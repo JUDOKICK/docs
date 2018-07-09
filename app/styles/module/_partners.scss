@@ -1,0 +1,29 @@
+.partners {
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner {
+    width: 28%;
+    margin-bottom: 50px;
+
+    &__link {
+      text-decoration: none;
+    }
+
+    &__logo {
+
+    }
+  }
+}

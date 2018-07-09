@@ -1,0 +1,95 @@
+.cartesi {
+  margin-top: 250px;
+
+  &__title {
+    font-size: 75px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    text-align: center;
+    color: $grey;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+      margin-right: 50px;
+      font-family: 'Rubik Light';
+      font-size: 20px;
+      color: $black;
+      border: 2px solid $black;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    &__video-button {
+      display: flex;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      i.icon {
+        margin-right: 10px;
+      }
+
+      span {
+        color: $black;
+        font-family: 'Rubik Light';
+        font-weight: lighter;
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__feat-img {
+    width: 527px;
+    height: 503px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+    &__caption {
+      font-family: 'Rubik Light';
+      font-size: 22px;
+      color: $black;
+      white-space: pre-line;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 190px;
+        left: -110px;
+      }
+
+      &:nth-child(2) {
+        top: 70px;
+        right: -110px;
+      }
+
+      &:nth-child(3) {
+        top: 425px;
+        right: -180px;
+
+      }
+    }
+
+    &__image {
+
+    }
+  }
+}

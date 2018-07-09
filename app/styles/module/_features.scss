@@ -1,0 +1,46 @@
+.features {
+  margin-top: 335px;
+  padding: 70px 0;
+  background-color: $black;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    display: block;
+    width: 590px;
+    height: 875px;
+    margin-top: -400px;
+    margin-right: 120px;
+  }
+
+  &__list {
+
+    &__item {
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: 'Rubik Regular';
+        font-size: 28px;
+        color: $white;
+        white-space: pre-line;
+      }
+
+      p {
+        font-family: 'Rubik Light';
+        letter-spacing: 0.5px;
+        font-weight: lighter;
+        line-height: 20px;
+        font-size: 14px;
+        color: $white;
+        white-space: pre-line;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

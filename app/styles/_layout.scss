@@ -1,0 +1,179 @@
+#main {
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-top: 40px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 171px;
+    height: 59px;
+    background-image: url(../images/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__link {
+
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.nav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+    &__item {
+
+      a {
+        font-family: 'Rubik Light';
+        font-weight: lighter;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+        margin-right: 60px;
+      }
+
+    }
+  }
+}
+
+.content {
+  min-height: 100%;
+}
+
+.footer {
+  background-color: $black;
+  padding: 70px 0 calc(70px + 55px);
+  position: relative;
+
+  .container {
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+
+      span {
+        display: block;
+        font-family: 'Rubik Regular';
+        font-size: 22px;
+        color: $white;
+        margin-bottom: 15px;
+      }
+
+      a {
+        font-family: 'Rubik Light';
+        font-weight: lighter;
+        font-size: 16px;
+        text-decoration: none;
+        color: #c3c3c3;
+      }
+    }
+  }
+
+  &__menu--social {
+
+    li {
+      display: inline;
+      margin-right: 15px;
+
+      > span {
+        display: block;
+      }
+
+      &:first-child {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      &:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+
+        .cartesi-logo {
+          width: 95px;
+          height: 94px;
+          margin-right: 25px;
+        }
+
+        span {
+          white-space: pre-line;
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    background-color: $white;
+    text-align: center;
+    height: 55px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Rubik Light';
+    font-weight: lighter;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contra-logo {
+      width: 89px;
+      height: 14px;
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.team {
+  background-color: $black;
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  .container {
+
+  }
+
+  &__title {
+    text-align: center;
+    color: $white;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 30px;
+      display: block;
+      color: $grey;
+      font-family: 'Rubik Light';
+      font-weight: lighter;
+      font-size: 28px;
+    }
+  }
+
+  &__group--core {
+    &:before {
+      content: 'Core';
+    }
+
+    .team__member {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 27%;
+
+      &__avatar {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      &__name {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      &__role {
+        color: #c3c3c3;
+      }
+    }
+  }
+
+  &__group--advisors {
+    margin-top: 70px;
+
+    &:before {
+      content: 'Advisors';
+    }
+
+    .team__member {
+      @include clearfix();
+      width: 37%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &__advisor-data {
+
+      }
+
+      &__avatar {
+        margin-right: 15px;
+      }
+
+      &__name {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      &__role {
+        display: block;
+        color: $grey;
+      }
+
+      &__company {
+        display: block;
+        color: #c3c3c3;
+        font-family: 'Rubik Light';
+        font-weight: lighter;
+        letter-spacing: 0.5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__member {
+    margin-bottom: 50px;
+
+    &__avatar {
+      display: block;
+    }
+
+    &__name {
+      color: $white;
+      font-family: 'Rubik Regular';
+      font-size: 22px;
+    }
+
+    &__role {
+      font-family: 'Rubik Light';
+      font-weight: lighter;
+      letter-spacing: 0.5px;
+      font-size: 16px;
+
+    }
+
+    &__company {
+      color: $grey;
+
+    }
+  }
+}

@@ -1,0 +1,146 @@
+$black: #000000;
+$white: #ffffff;
+$grey: #808285;
+
+@font-face {
+  font-family: 'Rubik Light';
+  src: url(../fonts/Rubik-Light.ttf)  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Regular';
+  src: url(../fonts/Rubik-Regular.ttf)  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url(../fonts/Rubik-Bold.ttf)  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Black';
+  src: url(../fonts/Rubik-Black.ttf)  format('truetype');
+}
+
+.icon {
+  font-size: 0;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon-caret-down {
+  background-image: url(../images/icon-caret-down.png);
+  width: 53px;
+  height: 18px;
+}
+
+.icon-twitter {
+  background-image: url(../images/icon-twitter.png);
+  width: 25px;
+  height: 19px;
+}
+
+.icon-facebook {
+  background-image: url(../images/icon-facebook.png);
+  width: 15px;
+  height: 25px;
+}
+
+.icon-medium {
+  background-image: url(../images/icon-medium.png);
+  width: 27px;
+  height: 27px;
+}
+
+.icon-send {
+  background-image: url(../images/icon-send.png);
+  width: 28px;
+  height: 23px;
+}
+
+.icon-linkedin {
+  background-image: url(../images/icon-linkedin.png);
+  width: 26px;
+  height: 24px;
+}
+
+.icon-play {
+  background-image: url(../images/icon-play.png);
+  width: 58px;
+  height: 56px;
+}
+
+
+.icon-play-reverse {
+  background-image: url(../images/icon-play-reverse.png);
+  width: 56px;
+  height: 56px;
+}
+
+.icon-slow {
+  background-image: url(../images/icon-slow.png);
+  width: 38px;
+  height: 38px;
+}
+
+.icon-restrictive {
+  background-image: url(../images/icon-restrictive.png);
+  width: 38px;
+  height: 38px;
+}
+
+.icon-expensive {
+  background-image: url(../images/icon-expensive.png);
+  width: 38px;
+  height: 38px;
+}
+
+.icon-science {
+  background-image: url(../images/icon-science.svg);
+  width: 163px;
+  height: 93px;
+}
+
+.icon-logistics {
+  background-image: url(../images/icon-logistics.svg);
+  width: 171px;
+  height: 135px;
+}
+
+.icon-finance {
+  background-image: url(../images/icon-finance.svg);
+  width: 122px;
+  height: 132px;
+}
+
+.icon-software {
+  background-image: url(../images/icon-software.svg);
+  width: 88px;
+  height: 133px;
+}
+
+.icon-healthcare {
+  background-image: url(../images/icon-healthcare.svg);
+  width: 116px;
+  height: 131px;
+}
+
+.icon-gamming {
+  background-image: url(../images/icon-gamming.svg);
+  width: 122px;
+  height: 154px;
+}
+
+.icon-contra {
+  background-image: url(../images/contra-logo.png);
+  width: 108px;
+  height: 17px;
+}
+
+.icon-cartesi {
+  background-image: url(../images/contra-cartesi.svg);
+  width: 95px;
+  height: 94px;
+}

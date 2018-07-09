@@ -1,0 +1,124 @@
+.how-to {
+  padding-top: 70px;
+  box-sizing: border-box;
+
+  .container {
+
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
+
+  &__tabnav {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+
+    &__item {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+      margin-left: 50px;
+      padding-bottom: 130px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        border-bottom: 95px solid $black;
+        border-right: 95px solid transparent;
+        border-left: 95px solid transparent;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 95px);
+        transition: all 300ms ease;
+      }
+
+      &.active:after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      i.icon {
+
+      }
+
+      span {
+        font-family: 'Rubik Light';
+        font-size: 22px;
+        color: $grey;
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__tabcontent {
+    width: 100%;
+    height: 450px;
+    padding: 30px 3.33334%;
+    box-sizing: border-box;
+    background-color: $black;
+    position: relative;
+
+    &__item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 300ms ease;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        margin-right: 70px;
+        width: 387px;
+        height: 269px;
+      }
+
+      &__text {
+        display: block;
+        color: $white;
+        white-space: pre-line;
+
+        h4 {
+          font-family: 'Rubik Regular';
+          font-size: 34px;
+          line-height: 34px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-family: 'Rubik Light';
+          font-weight: lighter;
+          letter-spacing: 0.5px;
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}
