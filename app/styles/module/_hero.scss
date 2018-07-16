@@ -3,24 +3,37 @@
   height: 100%;
   background-color: $black;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 90px;
   padding-bottom: 30px;
   box-sizing: border-box;
 
+  @media (min-width: 992px) {
+    padding-top: 150px;
+  }
+
   &__logo {
     width: 309px;
-    height: 308px;
+    max-width: 50%;
     display: block;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
   &__text {
     font-family: 'Rubik Light';
     font-weight: lighter;
-    font-size: 34px;
+    font-size: 26px;
     color: $white;
     text-transform: uppercase;
+    padding: 5px 4% 15px;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+      padding: 0 4%;
+      font-size: 34px;
+    }
   }
 
   &__button {
@@ -28,7 +41,7 @@
     margin-left: auto;
     background-color: transparent;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
@@ -36,20 +49,80 @@
       outline: none;
     }
 
-    .icon {
-      margin-right: 20px;
+    &:hover {
+
+      .icon {
+        margin-right: 15px;
+
+        .circle {
+          width: 180px;
+        }
+      }
+
+      .hero__button__text {
+        opacity: 0;
+        width: 0px;
+      }
+
+      .hero__button__text--hover {
+        opacity: 1;
+        width: 115px;
+      }
     }
 
-    span {
+    .icon {
+      margin-right: 25px;
+      position: relative;
+      transition: margin-right 200ms linear;
+
+      .circle {
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: 2px solid $white;
+        border-radius: 25px;
+        position: absolute;
+        top: -14px;
+        left: -18px;
+        transition: width 350ms ease-out 300ms;
+      }
+    }
+
+    &__text,
+    &__text--hover {
       color: $white;
       font-family: 'Rubik Light';
       font-weight: lighter;
       font-size: 24px;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all 300ms ease-in;
+    }
+
+    &__text {
+      width: 175px;
+    }
+
+    &__text--hover {
+      opacity: 0;
+      width: 0px;
     }
   }
 
   &__godown {
-    display: inline-block;
+    display: block;
+    width: 53px;
+    height: 35px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 40px;
+    position: relative;
+    transition: padding-top 150ms ease-out;
+    bottom: 0;
+    box-sizing: border-box;
+
+    &:hover {
+      padding-top: 13px;
+    }
   }
 }

@@ -6,8 +6,12 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 3.33334%;
+  padding: 0 5%;
   box-sizing: border-box;
+
+  @media (min-width: 992px) {
+    padding: 0 3.33334%;
+  }
 }
 
 .title {

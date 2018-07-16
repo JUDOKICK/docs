@@ -5,11 +5,24 @@
 
 .header {
   width: 100%;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 0px;
   left: 0;
-  z-index: 1;
-  padding-top: 40px;
+  z-index: 2;
+  background-color: $black;
+  box-shadow: 0px -3px 13px 6px rgba(0, 0, 0, 0.5);
+  transition: top 300ms ease;
+
+  @media (min-width: 992px) {
+    padding-top: 40px;
+    box-shadow: none;
+    position: absolute;
+  }
+
+  &.hide {
+    top: -70px;
+    transition: top 300ms ease-out;
+  }
 
   .container {
     display: flex;
@@ -19,54 +32,188 @@
 
   &__logo {
     display: inline-block;
-    width: 171px;
+    width: 130px;
     height: 59px;
     background-image: url(../images/logo.svg);
     background-position: center;
     background-repeat: no-repeat;
     font-size: 0;
+
+    @media (min-width: 768px) {
+      width: 171px;
+    }
   }
 
   &__social {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+
+    @media (min-width: 768px) {
+      margin-right: 40px;
+    }
+
+    @media (min-width: 992px) {
+      margin-right: 0;
+    }
 
     &__link {
 
+      &:first-child a {
+        margin-left: 0;
+      }
+
       a {
+        display: inline-block;
         margin-left: 10px;
+
+        i.icon {
+          max-width: 20px;
+
+          @media (min-width: 768px) {
+            max-width: none;
+          }
+        }
       }
     }
   }
 }
 
 .nav {
-  width: 50%;
+  width: 45%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+
+  @media (max-width: 991px) {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    transition: all 300ms ease-in;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  &.active {
+    left: 50%;
+
+    .nav__button__menu {
+      left: -25px;
+
+      @media (min-width: 768px) {
+        left: -35px;
+      }
+    }
+
+    .nav__menu {
+
+      &__item a:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button__menu {
+    display: block;
+    width: 30px;
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    transition: left 300ms ease-in 300ms;
+
+    @media (min-width: 768px) {
+      width: 50px;
+      left: -50px;
+    }
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    .bar {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $white;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+
+
+      &:nth-child(1) {
+        top: 0px;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: 6px;
+        left: 0;
+        margin-top: 8px;
+      }
+
+      &:nth-child(3) {
+        top: 9px;
+        left: 0;
+        margin-top: 8px;
+      }
+    }
+  }
 
   &__menu {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
     list-style: none;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &__item {
 
       a {
+        display: inline-block;
         font-family: 'Rubik Light';
         font-weight: lighter;
         font-size: 20px;
+        color: $black;
         letter-spacing: 1px;
         text-decoration: none;
-        color: $white;
         text-transform: uppercase;
-        margin-right: 60px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $black;
+          transition: width 550ms ease-out 400ms;
+        }
+
+        @media (min-width: 992px) {
+          color: $white;
+          margin-right: 30px;
+          margin-left: 30px;
+        }
       }
 
     }
@@ -75,6 +222,7 @@
 
 .content {
   min-height: 100%;
+  overflow: hidden;
 }
 
 .footer {
@@ -83,21 +231,45 @@
   position: relative;
 
   .container {
-    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 10%;
+    }
+
+    @media (min-width: 992px) {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
   }
 
   &__menu {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    margin-right: 0;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
 
     li {
       display: block;
       margin-bottom: 10px;
+
+      @media (min-width: 992px) {
+      }
 
       span {
         display: block;
@@ -113,15 +285,36 @@
         font-size: 16px;
         text-decoration: none;
         color: #c3c3c3;
+
+        @media (max-width: 992px) {
+          width: 100%;
+          border-bottom: 3px solid $black;
+        }
       }
     }
   }
 
   &__menu--social {
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin-top: 60px;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 0;
+      width: auto;
+      text-align: left;
+    }
 
     li {
       display: inline;
       margin-right: 15px;
+
+      &:first-child {
+        margin-right: 0;
+      }
 
       > span {
         display: block;
@@ -130,18 +323,34 @@
       &:first-child {
         display: block;
         margin-bottom: 30px;
+
+      }
+
+      &:nth-child(6) {
+        margin-right: 0;
       }
 
       &:last-child {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         margin-top: 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+
+        @media (min-width: 992px) {
+          flex-direction: row;
+          width: auto;
+        }
 
         .cartesi-logo {
           width: 95px;
           height: 94px;
-          margin-right: 25px;
+
+          @media (min-width: 768px) {
+            margin-right: 25px;
+          }
         }
 
         span {
@@ -156,7 +365,6 @@
   &__copyright {
     background-color: $white;
     text-align: center;
-    height: 55px;
     padding: 15px 0;
     box-sizing: border-box;
     width: 100%;
@@ -166,9 +374,16 @@
     font-family: 'Rubik Light';
     font-weight: lighter;
     font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    line-height: 20px;
+    display: inline-block;
+
+    @media (min-width: 992px) {
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+    }
 
     .contra-logo {
       width: 89px;

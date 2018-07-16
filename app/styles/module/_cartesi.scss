@@ -1,27 +1,53 @@
 .cartesi {
-  margin-top: 250px;
+  margin-top: 130px;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    margin-top: 250px;
+  }
 
   &__title {
-    font-size: 75px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 40px;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
+
+    @media (min-width: 768px) {
+      line-height: 40px;
+      font-size: 60px;
+    }
+
+    @media (min-width: 992px) {
+      line-height: 60px;
+      font-size: 75px;
+    }
   }
 
   &__subtitle {
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     color: $grey;
+
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   &__action {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 
     &__button {
-      margin-right: 50px;
+      margin-bottom: 35px;
+      margin-top: 35px;
       font-family: 'Rubik Light';
       font-size: 20px;
       color: $black;
@@ -31,10 +57,22 @@
       text-decoration: none;
       border-radius: 10px;
       box-sizing: border-box;
+      transition: all 200ms ease-in;
+
+      @media (min-width: 768px) {
+        margin-right: 50px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
     }
 
     &__video-button {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       color: $white;
       text-decoration: none;
@@ -43,48 +81,115 @@
         outline: none;
       }
 
-      i.icon {
-        margin-right: 10px;
+      // &:hover {
+
+      //   .icon {
+      //     margin-right: 15px;
+
+      //     .circle {
+      //       width: 180px;
+      //     }
+      //   }
+
+      //   .cartesi__action__video-button__text {
+      //     opacity: 0;
+      //     width: 0px;
+      //   }
+
+      //   .cartesi__action__video-button__text--hover {
+      //     opacity: 1;
+      //     width: 115px;
+      //   }
+      // }
+
+      .icon {
+        margin-right: 25px;
+        position: relative;
+        transition: margin-right 200ms linear;
+
+        .circle {
+          display: block;
+          width: 45px;
+          height: 45px;
+          border: 2px solid $black;
+          border-radius: 25px;
+          position: absolute;
+          top: -14px;
+          left: -18px;
+          transition: width 350ms ease-out 300ms;
+        }
       }
 
-      span {
+      &__text,
+      &__text--hover {
         color: $black;
         font-family: 'Rubik Light';
         font-weight: lighter;
-        font-size: 22px;
+        font-size: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all 300ms ease-in;
+      }
+
+      &__text {
+        width: 175px;
+      }
+
+      &__text--hover {
+        opacity: 0;
+        width: 0px;
       }
     }
   }
 
   &__feat-img {
-    width: 527px;
-    height: 503px;
+    width: 100%;
+    max-width: 527px;
     margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      height: 503px;
+      display: block;
+    }
 
     &__caption {
       font-family: 'Rubik Light';
       font-size: 22px;
       color: $black;
       white-space: pre-line;
-      position: absolute;
+      text-align: center;
+      opacity: 0;
+
+      @media (min-width: 768px) {
+        position: absolute;
+      }
 
       &:nth-child(1) {
         top: 190px;
         left: -110px;
+
+        @media (min-width: 992px) {
+          left: -170px;
+        }
       }
 
       &:nth-child(2) {
         top: 70px;
         right: -110px;
+        animation-delay: 400ms;
       }
 
       &:nth-child(3) {
         top: 425px;
         right: -180px;
-
+        animation-delay: 700ms;
       }
     }
 

@@ -1,8 +1,10 @@
 // bower:scss
 @import "bower_components/jeet/scss/index.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
 @import 'theme';
 @import 'base';
+@import 'mixins';
 @import 'module';
 @import 'layout';

@@ -11,6 +11,8 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
     <link rel="stylesheet" href="/bower_components/fancybox/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
@@ -26,6 +28,11 @@
         <div class="container">
           <span class="header__logo" role="img">cartesi</span>
           <nav id="nav" class="nav">
+            <a href="#" class="nav__button__menu" role="button">
+              <i class="bar"></i>
+              <i class="bar"></i>
+              <i class="bar"></i>
+            </a>
             <ul class="nav__menu">
               <li class="nav__menu__item"><a href="#cartesi">Why Cartesi</a></li>
               <li class="nav__menu__item"><a href="#team">Team</a></li>
@@ -35,9 +42,17 @@
           <ul class="header__social">
             <li class="header__social__link">
               <a href="#"><i class="icon icon-twitter"></i></a>
+            </li>
+            <li class="header__social__link">
               <a href="#"><i class="icon icon-medium"></i></a>
+            </li>
+            <li class="header__social__link">
               <a href="#"><i class="icon icon-facebook"></i></a>
+            </li>
+            <li class="header__social__link">
               <a href="#"><i class="icon icon-send"></i></a>
+            </li>
+            <li class="header__social__link">
               <a href="#"><i class="icon icon-linkedin"></i></a>
             </li>
           </ul>
@@ -49,32 +64,35 @@
           <img src="images/icon.svg" alt="Cartesi" class="hero__logo">
           <p class="hero__text">Cartesi brings real world computations to the blockchain.</p>
           <a data-fancybox href="https://www.youtube.com/watch?v=fVqlZxoNlkY" class="hero__button">
-            <i class="icon icon-play">play</i> <span>Watch the video</span>
+            <i class="icon icon-arrow-right"><span class="circle"></span></i>
+            <span class="hero__button__text">Watch the video</span>
+            <span class="hero__button__text--hover">Learn now</span>
           </a>
           <a href="#blockchain" class="hero__godown smooth-scroll"><i class="icon icon-caret-down"></i></a>
         </section>
 
         <section id="blockchain" class="blockchain">
           <div class="container">
-
-            <h1 class="title blockchain__title">Blockchains need reality</h1>
-            <h2 class="subtitle blockchain__subtitle">Intensive computations are impractical inside the blockchain</h2>
+            <div class="container">
+              <h1 class="title blockchain__title">Blockchains need reality</h1>
+              <h2 class="subtitle blockchain__subtitle">Intensive computations are impractical inside the blockchain</h2>
+            </div>
 
             <div class="realities">
 
-              <span class="reality">
+              <span class="reality animated" animated="fadeInLeft">
                 <i class="icon icon-slow">slow</i> Slow
               </span>
-              <span class="reality">
+              <span class="reality animated" animated="fadeInDown">
                 <i class="icon icon-restrictive">restrictive</i> Restrictive
               </span>
-              <span class="reality">
+              <span class="reality animated" animated="fadeInRight">
                 <i class="icon icon-expensive">expensive</i> Expensive
               </span>
 
               <img src="images/realities.svg" alt="realities" class="realities__img">
 
-              <p class="realities__text">Off-chain
+              <p class="realities__text animated" animated="fadeInUp">Off-chain
                 computations
                 cannot be trusted
                 by the blockchain</p>
@@ -90,20 +108,22 @@
             <h2 class="subtitle cartesi__subtitle">We solve all these problems to build the internet 3.0</h2>
 
             <div class="cartesi__action">
-              <a href="./images/contra-logo.png" download class="cartesi__action__button">Download the whitepaper</a>
-              <a data-fancybox href="https://www.youtube.com/watch?v=er416Ad3R1g" class="cartesi__action__video-button">
-                <i class="icon icon-play-reverse">play</i> <span>Watch the video</span>
+              <a href="./images/contra-logo.png" download class="cartesi__action__button" animated="fadeInLeft">Download the whitepaper</a>
+              <a data-fancybox href="https://www.youtube.com/watch?v=er416Ad3R1g" class="cartesi__action__video-button" animated="fadeInRight">
+                <i class="icon icon-arrow-right-reverse"><span class="circle"></span></i>
+                <span class="cartesi__action__video-button__text">Watch the video</span>
+                <span class="cartesi__action__video-button__text--hover">Learn now</span>
               </a>
             </div>
 
             <div class="cartesi__feat-img">
-              <p class="cartesi__feat-img__caption">Intensive
+              <p class="cartesi__feat-img__caption animated" animated="fadeIn">Intensive
                 computations
                 performed off-chain</p>
-              <p class="cartesi__feat-img__caption">Complete
+              <p class="cartesi__feat-img__caption animated" animated="fadeIn">Complete
                 generality for
                 developers</p>
-              <p class="cartesi__feat-img__caption">Consensus
+              <p class="cartesi__feat-img__caption animated" animated="fadeIn">Consensus
                 efficiently
                 reached on-chain</p>
 
@@ -118,7 +138,7 @@
             <img src="images/features.svg" alt="Cartesi Features" class="features__img">
 
             <div class="features__list">
-              <div class="features__list__item">
+              <div class="features__list__item animated" animated="fadeInUp">
                 <h4>Real world computations
                   meets the blockchain.</h4>
                 <p>Intensive computations require a realistic platform.
@@ -127,7 +147,7 @@
                   operating system. Developers can use all the tools,
                   libraries, and services they are already familiar with.</p>
               </div>
-              <div class="features__list__item">
+              <div class="features__list__item animated" animated="fadeInUp">
                 <h4>Portable across
                   multiple blockchains.</h4>
                 <p>Smart contracts running on different blockchains can
@@ -136,7 +156,7 @@
                   specific blockchains, making them portable and providing
                   security, immutability, and a payment system.</p>
               </div>
-              <div class="features__list__item">
+              <div class="features__list__item animated" animated="fadeInUp">
                 <h4>Guaranteed Consensus</h4>
                 <p>External computations can be verified externally by all
                   involved parties. Disputes are settled automatically by Cartesi.
@@ -148,104 +168,112 @@
         </section>
 
         <section id="how-to" class="how-to">
-          <div class="container">
+          <h1 class="title how-to__title">How Cartesi can help change the world</h1>
 
-            <h1 class="title how-to__title">How Cartesi can help change the world</h1>
-
-            <nav class="how-to__tabnav">
-              <a href="#how-to__science" class="how-to__tabnav__item">
-                <i class="icon icon-science">science</i> <span>Science</span>
-              </a>
-              <a href="#how-to__logistics" class="how-to__tabnav__item active">
-                <i class="icon icon-logistics">logistics</i> <span>Logistics</span>
-                <span class="active"></span>
-              </a>
-              <a href="#how-to__finance" class="how-to__tabnav__item">
-                <i class="icon icon-finance">finance</i> <span>Finance</span>
-              </a>
-              <a href="#how-to__software" class="how-to__tabnav__item">
-                <i class="icon icon-software">software</i> <span>Software</span>
-              </a>
-              <a href="#how-to__healthcare" class="how-to__tabnav__item">
-                <i class="icon icon-healthcare">healthcare</i> <span>Healthcare</span>
-              </a>
-              <a href="#how-to__gamming" class="how-to__tabnav__item">
-                <i class="icon icon-gamming">gamming</i> <span>Gamming</span>
-              </a>
-            </nav>
-          </div>
+          <nav id="how-to__tabnav" class="how-to__tabnav">
+            <a href="#how-to__science" class="how-to__tabnav__item active">
+              <i class="icon icon-science">science</i> <span>Science</span>
+            </a>
+            <a href="#how-to__logistics" class="how-to__tabnav__item">
+              <i class="icon icon-logistics">logistics</i> <span>Logistics</span>
+            </a>
+            <a href="#how-to__finance" class="how-to__tabnav__item">
+              <i class="icon icon-finance">finance</i> <span>Finance</span>
+            </a>
+            <a href="#how-to__software" class="how-to__tabnav__item">
+              <i class="icon icon-software">software</i> <span>Software</span>
+            </a>
+            <a href="#how-to__healthcare" class="how-to__tabnav__item">
+              <i class="icon icon-healthcare">healthcare</i> <span>Healthcare</span>
+            </a>
+            <a href="#how-to__gamming" class="how-to__tabnav__item">
+              <i class="icon icon-gamming">gamming</i> <span>Gamming</span>
+            </a>
+          </nav>
 
           <div class="how-to__tabcontent">
-            <div id="how-to__science" class="how-to__tabcontent__item">
-              <img src="images/icon-science.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+            <div id="how-to__science" class="how-to__tabcontent__item active">
+              <div class="container">
+                <img src="images/icon-science.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
-            <div id="how-to__logistics" class="how-to__tabcontent__item active">
-              <img src="images/ship.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+            <div id="how-to__logistics" class="how-to__tabcontent__item">
+              <div class="container">
+                <img src="images/ship.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
             <div id="how-to__finance" class="how-to__tabcontent__item">
-              <img src="images/icon-finance.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+              <div class="container">
+                <img src="images/icon-finance.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
             <div id="how-to__software" class="how-to__tabcontent__item">
-              <img src="images/icon-software.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+              <div class="container">
+                <img src="images/icon-software.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
             <div id="how-to__healthcare" class="how-to__tabcontent__item">
-              <img src="images/icon-healthcare.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+              <div class="container">
+                <img src="images/icon-healthcare.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
             <div id="how-to__gamming" class="how-to__tabcontent__item">
-              <img src="images/icon-gamming.svg" alt="Science">
-              <div class="how-to__tabcontent__item__text">
-                <h4>Don't miss your ship, captain.</h4>
-                <p>Dapps built on top of Cartesi can change
-                  the way the supply chain world works.
-                  Ensure your products are legitimate
-                  through verified consensus, making real
-                  world logistics solution actually feasible
-                  on the blockchain with big data.</p>
+              <div class="container">
+                <img src="images/icon-gamming.svg" alt="Science">
+                <div class="how-to__tabcontent__item__text">
+                  <h4>Don't miss your ship, captain.</h4>
+                  <p>Dapps built on top of Cartesi can change
+                    the way the supply chain world works.
+                    Ensure your products are legitimate
+                    through verified consensus, making real
+                    world logistics solution actually feasible
+                    on the blockchain with big data.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -255,7 +283,7 @@
           <div class="container">
             <h1 class="title roadmap__title">The road to Cartesi</h1>
 
-            <div class="roadmap__phase">
+            <div class="roadmap__phase animated" animated="animation-custom">
               <img src="images/roadmap-phase-1.svg" width="83" height="50" alt="Phase One" class="roadmap__phase__img">
               <h4 class="roadmap__phase__number">Phase 1</h4>
               <h2 class="roadmap__phase__title">Hajime</h2>
@@ -267,7 +295,7 @@
               </div>
             </div>
 
-            <div class="roadmap__phase">
+            <div class="roadmap__phase animated" animated="animation-custom">
               <img src="images/roadmap-phase-2.svg" width="178" height="64" alt="Phase One" class="roadmap__phase__img">
               <h4 class="roadmap__phase__number">Phase 2</h4>
               <h2 class="roadmap__phase__title">Kaizen</h2>
@@ -288,7 +316,7 @@
               </div>
             </div>
 
-            <div class="roadmap__phase">
+            <div class="roadmap__phase animated" animated="animation-custom">
               <img src="images/roadmap-phase-3.svg" width="178" height="112" alt="Phase One" class="roadmap__phase__img">
               <h4 class="roadmap__phase__number">Phase 3</h4>
               <h2 class="roadmap__phase__title">Satori</h2>
@@ -331,35 +359,45 @@
             <div class="team__group team__group--core">
               <div class="team__member">
                 <img src="images/erick-de-moura.png" alt="Erick de Moura" class="team__member__avatar">
-                <span class="team__member__name">Erick de Moura</span>
-                <span class="team__member__role">Chief Executive Officer</span>
+                <div class="team__member__data">
+                  <span class="team__member__name">Erick de Moura</span>
+                  <span class="team__member__role">Chief Executive Officer</span>
+                </div>
               </div>
               <div class="team__member">
                 <img src="images/augusto-teixeira-phd.png" alt="Augusto Teixeira, PhD" class="team__member__avatar">
-                <span class="team__member__name">Augusto Teixeira, PhD</span>
-                <span class="team__member__role">Chief Scientific Officer</span>
+                <div class="team__member__data">
+                  <span class="team__member__name">Augusto Teixeira, PhD</span>
+                  <span class="team__member__role">Chief Scientific Officer</span>
+                </div>
               </div>
               <div class="team__member">
                 <img src="images/diego-nehab-phd.png" alt="Diego Nehab, PhD" class="team__member__avatar">
-                <span class="team__member__name">Diego Nehab, PhD</span>
-                <span class="team__member__role">Chief Technology Officer</span>
+                <div class="team__member__data">
+                  <span class="team__member__name">Diego Nehab, PhD</span>
+                  <span class="team__member__role">Chief Technology Officer</span>
+                </div>
               </div>
               <div class="team__member">
                 <img src="images/colin-steil.png" alt="Colin Steil" class="team__member__avatar">
-                <span class="team__member__name">Colin Steil</span>
-                <span class="team__member__role">Chief Operating Officer</span>
+                <div class="team__member__data">
+                  <span class="team__member__name">Colin Steil</span>
+                  <span class="team__member__role">Chief Operating Officer</span>
+                </div>
               </div>
               <div class="team__member">
                 <img src="images/marco-mirabella.png" alt="Marco Mirabella" class="team__member__avatar">
-                <span class="team__member__name">Marco Mirabella</span>
-                <span class="team__member__role">Chief Business Development Officer</span>
+                <div class="team__member__data">
+                  <span class="team__member__name">Marco Mirabella</span>
+                  <span class="team__member__role">Chief Business Development Officer</span>
+                </div>
               </div>
             </div>
 
             <div class="team__group team__group--advisors">
               <div class="team__member">
                 <img src="images/serguei-popov-phd.png" alt="Serguei Popov, PhD" class="team__member__avatar">
-                <div class="team__member__advisor-data">
+                <div class="team__member__data">
                   <span class="team__member__role">Senior Advisor</span>
                   <span class="team__member__name">Serguei Popov, PhD</span>
                   <span class="team__member__company">Co-Founder of IOTA</span>
@@ -367,7 +405,7 @@
               </div>
               <div class="team__member">
                 <img src="images/stas-oskin.png" alt="Stas Oskin" class="team__member__avatar">
-                <div class="team__member__advisor-data">
+                <div class="team__member__data">
                   <span class="team__member__role">Senior Advisor</span>
                   <span class="team__member__name">Stas Oskin</span>
                   <span class="team__member__company">Core Dev & Bus Dev of Wings.ai</span>
@@ -375,14 +413,14 @@
               </div>
               <div class="team__member">
                 <img src="images/luiz-henrique-de-figueiredo-phd.png" alt="Luiz Henrique de Figueiredo, PhD" class="team__member__avatar">
-                <div class="team__member__advisor-data">
+                <div class="team__member__data">
                   <span class="team__member__name">Luiz Henrique<br>de Figueiredo, PhD</span>
                   <span class="team__member__company">Co-creator of LUA<br>programming language</span>
                 </div>
               </div>
               <div class="team__member">
                 <img src="images/willian-bao-bean.png" alt="William Bao Bean" class="team__member__avatar">
-                <div class="team__member__advisor-data">
+                <div class="team__member__data">
                   <span class="team__member__name">William Bao Bean</span>
                   <span class="team__member__company">General Partner at SOSV</span>
                   <span class="team__member__company">Managing Director at Chinaccelerator</span>
@@ -490,7 +528,9 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <!-- endbower -->
+    <script src="jquery.visible.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

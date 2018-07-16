@@ -26,6 +26,13 @@
       border-radius: 1px;
       position: absolute;
       left: 50%;
+      top: -30px;
+      opacity: 0;
+      transition: all 400ms ease-out 400ms;
+    }
+
+    &.animation-custom:before {
+      opacity: 1;
       top: 0;
     }
 
