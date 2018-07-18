@@ -13,13 +13,17 @@
   }
 
   &__tabnav {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: center;
-    margin-bottom: 130px;
+    display: none;
+
+    @media (min-width: 992px) {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: center;
+      margin-bottom: 130px;
+    }
 
     &__item {
       display: flex !important;
@@ -56,15 +60,17 @@
 
   &__tabcontent {
     width: 100%;
-    height: 450px;
-    padding: 30px 3.33334%;
+    padding: 60px 3.33334% 90px;
     box-sizing: border-box;
     background-color: $black;
     position: relative;
 
+    @media (min-width: 992px) {
+      padding: 30px 3.33334% 30px;
+      height: 450px;
+    }
+
     &:after {
-      content: '';
-      display: block;
       border-bottom: 95px solid $black;
       border-right: 95px solid transparent;
       border-left: 95px solid transparent;
@@ -72,24 +78,37 @@
       bottom: 100%;
       left: calc(50% - 95px);
       transition: all 300ms ease;
+
+      @media (min-width: 992px) {
+        content: '';
+        display: block;
+      }
     }
 
     &__item {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 300ms ease;
+
+      @media (min-width: 992px) {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 300ms ease;
+      }
 
       .container {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+          flex-direction: row;
+          height: 100%;
+        }
       }
 
       &.active {
@@ -98,27 +117,38 @@
       }
 
       img {
-        margin-right: 70px;
         width: 387px;
-        height: 269px;
-        display: none;
+        max-width: 50%;
+        max-height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 35px;
 
         @media (min-width: 768px) {
-          display: inline-block;
+          margin-right: 70px;
+          margin-bottom: 0;
         }
       }
 
       &__text {
         display: block;
         color: $white;
-        white-space: pre-line;
+
+        @media (min-width: 768px) {
+          white-space: pre-line;
+        }
 
         h4 {
           font-family: 'Rubik Regular';
           font-size: 34px;
           line-height: 34px;
           margin-top: 0;
-          margin-bottom: 0;
+          margin-bottom: 25px;
+
+          @media (min-width: 768px) {
+            white-space: pre-line;
+            margin-bottom: 0;
+          }
         }
 
         p {
@@ -129,6 +159,47 @@
           letter-spacing: 0.5px;
           font-size: 15px;
           line-height: 21px;
+        }
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        text-align: unset;
+
+        button {
+          display: inline-block;
+          font-size: 0;
+          background-color: $white;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          border: none;
+          transition: all 300ms ease-out;
+          padding: 0;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &.slick-active button {
+          height: 22px;
+          width: 22px;
         }
       }
     }

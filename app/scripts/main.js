@@ -12,6 +12,7 @@
       }, 600)
     });
 
+
     /**
      * '#how-to' prevent item click
      */
@@ -19,10 +20,11 @@
       event.preventDefault();
     });
 
+
     /**
      * Slick.js init
      */
-    $('.how-to__tabnav').slick({
+    $('#how-to__tabnav').slick({
       slidesToShow: 5,
       slidesToScroll: 1,
       centerMode: true,
@@ -38,24 +40,38 @@
       pauseOnHover: false,
       responsive: [
         {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1
-          }
+          breakpoint: 991,
+          settings: 'unslick'
         }
       ]
     });
 
+    $('#how-to__tabcontent').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 400,
+      infinite: true,
+      arrows: false,
+      dots: true,
+      focusOnSelect: true,
+      pauseOnFocus: true,
+      pauseOnHover: false,
+      adaptativeHeight: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: 'unslick'
+        }
+      ]
+    });
+
+
     /**
      * slick change tab
      */
-    // On before slide change
     $('.how-to__tabnav').on('afterChange', function(event, slick, currentSlide){
       let slide = $('[data-slick-index='+ currentSlide +']');
       let contentTarget = slide.find('.how-to__tabnav__item').attr('href');
@@ -64,6 +80,7 @@
       $(contentTarget).addClass('active');
     });
 
+
     /**
      * open menu mobile
      */
@@ -71,7 +88,10 @@
       event.preventDefault();
 
       $('.nav').toggleClass('active');
+      $('.header__logo').toggleClass('mobile-active');
+      $('.nav__button__menu').toggleClass('close');
     });
+
 
     /**
      * hide navbar when scroll down
@@ -83,10 +103,12 @@
       if (prevScrollpos > currentScrollPos) {
         $('.header').removeClass('hide');
       } else {
-        $('.header').addClass('hide');
+        if (!$('.nav').hasClass('active'))
+          $('.header').addClass('hide');
       }
       prevScrollpos = currentScrollPos;
     }
+
 
     /**
      * apply animation classes when element

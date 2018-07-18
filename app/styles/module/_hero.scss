@@ -89,7 +89,8 @@
     }
 
     &__text,
-    &__text--hover {
+    &__text--hover,
+    &__text--mobile {
       color: $white;
       font-family: 'Rubik Light';
       font-weight: lighter;
@@ -106,6 +107,29 @@
     &__text--hover {
       opacity: 0;
       width: 0px;
+    }
+
+    &__text--mobile {
+      opacity: 0;
+      width: 0px;
+    }
+
+    @media (max-width: 991px) {
+      &:hover .hero__button__text--hover,
+      .hero__button__text {
+        opacity: 0;
+        width: 0px;
+      }
+
+      .hero__button__text--mobile {
+        opacity: 1;
+        width: 100px;
+      }
+
+      .icon .circle,
+      &:hover .icon .circle {
+        width: 180px;
+      }
     }
   }
 
