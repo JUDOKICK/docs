@@ -62,16 +62,19 @@
       &:nth-child(1) {
         top: 20px;
         left: -75px;
+        animation-delay: 600ms;
       }
 
       &:nth-child(2) {
         top: -70px;
         left: 135px;
+        animation-delay: 900ms;
       }
 
       &:nth-child(3) {
         top: 20px;
         right: -70px;
+        animation-delay: 300ms;
       }
 
       i.icon {
@@ -86,16 +89,57 @@
       @media (min-width: 768px) {
         margin-top: 0;
       }
+
+      #blockchain,
+      #lock,
+      #chip {
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      #blockchain {
+        transition-delay: 100ms;
+      }
+
+      #lock {
+        transition-delay: 3s;
+      }
+
+      #chip {
+        transition-delay: 1500ms;
+      }
+
+      &.animation-custom {
+        #blockchain,
+        #lock,
+        #chip {
+          opacity: 1;
+        }
+
+        #blockchain {
+
+        }
+
+        #lock {
+          transition: all 500ms ease-out;
+          transition-delay: 1500ms;
+        }
+
+        #chip {
+          transition: all 500ms ease-out;
+        }
+      }
     }
 
     &__text {
-      bottom: -90px;
+      bottom: -110px;
       right: 0;
       font-size: 22px;
       font-family: 'Rubik Light';
       color: $black;
       white-space: pre-line;
       opacity: 0;
+      animation-delay: 2s;
 
       @media (min-width: 768px) {
         position: absolute;

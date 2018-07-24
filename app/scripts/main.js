@@ -6,6 +6,7 @@
      */
     $('.smooth-scroll').click(function(event) {
       event.preventDefault();
+      event.stopPropagation();
 
       $('html, body').stop().animate({
         scrollTop: $($(this).attr('href')).offset().top
@@ -35,7 +36,7 @@
       arrows: false,
       dots: false,
       draggable: false,
-      focusOnSelect: false,
+      focusOnSelect: true,
       pauseOnFocus: true,
       pauseOnHover: false,
       responsive: [
@@ -99,13 +100,16 @@
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       let currentScrollPos = window.pageYOffset;
-      console.log('prevScrollpos > currentScrollPos = ', prevScrollpos > currentScrollPos)
-      if (prevScrollpos > currentScrollPos) {
-        $('.header').removeClass('hide');
-      } else {
-        if (!$('.nav').hasClass('active'))
-          $('.header').addClass('hide');
+
+      if ($(window).width() < 992) {
+        if (prevScrollpos > currentScrollPos) {
+          $('.header').removeClass('hide');
+        } else {
+          if (!$('.nav').hasClass('active'))
+            $('.header').addClass('hide');
+        }
       }
+
       prevScrollpos = currentScrollPos;
     }
 
@@ -114,17 +118,36 @@
      * apply animation classes when element
      * is visible on viewport
      */
-    $(window).scroll(function(event) {
+    $(window).on('scroll load', function(event) {
       $('.animated[animated]').each(function(index) {
-        let classes = $(this).attr('animated') || '';
+        let animation = $(this).attr('animated');
+        let classes = animation + ' ' + $(this).attr('class');
         let checkAnyPart = false;
 
-        if (classes === 'animation-custom') checkAnyPart = true;
+        if (animation === 'animation-custom') checkAnyPart = true;
 
-        if ($(this).visible(checkAnyPart))
-          $(this).addClass(classes);
+        if ($(this).visible(checkAnyPart) && !$(this).get(0).classList.contains(animation)) {
+          $(this).attr('class', classes);
+        }
       });
     });
 
+    // bodymovin.loadAnimation({
+    //   container: document.getElementById('hero__logo'),
+    //   rederer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: 'data.json'
+    // })
+
+    $('.nav__menu__item a').click(function() {
+      if ($(window).width() < 992) {
+        $('.nav').toggleClass('active');
+        $('.header__logo').toggleClass('mobile-active');
+        $('.nav__button__menu').toggleClass('close');
+      }
+    })
+
+    // $('#hero__logo')[0].play();
   });
 })(jQuery)

@@ -5,6 +5,11 @@
 
 @import 'theme';
 @import 'base';
-@import 'mixins';
+@import 'keyframes';
 @import 'module';
 @import 'layout';
+
+
+rect[width="1920"][fill="#ffffff"] {
+  fill: #000;
+}
