@@ -33,6 +33,24 @@
     // }
   }
 
+  &__logo--mobile {
+    display: block;
+  }
+
+  &__logo--desktop {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    .hero__logo--mobile {
+      display: none;
+    }
+
+    .hero__logo--desktop {
+      display: block;
+    }
+  }
+
   &__text {
     font-family: 'Rubik Light';
     font-weight: lighter;

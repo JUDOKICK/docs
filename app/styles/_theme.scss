@@ -12,16 +12,6 @@ $grey: #808285;
   src: url(../fonts/Rubik-Regular.ttf)  format('truetype');
 }
 
-@font-face {
-  font-family: 'Rubik Bold';
-  src: url(../fonts/Rubik-Bold.ttf)  format('truetype');
-}
-
-@font-face {
-  font-family: 'Rubik Black';
-  src: url(../fonts/Rubik-Black.ttf)  format('truetype');
-}
-
 .icon {
   font-size: 0;
   display: inline-block;
@@ -169,45 +159,8 @@ $grey: #808285;
   height: 131px;
 }
 
-.icon-gamming {
-  background-image: url(../images/icon-gamming.svg);
-  width: 122px;
-  height: 154px;
-}
-
-
-.icon-science-reverse {
-  background-image: url(../images/icon-science-reverse.svg);
-  width: 163px;
-  height: 93px;
-}
-
-.icon-logistics-reverse {
-  background-image: url(../images/icon-logistics-reverse.svg);
-  width: 171px;
-  height: 135px;
-}
-
-.icon-finance-reverse {
-  background-image: url(../images/icon-finance-reverse.svg);
-  width: 122px;
-  height: 132px;
-}
-
-.icon-software-reverse {
-  background-image: url(../images/icon-software-reverse.svg);
-  width: 88px;
-  height: 133px;
-}
-
-.icon-healthcare-reverse {
-  background-image: url(../images/icon-healthcare-reverse.svg);
-  width: 116px;
-  height: 131px;
-}
-
-.icon-gamming-reverse {
-  background-image: url(../images/icon-gamming-reverse.svg);
+.icon-gaming {
+  background-image: url(../images/icon-gaming.svg);
   width: 122px;
   height: 154px;
 }

@@ -51,6 +51,8 @@
       margin-bottom: 10px;
       margin-right: 10px;
       opacity: 0;
+      animation-delay: 300ms;
+      animation-duration: 700ms;
 
       @media (min-width: 768px) {
         position: absolute;
@@ -62,19 +64,16 @@
       &:nth-child(1) {
         top: 20px;
         left: -75px;
-        animation-delay: 600ms;
       }
 
       &:nth-child(2) {
         top: -70px;
         left: 135px;
-        animation-delay: 900ms;
       }
 
       &:nth-child(3) {
         top: 20px;
         right: -70px;
-        animation-delay: 300ms;
       }
 
       i.icon {
@@ -90,43 +89,32 @@
         margin-top: 0;
       }
 
-      #blockchain,
-      #lock,
-      #chip {
+      #blockchain-group,
+      #lock-group,
+      #chip-group {
         opacity: 0;
-        transition: opacity 300ms ease-in-out;
+        animation-duration: 700ms;
+        transition-duration: 700ms;
       }
 
-      #blockchain {
-        transition-delay: 100ms;
+      #blockchain-group {
       }
 
-      #lock {
-        transition-delay: 3s;
+      #lock-group {
+        transition-delay: 1.5s;
+        animation-delay: 1.5s;
       }
 
-      #chip {
-        transition-delay: 1500ms;
+      #chip-group {
+        transition-delay: 1s;
+        animation-delay: 1s;
       }
 
       &.animation-custom {
-        #blockchain,
-        #lock,
-        #chip {
+        #blockchain-group,
+        #lock-group,
+        #chip-group {
           opacity: 1;
-        }
-
-        #blockchain {
-
-        }
-
-        #lock {
-          transition: all 500ms ease-out;
-          transition-delay: 1500ms;
-        }
-
-        #chip {
-          transition: all 500ms ease-out;
         }
       }
     }
@@ -139,7 +127,7 @@
       color: $black;
       white-space: pre-line;
       opacity: 0;
-      animation-delay: 2s;
+      animation-delay: 500ms;
 
       @media (min-width: 768px) {
         position: absolute;

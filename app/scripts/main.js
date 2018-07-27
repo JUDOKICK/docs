@@ -102,7 +102,7 @@
       let currentScrollPos = window.pageYOffset;
 
       if ($(window).width() < 992) {
-        if (prevScrollpos > currentScrollPos) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
           $('.header').removeClass('hide');
         } else {
           if (!$('.nav').hasClass('active'))
@@ -132,6 +132,9 @@
       });
     });
 
+    /**
+     * Bodymovin plugin configuration params
+     */
     // bodymovin.loadAnimation({
     //   container: document.getElementById('hero__logo'),
     //   rederer: 'svg',
@@ -140,14 +143,37 @@
     //   path: 'data.json'
     // })
 
-    $('.nav__menu__item a').click(function() {
+
+    /**
+     * Open/Close menu on mobile devices
+     */
+    $('.nav__menu__item a').click(function toggleMenu() {
       if ($(window).width() < 992) {
         $('.nav').toggleClass('active');
         $('.header__logo').toggleClass('mobile-active');
         $('.nav__button__menu').toggleClass('close');
       }
-    })
+    });
 
-    // $('#hero__logo')[0].play();
+
+    /**
+     * Imagine Scroll init
+     */
+    $('.imagine').imagine();
+
+
+    /**
+     * Close menu when swipe right
+     */
+    if ( $(window).width() < 992 ) {
+      $(window).on('swiperight', function(e) {
+        if ( $('#nav').hasClass('active') ) {
+          $('.nav').toggleClass('active');
+          $('.header__logo').toggleClass('mobile-active');
+          $('.nav__button__menu').toggleClass('close');
+        }
+      });
+    }
+
   });
 })(jQuery)

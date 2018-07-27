@@ -27,6 +27,7 @@
     width: 590px;
     max-width: 100%;
     margin-top: -250px;
+    overflow: visible;
 
     @media (min-width: 768px) {
       max-width: 70%;

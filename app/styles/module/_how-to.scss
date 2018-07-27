@@ -33,6 +33,7 @@
       justify-content: flex-end;
       text-decoration: none;
       position: relative;
+      cursor: default;
 
       &:focus {
         outline: none;
@@ -118,16 +119,28 @@
 
       img {
         width: 387px;
-        max-width: 50%;
-        max-height: 250px;
+        max-width: 70%;
+        max-height: 150px;
         margin-right: auto;
         margin-left: auto;
         margin-bottom: 35px;
+        display: none;
 
         @media (min-width: 768px) {
+          display: block;
           margin-right: 70px;
           margin-left: 0;
           margin-bottom: 0;
+          max-width: 50%;
+          max-height: 250px;
+        }
+
+        &.mobile {
+          display: block;
+
+          @media (min-width: 768px) {
+            display: none;
+          }
         }
       }
 
