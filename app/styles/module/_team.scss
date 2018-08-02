@@ -94,7 +94,7 @@
     }
 
     .team__member {
-      @include clearfix();
+      //@include clearfix();
       width: 100%;
       align-items: center;
       display: flex;
