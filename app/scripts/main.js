@@ -17,15 +17,19 @@
     /**
      * '#how-to' prevent item click
      */
-    $('.how-to__tabnav__item').click(function(event) {
+    $('#how-to').on('click', '.how-to__tabnav__item', function(event) {
       event.preventDefault();
+
+      $('html, body').stop().animate({
+        scrollTop: $('#how-to__tabcontent').offset().top - 300
+      }, 600)
     });
 
 
     /**
      * Slick.js init
      */
-    $('#how-to__tabnav').slick({
+    var tabnavOptions = {
       slidesToShow: 5,
       slidesToScroll: 1,
       centerMode: true,
@@ -41,13 +45,15 @@
       pauseOnHover: false,
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 992,
           settings: 'unslick'
         }
       ]
-    });
+    };
 
-    $('#how-to__tabcontent').slick({
+    $('#how-to__tabnav').slick(tabnavOptions);
+
+    var tabcontentOptions = {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -63,12 +69,22 @@
       mobileFirst: true,
       responsive: [
         {
-          breakpoint: 992,
+          breakpoint: 991,
           settings: 'unslick'
         }
       ]
-    });
+    };
 
+    $('#how-to__tabcontent').slick(tabcontentOptions);
+
+    $(window).on('resize orientationchange', function() {
+      var tabnavSlider = $('#how-to__tabnav');
+      var tabcontentSlider = $('#how-to__tabcontent');
+
+      // without this check, all kinds of weird errors happen, and the slider doesn't really work
+      if(!tabnavSlider.hasClass('slick-initialized')) tabnavSlider.slick(tabnavOptions);
+      if(!tabcontentSlider.hasClass('slick-initialized')) tabcontentSlider.slick(tabcontentOptions);
+    });
 
     /**
      * slick change tab
