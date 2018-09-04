@@ -151,13 +151,27 @@
     /**
      * Bodymovin plugin configuration params
      */
-    // bodymovin.loadAnimation({
-    //   container: document.getElementById('hero__logo'),
-    //   rederer: 'svg',
-    //   loop: true,
-    //   autoplay: true,
-    //   path: 'data.json'
-    // })
+    bodymovin.loadAnimation({
+      container: document.getElementById('hero__logo'),
+      rederer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'cartesi_home_logo.json'
+    })
+    bodymovin.loadAnimation({
+      container: document.getElementById('realities__img'),
+      rederer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'blockchain_need_help.json'
+    })
+    bodymovin.loadAnimation({
+      container: document.getElementById('cartesi__feat-img__image'),
+      rederer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'we_solve_all_these_problems.json'
+    })
 
 
     /**
