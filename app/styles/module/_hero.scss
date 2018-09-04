@@ -67,14 +67,17 @@
   }
 
   &__button {
-    margin-right: 50px;
-    margin-left: 50px;
     background-color: transparent;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 15px;
+
+    @media (min-width: 768px) {
+      margin-left: 50px;
+      margin-top: 0;
+    }
 
     &:focus {
       outline: none;
@@ -86,18 +89,8 @@
         margin-right: 15px;
 
         .circle {
-          width: 180px;
+          width: 240px;
         }
-      }
-
-      .hero__button__text {
-        opacity: 0;
-        width: 0px;
-      }
-
-      .hero__button__text--hover {
-        opacity: 1;
-        width: 115px;
       }
     }
 
@@ -119,9 +112,7 @@
       }
     }
 
-    &__text,
-    &__text--hover,
-    &__text--mobile {
+    &__text {
       color: $white;
       font-family: 'Rubik Light';
       font-weight: lighter;
@@ -135,31 +126,10 @@
       width: 175px;
     }
 
-    &__text--hover {
-      opacity: 0;
-      width: 0px;
-    }
-
-    &__text--mobile {
-      opacity: 0;
-      width: 0px;
-    }
-
     @media (max-width: 991px) {
-      &:hover .hero__button__text--hover,
-      .hero__button__text {
-        opacity: 0;
-        width: 0px;
-      }
-
-      .hero__button__text--mobile {
-        opacity: 1;
-        width: 100px;
-      }
-
       .icon .circle,
       &:hover .icon .circle {
-        width: 180px;
+        width: 250px;
       }
     }
   }
