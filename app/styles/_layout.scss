@@ -378,10 +378,25 @@ body{
         font-size: 16px;
         text-decoration: none;
         color: #c3c3c3;
+        transition: all 350ms ease-out;
+        border-bottom: 1px solid transparent;
+
+        &:not(.footer__menu--social__icon):hover {
+          border-bottom: 1px solid #aaaaaa;
+        }
 
         @media (max-width: 992px) {
           width: 100%;
           border-bottom: 3px solid $black;
+        }
+      }
+
+      .footer__menu--social__icon {
+        transition: opacity 350ms ease-out;
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
