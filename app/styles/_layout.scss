@@ -151,6 +151,8 @@ body{
 
     .nav__menu {
 
+      margin-top: 5px;
+
       &__item:nth-child(3) a:after {
         width: 180px;
       }
@@ -417,7 +419,7 @@ body{
 
       }
 
-      &:nth-child(6) {
+      &:nth-child(8) {
         margin-right: 0;
       }
 
