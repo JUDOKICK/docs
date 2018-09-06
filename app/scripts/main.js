@@ -135,6 +135,8 @@
      * is visible on viewport
      */
     $(window).on('scroll load', function(event) {
+
+      // animate.css
       $('.animated[animated]').each(function(index) {
         let animation = $(this).attr('animated');
         let classes = animation + ' ' + $(this).attr('class');
@@ -151,28 +153,43 @@
     /**
      * Bodymovin plugin configuration params
      */
-    bodymovin.loadAnimation({
-      container: document.getElementById('hero__logo'),
-      rederer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'cartesi_home_logo.json'
-    })
-    bodymovin.loadAnimation({
+    // let heroLogoAnimation = bodymovin.loadAnimation({
+    //   container: document.getElementById('hero__logo'),
+    //   rederer: 'svg',
+    //   loop: true,
+    //   autoplay: false,
+    //   path: 'cartesi_home_logo.json'
+    // })
+    let realitiesImgAnimation = bodymovin.loadAnimation({
       container: document.getElementById('realities__img'),
       rederer: 'svg',
       loop: true,
-      autoplay: true,
+      autoplay: false,
       path: 'blockchain_need_help.json'
     })
-    bodymovin.loadAnimation({
+    let cartesiImgAnimation = bodymovin.loadAnimation({
       container: document.getElementById('cartesi__feat-img__image'),
       rederer: 'svg',
       loop: true,
-      autoplay: true,
+      autoplay: false,
       path: 'we_solve_all_these_problems.json'
     })
 
+    $(window).on('scroll load', function(event) {
+      // if ($('#hero__logo').visible(true) && !$('#hero__logo').hasClass('loop')) {
+      //     $('#hero__logo').addClass('loop')
+      //     heroLogoAnimation.goToAndPlay(1, true)
+      // }
+      if ($('#realities__img').visible(true) && !$('#realities__img').hasClass('loop')) {
+        $('#realities__img').addClass('loop')
+        realitiesImgAnimation.goToAndPlay(1, true)
+        realitiesImgAnimation.setSpeed(1)
+      }
+      if ($('#cartesi__feat-img__image').visible(true) && !$('#cartesi__feat-img__image').hasClass('loop')) {
+        $('#cartesi__feat-img__image').addClass('loop')
+        cartesiImgAnimation.goToAndPlay(1, true)
+      }
+    });
 
     /**
      * Open/Close menu on mobile devices

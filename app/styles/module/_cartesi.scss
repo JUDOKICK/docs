@@ -71,7 +71,7 @@
 
       &__reverse {
         margin-bottom: 35px;
-        margin-top: 35px;
+        margin-top: 0;
         font-family: 'Rubik Light';
         font-size: 20px;
         padding: 15px 20px;
@@ -83,6 +83,11 @@
         color: $white;
         border: 2px solid $white;
         background-color: $black;
+
+        @media (min-width: 768px) {
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
 
         &:hover {
           background-color: $white;
