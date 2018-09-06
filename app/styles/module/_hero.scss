@@ -8,46 +8,19 @@
   box-sizing: border-box;
 
   @media (min-width: 992px) {
-    padding-top: 150px;
+    padding-top: 130px;
   }
 
   &__logo {
     width: 309px;
-    max-width: 50%;
+    max-width: 60%;
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
-    // #poly1 {
-    //   stroke-dasharray: 100;
-    //   stroke-dashoffset: 100;
-    //   animation: dash 5s linear alternate infinite;
-    // }
-
-    // #line1 {
-    //   stroke-dasharray: 100;
-    //   stroke-dashoffset: 100;
-    //   animation: dash 5s linear alternate infinite;
-    // }
-  }
-
-  &__logo--mobile {
-    display: block;
-  }
-
-  &__logo--desktop {
-    display: none;
-  }
-
-  @media (min-width: 992px) {
-    .hero__logo--mobile {
-      display: none;
-    }
-
-    .hero__logo--desktop {
-      display: block;
+    @media (min-width: 768px) {
+      max-width: 50%;
     }
   }
 
