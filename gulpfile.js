@@ -5,11 +5,26 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const s3 = require( "gulp-s3-deploy" );
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 let dev = true;
+
+var s3Credentials = {
+  "key":    process.env.AWS_ACCESS_KEY_ID,
+  "secret": process.env.AWS_SECRET_ACCESS_KEY,
+  "bucket": process.env.AWS_S3_BUCKET,
+  "region": process.env.AWS_REGION
+
+};
+
+gulp.task('deploy', () => {
+  console.log(process.env.AWS_S3_BUCKET);
+  gulp.src( './dist/**' )
+    .pipe( s3( s3Credentials ) );
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
