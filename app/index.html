@@ -58,7 +58,7 @@
             <ul class="nav__menu">
               <li class="nav__menu__item"><a href="#cartesi" class="smooth-scroll">Why Cartesi</a></li>
               <li class="nav__menu__item"><a href="#team" class="smooth-scroll">Team</a></li>
-             <!-- <li class="nav__menu__item"><a href="#roadmap" class="smooth-scroll">Roadmap</a></li> -->
+              <li class="nav__menu__item"><a href="#roadmap" class="smooth-scroll">Roadmap</a></li>
               <ul class="nav__menu__item--social-mobile">
                 <li><a href="https://www.twitter.com/cartesiproject" target="_blank"><i class="icon icon-twitter-reverse"></i></a></li>
                 <li><a href="https://www.medium.com/cartesi" target="_blank"><i class="icon icon-medium-reverse"></i></a></li>
@@ -1321,6 +1321,88 @@
           </div>
         </section>
 
+        <section id="roadmap" class="roadmap">
+          <div class="container">
+            <h1 class="title roadmap__title">The Road to Cartesi</h1>
+
+            <div id="phase-1" class="roadmap__phase animated" animated="animation-custom">
+              <img src="images/roadmap-phase-1.svg" width="83" height="50" alt="Phase One" class="roadmap__phase__img">
+              <h4 class="roadmap__phase__number">Phase 1</h4>
+              <h2 class="roadmap__phase__title">Reproducibility</h2>
+
+              <div class="roadmap__phase__text">
+                <h3>MVP</h3>
+                <p>State of the art deterministic VM.
+                  The blockchain specifies computations that run
+                  off-chain on a Reproducible Linux OS.
+                </p>
+              </div>
+            </div>
+
+            <div id="phase-2" class="roadmap__phase animated" animated="animation-custom">
+              <img src="images/roadmap-phase-2.svg" width="178" height="64" alt="Phase One" class="roadmap__phase__img">
+              <h4 class="roadmap__phase__number">Phase 2</h4>
+              <h2 class="roadmap__phase__title">Verifiability</h2>
+
+              <div class="roadmap__phase__text">
+                <h3>Cartesi Core</h3>
+                <p>Complex computations are adjudicated for correctness 
+                  on the blockchain at negligible cost, in a safe and 
+                  decentralized way.
+                </p>
+              </div>
+
+              <!--div class="roadmap__phase__text">
+                <h3>Data Ledger</h3>
+                <p>Cartesi will create its own “Data Ledger,” a highly specialized
+                  sidechain based on Proof of Stake to ensure availability of
+                  medium-sized data and avoid withholding attacks.</p>
+              </div -->
+            </div>
+
+            <div id="phase-3" class="roadmap__phase animated" animated="animation-custom">
+              <img src="images/roadmap-phase-3.svg" width="178" height="112" alt="Phase One" class="roadmap__phase__img">
+              <h4 class="roadmap__phase__number">Phase 3</h4>
+              <h2 class="roadmap__phase__title">Infrastructure</h2>
+
+              <div class="roadmap__phase__text">
+                <h3>SDK</h3>
+                <p>Cartesi will have its own packaged protocol and open source 
+                  SDK for the world to use. Create your own decentralized applications
+                  without knowledge of blockchain languages and deploy
+                  them to the growing network of Cartesi Nodes.
+                </p>
+              </div>
+
+              <div class="roadmap__phase__text">
+                <h3>Network</h3>
+                <p>The Cartesi Network will overcome basic challenges in the 
+                  adoption of blockchain technology: usability and scalability.
+                  The Network will be comprised of Cartesi Workers selected 
+                  according to a PoS protocol that run computations and 
+                  resolve disputes on behalf of users. 
+                </p>
+              </div>
+
+<!--
+              <div class="roadmap__phase__text">
+                <h3>Verified Networking</h3>
+                <p>Cartesi will be able to verify computations even in the 
+                  presence of external communications as a result of verified 
+                  networking. This will enable a vast new range of applications 
+                  able to be deployed on the network.</p>
+              </div>
+              <div class="roadmap__phase__text">
+                <h3>Android Support</h3>
+                <p>Cartesi will have the goal of supporting all types of Android
+                  platforms, allowing the world to lend its idle computer power.</p>
+              </div>
+-->
+            </div>
+          </div>
+        </section>
+
+
         <section id="team" class="team">
           <div class="container">
             <h1 class="title team__title">The Cartesi Team</h1>
@@ -1504,7 +1586,7 @@
           <div class="container">
             <div class="partner">
               <a href="https://fbg.capital" class="partner__link" target="_blank">
-                <img src="images/fbg.png" alt="FBG Capital" class="partner__logo">
+                <img src="images/fbg.png" width="220px" alt="FBG Capital" class="partner__logo">
               </a>
             </div>
           <div class="container">
@@ -1525,12 +1607,12 @@
             </div>
             <div class="partner">
               <a href="https://www.wings.ai/" class="partner__link" target="_blank">
-                <img src="images/wings.png" alt="Wings" class="partner__logo">
+                <img src="images/wings.png" style="width:60%; height:60%" alt="Wings" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="https://entethalliance.org/" class="partner__link" target="_blank">
-                <img src="images/EEA.jpg" alt="EEA" class="partner__logo">
+                <img src="images/EEA.jpg" style="width:70%; height:70%"  alt="EEA" class="partner__logo">
               </a>
             </div>
             <div class="partner">
@@ -1555,7 +1637,7 @@
             </div>
             <div class="partner">
              <a href="http://www.bigbangangels.com/" class="partner__link" target="_blank">
-               <img src="images/BBA.png" style="width:50%; height:50%" alt="Big Bang Angels" class="partner__logo">
+               <img src="images/BBA.png" style="width:65%; height:65%" alt="Big Bang Angels" class="partner__logo">
              </a>
             </div>
           </div>
@@ -1582,12 +1664,12 @@
             <li><a href="#partners" class="smooth-scroll">Partners & Supporters</a></li>
           </ul>
 
-         ## <ul class="footer__menu">
-         ##   <li><span>Roadmap</span></li>
-         ##   <li><a href="#phase-1" class="smooth-scroll">Phase 1: Hajime</a></li>
-         ##  <li><a href="#phase-2" class="smooth-scroll">Phase 2: Kaizen</a></li>
-         ##   <li><a href="#phase-3" class="smooth-scroll">Phase 3: Satori</a></li>
-         ## </ul>
+          <ul class="footer__menu">
+            <li><span>Roadmap</span></li>
+            <li><a href="#phase-1" class="smooth-scroll">Phase 1: Reproducibility</a></li>
+           <li><a href="#phase-2" class="smooth-scroll">Phase 2: Verifiability </a></li>
+            <li><a href="#phase-3" class="smooth-scroll">Phase 3: Infrastructure</a></li>
+          </ul>
 
           <ul class="footer__menu footer__menu--social">
             <li><span>Stay in touch:</span></li>
