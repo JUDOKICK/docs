@@ -165,14 +165,14 @@
       rederer: 'svg',
       loop: true,
       autoplay: false,
-      path: '/blockchain_need_help.json'
+      path: 'blockchain_need_help.json'
     })
     let cartesiImgAnimation = bodymovin.loadAnimation({
       container: document.getElementById('cartesi__feat-img__image'),
       rederer: 'svg',
       loop: true,
       autoplay: false,
-      path: '/we_solve_all_these_problems.json'
+      path: 'we_solve_all_these_problems.json'
     })
 
     $(window).on('scroll load', function(event) {
