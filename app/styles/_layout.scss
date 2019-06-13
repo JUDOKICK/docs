@@ -115,6 +115,12 @@ body{
   }
 }
 
+@media (min-width: 992px) {
+  #nav__menu__language {
+    display: none
+  }
+}
+
 .nav {
   width: 45%;
   display: flex;
