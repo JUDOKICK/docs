@@ -9,16 +9,6 @@
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PHW7RLZ');
-
-      function myFunction() {
-        var x = document.getElementById("language_select").value;
-        console.log("You selected: " + x)
-        if(x === "ch") {
-          window.location = window.location.origin + '/ch'
-        } else if(x === "en") {
-          window.location = window.location.origin
-        }
-      }
     </script>
 
     <!-- End Google Tag Manager -->
@@ -88,18 +78,10 @@
             <li class="header__social__link"><a href="https://t.me/cartesiproject" target="_blank"><i class="icon icon-telegram"></i></a></li>
             <li class="header__social__link"><a href="https://www.reddit.com/r/cartesi" target="_blank"><i class="icon icon-reddit"></i></a></li>
             <li class="header__social__link"><a href="mailto:info@cartesi.io" target="_blank"><i class="icon icon-email"></i></a></li>
-            <!--
-            <li class="header__social__link">
-              <select id="language_select" onchange="myFunction()">
-                <option value="en">EN</option>
-                <option value="ch">CH</option>
-              </select>
-            </li>
-            -->
             <div class="dropdown">
               <button class="dropbtn">English  &#9660;</button>
               <div class="dropdown-content">
-              <a href="./ch" class="link_menu">中文</a>
+              <a href="./ch/index.html" class="link_menu">中文</a>
               </div>
             </div>
             

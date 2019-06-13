@@ -38,11 +38,11 @@
    */
   function languageRedirect(language) {
     var redirect_table = {
-      'zh'   : '/ch/',
-      'zh-hk': '/ch/',
-      'zh-cn': '/ch/',
-      'zh-sg': '/ch/',
-      'zh-tw': '/ch/',
+      'zh'   : '/ch/index.html',
+      'zh-hk': '/ch/index.html',
+      'zh-cn': '/ch/index.html',
+      'zh-sg': '/ch/index.html',
+      'zh-tw': '/ch/index.html',
       'en': '/',
       'en-au': '/',
       'en-bz': '/',
