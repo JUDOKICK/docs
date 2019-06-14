@@ -16,14 +16,14 @@
 
   &__group {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    position: relative;   
+    position: relative;
 
-    // @media (min-width: 992px) {
-    //   justify-content: center;
-    // }
+    @media (min-width: 992px) {
+      justify-content: center;
+    }
 
     &:before {
       left: 0;
@@ -95,28 +95,36 @@
 
     .team__member {
       //@include clearfix();
-      width: 100%;
-      align-items: center;
       display: flex;
+      align-items: center;
       justify-content: flex-start;
+      width: 200%;
 
       @media (min-width: 992px) {
-        width: 37%;
         justify-content: center;
+        flex-direction: column;
+        width: 37%;
       }
 
       &__avatar {
         margin-right: 15px;
+
+        @media (min-width: 992px) {
+          margin-right: auto;
+          margin-left: auto;
+        }
       }
 
       &__name {
         display: block;
+        margin-top: 15px;
         margin-bottom: 5px;
       }
 
       &__role {
         display: block;
         color: $grey;
+        margin-bottom: 5px;
       }
 
       &__company {
@@ -126,6 +134,13 @@
         font-weight: lighter;
         letter-spacing: 0.5px;
         font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      &__data {
+        @media (min-width: 992px) {
+          text-align: center;
+        }
       }
     }
   }
