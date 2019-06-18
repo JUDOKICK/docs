@@ -510,3 +510,58 @@ body{
     }
   }
 }
+
+@media (min-width: 1400px) {
+  .small-paragraph-features {
+    display: none;
+  }
+  .big-paragraph-features {
+    display: block;
+  }
+}
+
+@media (max-width: 1400px) {
+  .small-paragraph-features {
+    display: block;
+    max-width: 500px;
+  }
+  .big-paragraph-features {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .small-paragraph-how-to {
+    display: none;
+  }
+  .big-paragraph-how-to {
+    display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .small-paragraph-how-to {
+    display: block;
+  }
+  .big-paragraph-how-to {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .small-paragraph-roadmap {
+    display: none;
+  }
+  .big-paragraph-roadmap {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .small-paragraph-roadmap {
+    display: block;
+  }
+  .big-paragraph-roadmap {
+    display: none;
+  }
+}
