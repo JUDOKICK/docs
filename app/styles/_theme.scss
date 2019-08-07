@@ -26,6 +26,18 @@ $grey: #808285;
   height: 18px;
 }
 
+.icon-github {
+  background-image: url(../images/icon-github.jpg);
+  width: 25px;
+  height: 19px;
+}
+
+.icon-discord {
+  background-image: url(../images/icon-discord.png);
+  width: 25px;
+  height: 19px;
+}
+
 .icon-twitter {
   background-image: url(../images/icon-twitter.png);
   width: 25px;
@@ -67,6 +79,18 @@ $grey: #808285;
   background-image: url(../images/icon-linkedin.png);
   width: 26px;
   height: 24px;
+}
+
+.icon-github-reverse {
+  background-image: url(../images/icon-discord-reverse.svg);
+  width: 25px;
+  height: 19px;
+}
+
+.icon-discord-reverse {
+  background-image: url(../images/icon-discord-reverse.png);
+  width: 25px;
+  height: 19px;
 }
 
 .icon-twitter-reverse {
