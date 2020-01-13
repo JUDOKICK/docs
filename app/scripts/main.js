@@ -221,6 +221,70 @@
         }
       });
     }
+    // $('.partners__slide').slick();
+    $('.partners__slide').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      // centerMode: true,
+      // variableWidth: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    
+    // FAQ
+    // $('h2.faq__accordion').click(function(){
+    //   $(this).toggleClass('down').parent().find('div.faq__accordion').stop().slideToggle();
+    // });
+
+    // $('div.faq__accordion').hide();
+    // $('h2.faq__accordion').click(function(){
+    //     $('div.faq__accordion').not(':hidden').stop().slideToggle();
+    //     $(this).toggleClass('down').next().stop().slideToggle();
+    // });
+
+    $('.accordion').each(function () {
+	    var $accordian = $(this);
+	    $accordian.find('.accordion-head').on('click', function () {
+            $(this).parent().find('.accordion-head').removeClass('open close');
+            $(this).removeClass('open').addClass('close');
+	        $accordian.find('.accordion-body').slideUp();
+	        if (!$(this).next().is(':visible')) {
+                $(this).removeClass('close').addClass('open');
+	            $(this).next().slideDown();
+	        }
+	    });
+	});
 
   });
 })(jQuery)

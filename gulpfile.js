@@ -27,7 +27,7 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('app/common/styles/**/*.scss')
+  return gulp.src('app/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
@@ -77,14 +77,14 @@ gulp.task('html', ['styles', 'scripts'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/common/images/**/*')
+  return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/common/fonts/**/*'))
+    .concat('app/fonts/**/*'))
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
 });
 
@@ -114,14 +114,14 @@ gulp.task('serve', () => {
 
     gulp.watch([
       'app/*.html',
-      'app/common/images/**/*',
+      'app/images/**/*',
       'app/ch/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/common/styles/**/*.scss', ['styles']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/common/fonts/**/*', ['fonts']);
+    gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
 });
@@ -157,12 +157,12 @@ gulp.task('serve:test', ['scripts'], () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
-  gulp.src('app/common/styles/*.scss')
+  gulp.src('app/styles/*.scss')
     .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
     }))
-    .pipe(gulp.dest('app/common/styles'));
+    .pipe(gulp.dest('app/styles'));
 
   gulp.src('app/*.html')
     .pipe(wiredep({
