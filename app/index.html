@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
-    <!-- <script src="/bower_components/modernizr/modernizr.js"></script> -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
   <body>
@@ -51,7 +51,7 @@
       <header id="header" class="header">
         <div class="container">
           <a href="https://cartesi.io" class="header__logo" role="img">cartesi</a>
-          <nav id="nav" class="nav" style="width: 35%">
+          <nav id="nav" class="nav">
             <a href="#" class="nav__button__menu" role="button">
               <i class="bar"></i>
               <i class="bar"></i>
@@ -62,11 +62,11 @@
               <li class="nav__menu__item"><a href="#team" class="smooth-scroll">Team</a></li>
               <!-- <li class="nav__menu__item"><a href="#roadmap" class="smooth-scroll">Roadmap</a></li> -->
               <li class="nav__menu__item"><a href="#blog" class="smooth-scroll">BLog</a></li>
-              <li class="nav__menu__item"><a href="#faq" class="smooth-scroll">FAQ</a></li>
+              <li class="nav__menu__item"><a href="faq.html">FAQ</a></li>
               <!-- <li class="nav__menu__item"><a href="" style="border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0">LIGHTPAPER</a></li>
               <li class="nav__menu__item"><a href="" style="border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0">Dapps</a></li> -->
               <li class="nav__menu__item"><a href="index_zh.html" id="nav__menu__language">中文</a></li>
-              <!-- <ul class="nav__menu__item--social-mobile">
+              <ul class="nav__menu__item--social-mobile">
                 <li><a href="https://www.github.com/cartesi" target="_blank"><i class="icon icon-github-reverse"></i></a></li>
                 <li><a href="https://discord.gg/Pt2NrnS" target="_blank"><i class="icon icon-discord-reverse"></i></a></li>
                 <li><a href="https://www.twitter.com/cartesiproject" target="_blank"><i class="icon icon-twitter-reverse"></i></a></li>
@@ -75,13 +75,14 @@
                 <li><a href="https://t.me/cartesiproject" target="_blank"><i class="icon icon-telegram-reverse"></i></a></li>
                 <li><a href="https://www.reddit.com/r/cartesi" target="_blank"><i class="icon icon-reddit"></i></a></li>
                 <li><a href="mailto:info@cartesi.io" target="_blank"><i class="icon icon-email"></i></a></li>
-              </ul> -->
+              </ul>
             </ul>
           </nav>
-          <nav id="nav" class="nav" style="width: 20%">
+          <nav id="nav" class="nav nav-sec">
             <ul class="nav__menu">
-              <li class="nav__menu__item"><a href="" style="border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0 1rem">LIGHTPAPER</a></li>
-              <li class="nav__menu__item"><a href="" style="border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0 1rem">Dapps</a></li>
+              <li class="nav__menu__item"><a href="" class="nav__menu__btn">WHITEPAPER</a></li>
+              <li class="nav__menu__item"><a href="" class="nav__menu__btn">LIGHTPAPER</a></li>              
+              <!-- <li class="nav__menu__item"><a href="" class="nav__menu__btn">Dapps</a></li> -->
             </ul>
           </nav>
           <ul class="header__social">
@@ -113,7 +114,7 @@
             <source src="logo.mp4" type="video/mp4">
             <source src="logo.webm" type="video/webm">
           </video> -->
-          <p class="hero__text">Cartesi brings real world computations to the blockchain.</p>
+          <p class="hero__text">A Linux Infrastructure for Scalable DApps.</p>
 
           <!-- MailerLite Universal -->
           <div class="ml-form-embed"
@@ -122,7 +123,7 @@
           </div>
           <!-- End MailerLite Universal -->
 
-          <div class="cartesi__action" style="margin-top: 3rem">
+          <div class="cartesi__action">
 
             <!-- <a href="cartesi_whitepaper.pdf" download class="cartesi__action__button__reverse" animated="fadeInLeft">Download Whitepaper</a> -->
             <a data-fancybox href="https://www.youtube.com/embed/tYBfDe-14hE?rel=0&amp;controls=0&amp;showinfo=0" class="hero__button">
@@ -420,6 +421,26 @@
 
           </div>
         </section>
+
+        <!-- <section style="background: url('images/creepts.png') repeat-x center 0; text-align: center;">
+          <img src="images/creepts.png">
+        </section> -->
+        <!-- <section id="creepts" class="creepts">
+          <div class="container">            
+            <div class="creepts__content">
+              <div class="row">
+                <div class="creepts__info col">
+                  <h1 class="creepts__logo">
+                    <img src="images/logo-creepts.svg" alt="">
+                  </h1>
+                </div>
+                <div class="creepts__image col animated" animated="fadeInLeft">
+                  <img src="images/creepts-cel.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
 
         <section id="cartesi" class="cartesi">
           <div class="container">
@@ -1197,6 +1218,18 @@
 
             <div class="features__list">
               <div class="features__list__item animated" animated="fadeInUp">
+                <h4>A Real OS. Intensive Computation.</h4>
+                <p>Cartesi offers a Linux runtime environment for blockchain DApps. Complex computations run off-chain while retaining the strong security guarantees of the underlying blockchain.</p>
+              </div>
+              <div class="features__list__item animated" animated="fadeInUp">
+                <h4>Guaranteed Consensus.</h4>
+                <p>Computations can be verified by all parties involved in the App. Disputes are settled automatically by Cartesi. This requires negligible computation inside the blockchain, regardless of the size of the external computation.</p>
+              </div>
+              <div class="features__list__item animated" animated="fadeInUp">
+                <h4>Ease of Development and Portability.</h4>
+                <p>With Cartesi, developers use familiar and powerful software components supported by Linux to create their DApps. They are free from the hassle of limited domain-specific blockchain environments. Mainstream developers can fully express themselves building Apps with the software stacks they are already familiar with. Cartesi DApps will be portable across the most relevant blockchains, so developers won’t need to worry about the longevity of specific blockchain projects.</p>
+              </div>
+              <!-- <div class="features__list__item animated" animated="fadeInUp">
                 <h4>Real world computations
                   meet the blockchain.</h4>
                 <p>Intensive computations require a realistic platform.
@@ -1221,13 +1254,13 @@
                   involved parties. Disputes are settled automatically by Cartesi.
                   This requires negligible computation inside the blockchain,
                   regardless of the size of the external computation.</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
 
         <section id="how-to" class="how-to">
-          <h1 class="title how-to__title">How Cartesi Can Help Change the World</h1>
+          <h1 class="title how-to__title">A Decentralized Internet Powered by Cartesi</h1>
 
           <nav id="how-to__tabnav" class="how-to__tabnav">
             <a href="#how-to__science" class="how-to__tabnav__item active">
@@ -1254,12 +1287,7 @@
                 <img src="images/icon-science-mobile.svg" class="mobile" alt="Science">
                 <div class="how-to__tabcontent__item__text">
                   <h4>Discovering the Unknown.</h4>
-                  <p>Outsourced computation will allow for millions of
-                    users to lend their idle computing power. This will
-                    benefit scientific research, 3d rendering, video
-                    transcoding, and many other computationally intensive 
-                    tasks in a totally trustless way, without reputation 
-                    systems.</p>
+                  <p>Outsourced computation will allow for millions of users to lend their idle computing power. This will benefit scientific research, 3d rendering, video transcoding, and many other computationally intensive tasks in a totally trustless way, without reputation systems.</p>
                 </div>
               </div>
             </div>
@@ -1269,12 +1297,7 @@
                 <img src="images/icon-logistics-mobile.svg" class="mobile" alt="Logistics">
                 <div class="how-to__tabcontent__item__text">
                   <h4>Decentralized Data Science</h4>
-                  <p>Cartesi's verifiable computation paves the way for decentralized
-                    data scientist marketplaces. Businesses can outsource optimization
-                    tasks to experts whose jobs will be compensated if and only if they 
-                    are computationally proven to be correct. Imagine optimizing the use
-                    of transport based on packages to deliver, their sizes and where they 
-                    have to go.</p>
+                  <p>Cartesi's verifiable computation paves the way for decentralized data scientist marketplaces. Businesses can outsource optimization tasks to experts whose jobs will be compensated if and only if they are computationally proven to be correct.</p>
                 </div>
               </div>
             </div>
@@ -1284,11 +1307,7 @@
                 <img src="images/icon-finance-mobile.svg" class="mobile" alt="Finance">
                 <div class="how-to__tabcontent__item__text">
                   <h4>Finance. The Next Level.</h4>
-                  <p>Cartesi applications will be able to read 
-                    and do complex calculus involving data from 
-                    multiple blockchains. This will enable 
-                    interoperability between blockchains and 
-                    services such as futures and insurance markets.</p>
+                  <p>Cartesi applications will be able to read and do complex calculations involving data from multiple blockchains and external sources. This will help interoperability between blockchains and services such as futures and insurance markets.</p>
                 </div>
               </div>
             </div>
@@ -1298,16 +1317,7 @@
                 <img src="images/icon-software-mobile.svg" class="mobile" alt="Science">
                 <div class="how-to__tabcontent__item__text">
                   <h4>Efficient AI, by AI.</h4>
-                  <p>A trustless marketplace for AI and computational
-                    tasks. With the power of Cartesi’s decentralized
-                    automated verification, developers will be
-                    able to create services that allow new
-                    DApps to outsource and distribute work.
-                    These include machine learning, data analysis,
-                    or computationally intensive tasks that require
-                    experts in the field. This opens new possibilities
-                    for lower cost AI, developed by outsourced
-                    experts and bots.</p>
+                  <p>A trustless marketplace for AI and computational tasks. With the power of Cartesi’s decentralized automated verification, developers will be able to create services that allow new DApps to outsource and distribute work. This opens new possibilities for lower cost AI, developed by outsourced experts and bots.</p>
                 </div>
               </div>
             </div>
@@ -1317,20 +1327,14 @@
                 <img src="images/icon-gaming-mobile.svg" class="mobile" alt="Gaming">
                 <div class="how-to__tabcontent__item__text">
                   <h4>Truly Own Your Game.</h4>
-                  <p>Cartesi will unleash vast new possibilities for 
-                    blockchain games. Developers will be able to use
-                    the tools, libraries, and engines that can be
-                    compiled for Linux. Additionally, game processing
-                    will be free from the limits of blockchains without
-                    the need to sacrifice decentralization. Envision
-                    trustless global participation across multiple games.</p>
+                  <p>Cartesi will unleash vast new possibilities for blockchain games. Developers will be able to use the tools, libraries that can be compiled for Linux. Additionally, game state processing will be free from the computational limits of blockchains without the need to sacrifice decentralization.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="roadmap" class="roadmap">
+        <!--<section id="roadmap" class="roadmap">
           <div class="container">
             <h1 class="title roadmap__title">The Road to Cartesi</h1>
 
@@ -1361,12 +1365,12 @@
                 </p>
               </div>
 
-              <!--div class="roadmap__phase__text">
+              <div class="roadmap__phase__text">
                 <h3>Data Ledger</h3>
                 <p>Cartesi will create its own “Data Ledger,” a highly specialized
                   sidechain based on Proof of Stake to ensure availability of
                   medium-sized data and avoid withholding attacks.</p>
-              </div -->
+                </div>
             </div>
 
             <div id="phase-3" class="roadmap__phase animated" animated="animation-custom">
@@ -1383,7 +1387,6 @@
                 </p>
               </div>
 
-<!--
               <div class="roadmap__phase__text">
                 <h3>Network</h3>
                 <p>The Cartesi Network will overcome basic challenges in the 
@@ -1406,11 +1409,32 @@
                 <p>Cartesi will have the goal of supporting all types of Android
                   platforms, allowing the world to lend its idle computer power.</p>
               </div>
--->
             </div>
           </div>
-        </section>
+        </section>-->
 
+        <section id="timeline" class="timeline">
+          <div class="container">
+            <h1 class="title roadmap__title timeline__title">What We’re Achieving</h1>
+          </div>
+          <div class="timeline__content">
+            <img src="images/timeline.svg">
+          </div>
+          <h3 class="timeline__obs"> Swipe > </h3>
+          <!-- <ul>
+            <li><span class="timeline__title">Research<br> Started</span> <span class="papers4"></span> <span class="timeline__date">July <span>2017</span></span></li>
+            <li><span class="timeline__date">July <span>2017</span></span> <span class="papers4"></span> <span class="timeline__title">Research<br> Started</span></li>
+          </ul>
+          Research Started July 2017
+          Cartesi Core's Whitepaper July 2018
+          Achieved Reproducibility of Computation —  Prototype with working demo December 2018
+          Achieved Verifiability of Computation — Prototype with interactive dispute resolution on the blockchain Q2
+          Cartesi Core released as open-source Q3
+          Decentralized Tournament Infrastructure Q4
+          Cartesi SDK — installation tools, documentation, tutorial. Q1 2020
+          Cartesi Network on Testnet Q2 2020
+          Cartesi Network and Mine on Mainnet 2020 -->
+        </section>
 
         <section id="team" class="team">
           <div class="container">
@@ -1429,7 +1453,7 @@
               <div class="team__member">
                 <img src="images/augusto-teixeira-phd.png" alt="Augusto Teixeira, PhD" class="team__member__avatar">
                 <div class="team__member__data">
-                  <a href="http://w3.impa.br/~augusto/" target="_blank" style="text-decoration: inherit;">
+                  <a href="https://www.linkedin.com/in/augusto-teixeira-39a3a8169/" target="_blank" style="text-decoration: inherit;">
                     <span class="team__member__name">Augusto Teixeira, PhD</span>
                   </a>
                   <span class="team__member__role">Chief Scientific Officer</span>
@@ -1453,7 +1477,7 @@
                   <span class="team__member__role">Chief Operating Officer</span>
                 </div>
               </div>
-              <div class="team__member">
+              <!-- <div class="team__member">
 
                 <img src="images/marco-mirabella.png" alt="Marco Mirabella" class="team__member__avatar">
                 <div class="team__member__data">
@@ -1462,7 +1486,7 @@
                 </a>
                   <span class="team__member__role">Chief Business Development Officer</span>
                 </div>
-              </div>
+              </div> -->
 
               <div class="team__member">
                 <img src="images/danilo-tuler.png" alt="Danilo Tuler" class="team__member__avatar">
@@ -1534,7 +1558,7 @@
               <div class="team__member">
                 <img src="images/serguei-popov-phd.png" alt="Serguei Popov, PhD" class="team__member__avatar">
                 <div class="team__member__data">
-                  <a href="http://www.ime.unicamp.br/~popov/" target="_blank" style="text-decoration: inherit;">
+                  <a href="https://www.linkedin.com/in/serguei-popov-631bb762/" target="_blank" style="text-decoration: inherit;">
                     <span class="team__member__name">Serguei Popov, PhD</span>
                   </a>
                   <span class="team__member__role">Senior Advisor</span>
@@ -1554,7 +1578,7 @@
               <div class="team__member">
                 <img src="images/luiz-henrique-de-figueiredo-phd.png" alt="Luiz Henrique de Figueiredo, PhD" class="team__member__avatar">
                 <div class="team__member__data">
-                  <a href="http://lhf.impa.br/" target="_blank" style="text-decoration: inherit;">
+                  <a href="https://www.linkedin.com/in/luiz-henrique-de-figueiredo-b2458313/" target="_blank" style="text-decoration: inherit;">
                   <span class="team__member__name">Luiz Henrique de Figueiredo, PhD</span>
                 </a>
                   <span class="team__member__company">Co-creator of Lua<br>programming language</span>
@@ -1595,9 +1619,33 @@
           </div>
         </section>
 
+        <section id="blog" class="blog">
+          <div class="blog__container">
+            <h1 class="title roadmap__title">Stay up to date</h1>
+            <div id="retainable-rss-embed" 
+            data-rss="https://medium.com/feed/cartesi,
+            https://medium.com/feed/cartesi"
+            data-maxcols="3" 
+            data-layout="grid" 
+            data-poststyle="inline" 
+            data-readmore="Read the rest" 
+            data-buttonclass="btn btn-primary" 
+            data-offset="-100"></div>
+            <!-- <ul class="blog__slider">
+              Posts go here
+            </ul>
+            <ul class="blog__counter">
+              <li class="blog__counterItem blog__counterItem-active"></li>
+              <li class="blog__counterItem"></li>
+              <li class="blog__counterItem"></li>
+            </ul> -->
+            <p class="view-link"><a href="https://medium.com/cartesi" target="_blank">View all articles</a></p>
+          </div>
+        </section>
+
         <section id="partners" class="partners">
           <h1 class="title partners__title">Partners & Supporters</h1>
-          <div class="container">
+          <div class="partners__slide container">
             <div class="partner">
               <a href="https://fbg.capital" class="partner__link" target="_blank">
                 <img src="images/fbg.png" width="220px" alt="FBG Capital" class="partner__logo">
@@ -1608,7 +1656,6 @@
                 <img src="images/ldcap.png" width="220px" alt="LD Capital" class="partner__logo">
               </a>
             </div>
-          <div class="container">
             <div class="partner">
               <a href="https://sosv.com/" class="partner__link" target="_blank">
                 <img src="images/sosv.png" alt="SOSV The Accelerator VC" class="partner__logo">
@@ -1621,42 +1668,47 @@
             </div>
             <div class="partner">
               <a href="https://www.artesianinvest.com/" class="partner__link" target="_blank">
-                <img src="images/artesian.jpg" alt="Artesian" class="partner__logo">
+                <img src="images/artesian.png" alt="Artesian" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="https://www.wings.ai/" class="partner__link" target="_blank">
-                <img src="images/wings.png" style="width:60%; height:60%" alt="Wings" class="partner__logo">
+                <img src="images/wings.png" alt="Wings" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="https://entethalliance.org/" class="partner__link" target="_blank">
-                <img src="images/EEA.jpg" style="width:70%; height:70%"  alt="EEA" class="partner__logo">
+                <img src="images/EEA.png" alt="EEA" class="partner__logo">
               </a>
             </div>
-            <div class="partner">
+            <!-- <div class="partner">
               <a href="https://biilabs.io" class="partner__link" target="_blank">
                 <img src="images/biilabs.png" alt="BiiLabs.io" class="partner__logo">
               </a>
-            </div>
+            </div> -->
             <div class="partner">
               <a href="http://acrossasia.org/about/" class="partner__link" target="_blank">
-                <img src="images/AAA_3.png" style="width:50%; height:50%" alt="Across Asia Alliance" class="partner__logo">
+                <img src="images/AAA_3.png" alt="Across Asia Alliance" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="http://crm.taiwanarena.tech/" class="partner__link" target="_blank">
-                <img src="images/TTA.png" style="width:50%; height:50%" alt="Taiwan Tech Arena" class="partner__logo">
+                <img src="images/TTA.png" alt="Taiwan Tech Arena" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="https://www.startupstadium.tw/" class="partner__link" target="_blank">
-                <img src="images/TSS.png" style="width:50%; height:50%" alt="Taiwan Startup Stadium" class="partner__logo">
+                <img src="images/TSS.png" alt="Taiwan Startup Stadium" class="partner__logo">
               </a>
             </div>
             <div class="partner">
              <a href="http://www.bigbangangels.com/" class="partner__link" target="_blank">
-               <img src="images/BBA.png" style="width:65%; height:65%" alt="Big Bang Angels" class="partner__logo">
+               <img src="images/BBA.png" alt="Big Bang Angels" class="partner__logo">
+             </a>
+            </div>
+            <div class="partner">
+             <a href="http://www.snz.com/" class="partner__link" target="_blank">
+               <img src="images/snz.png" alt="SNZ" class="partner__logo">
              </a>
             </div>
           </div>
@@ -1673,6 +1725,8 @@
             <li><a href="cartesi_whitepaper.pdf" download>Whitepaper</a></li>
             <li><a href="#cartesi__feat-img" class="smooth-scroll">How it works</a></li>
             <li><a href="#how-to" class="smooth-scroll">Industries</a></li>
+            <li><a href="#blog" class="smooth-scroll">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <!--li><a href="#" class="smooth-scroll">In the news</a></li-->
           </ul>
 
@@ -1717,14 +1771,14 @@
         <div class="footer__copyright">All rights reserved © 2019 Cartesi Foundation Ltd.</div>
       </footer>
     </main>
-    <!-- <script 
+    <!--<script 
       type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" 
       data-dojo-config="usePlainJson: true, isDebug: false">
-    </script> -->
+    </script>
     <script 
       type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], 
       function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"94ef27be08e7ea90f1b881b92","lid":"dc57e9ab38","uniqueMethods":true}) })
-    </script>
+    </script>-->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -1752,17 +1806,19 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
+    <!-- Medium redered -->
+    <script src="scripts/medium-rss-embed.js"></script>
+
     <!-- MailerLite Universal -->
     <script>
-    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-    var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-    var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-    _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-    var ml_account = ml('accounts', '1797592', 'x4y1u5u9w3', 'load');
-    </script>
-    <!-- End MailerLite Universal -->
-
+      (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+      var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+      f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+      var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+      _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+  
+      var ml_account = ml('accounts', '1797592', 'x4y1u5u9w3', 'load');
+      </script>
+      <!-- End MailerLite Universal -->
   </body>
 </html>
