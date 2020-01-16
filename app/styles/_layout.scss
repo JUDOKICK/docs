@@ -162,9 +162,9 @@ body{
 
       margin-top: 5px;
 
-      &__item:nth-child(3) a:after {
-        width: 180px;
-      }
+      // &__item:nth-child(3) a:after {
+      //   width: 180px;
+      // }
 
       &__item a:after {
         width: 100%;
@@ -325,6 +325,9 @@ body{
           font-size: 1.5rem;
           i.icon {
           }
+          @media (max-width: 575.98px) {
+            font-size: .59rem;
+          }
         }
       }
     }
@@ -425,6 +428,9 @@ body{
 
         &:hover {
           opacity: 0.8;
+        }
+        @media (max-width: 575.98px) {
+          font-size: .8rem;
         }
         @media only screen
         and (min-width : 992px)
