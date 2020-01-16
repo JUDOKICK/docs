@@ -313,6 +313,11 @@ body{
       align-items: center;
       justify-content: flex-start;
 
+      @media (max-width: 575.98px) {
+        flex-wrap: wrap!important;
+        padding: 0 4rem 0 0;
+      }
+
       @media (min-width: 992px) {
         display: none;
       }
@@ -321,13 +326,13 @@ body{
         margin-right: 15px;
 
         a {
-          color: #000;
+          color: #000!important;
           font-size: 1.5rem;
           i.icon {
           }
-          @media (max-width: 575.98px) {
-            font-size: .59rem;
-          }
+          // @media (max-width: 575.98px) {
+          //   font-size: .59rem;
+          // }
         }
       }
     }
@@ -429,9 +434,9 @@ body{
         &:hover {
           opacity: 0.8;
         }
-        @media (max-width: 575.98px) {
-          font-size: .8rem;
-        }
+        // @media (max-width: 575.98px) {
+        //   font-size: .8rem;
+        // }
         @media only screen
         and (min-width : 992px)
         and (max-width : 1270px) {
