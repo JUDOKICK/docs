@@ -1212,18 +1212,11 @@ rect[width="1920"][fill="#ffffff"] {
 
 /*+-----------------------------------------------+*/
 
-@media (min-width: 992px){
-	// .nav {
-	//   width: 30%;
-	// }
-	// .nav-sec {
-	//   width: 20%;
-	// }
-}
-@media (max-width: 575.98px){
+
+@media (max-width: 990px){
 	.nav-sec {
 	  display: none;
-	}	
+	}
 }
 .nav__menu__btn {
   border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0 1rem!important; transition: all .3s ease-in-out;
@@ -1231,6 +1224,14 @@ rect[width="1920"][fill="#ffffff"] {
 .nav__menu__btn:hover {
   background: #fff;
   color: #000;
+}
+@media only screen
+and (min-width : 992px)
+and (max-width : 1220px) {
+	.nav__menu__btn {
+    font-size: 16px;
+    padding: .5rem;
+  }
 }
 
 .creepts {
@@ -1345,10 +1346,17 @@ rect[width="1920"][fill="#ffffff"] {
   background-color: lightblue;
 }
 .blog__container {
-  width: 70%;
+  width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
 }
+@media only screen
+  and (min-width : 768px)
+  and (max-width : 1270px) {
+    .blog__container {
+      width: 90%;
+    }
+  }
 @media (max-width: 575.98px){
   .blog__container {
     width: 100%;
@@ -1548,7 +1556,7 @@ div.faq__accordion { display: none; }
 }
 .accordion .accordion-head h4 {
   float: left;
-  width: 99%;
+  width: 90%;
 }
 .accordion .accordion-head span {
   font-family: Rubik Regular;
