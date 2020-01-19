@@ -1617,15 +1617,19 @@
         <section id="blog" class="blog">
           <div class="blog__container">
             <h1 class="title roadmap__title">Stay up to date</h1>
-            <div id="retainable-rss-embed" 
-            data-rss="https://medium.com/feed/cartesi,
-            https://medium.com/feed/cartesi"
+            <!-- <div id="retainable-rss-embed" 
+            data-rss="https://medium.com/feed/cartesi"
             data-maxcols="3" 
             data-layout="grid" 
             data-poststyle="inline" 
-            data-readmore="Read the rest" 
+            data-readmore="Read more" 
             data-buttonclass="btn btn-primary" 
-            data-offset="-100"></div>
+            data-offset="-100"></div> -->
+
+            <div id="medium-widget"></div>
+            <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+            <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/cartesi","postsPerLine":3,"limit":3,"picture":"big","fields":["description","author","publishAt"],"ratio":"original"}});</script>
+
             <!-- <ul class="blog__slider">
               Posts go here
             </ul>
@@ -1787,7 +1791,7 @@
     <script src="scripts/main.js"></script>
 
     <!-- Medium redered -->
-    <script src="scripts/medium-rss-embed.js"></script>
+    <!-- <script src="scripts/medium-rss-embed.js"></script> -->
 
     <!-- MailerLite Universal -->
     <script>
