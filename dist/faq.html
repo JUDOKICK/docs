@@ -331,7 +331,7 @@
               <div class="container">
                 <p>Cartesi is quite similar to TrueBit at first glance, but they differ vastly in their design decisions. The first major difference between TrueBit and Cartesi concerns the virtual machine itself; TrueBit’s virtual machine is based on WebAssembly (WASM). WASM is the W3C Community Group’s Instruction Set Architecture (ISA) for efficient web applications, while Cartesi’s virtual machine implements the RISC-V ISA.</p>
 
-                <p>TrueBit’s technology focuses on boosting the computational power for smart contracts, which operate under a bare-bones runtime environment. However, as we said earlier the applications that we use on the Web or our devices don't exist in isolation as they stand on an operating system and many software layers. Our architectural choice enables Cartesi computations to run on a proper operating system. In this environment, much more powerful decentralized applications can be developed</p> 
+                <p>TrueBit’s technology focuses on boosting the computational power for smart contracts, which operate under a bare-bones runtime environment. However, as we said earlier, the applications that we use on the Web or our devices don't exist in isolation. Instead, they stand on top of an operating system and depend on numerous software components that evolved throughout decades. Our architectural choice enables Cartesi computations to run on a proper operating system. In this environment, DApps are built with mainstream software stacks, which allows for vast new possibilities, besides being easier to code and with much lower entry barrier for professionals.</p> 
               </div>
             </div>
 
@@ -342,7 +342,10 @@
             </div>
             <div class="accordion-body cbg">
               <div class="container">
-                <p>CYes. Another problem in TrueBit is its inefficient incentive layer; in order to maintain the participation of members, computations with erroneous results (think of it as baits) must be deliberately thrown into the network to maintain the excitement and participation of the miners. Conversely, Cartesi employs a slim incentive layer that guarantees that the fees are brought to a bare minimum while still guaranteeing full decentralization and also offers the option of private processing for DApps.</p>
+                <p> Yes. One of the differences of greatest consequence is in how Cartesi aligns the interest in off-chain computations with the responsibility for their execution. In TrueBit, there is no such alignment. A smart contract posts the computation to a pool of untrusted parties and waits for one of them to perform it off-chain and post the result back. In this sense, TrueBit can be seen as a means for increasing the computational power of individual smart contracts. Cheating is prevented with a complex incentive layer that rewards pool members for successively disputing incorrect results. To keep the members engaged, computations with incorrect results must be artificially injected by the incentive layer. This inefficiency is a fundamental part of the design of TrueBit. 
+	</p><p>	
+Conversely, Cartesi can be seen as a way for off-chain computations to be endorsed by a smart contract. All parties that could be affected by this endorsement are responsible for performing the computation off-chain and, if needed, starting a dispute. Although the ensuing verification can be outsourced to a dispute resolution market, there is no built-in inefficiency and no need for an incentive layer.
+</p>
               </div>
             </div>
 
