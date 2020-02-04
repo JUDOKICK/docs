@@ -76,8 +76,8 @@
           <!-- header menu docs -->
           <nav id="nav" class="nav nav-sec">
             <ul class="nav__menu">
-              <li class="nav__menu__item"><a href="cartesi_whitepaper.pdf" class="nav__menu__btn">WHITEPAPER</a></li>
-              <li class="nav__menu__item"><a href="" class="nav__menu__btn">LIGHTPAPER</a></li>
+              <li class="nav__menu__item"><a href="cartesi_whitepaper.pdf" class="nav__menu__btn" target="_blank">WHITEPAPER</a></li>
+              <li class="nav__menu__item"><a href="" class="nav__menu__btn" target="_blank">LIGHTPAPER</a></li>
               <!-- <li class="nav__menu__item"><a href="" class="nav__menu__btn">Dapps</a></li> -->
             </ul>
           </nav>
@@ -98,7 +98,7 @@
             <div class="dropdown">
               <button class="dropbtn">English  &#9660;</button>
               <div class="dropdown-content">
-              <a href="index_zh.html" class="link_menu">中文</a>
+              <a href="faq_zh.html" class="link_menu">中文</a>
               </div>
             </div>
             <!-- //header menu language -->
@@ -322,7 +322,7 @@
               </div>
             </div>
 
-            <div class="accordion-head">
+<div class="accordion-head">
               <div class="container">
                 <h4><span>9</span> <div>What is the difference between Cartesi and Truebit?</div></h4><div class="arrow down"></div>
               </div>
@@ -331,23 +331,27 @@
               <div class="container">
                 <p>Cartesi is quite similar to TrueBit at first glance, but they differ vastly in their design decisions. The first major difference between TrueBit and Cartesi concerns the virtual machine itself; TrueBit’s virtual machine is based on WebAssembly (WASM). WASM is the W3C Community Group’s Instruction Set Architecture (ISA) for efficient web applications, while Cartesi’s virtual machine implements the RISC-V ISA.</p>
 
-                <p>TrueBit’s technology focuses on boosting the computational power for smart contracts, which operate under a bare-bones runtime environment. However, as we said earlier, the applications that we use on the Web or our devices don't exist in isolation. Instead, they stand on top of an operating system and depend on numerous software components that evolved throughout decades. Our architectural choice enables Cartesi computations to run on a proper operating system. In this environment, DApps are built with mainstream software stacks, which allows for vast new possibilities, besides being easier to code and with much lower entry barrier for professionals.</p> 
+                <p>TrueBit’s technology focuses on boosting the computational power for smart contracts, which operate under a bare-bones runtime environment. However, as we said earlier, the applications that we use on the Web or our devices don't exist in isolation. Instead, they stand on top of an operating system and depend on numerous software components that evolved throughout decades. Our architectural choice enables Cartesi computations to run on a proper operating system. In this environment, DApps are built with mainstream software stacks, which allows for vast new possibilities, besides being easier to code and with much lower entry barrier for professionals.</p>
               </div>
             </div>
 
-            <div class="accordion-head cbg">
+ <div class="accordion-head cbg">
               <div class="container">
                 <h4><span class="min">9.1</span> <div>Are there any other important design distinctions with Truebit?</div></h4><div class="arrow down"></div>
               </div>
             </div>
             <div class="accordion-body cbg">
               <div class="container">
-                <p> Yes. One of the differences of greatest consequence is in how Cartesi aligns the interest in off-chain computations with the responsibility for their execution. In TrueBit, there is no such alignment. A smart contract posts the computation to a pool of untrusted parties and waits for one of them to perform it off-chain and post the result back. In this sense, TrueBit can be seen as a means for increasing the computational power of individual smart contracts. Cheating is prevented with a complex incentive layer that rewards pool members for successively disputing incorrect results. To keep the members engaged, computations with incorrect results must be artificially injected by the incentive layer. This inefficiency is a fundamental part of the design of TrueBit. 
-	</p><p>	
+                <p> Yes. One of the differences of greatest consequence is in how Cartesi aligns the interest in off-chain computations with the responsibility for their execution. In TrueBit, there is no such alignment. A smart contract posts the computation to a pool of untrusted parties and waits for one of them to perform it off-chain and post the result back. In this sense, TrueBit can be seen as a means for increasing the computational power of individual smart contracts. Cheating is prevented with a complex incentive layer that rewards pool members for successively disputing incorrect results. To keep the members engaged, computations with incorrect results must be artificially injected by the incentive layer. This inefficiency is a fundamental part of the design of TrueBit.
+        </p><p>
 Conversely, Cartesi can be seen as a way for off-chain computations to be endorsed by a smart contract. All parties that could be affected by this endorsement are responsible for performing the computation off-chain and, if needed, starting a dispute. Although the ensuing verification can be outsourced to a dispute resolution market, there is no built-in inefficiency and no need for an incentive layer.
 </p>
               </div>
             </div>
+
+
+
+
 
             <div class="accordion-head">
               <div class="container">
@@ -589,7 +593,7 @@ Conversely, Cartesi can be seen as a way for off-chain computations to be endors
 
           <div class="faq__header__question">
             <h1 class="faq__title title team__title">HAVE ANY QUESTIONS?</h1>
-            <h2 class="faq__subtitle"><i class="ico-telegram"></i>JOIN OUR TELEGRAM GROUP</h2>
+            <h2 class="faq__subtitle"><a href="https://t.me/cartesiproject" target="_blank"><i class="ico-telegram"></i>JOIN OUR TELEGRAM GROUP</a></h2>
           </div>
 
           <!-- <div class="faq__content" id="faq-questions">
@@ -624,9 +628,10 @@ Conversely, Cartesi can be seen as a way for off-chain computations to be endors
           <ul class="footer__menu">
             <li><span>Home</span></li>
             <li><a href="./#cartesi">Why Cartesi</a></li>
-            <li><a href="cartesi_whitepaper.pdf">Whitepaper</a></li>
+            <li><a href="cartesi_whitepaper.pdf" target="_blank">Whitepaper</a></li>
             <li><a href="./#cartesi__feat-img">How it works</a></li>
             <li><a href="./#how-to">Industries</a></li>
+            <li><a href="./#roadmap">Roadmap</a></li>
             <li><a href="./#blog">Blog</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <!--li><a href="#">In the news</a></li-->
