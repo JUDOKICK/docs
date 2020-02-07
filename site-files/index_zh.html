@@ -61,7 +61,7 @@
           <nav id="nav" class="nav nav-sec">
             <ul class="nav__menu">
               <li class="nav__menu__item"><a href="cartesi_whitepaper_zh.pdf" class="nav__menu__btn" target="_blank">白皮書</a></li>
-              <li class="nav__menu__item"><a href="" class="nav__menu__btn" target="_blank">轻纸</a></li>
+              <li class="nav__menu__item"><a href="" class="nav__menu__btn" target="_blank">单页介绍</a></li>
               <!-- <li class="nav__menu__item"><a href="" class="nav__menu__btn">Dapps</a></li> -->
             </ul>
           </nav>
@@ -137,6 +137,7 @@
               <p class="cartesi__feat-img__caption animated" animated="fadeIn">链下密集计算</p>
               <p class="cartesi__feat-img__caption animated" animated="fadeIn">对开发者来说是完全通用的</p>
               <p class="cartesi__feat-img__caption animated" animated="fadeIn">在链上达成了有效共识</p>
+              <div id="cartesi__feat-img__image"></div>
             </div>
           </div>
         </section>
@@ -443,25 +444,15 @@
             <div class="features__list">
               <div class="features__list__item animated" animated="fadeInUp">
                 <h4>一个真正的OS计算密集的系统</h4>
-                <p class="big-paragraph-features">密集计算需要一个高效适用的平台。Cartesi使外部计算能够利用Linux
-                  操作系统下的RISC-V处理器运行。开发人员可以使用他们已经熟悉的所有工具，
-                  库，和服务。</p>
-                <p class="small-paragraph-features">密集计算需要一个高效适用的平台。Cartesi使外部计算能够利用Linux操作系统下的RISC-V处理器运行。开发人员可以使用他们已经熟悉的所有工具，库，和服务。</p>
+                <p class="big-paragraph-features">密集计算需要一个高效适用的平台。Cartesi使外部计算能够利用Linux操作系统下的RISC-V处理器运行。开发人员可以使用他们已经熟悉的所有工具，库，和服务。</p>
                 </div>
               <div class="features__list__item animated" animated="fadeInUp">
                 <h4>跨链交互</h4>
-                <p class="big-paragraph-features">在不同区块链上运行的智能合约可以在Cartesi节点中以完全相同的方式进行外
-                  部计算。这将复杂计算与特定区块链的特性分隔开来，使复杂计算具有可移植
-                  性，同时提供安全性，固定性和一个支付系统。
-                </p>
-                <p class="small-paragraph-features">在不同区块链上运行的智能合约可以在Cartesi节点中以完全相同的方式进行外 部计算。这将复杂计算与特定区块链的特性分隔开来，使复杂计算具有可移植 性，同时提供安全性，固定性和一个支付系统。</p>
+                <p class="big-paragraph-features">在不同区块链上运行的智能合约可以在Cartesi节点中以完全相同的方式进行外部计算。这将复杂计算与特定区块链的特性分隔开来，使复杂计算具有可移植性，同时提供安全性，固定性和一个支付系统。</p>
               </div>
               <div class="features__list__item animated" animated="fadeInUp">
                 <h4>确保达成共识</h4>
-                <p class="big-paragraph-features">外部计算可被所有相关方用于进行区块链外部验证。所有相关方都可以在外部验证外
-                  部计算。可能产生的争议由Cartesi自动解决。无论外部计算的规模如何，区块
-                  链内部都不会受到过高的计算压力。</p>
-                <p class="small-paragraph-features">外部计算可被所有相关方用于进行区块链外部验证。所有相关方都可以在外部验证外 部计算。可能产生的争议由Cartesi自动解决。无论外部计算的规模如何，区块 链内部都不会受到过高的计算压力。</p>
+                <p class="big-paragraph-features">外部计算可被所有相关方用于进行区块链外部验证。所有相关方都可以在外部验证外部计算。可能产生的争议由Cartesi自动解决。无论外部计算的规模如何，区块链内部都不会受到过高的计算压力。</p>
                 </div>
             </div>
           </div>
@@ -847,7 +838,12 @@
             </li>
           </ul>
         </div>
-        <div class="footer__copyright">All rights reserved © 2019 Cartesi Foundation Ltd.</div>
+        <div class="footer__copyright">All rights reserved ©
+          <script language=javascript type="text/javascript">
+            now = new Date
+            document.write (now.getFullYear() )
+          </script> Cartesi Foundation Ltd.
+        </div>
       </footer>
     </main>
 
