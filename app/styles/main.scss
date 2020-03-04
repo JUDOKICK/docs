@@ -1130,48 +1130,89 @@ and (max-width : 1220px) {
 }
 
 .creepts {
-  background: url('../images/creepts-bg.png') no-repeat center 0 / 100% auto;
+  // background: url('../images/creepts-bg.jpg') no-repeat center 0 / 100% auto;
+  background: url('../images/creepts-bg-mobile.jpg') repeat center 0;
   box-sizing: border-box;
-  margin: 250px 0 0;
+  // margin: 250px 0 0;
   &__logo {
     margin: 0;
   }
+  &__content {
+    margin: 0 auto;
+    // border: 1px solid red;
+    overflow: hidden;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    p {
+      font-family: 'Rubik Light';
+      font-style: italic;
+      font-size: 26px;
+      color: #fff;
+      margin: 0;
+      word-break: break-word;
+    }
+    span {
+      font-family: 'Rubik Light';
+      font-size: 22px;
+      font-weight: lighter;
+      color: #fff;
+      display: block;
+    }
+  }
+  &__image {
+    /* float: left; */
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+  }
+  @media only screen
+  and (min-width: 320px)
+  and (max-width: 991.98px) {
+    margin: 6rem 0 0;
+    padding: 4rem 0 2rem;
+    &__content{
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      width: 50%;
+      text-align: center;
+      // padding: 1rem;
+    }
+    &__info {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      width: 50%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  @media (min-width: 1200px) {
+    .col-xl-5 {
+      // -ms-flex: 0 0 66.666667%;
+      // -webkit-box-flex: 0;
+      // flex: 0 0 66.666667%;
+      // max-width: 66.666667%;
+      width: 786px!important;
+      flex: initial;
+      max-width: none;
+    }
+  }
 }
 
-.creepts__content {
-  margin: 0 auto;
-  // border: 1px solid red;
-  overflow: hidden;
-}
-.creepts__info {
-display: flex;
-align-items: center;
-p {
-  font-family: 'Rubik Light';
-  font-style: italic;
-  font-size: 26px;
-  color: #fff;
-margin: 0;
-}
-span {
-  font-family: 'Rubik Light';
-  font-size: 22px;
-  font-weight: lighter;
-  color: #fff;
-  display: block;
-}
-}
-.creepts__image {
-  /* float: left; */
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  width: 50%;
-  text-align: center;
-  padding: 1rem;
-}
 .btn {
   display: inline-block;
   font-weight: 400;
