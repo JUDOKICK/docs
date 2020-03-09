@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
   <head>
+    <meta charset="utf-8">
     <script src="scripts/redirect.js"></script>
     <script>window.manageLanguageRedirect('en');</script>
     <!-- Google Tag Manager -->
@@ -10,25 +11,42 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PHW7RLZ');
     </script>
-
     <!-- End Google Tag Manager -->
-
-    <meta charset="utf-8">
-    <meta name="description" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain.">
-    <meta property="og:image" content="https://cartesi.io/images/cartesi_logo_large_.png">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://cartesi.io"/>
-    <meta property="og:title" content="Cartesi" />
-    <meta property="og:description" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain." />
+    
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Cartesi">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain.">
+    <meta property="og:image" content="http://cartesi.io/images/thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Cartesi">
+    <meta property="og:url" content="http://cartesi.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Cartesi Foundation Ltd.">
+    <meta name="twitter:image:alt" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain.">
+    <!--  Non-Essential, But Required for Analytics 
+    <meta property="fb:app_id" content="your_app_id" />
+    <meta name="twitter:site" content="@website-username">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cartesi</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <!-- Place favicon.ico in the root directory -->
     <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="styles/vendor.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/fancybox/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -758,12 +776,12 @@
           <div class="partners__slide container">
             <div class="partner">
               <a href="https://fbg.capital" class="partner__link" target="_blank">
-                <img src="images/fbg.png" width="220px" alt="FBG Capital" class="partner__logo">
+                <img src="images/fbg.png" alt="FBG Capital" class="partner__logo">
               </a>
             </div>
             <div class="partner">
               <a href="https://ldcap.com" class="partner__link" target="_blank">
-                <img src="images/ldcap.png" width="220px" alt="LD Capital" class="partner__logo">
+                <img src="images/ldcap.png" alt="LD Capital" class="partner__logo">
               </a>
             </div>
             <div class="partner">
@@ -782,8 +800,8 @@
               </a>
             </div>
             <div class="partner">
-              <a href="https://www.wings.ai/" class="partner__link" target="_blank">
-                <img src="images/wings.png" alt="Wings" class="partner__logo">
+              <a href="#" class="partner__link" target="_blank">
+                <img data-src="images/logo-goblock.png" alt="GoBlock" class="partner__logo lozad">
               </a>
             </div>
             <div class="partner">
@@ -866,6 +884,7 @@
       </footer>
     </main>
 
+    <!-- scripts -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -875,8 +894,22 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
-    <script src="scripts/vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <!-- endbower -->
+    <script src="jquery.visible.js"></script>
+    <script src="assets/js/gsap/tweenlite.min.js" type="text/javascript"></script>
+    <script src="assets/js/gsap/plugins/css.min.js" type="text/javascript"></script>
+    <script src="assets/js/animus/animus.min.js" type="text/javascript"></script>
+    <script src="assets/js/imagine/imagine.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-swipe/jquery.mobile.custom.js" type="text/javascript"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 
     <!-- lazyload -->
     <script type="text/javascript">
@@ -885,7 +918,7 @@
         img.onload = function() {
           img.removeAttribute('data-src');
         };
-      });      
+      });
     </script>
     <!-- End lazyload -->
 
@@ -898,7 +931,9 @@
       _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
   
       var ml_account = ml('accounts', '1797592', 'x4y1u5u9w3', 'load');
-      </script>
-      <!-- End MailerLite Universal -->
+    </script>
+    <!-- End MailerLite Universal -->
+    <!-- //scripts -->
+
   </body>
 </html>
