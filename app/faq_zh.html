@@ -17,10 +17,10 @@
     <meta property="og:title" content="Cartesi">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain.">
-    <meta property="og:image" content="http://cartesi.io/images/thumbnail.jpg">
+    <meta property="og:image" content="https://cartesi.io/images/thumbnail.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Cartesi">
-    <meta property="og:url" content="http://cartesi.io/">
+    <meta property="og:url" content="https://cartesi.io/">
     <meta name="twitter:card" content="summary_large_image">
     <!--  Non-Essential, But Recommended -->
     <meta property="og:site_name" content="Cartesi Foundation Ltd.">
@@ -683,7 +683,7 @@ Cartesi提供了一个Linux运行时环境，是唯一一个基于软件的可�
 
     <!-- lazyload -->
     <script type="text/javascript">
-      [].slice.apply(document.querySelectorAll('img[data-src].lozad')).forEach(function(img) {
+      [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
         img.setAttribute('src', img.getAttribute('data-src'));
         img.onload = function() {
           img.removeAttribute('data-src');

@@ -17,10 +17,10 @@
     <meta property="og:title" content="Cartesi">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Cartesi is an infrastructure layer for achieving consensus over real world computations running off-chain.">
-    <meta property="og:image" content="http://cartesi.io/images/thumbnail.jpg">
+    <meta property="og:image" content="https://cartesi.io/images/thumbnail.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Cartesi">
-    <meta property="og:url" content="http://cartesi.io/">
+    <meta property="og:url" content="https://cartesi.io/">
     <meta name="twitter:card" content="summary_large_image">
     <!--  Non-Essential, But Recommended -->
     <meta property="og:site_name" content="Cartesi Foundation Ltd.">
@@ -119,14 +119,14 @@
                     <div class="creepts__info--wrap">
                       <span class="animated delay-1s" animated="fadeInDown">新的应用场景</span>
                       <h1 class="creepts__logo animated delay-1s" animated="fadeInRight">
-                        <img data-src="images/logo-creepts.svg" class="lozad" alt="Creepts">
+                        <img data-src="images/logo-creepts.svg"  alt="Creepts">
                       </h1>
                       <p class="animated" animated="fadeInRight delay-1s">是第一个基于Linux操作系统运行的完全去中心化游戏</p>
-                      <a href="http://creepts.cartesi.io/" title="转到网站" class="btn btn-gowebsite animated delay-1s" animated="fadeInUp" target="_blank">转到网站</a>
+                      <a href="https://creepts.cartesi.io/" title="转到网站" class="btn btn-gowebsite animated delay-1s" animated="fadeInUp" target="_blank">转到网站</a>
                     </div>
                   </div>
                   <div class="creepts__image col-12 col-sm-6">
-                    <img data-src="images/creepts-cel.png" class="animated faster lozad" animated="fadeInLeft" alt="Creepts">
+                    <img data-src="images/creepts-cel.png" class="animated faster" animated="fadeInLeft" alt="Creepts">
                   </div>
                 </div>
               </div>
@@ -187,8 +187,8 @@
         <section id="features" class="features">
           <div class="container">
             <svg version="1.1" class="features__img" id="features-svg"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 590 875" enable-background="new 0 0 590 875" xml:space="preserve">
+              xmlns="https://www.w3.org/2000/svg"
+              xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 590 875" enable-background="new 0 0 590 875" xml:space="preserve">
               <polygon stroke="#FFFFFF" stroke-width="1.5755" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
               274.886,872.222 549.414,713.723 281.097,557.473 2.937,715.868 "/>
               <polygon class="imagine" data-imagine="y 0..80" stroke="#FFFFFF" stroke-width="1.5755" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
@@ -748,7 +748,7 @@
                 </div>
               </div>
               <div class="team__member">
-                <img data-src="images/tkhamed.png" alt="T.k. Hamed, Founder of CTE Advisor" class="team__member__avatar lozad" style="width:160; height:160;">
+                <img data-src="images/tkhamed.png" alt="T.k. Hamed, Founder of CTE Advisor" class="team__member__avatar" style="width:160; height:160;">
                 <div class="team__member__data">
                   <a href="https://www.linkedin.com/in/tkhamed/" target="_blank" style="text-decoration: inherit;">
                     <span class="team__member__name">T.k. Hamed</span>
@@ -801,7 +801,12 @@
             </div>
             <div class="partner">
               <a href="#" class="partner__link" target="_blank">
-                <img data-src="images/logo-goblock.png" alt="GoBlock" class="partner__logo lozad">
+                <img data-src="images/logo-goblock.png" alt="GoBlock" class="partner__logo">
+              </a>
+            </div>
+            <div class="partner">
+              <a href="#" class="partner__link" target="_blank">
+                <img data-src="images/logo-newfang.png" alt="Newfang" class="partner__logo">
               </a>
             </div>
             <div class="partner">
@@ -810,12 +815,12 @@
               </a>
             </div>
             <div class="partner">
-              <a href="http://acrossasia.org/about/" class="partner__link" target="_blank">
+              <a href="https://acrossasia.org/about/" class="partner__link" target="_blank">
                 <img src="images/AAA_3.png" alt="Across Asia Alliance" class="partner__logo">
               </a>
             </div>
             <div class="partner">
-              <a href="http://crm.taiwanarena.tech/" class="partner__link" target="_blank">
+              <a href="https://crm.taiwanarena.tech/" class="partner__link" target="_blank">
                 <img src="images/TTA.png" alt="Taiwan Tech Arena" class="partner__logo">
               </a>
             </div>
@@ -825,12 +830,12 @@
               </a>
             </div>
             <div class="partner">
-             <a href="http://www.bigbangangels.com/" class="partner__link" target="_blank">
+             <a href="https://www.bigbangangels.com/" class="partner__link" target="_blank">
                <img src="images/BBA.png" alt="Big Bang Angels" class="partner__logo">
              </a>
             </div>
             <div class="partner">
-             <a href="http://www.snz.com/" class="partner__link" target="_blank">
+             <a href="https://www.snz.com/" class="partner__link" target="_blank">
                <img src="images/snz.png" alt="SNZ" class="partner__logo">
              </a>
             </div>
@@ -913,7 +918,7 @@
 
     <!-- lazyload -->
     <script type="text/javascript">
-      [].slice.apply(document.querySelectorAll('img[data-src].lozad')).forEach(function(img) {
+      [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
         img.setAttribute('src', img.getAttribute('data-src'));
         img.onload = function() {
           img.removeAttribute('data-src');
