@@ -226,64 +226,64 @@
      * Partners Slide
      */
     $('.partners__slide').slick({
-	  dots: false,
-	  infinite: true,
-	  speed: 300,
-	  slidesToShow: 6,
-	  slidesToScroll: 1,
-	  autoplay: true,
-  	  autoplaySpeed: 2000,
-	  responsive: [
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 4,
-	        slidesToScroll: 1,
-	        infinite: true,
-	        autoplay: true,
-  			autoplaySpeed: 2000,
-	        dots: false
-	      }
-	    },
-	    {
-	      breakpoint: 600,
-	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 1,
-	        autoplay: true,
-  			autoplaySpeed: 2000,
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1,
-	        autoplay: true,
-  			autoplaySpeed: 2000
-	      }
-	    }
-	    // You can unslick at a given breakpoint now by adding:
-	    // settings: "unslick"
-	    // instead of a settings object
-	  ]
-	});
+  	  dots: false,
+  	  infinite: true,
+  	  speed: 300,
+  	  slidesToShow: 6,
+  	  slidesToScroll: 1,
+  	  autoplay: true,
+    	autoplaySpeed: 2000,
+  	  responsive: [
+  	    {
+  	      breakpoint: 1024,
+  	      settings: {
+  	        slidesToShow: 4,
+  	        slidesToScroll: 1,
+  	        infinite: true,
+  	        autoplay: true,
+    			  autoplaySpeed: 2000,
+  	        dots: false
+  	      }
+  	    },
+  	    {
+  	      breakpoint: 600,
+  	      settings: {
+  	        slidesToShow: 3,
+  	        slidesToScroll: 1,
+  	        autoplay: true,
+    			autoplaySpeed: 2000,
+  	      }
+  	    },
+  	    {
+  	      breakpoint: 480,
+  	      settings: {
+  	        slidesToShow: 1,
+  	        slidesToScroll: 1,
+  	        autoplay: true,
+    			autoplaySpeed: 2000
+  	      }
+  	    }
+  	    // You can unslick at a given breakpoint now by adding:
+  	    // settings: "unslick"
+  	    // instead of a settings object
+  	  ]
+  	});
 
-	/**
-     * FAQ Acordion
-     */
-	$('.accordion').each(function () {
+    /**
+    * FAQ Acordion
+    */
+  	$('.accordion').each(function () {
 	    var $accordian = $(this);
 	    $accordian.find('.accordion-head').on('click', function () {
             $(this).parent().find('.accordion-head').removeClass('open close');
             $(this).removeClass('open').addClass('close');
 	        $accordian.find('.accordion-body').slideUp();
 	        if (!$(this).next().is(':visible')) {
-                $(this).removeClass('close').addClass('open');
-	            $(this).next().slideDown();
+            $(this).removeClass('close').addClass('open');
+            $(this).next().slideDown();
 	        }
 	    });
-	});
+  	});
 
   });
 })(jQuery)

@@ -158,6 +158,7 @@ gulp.task('serve:test', ['scripts'], () => {
 // inject bower components
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
+  // gulp.src('app/styles/*.scss')
     .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
