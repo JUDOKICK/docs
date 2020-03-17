@@ -17,7 +17,6 @@ var s3Credentials = {
   "secret": process.env.AWS_SECRET_ACCESS_KEY,
   "bucket": process.env.AWS_S3_BUCKET,
   "region": process.env.AWS_REGION
-
 };
 
 gulp.task('deploy', () => {
