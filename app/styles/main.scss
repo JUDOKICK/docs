@@ -1109,6 +1109,18 @@ img {
   }
 } 
 
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
 @media (max-width: 990px){
 	.nav-sec {
 	  display: none;
