@@ -95,8 +95,6 @@ function css() {
 function scripts() {
   return gulp.src(JS_DEV_PATH)
   // return gulp.src([
-  //   'app/scripts/vendor/*.js',
-
   //   'app/scripts/vendor/jquery.js',
   //   'app/scripts/vendor/modernizr.js',
   //   'app/scripts/vendor/jquery.fancybox.js',
@@ -180,16 +178,6 @@ function fonts() {
 }
 
 // /////////////////////////////////////////////////////
-// COPYING VIDEOS
-// /////////////////////////////////////////////////////
-
-// function videos() {
-//   return gulp
-//     .src(VIDEOS_DEV_PATH)
-//     .pipe(gulp.dest(VIDEOS_PATH));
-// }
-
-// /////////////////////////////////////////////////////
 // COPYING APP FILES
 // /////////////////////////////////////////////////////
 
@@ -197,6 +185,7 @@ function extras() {
   return gulp.src([
     'app/**/*',
     'app/**/*', '!app/scripts/vendor{,/**/*}',
+    // 'app/**/*', '!app/inc{,/**/*}',
     '!app/styles/**/*',
     '!app/*.html'
   ], {
@@ -230,11 +219,6 @@ function serve() {
     server: {
       baseDir: "./dist"
     }
-	 //proxy:'http://localhost/nomedodist/dist/',
-    // proxy:'http://localhost/nomedodist/wp/',
-    // port: 8080,
-    // open: true,
-    // notify: true
   });
   gulp.watch(SASS_PATH, css);
   gulp.watch(JS_DEV_PATH, scripts);
