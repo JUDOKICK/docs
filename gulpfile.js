@@ -1,20 +1,3 @@
-/* INSTALAÇÃO DE PLUGINS
-npm install gulp browser-sync gulp.spritesmith gulp-newer gulp-imagemin gulp-tinypng-compress vinyl-buffer gulp-sass gulp-plumber gulp-uglify gulp-concat gulp-rename merge-stream gulp-notify vinyl-source-stream html-includes gulp-babel gulp-babel@next @babel/core @babel/preset-env --save-dev
-
-// PROCURAR MODELO DO SPRITE EM NODE MODULES: scss.template.handlebars
-
-SUBTITUIR CONTEÚDO POR: 
-
-{{#sprites}}
-.{{name}} {
-  display: block;
-  background-image: url({{{escaped_image}}});
-  background-position: {{px.offset_x}} {{px.offset_y}};
-  width: {{px.width}};
-  height: {{px.height}};
-}
-{{/sprites}} */
-
 const babel       = require('gulp-babel');
       browserSync = require('browser-sync');
       buffer      = require('vinyl-buffer');
@@ -34,13 +17,28 @@ const babel       = require('gulp-babel');
       spritesmith = require('gulp.spritesmith');
       tinypng     = require('gulp-tinypng-compress');
       uglify      = require('gulp-uglify');
+      s3          = require( "gulp-s3-deploy" );
       reload      = browserSync.reload;
 
-// minify html command line 
-// html-minifier --collapse-whitespace dist/index.html -o dist/index.html
+      let dev = true;
 
-// svg sprite generate
-// svg-sprite-generate -d path/to/directory/of/svg/files -o path/to/sprite.svg
+// /////////////////////////////////////////////////////
+// DEPLOY 
+// /////////////////////////////////////////////////////      
+
+var s3Credentials = {
+  "key":    process.env.AWS_ACCESS_KEY_ID,
+  "secret": process.env.AWS_SECRET_ACCESS_KEY,
+  "bucket": process.env.AWS_S3_BUCKET,
+  "region": process.env.AWS_REGION
+
+};
+
+gulp.task('deploy', () => {
+  console.log(process.env.AWS_S3_BUCKET);
+  gulp.src( './dist/**' )
+    .pipe( s3( s3Credentials ) );
+});
 
 // /////////////////////////////////////////////////////
 // PATHS
