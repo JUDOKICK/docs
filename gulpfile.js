@@ -1,183 +1,264 @@
-// generated on 2018-07-04 using generator-webapp 3.0.1
-const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync').create();
-const del = require('del');
-const wiredep = require('wiredep').stream;
-const runSequence = require('run-sequence');
-const s3 = require( "gulp-s3-deploy" );
+/* INSTALAÇÃO DE PLUGINS
+npm install gulp browser-sync gulp.spritesmith gulp-newer gulp-imagemin gulp-tinypng-compress vinyl-buffer gulp-sass gulp-plumber gulp-uglify gulp-concat gulp-rename merge-stream gulp-notify vinyl-source-stream html-includes gulp-babel gulp-babel@next @babel/core @babel/preset-env --save-dev
 
-const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+// PROCURAR MODELO DO SPRITE EM NODE MODULES: scss.template.handlebars
 
-let dev = true;
+SUBTITUIR CONTEÚDO POR: 
 
-var s3Credentials = {
-  "key":    process.env.AWS_ACCESS_KEY_ID,
-  "secret": process.env.AWS_SECRET_ACCESS_KEY,
-  "bucket": process.env.AWS_S3_BUCKET,
-  "region": process.env.AWS_REGION
+{{#sprites}}
+.{{name}} {
+  display: block;
+  background-image: url({{{escaped_image}}});
+  background-position: {{px.offset_x}} {{px.offset_y}};
+  width: {{px.width}};
+  height: {{px.height}};
+}
+{{/sprites}} */
+
+const babel       = require('gulp-babel');
+      browserSync = require('browser-sync');
+      buffer      = require('vinyl-buffer');
+      concat      = require('gulp-concat');
+      fileinclude = require('gulp-file-include');
+      gulp        = require('gulp');
+      htmlmin     = require('gulp-htmlmin');
+      imagemin    = require('gulp-imagemin');
+      merge       = require('merge-stream');
+      newer       = require('gulp-newer');
+      notify      = require('gulp-notify');
+      plumber     = require('gulp-plumber');
+      rename      = require('gulp-rename');
+      sass        = require('gulp-sass');
+      source      = require('vinyl-source-stream');
+      sourcemaps  = require('gulp-sourcemaps');
+      spritesmith = require('gulp.spritesmith');
+      tinypng     = require('gulp-tinypng-compress');
+      uglify      = require('gulp-uglify');
+      reload      = browserSync.reload;
+
+// minify html command line 
+// html-minifier --collapse-whitespace dist/index.html -o dist/index.html
+
+// svg sprite generate
+// svg-sprite-generate -d path/to/directory/of/svg/files -o path/to/sprite.svg
+
+// /////////////////////////////////////////////////////
+// PATHS
+// /////////////////////////////////////////////////////
+
+const ROOT_PATH       = '.',
+      HTML_DEV_PATH   = 'app/*.html'
+      SASS_PATH       = 'app/styles/**/*.scss',
+      JS_DEV_PATH     = 'app/scripts/*.js',
+      SPRITE_PATH     = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
+      IMGS_DEV_PATH   = 'app/images/**/*.+(png|jpg|jpeg|gif|svg)',
+      FONTS_DEV_PATH  = 'app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+      VIDEOS_DEV_PATH = 'app/**/*.{mp4,webm,ogv}',
+
+      HTML_PATH       = "dist/",
+      CSS_PATH        = 'dist/styles/',
+      JS_PATH         = 'dist/scripts/',
+      IMGS_PATH       = 'dist/images/',
+      FONTS_PATH      = 'dist/fonts/',
+      VIDEOS_PATH     = 'dist/';
+
+
+
+// /////////////////////////////////////////////////////
+// SASS / MINIFICAÇÃO DE CSS task
+// /////////////////////////////////////////////////////
+
+const sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'compressed'
 };
 
-gulp.task('deploy', () => {
-  console.log(process.env.AWS_S3_BUCKET);
-  gulp.src( './dist/**' )
-    .pipe( s3( s3Credentials ) );
-});
-
-gulp.task('styles', () => {
-  return gulp.src('app/styles/**/*.scss')
-    .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
-});
-
-gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
-});
-
-function lint(files) {
-  return gulp.src(files)
-    .pipe($.eslint({ fix: true }))
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+function css() {
+  return gulp
+    .src(SASS_PATH)
+    // .pipe(sourcemaps.init({largeFile: true}))
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    // .pipe(rename(function (path) {
+    //     path.basename += ".min"
+    // }))
+    // .pipe(sourcemaps.write('/', {
+    //   addComment: false,
+    //   includeContent: false,
+    //   sourceRoot: CSS_PATH
+    // }))
+    .pipe(gulp.dest(CSS_PATH))
+    .pipe(browserSync.reload({stream:true}));
 }
 
-gulp.task('lint', () => {
-  return lint('app/scripts/**/*.js')
-    .pipe(gulp.dest('app/scripts'));
-});
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js')
-    .pipe(gulp.dest('test/spec'));
-});
+// /////////////////////////////////////////////////////
+// MINIFICAÇÃO DE JS
+// /////////////////////////////////////////////////////
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/**/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe(gulp.dest('dist'));
-});
+function scripts() {
+  return gulp.src(JS_DEV_PATH)
+  // return gulp.src([
+  //   'app/scripts/vendor/*.js',
 
-gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin()))
-    .pipe(gulp.dest('dist/images'));
-});
+  //   'app/scripts/vendor/jquery.js',
+  //   'app/scripts/vendor/modernizr.js',
+  //   'app/scripts/vendor/jquery.fancybox.js',
+  //   'app/scripts/vendor/slick.js',
+  //   'app/scripts/vendor/jquery.visible.js',
+  //   'app/scripts/vendor/tweenlite.min.js',
+  //   'app/scripts/vendor/css.min.js',
+  //   'app/scripts/vendor/animus.min.js',
+  //   'app/scripts/vendor/imagine.min.js',
+  //   'app/scripts/vendor/jquery.mobile.custom.js',
+  //   'app/scripts/main.js'
+  // ])
+  // .pipe(sourcemaps.init({largeFile: true}))
+  // .pipe(babel({
+  //   presets: ['@babel/preset-env']
+  // }))
+  .pipe(babel())
+  .pipe(plumber())
+  .pipe(concat('main.js'))
+  .pipe(uglify())
+  // .pipe(rename(function (path) {
+  //     path.basename += ".min"
+  // }))
+  // .pipe(sourcemaps.write('/', {
+  //   addComment: false,
+  //   includeContent: false,
+  //   sourceRoot: JS_PATH
+  // }))
+  .pipe(gulp.dest(JS_PATH))
+  .pipe(browserSync.reload({stream:true}));
+}
 
-gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
-});
+// /////////////////////////////////////////////////////
+// COMPRESS - SPRITE IMGS task
+// /////////////////////////////////////////////////////
 
-gulp.task('extras', () => {
+function images() {
+  return gulp.src(IMGS_DEV_PATH)
+    .pipe(newer(IMGS_PATH))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+          plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+          ]
+      })
+    ]))
+    .pipe(gulp.dest(IMGS_PATH));
+}
+
+function sprite() {
+  const data = gulp.src(SPRITE_PATH)
+  .pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: 'img/sprite.png',
+    cssName: '_sprite.scss'
+  }));
+
+  const imgStream = data.img
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest(IMGS_PATH));
+
+  const cssStream = data.css
+    .pipe(gulp.dest('app/scss'));
+
+  return merge(imgStream, cssStream);
+}
+
+// /////////////////////////////////////////////////////
+// COPYING FONTS
+// /////////////////////////////////////////////////////
+
+function fonts() {
+  return gulp
+    .src(FONTS_DEV_PATH)
+    .pipe(gulp.dest(FONTS_PATH));
+}
+
+// /////////////////////////////////////////////////////
+// COPYING VIDEOS
+// /////////////////////////////////////////////////////
+
+// function videos() {
+//   return gulp
+//     .src(VIDEOS_DEV_PATH)
+//     .pipe(gulp.dest(VIDEOS_PATH));
+// }
+
+// /////////////////////////////////////////////////////
+// COPYING APP FILES
+// /////////////////////////////////////////////////////
+
+function extras() {
   return gulp.src([
-    'app/*',
+    'app/**/*',
+    'app/**/*', '!app/scripts/vendor{,/**/*}',
+    '!app/styles/**/*',
     '!app/*.html'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
-});
+}
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+// /////////////////////////////////////////////////////
+// HTML MINIFY TASK
+// /////////////////////////////////////////////////////
 
-gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
-    browserSync.init({
-      notify: false,
-      port: 9000,
-      server: {
-        baseDir: ['.tmp', 'app'],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
-      }
-    });
+// https://goede.dist/transpile-and-minify-javascript-html-and-css-using-gulp-4
 
-    gulp.watch([
-      'app/*.html',
-      'app/images/**/*',
-      'app/ch/**/*',
-      '.tmp/fonts/**/*'
-    ]).on('change', reload);
-
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/fonts/**/*', ['fonts']);
-    gulp.watch('bower.json', ['wiredep', 'fonts']);
-  });
-});
-
-gulp.task('serve:dist', ['default'], () => {
-  browserSync.init({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
-  });
-});
-
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync.init({
-    notify: false,
-    port: 9000,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/scripts': '.tmp/scripts',
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
-
-// inject bower components
-gulp.task('wiredep', () => {
-  gulp.src('app/styles/*.scss')
-  // gulp.src('app/styles/*.scss')
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
+function html() {
+  return gulp
+    .src(HTML_DEV_PATH)
+    .pipe(fileinclude({ //include files
+      prefix: '@@',
+      basepath: '@file'
     }))
-    .pipe(gulp.dest('app/styles'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(HTML_PATH));
+}
 
-  gulp.src('app/*.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('app'));
-});
+// /////////////////////////////////////////////////////
+// BROWSER-SYNC / WATCH - RELOAD BROWSERS
+// /////////////////////////////////////////////////////
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
-
-gulp.task('default', () => {
-  return new Promise(resolve => {
-    dev = false;
-    runSequence(['clean', 'wiredep'], 'build', resolve);
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: "./dist"
+    }
+	 //proxy:'http://localhost/nomedodist/dist/',
+    // proxy:'http://localhost/nomedodist/wp/',
+    // port: 8080,
+    // open: true,
+    // notify: true
   });
-});
+  gulp.watch(SASS_PATH, css);
+  gulp.watch(JS_DEV_PATH, scripts);
+  gulp.watch(SPRITE_PATH, sprite);
+  gulp.watch(IMGS_DEV_PATH, images);
+  gulp.watch(HTML_DEV_PATH, html);
+  gulp.watch(HTML_DEV_PATH).on('change', browserSync.reload);
+}
+
+// /////////////////////////////////////////////////////
+// EXPORT TASKS
+// /////////////////////////////////////////////////////
+
+exports.html = html;
+exports.images = images;
+exports.css = css;
+exports.scripts = scripts;
+exports.extras = extras;
+exports.serve = serve;
+
+// /////////////////////////////////////////////////////
+// BUILD TASKS
+// /////////////////////////////////////////////////////
+
+exports.default = exports.build = gulp.parallel(html, css, scripts, images, fonts, extras);

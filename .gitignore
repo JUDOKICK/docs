@@ -1,10 +1,9 @@
 # dependencies
 node_modules
-bower_components
 
 # compiled output
 /dist
-/.tmp
+.map
 
 # System Files
 .DS_Store

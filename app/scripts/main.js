@@ -2,7 +2,7 @@
   $(document).ready(function() {
 
     /**
-     * Smooth Scroll
+     * Smooth Scroll 
      */
     $('.smooth-scroll').click(function(event) {
       event.preventDefault();
@@ -90,9 +90,8 @@
      * slick change tab
      */
     $('.how-to__tabnav').on('afterChange', function(event, slick, currentSlide){
-      let slide = $('[data-slick-index='+ currentSlide +']');
+      let slide = $('[data-slick-index=' + currentSlide +']');
       let contentTarget = slide.find('.how-to__tabnav__item').attr('href');
-
       $('.how-to__tabcontent__item').removeClass('active');
       $(contentTarget).addClass('active');
     });

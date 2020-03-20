@@ -195,7 +195,9 @@
       &:nth-child(1) {
         top: 190px;
         left: -110px;
-
+        @media (min-width: 768px) {
+          width: 260px;
+        }
         @media (min-width: 992px) {
           left: -170px;
         }
@@ -205,12 +207,19 @@
         top: 70px;
         right: -110px;
         animation-delay: 400ms;
+        
+        @media (min-width: 768px) {
+          width: 200px;
+        }
       }
 
       &:nth-child(3) {
         top: 425px;
         right: -180px;
         animation-delay: 700ms;
+        @media (min-width: 768px) {
+          width: 230px;
+        }
       }
     }
 
