@@ -4,7 +4,7 @@ Cartesi is an infrastructure layer for achieving consensus over real world compu
 
 ## Build
 
-Run the following commands to generate the static website at `site/`:
+Run the following commands to generate the static website at `dist/`:
 
     % npm install
     % npm run build
