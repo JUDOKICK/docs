@@ -15,7 +15,6 @@ const babel       = require('gulp-babel');
       source      = require('vinyl-source-stream');
       sourcemaps  = require('gulp-sourcemaps');
       spritesmith = require('gulp.spritesmith');
-      tinypng     = require('gulp-tinypng-compress');
       uglify      = require('gulp-uglify');
       s3          = require( "gulp-s3-deploy" );
       reload      = browserSync.reload;
