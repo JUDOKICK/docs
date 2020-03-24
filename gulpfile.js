@@ -20,8 +20,6 @@ const babel       = require('gulp-babel');
       s3          = require( "gulp-s3-deploy" );
       reload      = browserSync.reload;
 
-      let dev = true;
-
 // /////////////////////////////////////////////////////
 // DEPLOY 
 // /////////////////////////////////////////////////////      
@@ -31,13 +29,21 @@ var s3Credentials = {
   "secret": process.env.AWS_SECRET_ACCESS_KEY,
   "bucket": process.env.AWS_S3_BUCKET,
   "region": process.env.AWS_REGION
+};
 
+var options = { 
+  headers: {
+    'Cache-Control': 'max-age=315360000, no-transform, public',
+    'x-amz-acl': 'private'
+  },
+  gzippedOnly: true,
+  failOnError: true
 };
 
 gulp.task('deploy', () => {
   console.log(process.env.AWS_S3_BUCKET);
-  gulp.src( './dist/**' )
-    .pipe( s3( s3Credentials ) );
+  gulp.src( './dist/**' ).pipe(gzip())
+    .pipe( s3( s3Credentials, options ) );
 });
 
 // /////////////////////////////////////////////////////
@@ -152,7 +158,7 @@ function sprite() {
   const data = gulp.src(SPRITE_PATH)
   .pipe(spritesmith({
     imgName: 'sprite.png',
-    imgPath: 'img/sprite.png',
+    imgPath: 'images/sprite.png',
     cssName: '_sprite.scss'
   }));
 
@@ -162,7 +168,7 @@ function sprite() {
     .pipe(gulp.dest(IMGS_PATH));
 
   const cssStream = data.css
-    .pipe(gulp.dest('app/scss'));
+    .pipe(gulp.dest('app/styles'));
 
   return merge(imgStream, cssStream);
 }
@@ -184,9 +190,12 @@ function fonts() {
 function extras() {
   return gulp.src([
     'app/**/*',
-    'app/**/*', '!app/scripts/vendor{,/**/*}',
-    // 'app/**/*', '!app/inc{,/**/*}',
+    // 'app/**/*', '!app/scripts/vendor{,/**/*}',
+    // 'app/**/*', '!app/sprite{,/**/*}',
+    '!app/scripts/vendor{,/**/*}',
+    '!app/sprite{,/**/*}',
     '!app/styles/**/*',
+    '!app/inc{,/**/*}',
     '!app/*.html'
   ], {
     dot: true
@@ -234,6 +243,7 @@ function serve() {
 
 exports.html = html;
 exports.images = images;
+exports.sprite = sprite;
 exports.css = css;
 exports.scripts = scripts;
 exports.extras = extras;
@@ -243,4 +253,4 @@ exports.serve = serve;
 // BUILD TASKS
 // /////////////////////////////////////////////////////
 
-exports.default = exports.build = gulp.parallel(html, css, scripts, images, fonts, extras);
+exports.default = exports.build = gulp.parallel(html, css, scripts, images, sprite, fonts, extras);

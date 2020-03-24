@@ -11,6 +11,7 @@
 @import 'keyframes';
 @import 'module';
 @import 'layout';
+@import 'sprite';
  
 /*+----------------------------------------------+
   BOOTSTRAP GRID SYSTEM
@@ -32,18 +33,6 @@ img {
 
   &[data-src] {
     opacity: 0;
-  }
-}
-
-.d-block {
-  display: block;
-}
-.d-none {
-  display: none !important;
-}
-@media (min-width: 768px) {
-  .d-md-none {
-    display: none !important;
   }
 }
 
