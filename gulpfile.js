@@ -79,16 +79,16 @@ const sassOptions = {
 function css() {
   return gulp
     .src(SASS_PATH)
-    // .pipe(sourcemaps.init({largeFile: true}))
+    .pipe(sourcemaps.init({largeFile: true}))
     .pipe(sass(sassOptions).on('error', sass.logError))
     // .pipe(rename(function (path) {
     //     path.basename += ".min"
     // }))
-    // .pipe(sourcemaps.write('/', {
-    //   addComment: false,
-    //   includeContent: false,
-    //   sourceRoot: CSS_PATH
-    // }))
+    .pipe(sourcemaps.write('/', {
+      addComment: false,
+      includeContent: false,
+      sourceRoot: CSS_PATH
+    }))
     .pipe(gulp.dest(CSS_PATH))
     .pipe(browserSync.reload({stream:true}));
 }
@@ -123,11 +123,11 @@ function scripts() {
   // .pipe(rename(function (path) {
   //     path.basename += ".min"
   // }))
-  // .pipe(sourcemaps.write('/', {
-  //   addComment: false,
-  //   includeContent: false,
-  //   sourceRoot: JS_PATH
-  // }))
+  .pipe(sourcemaps.write('/', {
+    addComment: false,
+    includeContent: false,
+    sourceRoot: JS_PATH
+  }))
   .pipe(gulp.dest(JS_PATH))
   .pipe(browserSync.reload({stream:true}));
 }
@@ -240,12 +240,12 @@ function serve() {
 // EXPORT TASKS
 // /////////////////////////////////////////////////////
 
-exports.html = html;
-exports.images = images;
-exports.sprite = sprite;
-exports.css = css;
-exports.scripts = scripts;
-exports.extras = extras;
+// exports.html = html;
+// exports.images = images;
+// exports.sprite = sprite;
+// exports.css = css;
+// exports.scripts = scripts;
+// exports.extras = extras;
 exports.serve = serve;
 
 // /////////////////////////////////////////////////////
