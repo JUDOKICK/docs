@@ -126,7 +126,8 @@
     }
 
     &__text {
-      bottom: -110px;
+      width: 180px;
+      bottom: -120px;
       right: 0;
       font-size: 22px;
       font-family: 'Rubik Light';
@@ -134,7 +135,9 @@
       white-space: pre-line;
       opacity: 0;
       animation-delay: 500ms;
-
+      @media (max-width: 767px) {
+        width: 100%;
+      }
       @media (min-width: 768px) {
         position: absolute;
         text-align: left;

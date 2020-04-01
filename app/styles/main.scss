@@ -1,16 +1,289 @@
-// bower:scss
-@import "bower_components/jeet/scss/index.scss";
-@import "bower_components/slick-carousel/slick/slick.scss";
-// endbower
-@import "../assets/css/imagine/imagine.scss";
 
+@import "font-awesome";
+@import "normalize";
+@import "fancybox";
+@import "slick";
+@import "animate";
+@import "jeet";
+@import "imagine";
 @import 'theme';
 @import 'base';
 @import 'keyframes';
 @import 'module';
 @import 'layout';
+@import 'sprite';
+ 
+/*+----------------------------------------------+
+  BOOTSTRAP GRID SYSTEM
++-----------------------------------------------+*/
+@import '_bootstrap4-grid';
 
+/*+----------------------------------------------+
+  MAIN
++-----------------------------------------------+*/
 
 rect[width="1920"][fill="#ffffff"] {
   fill: #000;
+}
+
+//to lazyload
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &[data-src] {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 990px){
+	.nav-sec {
+	  display: none;
+	}
+}
+
+// https://stackoverflow.com/questions/8860631/how-to-get-same-effect-as-jquerys-slidetoggle-using-css-3-transitions
+.nav-sec {
+  margin: 0;
+  #lightpaper__area {
+    &:hover {
+      border-radius: 23px;
+      transition: all .3s ease-in-out;
+      .lightpaper__dropdown {
+        display: block;
+        transition: all .3s ease-in-out;
+      }
+      .fa-caret-down {
+        transform: rotate(-180deg);
+        transition: all .3s ease-in-out;
+      }
+      .nav__menu__btn {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+  .nav__menu__item {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    margin: 0 1rem;
+    transition: all .3s ease-in-out;
+    .fa-caret-down {
+      transform: rotate(0);
+      transition: all .3s ease-in-out;
+    }    
+    &.open {
+      border-radius: 23px;
+      transition: all .3s ease-in-out;
+      .fa-caret-down {
+        transform: rotate(-180deg);
+        transition: all .3s ease-in-out;
+      }
+      .nav__menu__btn {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+  #nav__menu__btn,
+  .nav__menu__btn {
+    border-radius: 50px;    
+    display: block;
+    font-family: 'Rubik Light';
+    font-weight: lighter;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+    transition: all .3s ease-in-out;
+    margin: 0;
+    // &:hover {
+    //   background: #fff;
+    //   color: #000;
+    // }
+  }
+}
+.lightpaper__dropdown {
+  display: none;  
+  list-style: none;
+  padding: 0;
+  transition: all .3s ease-in-out;
+  @media (max-width: 992px){
+    padding: 0 0 0 30px;  
+  }
+  @media (min-width: 992px){
+    li {
+      margin: 1rem 0;
+    }
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+@media only screen
+and (min-width : 992px)
+and (max-width : 1220px) {
+	.nav__menu__btn {
+    font-size: 16px;
+    padding: .5rem;
+  }
+}
+.menu-whitepaper {
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+
+
+/* CREEPTS
+------------------------------------------------ */
+@import 'creepts';
+
+/* BLOG
+------------------------------------------------ */
+@import 'blog';
+
+
+/* TEAM
+------------------------------------------------ */
+.team__member img {
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+}
+.team__member:hover img {
+  /* border: 1px solid gray; */
+  filter: brightness(130%);
+  -webkit-filter: brightness(130%);
+  -moz-filter: brightness(130%);
+  -o-filter: brightness(130%);
+  -ms-filter: brightness(130%);
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+}
+
+/* PARTNERS
+------------------------------------------------ */
+.slick-arrow {
+  width: 40px;
+  height: 74px;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  margin: -37px auto; 
+  cursor: pointer;
+  z-index: 9999;
+}
+.slick-prev {
+  background:url('../images/btn-arrow-left.svg') no-repeat 0 center / cover;
+  text-indent: -9999px;
+  left: 1rem;
+}
+.slick-next {
+  background:url('../images/btn-arrow-right.svg') no-repeat 0 center / cover;
+  text-indent: -9999px;
+  right: 1rem;
+}
+
+/* http://www.learningjquery.com/examples/style-flash.html */
+
+/* FAQ
+------------------------------------------------ */
+@import 'faq'; 
+
+/* 
+.timeline ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.timeline li {
+    display: inline-flex;
+    text-align: center;
+    flex-direction: column;
+}
+.timeline__title, .timeline__date {
+    font-family:Rubik Regular;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+}
+.timeline__title {
+    margin-bottom: 70px;
+    display: block;
+    margin: 0 auto;
+}
+.timeline__title:after {
+    content:"";
+    background: url('../images/timline-link.png') no-repeat 0 0 / cover;
+    width: 7px;
+    height: 65px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin: 5px 0 0 -2.5px;
+}
+.timeline__date {
+    text-transform: uppercase;
+    
+}
+.timeline__date span {
+    display: block;
+    font-weight: bold;
+}
+.papers4 {
+    background: url('../images/icon-paper4.png') no-repeat 0 0 / cover;
+    width: 25px;
+    height: 23px;
+    display: block;
+    display: block;
+    margin: 75px auto 10px;
+} */
+
+.timeline {
+  text-align: center;
+  padding: 60px 0;
+  &__title {
+    margin: 60px 0;
+  }
+  &__content {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
+  &__obs {
+    font-family:Rubik Regular;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+  }
+}
+
+@media (min-width:600px) {
+  .timeline__obs {
+    display: none;
+  }
+}
+
+.view-link {
+  font-family:Rubik Regular;
+  font-size: 16px;
+  text-align: center;
+}
+
+.view-link a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all .35s ease-out;
+}
+.view-link a:hover {
+  border-bottom: 1px solid #000;
 }

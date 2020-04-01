@@ -12,6 +12,11 @@ $grey: #808285;
   src: url(../fonts/Rubik-Regular.ttf)  format('truetype');
 }
 
+@font-face {
+  font-family: 'Rubik BoldItalic';
+  src: url(../fonts/Rubik-BoldItalic.ttf)  format('truetype');
+}
+
 .icon {
   font-size: 0;
   display: inline-block;
@@ -215,4 +220,16 @@ $grey: #808285;
   background-image: url(../images/contra-cartesi.svg);
   width: 95px;
   height: 94px;
+}
+
+.icon-wechat {
+  background-image: url(../images/icon-wechat.svg);
+  width: 25px;
+  height: 26px;
+}
+
+.icon-weibo {
+  background-image: url(../images/icon-weibo.svg);
+  width: 33px;
+  height: 26px;
 }

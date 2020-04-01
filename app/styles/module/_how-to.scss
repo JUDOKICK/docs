@@ -117,8 +117,8 @@
         visibility: visible;
       }
 
-      img {
-        width: 387px;
+      img, svg {
+        // width: 387px;
         max-width: 70%;
         max-height: 150px;
         margin-right: auto;
@@ -150,6 +150,7 @@
 
         @media (min-width: 768px) {
           white-space: pre-line;
+          width: 460px;
         }
 
         h4 {
