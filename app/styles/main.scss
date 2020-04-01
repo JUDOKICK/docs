@@ -45,24 +45,35 @@ img {
 // https://stackoverflow.com/questions/8860631/how-to-get-same-effect-as-jquerys-slidetoggle-using-css-3-transitions
 .nav-sec {
   margin: 0;
-  #lightpaper__area {
-    &:hover {
-      border-radius: 23px;
-      transition: all .3s ease-in-out;
-      .lightpaper__dropdown {
-        display: block;
+  @media (min-width: 992px){
+    #lightpaper__area {
+      overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 39px;
+      &:hover {
+        border-radius: 23px;
         transition: all .3s ease-in-out;
-      }
-      .fa-caret-down {
-        transform: rotate(-180deg);
-        transition: all .3s ease-in-out;
-      }
-      .nav__menu__btn {
-        background: transparent;
-        color: #fff;
+        height: 215px;
+        -webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+        transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+        .lightpaper__dropdown {
+          display: block;
+          transition: all .3s ease-in-out;
+          padding: 0;
+        }
+        .fa-caret-down {
+          transform: rotate(-180deg);
+          transition: all .3s ease-in-out;
+        }
+        .nav__menu__btn {
+          background: transparent;
+          color: #fff;
+        }
       }
     }
   }
+  
   .nav__menu__item {
     border: 2px solid #fff;
     border-radius: 50px;
@@ -105,14 +116,52 @@ img {
     // }
   }
 }
+@media (max-width: 990px){
+  #lightpaper__area {
+    overflow: hidden;
+    padding: 0;
+    height: 56px;
+    border: 0;
+    border-radius: 0;
+    -webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+    transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+    .lightpaper__dropdown {
+      padding: 0 0 0 30px;
+    }
+    &.open {
+      height: 212px;
+      -webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+      transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+      .lightpaper__dropdown {
+        border-radius: 0;
+        transition: all .3s ease-in-out;
+        height: 212px;
+        -webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+        transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
+      }
+      .fa-caret-down {
+        transform: rotate(-180deg);
+        transition: all .3s ease-in-out;
+      }
+      // .nav__menu__btn {
+      //   background: transparent;
+      //   color: #fff;
+      // }
+    }
+  }
+}
 .lightpaper__dropdown {
-  display: none;  
+  transition: all .3s ease-in-out;
   list-style: none;
   padding: 0;
-  transition: all .3s ease-in-out;
-  @media (max-width: 992px){
-    padding: 0 0 0 30px;  
-  }
+  // display: none;  
+  // padding: 0;
+  // transition: all .3s ease-in-out;
+  // @media (max-width: 990px){
+  //   overflow: hidden;
+  //   height: 0; 
+  //   list-style: none;
+  // }
   @media (min-width: 992px){
     li {
       margin: 1rem 0;

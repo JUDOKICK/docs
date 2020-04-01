@@ -225,83 +225,83 @@
      * Partners Slide
      */
     $('.partners__slide').slick({
-  	  dots: false,
-  	  infinite: true,
-  	  speed: 300,
-  	  slidesToShow: 6,
-  	  slidesToScroll: 1,
-  	  autoplay: true,
-    	autoplaySpeed: 2000,
-  	  responsive: [
-  	    {
-  	      breakpoint: 1024,
-  	      settings: {
-  	        slidesToShow: 4,
-  	        slidesToScroll: 1,
-  	        infinite: true,
-  	        autoplay: true,
-    			  autoplaySpeed: 2000,
-  	        dots: false
-  	      }
-  	    },
-  	    {
-  	      breakpoint: 600,
-  	      settings: {
-  	        slidesToShow: 3,
-  	        slidesToScroll: 1,
-  	        autoplay: true,
-    			autoplaySpeed: 2000,
-  	      }
-  	    },
-  	    {
-  	      breakpoint: 480,
-  	      settings: {
-  	        slidesToShow: 1,
-  	        slidesToScroll: 1,
-  	        autoplay: true,
-    			autoplaySpeed: 2000
-  	      }
-  	    }
-  	    // You can unslick at a given breakpoint now by adding:
-  	    // settings: "unslick"
-  	    // instead of a settings object
-  	  ]
-  	});
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+          autoplaySpeed: 2000,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+          autoplaySpeed: 2000
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
 
     /**
     * FAQ Acordion
     */
-  	$('.accordion').each(function () {
-	    var $accordian = $(this);
-	    $accordian.find('.accordion-head').on('click', function () {
+    $('.accordion').each(function () {
+      var $accordian = $(this);
+      $accordian.find('.accordion-head').on('click', function () {
             $(this).parent().find('.accordion-head').removeClass('open close');
             $(this).removeClass('open').addClass('close');
-	        $accordian.find('.accordion-body').slideUp();
-	        if (!$(this).next().is(':visible')) {
+          $accordian.find('.accordion-body').slideUp();
+          if (!$(this).next().is(':visible')) {
             $(this).removeClass('close').addClass('open');
             $(this).next().slideDown();
-	        }
-	    });
-  	});
-
-  if ( $(window).width() < 992 ) {
-    // $('.nav__menu__btn').click(function(e) {
-    //   e.preventDefault();
-    //   $(this).parent().toggleClass('open');
-    //   $('#header').toggleClass('open');
-    //   $('.lightpaper__dropdown').stop().slideToggle();
-    // });
-
-    $('#lightpaper__link').click(function(e) {
-      e.preventDefault();
-      $('.nav').toggleClass('active');
-      $('.header__logo').toggleClass('mobile-active');
-      $('.nav__button__menu').toggleClass('close');
-      $(this).parent().toggleClass('open');
-      $('#header').toggleClass('open');
-      $('.lightpaper__dropdown').stop().slideToggle();
+          }
+      });
     });
-  }
 
-  });
+    if ( $(window).width() < 992 ) {
+      // $('.nav__menu__btn').click(function(e) {
+      //   e.preventDefault();
+      //   $(this).parent().toggleClass('open');
+      //   $('#header').toggleClass('open');
+      //   $('.lightpaper__dropdown').stop().slideToggle();
+      // });
+
+      $('#lightpaper__link').click(function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+        // $('.lightpaper__dropdown').stop().slideToggle();
+        $('#header').toggleClass('open');
+        $('.header__logo').toggleClass('mobile-active');
+        $('.nav').toggleClass('active');
+        $('.nav__button__menu').toggleClass('close');
+      })
+    }
+
+  })
 })(jQuery)
