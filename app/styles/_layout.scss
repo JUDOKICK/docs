@@ -33,7 +33,7 @@ body{
 
   .container {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
   }
 
@@ -89,7 +89,7 @@ body{
     @media (min-width: 992px) {
       margin-right: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-end;
       list-style: none;
       padding-left: 0;
@@ -124,8 +124,9 @@ body{
 .nav {
   // width: 45%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  // justify-content: center;
+  margin-top: 10px;
 
   @media (max-width: 991px) {
     position: absolute;
@@ -253,7 +254,7 @@ body{
 
     @media (min-width: 992px) {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
     }
 
@@ -269,9 +270,14 @@ body{
         letter-spacing: 1px;
         text-decoration: none;
         text-transform: uppercase;
-        margin-bottom: 25px;
-        padding-bottom: 5px;
+        // margin-bottom: 25px;
+        // padding-bottom: 5px;
         position: relative;
+        
+        @media (max-width: 990px) {
+          margin-bottom: 25px;
+          padding-bottom: 5px;
+        }
 
         @media (min-width: 992px) {
           margin-bottom: 0;

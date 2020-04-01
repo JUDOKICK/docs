@@ -41,13 +41,88 @@ img {
 	  display: none;
 	}
 }
-.nav__menu__btn {
-  border: 2px solid #fff; border-radius: 50px; font-size: 14px; display: flex; align-items: center; justify-content: center; padding: .5rem 2rem; margin: 0 1rem!important; transition: all .3s ease-in-out;
+
+// https://stackoverflow.com/questions/8860631/how-to-get-same-effect-as-jquerys-slidetoggle-using-css-3-transitions
+.nav-sec {
+  margin: 0;
+  #lightpaper__area {
+    &:hover {
+      border-radius: 23px;
+      transition: all .3s ease-in-out;
+      .lightpaper__dropdown {
+        display: block;
+        transition: all .3s ease-in-out;
+      }
+      .fa-caret-down {
+        transform: rotate(-180deg);
+        transition: all .3s ease-in-out;
+      }
+      .nav__menu__btn {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+  .nav__menu__item {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    margin: 0 1rem;
+    transition: all .3s ease-in-out;
+    .fa-caret-down {
+      transform: rotate(0);
+      transition: all .3s ease-in-out;
+    }    
+    &.open {
+      border-radius: 23px;
+      transition: all .3s ease-in-out;
+      .fa-caret-down {
+        transform: rotate(-180deg);
+        transition: all .3s ease-in-out;
+      }
+      .nav__menu__btn {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+  #nav__menu__btn,
+  .nav__menu__btn {
+    border-radius: 50px;    
+    display: block;
+    font-family: 'Rubik Light';
+    font-weight: lighter;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+    transition: all .3s ease-in-out;
+    margin: 0;
+    // &:hover {
+    //   background: #fff;
+    //   color: #000;
+    // }
+  }
 }
-.nav__menu__btn:hover {
-  background: #fff;
-  color: #000;
+.lightpaper__dropdown {
+  display: none;  
+  list-style: none;
+  padding: 0;
+  transition: all .3s ease-in-out;
+  @media (max-width: 992px){
+    padding: 0 0 0 30px;  
+  }
+  @media (min-width: 992px){
+    li {
+      margin: 1rem 0;
+    }
+  }
+  a {
+    display: inline-block;
+  }
 }
+
 @media only screen
 and (min-width : 992px)
 and (max-width : 1220px) {
@@ -56,6 +131,14 @@ and (max-width : 1220px) {
     padding: .5rem;
   }
 }
+.menu-whitepaper {
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+
 
 /* CREEPTS
 ------------------------------------------------ */

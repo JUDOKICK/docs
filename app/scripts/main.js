@@ -284,5 +284,24 @@
 	    });
   	});
 
+  if ( $(window).width() < 992 ) {
+    // $('.nav__menu__btn').click(function(e) {
+    //   e.preventDefault();
+    //   $(this).parent().toggleClass('open');
+    //   $('#header').toggleClass('open');
+    //   $('.lightpaper__dropdown').stop().slideToggle();
+    // });
+
+    $('#lightpaper__link').click(function(e) {
+      e.preventDefault();
+      $('.nav').toggleClass('active');
+      $('.header__logo').toggleClass('mobile-active');
+      $('.nav__button__menu').toggleClass('close');
+      $(this).parent().toggleClass('open');
+      $('#header').toggleClass('open');
+      $('.lightpaper__dropdown').stop().slideToggle();
+    });
+  }
+
   });
 })(jQuery)
