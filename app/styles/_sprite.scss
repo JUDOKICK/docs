@@ -1,126 +1,277 @@
-.team-augusto-teixeira-phd {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -180px 0px;
-  width: 180px;
-  height: 180px;
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$team-augusto-teixeira-phd-name: 'team-augusto-teixeira-phd';
+$team-augusto-teixeira-phd-x: 180px;
+$team-augusto-teixeira-phd-y: 0px;
+$team-augusto-teixeira-phd-offset-x: -180px;
+$team-augusto-teixeira-phd-offset-y: 0px;
+$team-augusto-teixeira-phd-width: 180px;
+$team-augusto-teixeira-phd-height: 180px;
+$team-augusto-teixeira-phd-total-width: 900px;
+$team-augusto-teixeira-phd-total-height: 721px;
+$team-augusto-teixeira-phd-image: 'images/sprite.png';
+$team-augusto-teixeira-phd: (180px, 0px, -180px, 0px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-augusto-teixeira-phd', );
+$team-boris-name: 'team-boris';
+$team-boris-x: 360px;
+$team-boris-y: 0px;
+$team-boris-offset-x: -360px;
+$team-boris-offset-y: 0px;
+$team-boris-width: 180px;
+$team-boris-height: 180px;
+$team-boris-total-width: 900px;
+$team-boris-total-height: 721px;
+$team-boris-image: 'images/sprite.png';
+$team-boris: (360px, 0px, -360px, 0px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-boris', );
+$team-carlo-name: 'team-carlo';
+$team-carlo-x: 0px;
+$team-carlo-y: 181px;
+$team-carlo-offset-x: 0px;
+$team-carlo-offset-y: -181px;
+$team-carlo-width: 180px;
+$team-carlo-height: 180px;
+$team-carlo-total-width: 900px;
+$team-carlo-total-height: 721px;
+$team-carlo-image: 'images/sprite.png';
+$team-carlo: (0px, 181px, 0px, -181px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-carlo', );
+$team-colin-steil-name: 'team-colin-steil';
+$team-colin-steil-x: 180px;
+$team-colin-steil-y: 181px;
+$team-colin-steil-offset-x: -180px;
+$team-colin-steil-offset-y: -181px;
+$team-colin-steil-width: 180px;
+$team-colin-steil-height: 180px;
+$team-colin-steil-total-width: 900px;
+$team-colin-steil-total-height: 721px;
+$team-colin-steil-image: 'images/sprite.png';
+$team-colin-steil: (180px, 181px, -180px, -181px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-colin-steil', );
+$team-danilo-tuler-name: 'team-danilo-tuler';
+$team-danilo-tuler-x: 360px;
+$team-danilo-tuler-y: 181px;
+$team-danilo-tuler-offset-x: -360px;
+$team-danilo-tuler-offset-y: -181px;
+$team-danilo-tuler-width: 180px;
+$team-danilo-tuler-height: 180px;
+$team-danilo-tuler-total-width: 900px;
+$team-danilo-tuler-total-height: 721px;
+$team-danilo-tuler-image: 'images/sprite.png';
+$team-danilo-tuler: (360px, 181px, -360px, -181px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-danilo-tuler', );
+$team-diego-nehab-name: 'team-diego-nehab';
+$team-diego-nehab-x: 540px;
+$team-diego-nehab-y: 0px;
+$team-diego-nehab-offset-x: -540px;
+$team-diego-nehab-offset-y: 0px;
+$team-diego-nehab-width: 180px;
+$team-diego-nehab-height: 180px;
+$team-diego-nehab-total-width: 900px;
+$team-diego-nehab-total-height: 721px;
+$team-diego-nehab-image: 'images/sprite.png';
+$team-diego-nehab: (540px, 0px, -540px, 0px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-diego-nehab', );
+$team-erick-de-moura-name: 'team-erick-de-moura';
+$team-erick-de-moura-x: 540px;
+$team-erick-de-moura-y: 180px;
+$team-erick-de-moura-offset-x: -540px;
+$team-erick-de-moura-offset-y: -180px;
+$team-erick-de-moura-width: 180px;
+$team-erick-de-moura-height: 180px;
+$team-erick-de-moura-total-width: 900px;
+$team-erick-de-moura-total-height: 721px;
+$team-erick-de-moura-image: 'images/sprite.png';
+$team-erick-de-moura: (540px, 180px, -540px, -180px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-erick-de-moura', );
+$team-fabiana-cecin-name: 'team-fabiana_cecin';
+$team-fabiana-cecin-x: 0px;
+$team-fabiana-cecin-y: 361px;
+$team-fabiana-cecin-offset-x: 0px;
+$team-fabiana-cecin-offset-y: -361px;
+$team-fabiana-cecin-width: 180px;
+$team-fabiana-cecin-height: 180px;
+$team-fabiana-cecin-total-width: 900px;
+$team-fabiana-cecin-total-height: 721px;
+$team-fabiana-cecin-image: 'images/sprite.png';
+$team-fabiana-cecin: (0px, 361px, 0px, -361px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-fabiana_cecin', );
+$team-felipe-name: 'team-felipe';
+$team-felipe-x: 180px;
+$team-felipe-y: 361px;
+$team-felipe-offset-x: -180px;
+$team-felipe-offset-y: -361px;
+$team-felipe-width: 180px;
+$team-felipe-height: 180px;
+$team-felipe-total-width: 900px;
+$team-felipe-total-height: 721px;
+$team-felipe-image: 'images/sprite.png';
+$team-felipe: (180px, 361px, -180px, -361px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-felipe', );
+$team-kevin-name: 'team-kevin';
+$team-kevin-x: 360px;
+$team-kevin-y: 361px;
+$team-kevin-offset-x: -360px;
+$team-kevin-offset-y: -361px;
+$team-kevin-width: 180px;
+$team-kevin-height: 180px;
+$team-kevin-total-width: 900px;
+$team-kevin-total-height: 721px;
+$team-kevin-image: 'images/sprite.png';
+$team-kevin: (360px, 361px, -360px, -361px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-kevin', );
+$team-luiz-henrique-de-figueiredo-phd-name: 'team-luiz-henrique-de-figueiredo-phd';
+$team-luiz-henrique-de-figueiredo-phd-x: 540px;
+$team-luiz-henrique-de-figueiredo-phd-y: 361px;
+$team-luiz-henrique-de-figueiredo-phd-offset-x: -540px;
+$team-luiz-henrique-de-figueiredo-phd-offset-y: -361px;
+$team-luiz-henrique-de-figueiredo-phd-width: 180px;
+$team-luiz-henrique-de-figueiredo-phd-height: 180px;
+$team-luiz-henrique-de-figueiredo-phd-total-width: 900px;
+$team-luiz-henrique-de-figueiredo-phd-total-height: 721px;
+$team-luiz-henrique-de-figueiredo-phd-image: 'images/sprite.png';
+$team-luiz-henrique-de-figueiredo-phd: (540px, 361px, -540px, -361px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-luiz-henrique-de-figueiredo-phd', );
+$team-michael-name: 'team-michael';
+$team-michael-x: 720px;
+$team-michael-y: 0px;
+$team-michael-offset-x: -720px;
+$team-michael-offset-y: 0px;
+$team-michael-width: 180px;
+$team-michael-height: 180px;
+$team-michael-total-width: 900px;
+$team-michael-total-height: 721px;
+$team-michael-image: 'images/sprite.png';
+$team-michael: (720px, 0px, -720px, 0px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-michael', );
+$team-serguei-popov-phd-name: 'team-serguei-popov-phd';
+$team-serguei-popov-phd-x: 720px;
+$team-serguei-popov-phd-y: 180px;
+$team-serguei-popov-phd-offset-x: -720px;
+$team-serguei-popov-phd-offset-y: -180px;
+$team-serguei-popov-phd-width: 180px;
+$team-serguei-popov-phd-height: 180px;
+$team-serguei-popov-phd-total-width: 900px;
+$team-serguei-popov-phd-total-height: 721px;
+$team-serguei-popov-phd-image: 'images/sprite.png';
+$team-serguei-popov-phd: (720px, 180px, -720px, -180px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-serguei-popov-phd', );
+$team-stas-oskin-name: 'team-stas-oskin';
+$team-stas-oskin-x: 0px;
+$team-stas-oskin-y: 0px;
+$team-stas-oskin-offset-x: 0px;
+$team-stas-oskin-offset-y: 0px;
+$team-stas-oskin-width: 180px;
+$team-stas-oskin-height: 181px;
+$team-stas-oskin-total-width: 900px;
+$team-stas-oskin-total-height: 721px;
+$team-stas-oskin-image: 'images/sprite.png';
+$team-stas-oskin: (0px, 0px, 0px, 0px, 180px, 181px, 900px, 721px, 'images/sprite.png', 'team-stas-oskin', );
+$team-stephen-name: 'team-stephen';
+$team-stephen-x: 720px;
+$team-stephen-y: 360px;
+$team-stephen-offset-x: -720px;
+$team-stephen-offset-y: -360px;
+$team-stephen-width: 180px;
+$team-stephen-height: 180px;
+$team-stephen-total-width: 900px;
+$team-stephen-total-height: 721px;
+$team-stephen-image: 'images/sprite.png';
+$team-stephen: (720px, 360px, -720px, -360px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-stephen', );
+$team-tkhamed-name: 'team-tkhamed';
+$team-tkhamed-x: 0px;
+$team-tkhamed-y: 541px;
+$team-tkhamed-offset-x: 0px;
+$team-tkhamed-offset-y: -541px;
+$team-tkhamed-width: 180px;
+$team-tkhamed-height: 180px;
+$team-tkhamed-total-width: 900px;
+$team-tkhamed-total-height: 721px;
+$team-tkhamed-image: 'images/sprite.png';
+$team-tkhamed: (0px, 541px, 0px, -541px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-tkhamed', );
+$team-victor-name: 'team-victor';
+$team-victor-x: 180px;
+$team-victor-y: 541px;
+$team-victor-offset-x: -180px;
+$team-victor-offset-y: -541px;
+$team-victor-width: 180px;
+$team-victor-height: 180px;
+$team-victor-total-width: 900px;
+$team-victor-total-height: 721px;
+$team-victor-image: 'images/sprite.png';
+$team-victor: (180px, 541px, -180px, -541px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-victor', );
+$team-willian-bao-bean-name: 'team-willian-bao-bean';
+$team-willian-bao-bean-x: 360px;
+$team-willian-bao-bean-y: 541px;
+$team-willian-bao-bean-offset-x: -360px;
+$team-willian-bao-bean-offset-y: -541px;
+$team-willian-bao-bean-width: 180px;
+$team-willian-bao-bean-height: 180px;
+$team-willian-bao-bean-total-width: 900px;
+$team-willian-bao-bean-total-height: 721px;
+$team-willian-bao-bean-image: 'images/sprite.png';
+$team-willian-bao-bean: (360px, 541px, -360px, -541px, 180px, 180px, 900px, 721px, 'images/sprite.png', 'team-willian-bao-bean', );
+$spritesheet-width: 900px;
+$spritesheet-height: 721px;
+$spritesheet-image: 'images/sprite.png';
+$spritesheet-sprites: ($team-augusto-teixeira-phd, $team-boris, $team-carlo, $team-colin-steil, $team-danilo-tuler, $team-diego-nehab, $team-erick-de-moura, $team-fabiana-cecin, $team-felipe, $team-kevin, $team-luiz-henrique-de-figueiredo-phd, $team-michael, $team-serguei-popov-phd, $team-stas-oskin, $team-stephen, $team-tkhamed, $team-victor, $team-willian-bao-bean, );
+$spritesheet: (900px, 721px, 'images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
 }
-.team-boris {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -360px 0px;
-  width: 180px;
-  height: 180px;
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
 }
-.team-carlo {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: 0px -181px;
-  width: 180px;
-  height: 180px;
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
 }
-.team-colin-steil {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -180px -181px;
-  width: 180px;
-  height: 180px;
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
 }
-.team-danilo-tuler {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -360px -181px;
-  width: 180px;
-  height: 180px;
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
 }
-.team-diego-nehab {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -540px 0px;
-  width: 180px;
-  height: 180px;
-}
-.team-erick-de-moura {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -540px -180px;
-  width: 180px;
-  height: 180px;
-}
-.team-fabiana_cecin {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: 0px -361px;
-  width: 180px;
-  height: 180px;
-}
-.team-felipe {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -180px -361px;
-  width: 180px;
-  height: 180px;
-}
-.team-kevin {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -360px -361px;
-  width: 180px;
-  height: 180px;
-}
-.team-luiz-henrique-de-figueiredo-phd {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -540px -361px;
-  width: 180px;
-  height: 180px;
-}
-.team-michael {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -720px 0px;
-  width: 180px;
-  height: 180px;
-}
-.team-serguei-popov-phd {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -720px -180px;
-  width: 180px;
-  height: 180px;
-}
-.team-stas-oskin {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: 0px 0px;
-  width: 180px;
-  height: 181px;
-}
-.team-stephen {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -720px -360px;
-  width: 180px;
-  height: 180px;
-}
-.team-tkhamed {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: 0px -541px;
-  width: 180px;
-  height: 180px;
-}
-.team-victor {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -180px -541px;
-  width: 180px;
-  height: 180px;
-}
-.team-willian-bao-bean {
-  display: block;
-  background-image: url(images/sprite.png);
-  background-position: -360px -541px;
-  width: 180px;
-  height: 180px;
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
 }
