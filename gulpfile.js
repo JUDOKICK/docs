@@ -111,9 +111,9 @@ function scripts() {
   //   'app/scripts/vendor/jquery.mobile.custom.js',
   //   'app/scripts/main.js'
   // ])
-  // .pipe(sourcemaps.init({largeFile: true}))
+  .pipe(sourcemaps.init({largeFile: true}))
   .pipe(babel({
-	presets: ['@babel/preset-env']
+	 presets: ['@babel/preset-env']
   }))
   //.pipe(babel())
   .pipe(plumber())
