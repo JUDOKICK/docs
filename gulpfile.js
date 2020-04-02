@@ -66,7 +66,6 @@ const ROOT_PATH       = '.',
       VIDEOS_PATH     = 'dist/';
 
 
-
 // /////////////////////////////////////////////////////
 // SASS / MINIFICAÇÃO DE CSS task
 // /////////////////////////////////////////////////////
@@ -113,10 +112,10 @@ function scripts() {
   //   'app/scripts/main.js'
   // ])
   // .pipe(sourcemaps.init({largeFile: true}))
-  // .pipe(babel({
-  //   presets: ['@babel/preset-env']
-  // }))
-  .pipe(babel())
+  .pipe(babel({
+	presets: ['@babel/preset-env']
+  }))
+  //.pipe(babel())
   .pipe(plumber())
   .pipe(concat('main.js'))
   .pipe(uglify())
@@ -240,12 +239,12 @@ function serve() {
 // EXPORT TASKS
 // /////////////////////////////////////////////////////
 
-// exports.html = html;
-// exports.images = images;
-// exports.sprite = sprite;
-// exports.css = css;
-// exports.scripts = scripts;
-// exports.extras = extras;
+exports.html = html;
+exports.images = images;
+exports.sprite = sprite;
+exports.css = css;
+exports.scripts = scripts;
+exports.extras = extras;
 exports.serve = serve;
 
 // /////////////////////////////////////////////////////
