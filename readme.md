@@ -14,6 +14,7 @@ Run the following commands to generate the static website at `dist/`:
 To develop locally run the following commands:
 
     % npm install
+    % npm run build
     % npm run dev
 
 ## Continuous Deployment
