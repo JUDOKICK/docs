@@ -2,6 +2,12 @@
   padding: 70px 0;
   box-sizing: border-box;
 
+  &__infographic{
+    display: block;
+    width: 1367px; 
+    height: 522px;
+    margin: 0 auto;
+  }
 
   &__title {
     text-align: center;

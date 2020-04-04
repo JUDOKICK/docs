@@ -7,6 +7,19 @@ body{
   margin: 0;
 }
 
+.cartesi{
+  &-logo {
+    display: block;
+    width: 160px;
+    height: 50px;
+  }
+  // &-icon {
+  //   display: block;
+  //   width: 32px;
+  //   height: 33px;
+  // }
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -502,8 +515,9 @@ body{
           width: auto;
         }
 
-        .cartesi-logo {
-          width: 95px;
+        .cartesi-icon {
+          // width: 95px;
+          width: 155px;
           height: 94px;
 
           @media (min-width: 768px) {
