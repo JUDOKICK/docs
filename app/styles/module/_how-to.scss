@@ -2,8 +2,61 @@
   padding-top: 70px;
   box-sizing: border-box;
 
-  .container {
+  &__icons {
+    // width: auto;
+    // height: 133px;
+    &__science {
+      width: 163px;
+      height: 93px;
+      &--reverse {
+        width: 383px;
+        height: 267px;
+      }
+      &--mobile {
+        width: 165px;
+        height: 138px;
+      }
+    }
+    &__logistics {
+      width: 172px;
+      height: 135px;
+      &--reverse {
+        width: 383px;
+        height: 267px;
+      }
+      &--mobile {
+        width: 174px;
+        height: 138px;
+      }
+    }
+    &__finance {
 
+    }
+    &__software {
+      width: 88px;
+      height: 133px;
+      &--reverse {
+        width: 383px;
+        height: 303px;
+      }
+      &--mobile {
+        width: 91px;
+        height: 138px;
+      }
+    }
+    &__gaming {
+      width: 122px;
+      height: 154px;
+      &--reverse {
+        width: 383px;
+        height: 278px;
+      }
+      &--mobile {
+        width: 128px;
+        height: 138px;
+      }
+    }
+    
   }
 
   &__title {
@@ -119,8 +172,8 @@
 
       img, svg {
         // width: 387px;
-        max-width: 70%;
-        max-height: 150px;
+        // max-width: 70%;
+        // max-height: 150px;
         margin-right: auto;
         margin-left: auto;
         margin-bottom: 35px;
@@ -131,8 +184,8 @@
           margin-right: 70px;
           margin-left: 0;
           margin-bottom: 0;
-          max-width: 50%;
-          max-height: 250px;
+          // max-width: 50%;
+          // max-height: 250px;
         }
 
         &.mobile {
