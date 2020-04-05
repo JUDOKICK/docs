@@ -13,11 +13,6 @@ body{
     width: 160px;
     height: 50px;
   }
-  // &-icon {
-  //   display: block;
-  //   width: 32px;
-  //   height: 33px;
-  // }
 }
 
 .header {
@@ -46,7 +41,6 @@ body{
 
   .container {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
   }
 
@@ -135,10 +129,8 @@ body{
 }
 
 .nav {
-  // width: 45%;
   display: flex;
   align-items: flex-start;
-  // justify-content: center;
   margin-top: 10px;
 
   @media (max-width: 991px) {
@@ -175,10 +167,6 @@ body{
     .nav__menu {
 
       margin-top: 5px;
-
-      // &__item:nth-child(3) a:after {
-      //   width: 180px;
-      // }
 
       &__item a:after {
         width: 100%;
@@ -278,13 +266,10 @@ body{
         font-family: 'Rubik Light';
         font-weight: lighter;
         font-size: 20px;
-        // color: $black;
         color: #fff;
         letter-spacing: 1px;
         text-decoration: none;
         text-transform: uppercase;
-        // margin-bottom: 25px;
-        // padding-bottom: 5px;
         position: relative;
         
         @media (max-width: 990px) {
@@ -349,9 +334,6 @@ body{
           font-size: 1.5rem;
           i.icon {
           }
-          // @media (max-width: 575.98px) {
-          //   font-size: .59rem;
-          // }
         }
       }
     }
@@ -453,9 +435,7 @@ body{
         &:hover {
           opacity: 0.8;
         }
-        // @media (max-width: 575.98px) {
-        //   font-size: .8rem;
-        // }
+
         @media only screen
         and (min-width : 992px)
         and (max-width : 1270px) {
@@ -483,24 +463,6 @@ body{
       display: inline;
       margin-right: 15px;
 
-      // &:first-child {
-      //   margin-right: 0;
-      // }
-
-      // > span {
-      //   display: block;
-      // }
-
-      // &:first-child {
-      //   display: block;
-      //   margin-bottom: 30px;
-
-      // }
-
-      // &:nth-child(8) {
-      //   margin-right: 0;
-      // }
-
       &:last-child {
         width: 100%;
         display: flex;
@@ -516,7 +478,6 @@ body{
         }
 
         .cartesi-icon {
-          // width: 95px;
           width: 155px;
           height: 94px;
 
