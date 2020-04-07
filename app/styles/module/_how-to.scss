@@ -20,15 +20,24 @@
       height: 135px;
       &--reverse {
         width: 383px;
-        height: 267px;
+        height: 288px;
       }
       &--mobile {
-        width: 174px;
-        height: 138px;
+        width: 160px;
+        height: 135px;
       }
     }
     &__finance {
-
+      width: 122px;
+      height: 134px;
+      &--reverse {
+        width: 383px;
+        height: 287px;
+      }
+      &--mobile {
+        width: 110px;
+        height: 135px;
+      }
     }
     &__software {
       width: 88px;
