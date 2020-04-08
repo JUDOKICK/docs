@@ -310,7 +310,17 @@
         $('.header__logo').toggleClass('mobile-active');
         $('.nav').toggleClass('active');
         $('.nav__button__menu').toggleClass('close');
+      })      
+    }
+
+    if ( $(window).width() > 992 ) {
+      $(".nav-sec #lightpaper__area")
+      .mouseover(function() {
+        $(this).closest("#header").css("background-color", "transparent");
       })
+      .mouseout(function() {
+        $(this).closest("#header").css("background-color", "#000");
+      });
     }
 
   })
