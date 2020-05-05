@@ -1,4 +1,4 @@
-# Creepts Website
+# Ambassador Program Hotsite
 
 This is the hotsite for Ambassador Program. It's hosted at https://cartesi.io/ambassadors
 
