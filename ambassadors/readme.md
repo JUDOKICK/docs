@@ -1,6 +1,6 @@
-# Ambassador Program Hotsite
+# Ambassadorial Program Hotsite
 
-This is the hotsite for Ambassador Program. It's hosted at https://cartesi.io/ambassadors
+This is the hotsite for Ambassadorial Program. It's hosted at https://cartesi.io/ambassadors
 
 
 ## Build
