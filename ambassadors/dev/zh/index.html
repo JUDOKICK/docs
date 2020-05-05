@@ -1,0 +1,41 @@
+@@include('../inc/header.html')
+
+            <!-- whatsittake -->
+            @@include('../inc/whatsittake.html')
+            <!-- //whatsittake -->
+
+            <!-- requirements -->
+            @@include('../inc/requirements.html')
+            <!-- //requirements -->
+            
+            <!-- interestarea -->
+            @@include('../inc/interestarea.html')
+            <!-- //interestarea -->
+
+            <!-- benefits -->
+            @@include('../inc/benefits.html')
+            <!-- //benefits -->
+            
+            <!-- getstarted -->
+            @@include('../inc/getstarted.html')
+            <!-- //getstarted --> 
+
+    <!-- footer -->
+    @@include('../inc/footer.html')
+    <!-- //footer -->
+
+    <script>
+      $("[data-localize]").localize("js/language", { language: "zh" });
+      
+      function menulang(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i<arr.length; i++) {
+            out += '<a href="' + arr[i].url + '">' + 
+            arr[i].display + '</a><br>';
+        }
+        document.getElementById("menulang").innerHTML = out;
+      }
+    </script>
+</body>
+</html>

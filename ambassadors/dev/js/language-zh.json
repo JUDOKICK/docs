@@ -1,0 +1,91 @@
+{
+   "header":{
+      "title":"卡特西大使計劃",
+      "info":"強大的Cartesi社區對於團隊在DApp領域的全球目標至關重要。 隨著我們社區的不斷發展，我們在尋找領導者，想法和不斷改進的地方。 為了增強品牌知名度並創建更大的影響力範圍，我們一直致力於以正規的方式將人才引入公司。 我們感謝您有興趣協助我們在加密貨幣領域和Linux領域實現更大的數字營銷。",
+      "button":"現在申請"
+   },
+   "menu":{
+      "link1":"關於",
+      "link2":"開發者",
+      "link3":"生態系統",
+      "link4":"新聞"
+   },
+   "whatsittake":{
+      "title":"成為笛卡爾大使需要什麼？",
+      "info":"..."
+   },
+   "requirements":{
+      "title":"Basic Requirements",
+      "info1":"",
+      "info2":"",
+      "info3":"",
+      "info4":""
+   },
+   "interestarea":{
+      "title":"Cartesi Ambassador Fields",
+      "description":"",
+      "info1":"",
+      "info2":"",
+      "info3":"",
+      "info4":"",
+      "info5":"",
+      "info6":""
+   },
+   "benefits":{
+      "title":"Benefits of Cartesi Ambassadors",
+      "description":"",
+      "button":"",
+      "info1":"",
+      "info2":"",
+      "info3":"",
+      "info4":"",
+      "info5":"",
+      "info6":"",
+      "info7":""
+   },
+   "getstarted":{
+      "title":"Get Started",
+      "label1":"Full Name",
+      "label2":"Telegram Handle",
+      "label3":"Representing Country",
+      "label4":"Area of Expertise",
+      "label5":"How Long involved in Crypto or Blockchain?",
+      "label6":"About Yourself",
+      "label7":"Describe your experiences and professional background",
+      "label8":"Link some references and resources we can examine",
+      "label9":"Explain why you want to be an ambassador",
+      "label10":"Area of Expertise",
+      "label11":"I Agree to the Terms of Use",
+      "button":"Apply"
+   },
+   "footer":{
+      "mediatitle":"Stay in touch",
+      "projectby":"The Cartesi Project is commissioned by the Cartesi Foundation."
+   },
+   "footer-menu1":{
+      "link1":"關於",
+      "link2":"Developers",
+      "link3":"Ecosystem",
+      "link4":"News"
+   },
+   "footer-menu2":{
+      "link1":"Why Cartesi",
+      "link2":"Whitepaper",
+      "link3":"Lightpaper",
+      "link4":"How it works",
+      "link5":"Industries"
+   },
+   "footer-menu3":{
+      "link1":"Roadmap",
+      "link2":"Blog",
+      "link3":"FAQ",
+      "link4":"Team",
+      "link5":"Core Team"
+   },
+   "footer-menu4":{
+      "link1":"Advisor",
+      "link2":"Partners & Supporters",
+      "link3":"Legal",
+      "link4":"Privacy Policy"
+   }
+}
