@@ -50,7 +50,8 @@ gulp.task('deploy', () => {
 // /////////////////////////////////////////////////////
 
 const ROOT_PATH       = '.',
-      HTML_DEV_PATH   = 'app/*.html'
+      HTML_DEV_PATH   = 'app/*.html',
+	  AMB_DEV_PATH   = 'app/ambassadors/*.html'
       SASS_PATH       = 'app/styles/**/*.scss',
       JS_DEV_PATH     = 'app/scripts/*.js',
       SPRITE_PATH     = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
@@ -59,6 +60,7 @@ const ROOT_PATH       = '.',
       VIDEOS_DEV_PATH = 'app/**/*.{mp4,webm,ogv}',
 
       HTML_PATH       = "dist/",
+	  AMB_PATH       = "dist/ambassadors/",
       CSS_PATH        = 'dist/styles/',
       JS_PATH         = 'dist/scripts/',
       IMGS_PATH       = 'dist/images/',
@@ -192,7 +194,7 @@ function extras() {
     // 'app/**/*', '!app/sprite{,/**/*}',
     '!app/scripts/vendor{,/**/*}',
     '!app/sprite{,/**/*}',
-    '!app/styles/**/*',
+    '!app/styles/**/*.scss',
     '!app/inc{,/**/*}',
     '!app/*.html'
   ], {
@@ -216,6 +218,16 @@ function html() {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(HTML_PATH));
 }
+function html_amb() {
+  return gulp
+    .src(AMB_DEV_PATH)
+    .pipe(fileinclude({ //include files
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(AMB_PATH));
+}
 
 // /////////////////////////////////////////////////////
 // BROWSER-SYNC / WATCH - RELOAD BROWSERS
@@ -233,6 +245,9 @@ function serve() {
   gulp.watch(IMGS_DEV_PATH, images);
   gulp.watch(HTML_DEV_PATH, html);
   gulp.watch(HTML_DEV_PATH).on('change', browserSync.reload);
+  gulp.watch(AMB_DEV_PATH, html_amb);
+  gulp.watch(AMB_PATH).on('change', browserSync.reload);
+  
 }
 
 // /////////////////////////////////////////////////////
@@ -240,6 +255,7 @@ function serve() {
 // /////////////////////////////////////////////////////
 
 exports.html = html;
+exports.html_amb = html_amb;
 exports.images = images;
 exports.sprite = sprite;
 exports.css = css;
@@ -251,4 +267,4 @@ exports.serve = serve;
 // BUILD TASKS
 // /////////////////////////////////////////////////////
 
-exports.default = exports.build = gulp.parallel(html, css, scripts, images, sprite, fonts, extras);
+exports.default = exports.build = gulp.parallel(html, html_amb, css, scripts, images, sprite, fonts, extras);
