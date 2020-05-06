@@ -49,18 +49,18 @@ gulp.task('deploy', () => {
 // PATHS
 // /////////////////////////////////////////////////////
 
-const ROOT_PATH       = '.',
-      HTML_DEV_PATH   = 'app/*.html',
-	    AMB_DEV_PATH    = 'app/ambassadors/*.html'
-      SASS_PATH       = 'app/styles/**/*.scss',
-      JS_DEV_PATH     = 'app/scripts/*.js',
-      SPRITE_PATH     = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
-      IMGS_DEV_PATH   = 'app/images/**/*.+(png|jpg|jpeg|gif|svg)',
-      FONTS_DEV_PATH  = 'app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
-      VIDEOS_DEV_PATH = 'app/**/*.{mp4,webm,ogv}',
+const ROOT_PATH          = '.',
+      HTML_DEV_PATH      = 'app/*.html',
+	    HTML_AMB_DEV_PATH  = 'app/ambassadors/*.html'
+      SASS_PATH          = 'app/styles/**/*.scss',
+      JS_DEV_PATH        = 'app/scripts/*.js',
+      SPRITE_PATH        = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
+      IMGS_DEV_PATH      = 'app/images/**/*.+(png|jpg|jpeg|gif|svg)',
+      FONTS_DEV_PATH     = 'app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+      VIDEOS_DEV_PATH    = 'app/**/*.{mp4,webm,ogv}',
 
       HTML_PATH       = "dist/",
-	    AMB_PATH        = "dist/ambassadors/",
+	    HTML_AMB_PATH   = "dist/ambassadors/",
       CSS_PATH        = 'dist/styles/',
       JS_PATH         = 'dist/scripts/',
       IMGS_PATH       = 'dist/images/',
@@ -220,13 +220,13 @@ function html() {
 }
 function html_amb() {
   return gulp
-    .src(AMB_DEV_PATH)
+    .src(HTML_AMB_DEV_PATH)
     .pipe(fileinclude({ //include files
       prefix: '@@',
       basepath: '@file'
     }))
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(AMB_PATH));
+    .pipe(gulp.dest(HTML_AMB_PATH));
 }
 
 // /////////////////////////////////////////////////////
@@ -245,8 +245,8 @@ function serve() {
   gulp.watch(IMGS_DEV_PATH, images);
   gulp.watch(HTML_DEV_PATH, html);
   gulp.watch(HTML_DEV_PATH).on('change', browserSync.reload);
-  gulp.watch(AMB_DEV_PATH, html_amb);
-  gulp.watch(AMB_PATH).on('change', browserSync.reload);
+  gulp.watch(HTML_AMB_DEV_PATH, html_amb);
+  gulp.watch(HTML_AMB_DEV_PATH).on('change', browserSync.reload);
   
 }
 
