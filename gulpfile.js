@@ -51,7 +51,7 @@ gulp.task('deploy', () => {
 
 const ROOT_PATH       = '.',
       HTML_DEV_PATH   = 'app/*.html',
-	  AMB_DEV_PATH   = 'app/ambassadors/*.html'
+	    AMB_DEV_PATH    = 'app/ambassadors/*.html'
       SASS_PATH       = 'app/styles/**/*.scss',
       JS_DEV_PATH     = 'app/scripts/*.js',
       SPRITE_PATH     = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
@@ -60,7 +60,7 @@ const ROOT_PATH       = '.',
       VIDEOS_DEV_PATH = 'app/**/*.{mp4,webm,ogv}',
 
       HTML_PATH       = "dist/",
-	  AMB_PATH       = "dist/ambassadors/",
+	    AMB_PATH        = "dist/ambassadors/",
       CSS_PATH        = 'dist/styles/',
       JS_PATH         = 'dist/scripts/',
       IMGS_PATH       = 'dist/images/',
