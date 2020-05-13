@@ -107,8 +107,8 @@
     font-family: 'Rubik BoldItalic';
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 13px;
-    background: #00FF33;
+    font-size: 13px!important;
+    background: #00FF33!important;
     color: #000036;
     /*box-shadow: 0 0 5px #000036, 0 0 10px #000036, 0 0 5px #00FF33, 0 0 20px #00FF33, 0 0 5px #00FF33, 0 0 0px #00FF33, 0 0 0px #00FF33;
     &:before {
@@ -116,7 +116,7 @@
     }*/
     position: relative;
     width: 200px;
-    padding: .75rem;
+    padding: .75rem!important;
     transition: all .3s ease;
     cursor: pointer;
     margin: 1.5rem 0 0;

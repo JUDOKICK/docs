@@ -13,10 +13,10 @@ html, body {
 }
 
 body {
-  margin:0;
-  overflow:hidden;
+  margin: 0;
+  // overflow: hidden;
   &.block {
-    overflow:hidden;
+    overflow: hidden;
   }
 }
 
@@ -84,7 +84,7 @@ body {
     transition: top 300ms ease-out;
   }
 
-  .container {
+  .container-flex {
     display: flex;
     justify-content: space-between;
   }
@@ -392,10 +392,10 @@ body {
 
 .footer {
   background-color: $black;
-  padding: 70px 0 calc(100px + 70px);
+  padding: 70px 0 calc(100px + 30px);
   position: relative;
 
-  .container {
+  .container-flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -500,7 +500,7 @@ body {
 
     @media (min-width: 992px) {
       margin-top: 0;
-      width: 450px;
+      width: 460px;
       text-align: left;
     }
 

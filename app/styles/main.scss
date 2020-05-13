@@ -1,5 +1,5 @@
 
-@import "font-awesome";
+@import "fonts";
 @import "normalize";
 @import "fancybox";
 @import "slick";
@@ -11,7 +11,7 @@
 @import 'keyframes';
 @import 'module';
 @import 'layout';
-@import 'sprite';
+//@import 'sprite';
  
 /*+----------------------------------------------+
   BOOTSTRAP GRID SYSTEM
@@ -61,10 +61,11 @@ img {
       overflow: hidden;
       padding-top: 0;
       padding-bottom: 0;
-      height: 35px;
+      height: 39px;
       &:hover {
         border-radius: 23px;
         transition: all .3s ease-in-out;
+        // height: 215px;
         height: 215px;
         -webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
         transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-top-width .3s linear, border-top-width .3s linear;
@@ -121,7 +122,7 @@ img {
     margin: 0;
     padding: 0;
     width: 185px;
-    height: 35px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

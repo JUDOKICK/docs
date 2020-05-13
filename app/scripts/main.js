@@ -321,7 +321,7 @@
       .mouseout(function() {
         $(this).closest("#header").css("background-color", "#000");
       });
-    }
+    }	
 
   })
 })(jQuery)

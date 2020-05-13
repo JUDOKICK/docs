@@ -49,23 +49,23 @@ gulp.task('deploy', () => {
 // PATHS
 // /////////////////////////////////////////////////////
 
-const ROOT_PATH          = '.',
-      HTML_DEV_PATH      = 'app/*.html',
-	    HTML_AMB_DEV_PATH  = 'app/ambassadors/*.html'
-      SASS_PATH          = 'app/styles/**/*.scss',
-      JS_DEV_PATH        = 'app/scripts/*.js',
-      SPRITE_PATH        = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
-      IMGS_DEV_PATH      = 'app/images/**/*.+(png|jpg|jpeg|gif|svg)',
-      FONTS_DEV_PATH     = 'app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
-      VIDEOS_DEV_PATH    = 'app/**/*.{mp4,webm,ogv}',
+const HTML_DEV_PATH         = 'app/*.html',
+	    HTML_AMB_DEV_PATH     = 'app/ambassadors/*.html',
+      HTML_BOUNTY_DEV_PATH  = 'app/bounty/*.html',
+      SASS_PATH             = 'app/styles/**/*.scss',
+      SASS_AMB_PATH         = 'app/styles_amb/**/*.scss',
+      JS_DEV_PATH           = 'app/scripts/*.js',
+      SPRITE_PATH           = 'app/sprite/*.+(png|jpg|jpeg|gif|svg)',
+      IMGS_DEV_PATH         = 'app/images/**/*.+(png|jpg|jpeg|gif|svg)',
 
-      HTML_PATH       = "dist/",
-	    HTML_AMB_PATH   = "dist/ambassadors/",
-      CSS_PATH        = 'dist/styles/',
-      JS_PATH         = 'dist/scripts/',
-      IMGS_PATH       = 'dist/images/',
-      FONTS_PATH      = 'dist/fonts/',
-      VIDEOS_PATH     = 'dist/';
+      HTML_PATH          = "dist/",
+	    HTML_AMB_PATH      = "dist/ambassadors/",
+      HTML_BOUNTY_PATH   = "dist/bounty/",
+      CSS_PATH           = 'dist/styles/',
+      JS_PATH            = 'dist/scripts/',
+      IMGS_PATH          = 'dist/images/',
+      FONTS_PATH         = 'dist/fonts/',
+      VIDEOS_PATH        = 'dist/';
 
 
 // /////////////////////////////////////////////////////
@@ -80,7 +80,24 @@ const sassOptions = {
 function css() {
   return gulp
     .src(SASS_PATH)
-    .pipe(sourcemaps.init({largeFile: true}))
+    // .pipe(sourcemaps.init({largeFile: true}))
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    // .pipe(rename(function (path) {
+    //     path.basename += ".min"
+    // }))
+    .pipe(sourcemaps.write('/', {
+      addComment: false,
+      includeContent: false,
+      sourceRoot: CSS_PATH
+    }))
+    .pipe(gulp.dest(CSS_PATH))
+    .pipe(browserSync.reload({stream:true}));
+}
+
+function css_amb() {
+  return gulp
+    .src(SASS_AMB_PATH)
+    // .pipe(sourcemaps.init({largeFile: true}))
     .pipe(sass(sassOptions).on('error', sass.logError))
     // .pipe(rename(function (path) {
     //     path.basename += ".min"
@@ -113,7 +130,7 @@ function scripts() {
   //   'app/scripts/vendor/jquery.mobile.custom.js',
   //   'app/scripts/main.js'
   // ])
-  .pipe(sourcemaps.init({largeFile: true}))
+  // .pipe(sourcemaps.init({largeFile: true}))
   .pipe(babel({
 	 presets: ['@babel/preset-env']
   }))
@@ -124,15 +141,28 @@ function scripts() {
   // .pipe(rename(function (path) {
   //     path.basename += ".min"
   // }))
-  .pipe(sourcemaps.write('/', {
-    addComment: false,
-    includeContent: false,
-    sourceRoot: JS_PATH
-  }))
+  // .pipe(sourcemaps.write('/', {
+  //   addComment: false,
+  //   includeContent: false,
+  //   sourceRoot: JS_PATH
+  // }))
   .pipe(gulp.dest(JS_PATH))
   .pipe(browserSync.reload({stream:true}));
 }
 
+function scripts_amb() {
+  return gulp.src([
+    'app/scripts/vendor/jquery.js',
+    'app/scripts/vendor/bootstrap.js',
+    // 'app/scripts/vendor/jquery.smooth-scroll.js',
+    'app/scripts/scripts.js',
+  ])
+  .pipe(plumber())
+  .pipe(concat('scripts.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest(JS_PATH))
+  .pipe(browserSync.reload({stream:true}));
+}
 // /////////////////////////////////////////////////////
 // COMPRESS - SPRITE IMGS task
 // /////////////////////////////////////////////////////
@@ -154,34 +184,24 @@ function images() {
     .pipe(gulp.dest(IMGS_PATH));
 }
 
-function sprite() {
-  const data = gulp.src(SPRITE_PATH)
-  .pipe(spritesmith({
-    imgName: 'sprite.png',
-    imgPath: 'images/sprite.png',
-    cssName: '_sprite.scss'
-  }));
+// function sprite() {
+//   const data = gulp.src(SPRITE_PATH)
+//   .pipe(spritesmith({
+//     imgName: 'sprite.png',
+//     imgPath: 'images/sprite.png',
+//     cssName: '_sprite.scss'
+//   }));
 
-  const imgStream = data.img
-    .pipe(buffer())
-    .pipe(imagemin())
-    .pipe(gulp.dest(IMGS_PATH));
+//   const imgStream = data.img
+//     .pipe(buffer())
+//     .pipe(imagemin())
+//     .pipe(gulp.dest(IMGS_PATH));
 
-  const cssStream = data.css
-    .pipe(gulp.dest('app/styles'));
+//   const cssStream = data.css
+//     .pipe(gulp.dest('app/styles'));
 
-  return merge(imgStream, cssStream);
-}
-
-// /////////////////////////////////////////////////////
-// COPYING FONTS
-// /////////////////////////////////////////////////////
-
-function fonts() {
-  return gulp
-    .src(FONTS_DEV_PATH)
-    .pipe(gulp.dest(FONTS_PATH));
-}
+//   return merge(imgStream, cssStream);
+// }
 
 // /////////////////////////////////////////////////////
 // COPYING APP FILES
@@ -193,10 +213,12 @@ function extras() {
     // 'app/**/*', '!app/scripts/vendor{,/**/*}',
     // 'app/**/*', '!app/sprite{,/**/*}',
     '!app/scripts/vendor{,/**/*}',
-    '!app/sprite{,/**/*}',
-    '!app/styles/**/*.scss',
+    // '!app/sprite{,/**/*}',
+    // '!app/styles/**/*.scss',
+    '!app/styles{,/**/*}',
+    '!app/styles_amb{,/**/*}',
     '!app/inc{,/**/*}',
-    '!app/*.html'
+    '!app/**/*.html'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -218,6 +240,7 @@ function html() {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(HTML_PATH));
 }
+
 function html_amb() {
   return gulp
     .src(HTML_AMB_DEV_PATH)
@@ -227,6 +250,17 @@ function html_amb() {
     }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(HTML_AMB_PATH));
+}
+
+function html_bounty() {
+  return gulp
+    .src(HTML_BOUNTY_DEV_PATH)
+    .pipe(fileinclude({ //include files
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(HTML_BOUNTY_PATH));
 }
 
 // /////////////////////////////////////////////////////
@@ -240,26 +274,30 @@ function serve() {
     }
   });
   gulp.watch(SASS_PATH, css);
+  gulp.watch(SASS_AMB_PATH, css_amb);
   gulp.watch(JS_DEV_PATH, scripts);
-  gulp.watch(SPRITE_PATH, sprite);
+  gulp.watch(JS_DEV_PATH, scripts_amb);
+  // gulp.watch(SPRITE_PATH, sprite);
   gulp.watch(IMGS_DEV_PATH, images);
   gulp.watch(HTML_DEV_PATH, html);
   gulp.watch(HTML_DEV_PATH).on('change', browserSync.reload);
   gulp.watch(HTML_AMB_DEV_PATH, html_amb);
-  gulp.watch(HTML_AMB_DEV_PATH).on('change', browserSync.reload);
-  
+  gulp.watch(HTML_AMB_DEV_PATH).on('change', browserSync.reload); 
+  gulp.watch(HTML_BOUNTY_DEV_PATH, html_bounty);
+  gulp.watch(HTML_BOUNTY_DEV_PATH).on('change', browserSync.reload);
 }
 
 // /////////////////////////////////////////////////////
 // EXPORT TASKS
 // /////////////////////////////////////////////////////
 
-exports.html = html;
-exports.html_amb = html_amb;
-exports.images = images;
-exports.sprite = sprite;
-exports.css = css;
-exports.scripts = scripts;
+// exports.html = html;
+// exports.html_amb = html_amb;
+// exports.html_bounty = html_bounty;
+// exports.images = images;
+// // exports.sprite = sprite;
+// exports.css = css;
+// exports.scripts = scripts;
 exports.extras = extras;
 exports.serve = serve;
 
@@ -267,4 +305,4 @@ exports.serve = serve;
 // BUILD TASKS
 // /////////////////////////////////////////////////////
 
-exports.default = exports.build = gulp.parallel(html, html_amb, css, scripts, images, sprite, fonts, extras);
+exports.default = exports.build = gulp.parallel(html, html_amb, html_bounty, css, css_amb, scripts, scripts_amb, images, extras);

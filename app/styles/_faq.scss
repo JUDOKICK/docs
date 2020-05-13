@@ -100,6 +100,19 @@ div.faq__accordion { display: none; }
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  &-title {
+    font-family: Rubik Regular;
+    font-size: 24px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
 }
 .accordion .accordion-head.cbg,
 .accordion .accordion-body.cbg {

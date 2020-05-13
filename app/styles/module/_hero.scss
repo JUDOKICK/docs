@@ -79,6 +79,8 @@
         border: 2px solid $white;
         border-radius: 25px;
         position: absolute;
+        // top: -14px;
+        // left: -17px;
         top: -14px;
         left: -17px;
         transition: width 350ms ease-out 300ms;
@@ -125,7 +127,9 @@
   }
 }
 
-
+#mlb2-1683328.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+  height: 42px;
+}
 
 
 

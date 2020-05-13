@@ -2,21 +2,6 @@ $black: #000000;
 $white: #ffffff;
 $grey: #808285;
 
-@font-face {
-  font-family: 'Rubik Light';
-  src: url(../fonts/Rubik-Light.ttf)  format('truetype');
-}
-
-@font-face {
-  font-family: 'Rubik Regular';
-  src: url(../fonts/Rubik-Regular.ttf)  format('truetype');
-}
-
-@font-face {
-  font-family: 'Rubik BoldItalic';
-  src: url(../fonts/Rubik-BoldItalic.ttf)  format('truetype');
-}
-
 .icon {
   font-size: 0;
   display: inline-block;

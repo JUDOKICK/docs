@@ -4,7 +4,7 @@ body {
   height: 100%;
 }
 
-.container {
+.container-flex {
   width: 100%;
   padding: 0 5%;
   box-sizing: border-box;
@@ -18,10 +18,12 @@ body {
   font-family: 'Rubik Light';
   font-weight: lighter;
   font-size: 40px;
+  color: #000;
 }
 
 .subtitle {
   font-family: 'Rubik Light';
   font-weight: lighter;
   font-size: 20px;
+  color: #000;
 }
