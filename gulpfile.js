@@ -154,11 +154,10 @@ function scripts_amb() {
   return gulp.src([
     'app/scripts/vendor/jquery.js',
     'app/scripts/vendor/bootstrap.js',
-    // 'app/scripts/vendor/jquery.smooth-scroll.js',
-    'app/scripts/scripts.js',
+    'app/scripts/scripts.js'
   ])
   .pipe(plumber())
-  .pipe(concat('scripts.js'))
+  .pipe(concat('scripts.js'))  
   .pipe(uglify())
   .pipe(gulp.dest(JS_PATH))
   .pipe(browserSync.reload({stream:true}));
@@ -210,9 +209,9 @@ function images() {
 function extras() {
   return gulp.src([
     'app/**/*',
-    // 'app/**/*', '!app/scripts/vendor{,/**/*}',
-    // 'app/**/*', '!app/sprite{,/**/*}',
     '!app/scripts/vendor{,/**/*}',
+    '!app/scripts/main.js',
+    '!app/scripts/scripts.js',
     // '!app/sprite{,/**/*}',
     // '!app/styles/**/*.scss',
     '!app/styles{,/**/*}',
@@ -267,13 +266,14 @@ function html_bounty() {
 // EXPORT TASKS
 // /////////////////////////////////////////////////////
 
-// exports.html = html;
-// exports.html_amb = html_amb;
-// exports.html_bounty = html_bounty;
-// exports.images = images;
-// // exports.sprite = sprite;
-// exports.css = css;
-// exports.scripts = scripts;
+exports.html = html;
+exports.html_amb = html_amb;
+exports.html_bounty = html_bounty;
+exports.images = images;
+// exports.sprite = sprite;
+exports.css = css;
+exports.scripts = scripts;
+exports.scripts_amb = scripts_amb;
 exports.extras = extras;
 exports.serve = serve;
 
