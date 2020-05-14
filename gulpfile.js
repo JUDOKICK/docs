@@ -264,6 +264,26 @@ function html_bounty() {
 }
 
 // /////////////////////////////////////////////////////
+// EXPORT TASKS
+// /////////////////////////////////////////////////////
+
+// exports.html = html;
+// exports.html_amb = html_amb;
+// exports.html_bounty = html_bounty;
+// exports.images = images;
+// // exports.sprite = sprite;
+// exports.css = css;
+// exports.scripts = scripts;
+exports.extras = extras;
+exports.serve = serve;
+
+// /////////////////////////////////////////////////////
+// BUILD TASKS
+// /////////////////////////////////////////////////////
+
+exports.default = exports.build = gulp.parallel(html, html_amb, html_bounty, css, css_amb, scripts, scripts_amb, images, extras);
+
+// /////////////////////////////////////////////////////
 // BROWSER-SYNC / WATCH - RELOAD BROWSERS
 // /////////////////////////////////////////////////////
 
@@ -286,23 +306,3 @@ function serve() {
   gulp.watch(HTML_BOUNTY_DEV_PATH, html_bounty);
   gulp.watch(HTML_BOUNTY_DEV_PATH).on('change', browserSync.reload);
 }
-
-// /////////////////////////////////////////////////////
-// EXPORT TASKS
-// /////////////////////////////////////////////////////
-
-// exports.html = html;
-// exports.html_amb = html_amb;
-// exports.html_bounty = html_bounty;
-// exports.images = images;
-// // exports.sprite = sprite;
-// exports.css = css;
-// exports.scripts = scripts;
-exports.extras = extras;
-exports.serve = serve;
-
-// /////////////////////////////////////////////////////
-// BUILD TASKS
-// /////////////////////////////////////////////////////
-
-exports.default = exports.build = gulp.parallel(html, html_amb, html_bounty, css, css_amb, scripts, scripts_amb, images, extras);
