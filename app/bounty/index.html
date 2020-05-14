@@ -232,7 +232,7 @@
                                 <label class="bounty__submit-label"  for="Proof of Concept">4. Proof of Concept</label>
                                 <p>The proof of concept is the most important part of the report submission.<br>
                                 Clear, reproducible steps will help us validate this issue as quickly as possible.</p>
-                                <input type="text" class="form-control" id="proof" placeholder="Title" required>
+                                <input type="text" name="proof" class="form-control" id="proof" placeholder="Title" required>
                                 <div class="invalid-tooltip">
                                 Please provide a Proof of Concept.
                                 </div>
@@ -269,7 +269,7 @@ Please replace *all* the [square] sections below with the pertinent details. Rem
                             </div>
                             <div class="bounty__submit-group">
                                 <p>What security impact could an attacker achieve?</p>
-                                <input type="text" class="form-control" id="impact" placeholder="Impact" required>
+                                <input type="text" name="impact" class="form-control" id="impact" placeholder="Impact" required>
                                 <div class="invalid-tooltip">
                                 Please provide a Impact.
                                 </div>
@@ -279,21 +279,21 @@ Please replace *all* the [square] sections below with the pertinent details. Rem
                         <div class="bounty__submit-group">
                             <label class="bounty__submit-label"  for="Proof of Concept">5. Who's reporting</label>
                             <p>Enter your name and email to receive updates on the status of your submission.</p>
-                            <input type="text" class="form-control" id="fullname" placeholder="Full Name" required>
+                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name" required>
                             <div class="invalid-tooltip">
                             Please provide a Full Name.
                             </div>
                         </div>
 
                         <div class="bounty__submit-group">
-                            <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="E-mail" required>
                             <div class="invalid-tooltip">
                             Please provide a valid E-mail.
                             </div>
                         </div>                        
 
                         <div class="bounty__submit-group custom-control custom-checkbox  justify-content-center d-flex">
-                            <input type="checkbox" class="custom-control-input" id="agreement" required>
+                            <input type="checkbox" name="agreement" class="custom-control-input" id="agreement" required>
                             <label class="custom-control-label" style="font-size:14px" for="agreement">By clicking 'Submit Report' you acknowledge that you agree to our Privacy Policy</label>
                             <div class="invalid-tooltip">You must agree before submitting.</div>
                         </div>
