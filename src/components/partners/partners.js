@@ -1,6 +1,6 @@
 import React from "react"
 import partnersStyle from "./partners.module.scss"
-import bgSvg from "../../images/svg/partners/partners-mapped.png"
+import bgSvg from "../../images/SVG/partners/partners-mapped.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage } from "gatsby-plugin-intl"
