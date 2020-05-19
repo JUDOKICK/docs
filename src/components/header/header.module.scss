@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background: $default-bg-color;
+  color: $black;
+  padding-left: 10%;
+  padding-right: 9%;
+
+  // & .headerCollapes {
+  //   position: absolute;
+  //   width: 100%;
+  //   z-index: 2;
+  // }
+
+  @media (min-width: 1490px) {
+    padding-right: 10%;
+  }
+
+  @media (min-width: 1490px) {
+    padding-right: 10%;
+  }
+
+  @media (max-width: 992px) {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .navPosition {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+
+    button {
+      border: 0;
+      width: fit-content;
+    }
+
+    @media (max-width: 502px) {
+      padding: 3%;
+    }
+  }
+
+  .logo {
+    width: 181px;
+    height: 60px;
+  }
+
+  .nameLogo {
+    font-size: 18px;
+  }
+
+  .navbarCollapse {
+    justify-content: flex-end;
+
+    .toggle {
+      border: 0 !important;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      margin: auto 15px;
+      @media (max-width: 1200px) {
+        margin: auto 5px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+  }
+}

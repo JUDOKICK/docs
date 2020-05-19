@@ -1,0 +1,192 @@
+.layout {
+  background: linear-gradient(157.41deg, #020e21 13.41%, #0042af 91.52%);
+  color: #fff;
+  width: 100%;
+  min-height: 730px;
+  height: 100%;
+
+  h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+
+  .imgBg {
+    width: 100%;
+    min-width: 1488px;
+    right: 0;
+    position: absolute;
+    top: 1%;
+    z-index: 0;
+    transition: all 0.2s ease;
+
+    @media (min-width: 1779px) {
+      width: 95%;
+      position: absolute;
+      top: -1%;
+      right: 0px;
+    }
+
+    @media (max-width: 1289px) {
+      width: 1488px;
+      position: absolute;
+      top: 2%;
+      opacity: 0.5;
+      right: 0px;
+    }
+  }
+
+  .contentPage {
+    z-index: 1;
+    position: relative;
+    transform: translateY(50%);
+
+    @media (min-width: 1800px) {
+      max-width: 1450px;
+    }
+
+    @media (min-width: 1290px) and (max-width: 1799px) {
+      max-width: 80%;
+    }
+
+    @media (max-width: 1190px) {
+      max-width: 80%;
+      transform: none;
+      text-align: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    @media (max-width: 490px) {
+      max-width: 95%;
+      padding-bottom: 100px;
+    }
+  }
+
+  .titleHeader {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1190px) {
+      h1 {
+        margin: auto;
+        max-width: 90%;
+      }
+
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 490px) {
+      h1 {
+        font-size: 9vw;
+      }
+    }
+  }
+
+  .subTitle {
+    margin-bottom: 20px;
+
+    @media (max-width: 1190px) {
+      p {
+        margin: auto;
+        max-width: 90%;
+      }
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 490px) {
+      p {
+        font-size: 7vw;
+      }
+    }
+  }
+
+  .btnsList {
+    display: block;
+    .btnStarted {
+      color: #013b9a;
+      background: #fff;
+      margin-right: 39px;
+
+      &:hover {
+        background: #013b9a;
+        color: #fff;
+      }
+    }
+
+    .btnVideo {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+        color: #013b9a;
+        background: #fff;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    @media (max-width: 581px) {
+      .btnStarted,
+      .btnVideo {
+        margin: 10px;
+        padding: 1px 5px;
+      }
+    }
+  }
+
+  .imgsList {
+    display: block;
+    margin-top: 69px;
+
+    img {
+      margin-right: 60px;
+    }
+
+    .computerLogo {
+      width: 148px;
+      height: 24.67px;
+    }
+
+    @media (max-width: 661px) {
+      img {
+        margin: 20px 50px;
+      }
+    }
+  }
+}
+
+.modalContentVideo {
+  .modalBody {
+    background-color: #000;
+  }
+
+  .modalHeader {
+    background-color: #000;
+    button {
+      padding: 1rem 1rem;
+      width: auto;
+      margin: -1rem 1-rem -1rem auto;
+      font-weight: 400;
+      color: #fff;
+      font-size: 1.5rem !important;
+    }
+  }
+  .videoYoutbe {
+    width: 100%;
+    height: 80vh;
+  }
+}

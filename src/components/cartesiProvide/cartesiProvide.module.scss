@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 100px 40px;
+
+  .boxCenter {
+    max-width: 900px;
+    text-align: center;
+
+    .tag {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      min-width: 315px;
+
+      .cardNews {
+        // width: 100%;
+        max-width: 468px;
+        // height: 29.33px;
+        height: 100%;
+        align-items: baseline;
+        font-weight: 300;
+        padding-right: 6px;
+        background-color: #d7e3f6;
+
+        .tagP {
+          margin: 0;
+          font-size: 16px;
+
+          span {
+            padding: 6px 8px;
+            margin-right: 8px;
+            color: #fff;
+            line-height: 2;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            background: #0047ff;
+          }
+
+          @media (max-width: 1350px) {
+            font-size: 14px;
+
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .tagMobile {
+          display: none;
+          width: 100%;
+          height: 100%;
+
+          h6 {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 -15px;
+            color: #fff;
+            background: #01359a;
+          }
+
+          p {
+            margin: 0;
+
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 456px) {
+          .tagMobile {
+            display: block;
+          }
+
+          .tagP {
+            display: none;
+          }
+        }
+
+        @media (max-width: 456px) {
+          padding-right: 0;
+          max-width: 95%;
+        }
+      }
+    }
+
+    .title {
+      justify-content: center;
+
+      h1 {
+        font-size: 48px;
+        font-weight: 400;
+        max-width: 785px;
+        margin-bottom: 30px;
+        letter-spacing: -0.02em;
+
+        @media (max-width: 466px) {
+          font-size: 7vw;
+        }
+      }
+    }
+
+    .subTitle {
+      justify-content: center;
+      p {
+        font-weight: 300;
+        max-width: 785px;
+        font-size: 18px;
+
+        @media (max-width: 466px) {
+          font-size: 4.5vw;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

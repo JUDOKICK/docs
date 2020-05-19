@@ -1,0 +1,193 @@
+.news {
+  width: 100%;
+  min-height: 600px;
+  left: 0px;
+  top: 0px;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto 180px;
+
+  @media (max-width: 1510px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 184px;
+  }
+
+  .title {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin: 70px auto;
+
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #0c0c0c;
+
+      @media (max-width: 490px) {
+        font-size: 9vw;
+      }
+    }
+  }
+
+  .gridCards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 441px);
+    grid-template-rows: 686px;
+    gap: 44px;
+    margin-bottom: 184px;
+
+    @media (max-width: 1550px) {
+      grid-template-columns: repeat(3, 401px);
+    }
+
+    @media (max-width: 1395px) {
+      grid-template-columns: repeat(3, 381px);
+      gap: 10px;
+    }
+
+    @media (max-width: 1175px) {
+      grid-template-columns: repeat(1, 441px);
+      grid-template-rows: repeat(3, 686px);
+      gap: 200px;
+      margin: auto;
+    }
+
+    @media (max-width: 482px) {
+      grid-template-columns: repeat(1, 95%);
+      grid-template-rows: repeat(3, 686px);
+      gap: 100px;
+      margin: auto;
+    }
+
+    .block {
+      background: #ffffff;
+      border: 1px solid #dde5f3;
+      box-sizing: border-box;
+      box-shadow: 4px 4px 30px rgba(142, 170, 198, 0.2);
+      border-radius: 4px;
+      max-width: 441px;
+
+      .cardHeader {
+        padding: 0;
+        border-bottom: 0;
+        background-color: #fff;
+
+        img {
+          height: 100%;
+          width: 100%;
+
+          // @media (max-width: 446px) {
+          //   height: 100%;
+          // }
+        }
+      }
+
+      .cardBody {
+        min-height: 355px;
+
+        @media (max-width: 482px) {
+          min-height: fit-content;
+        }
+
+        .author {
+          text-align: center;
+
+          img {
+            width: 36px;
+            height: 36px;
+            position: relative;
+            top: -36px;
+            border-radius: 100%;
+          }
+
+          p:first-of-type {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 146.7%;
+            text-align: center;
+            margin-top: -25px;
+            text-transform: capitalize;
+
+            @media (max-width: 482px) {
+              font-size: 14px;
+            }
+          }
+
+          p:nth-of-type(2) {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 146.7%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #8eaac6;
+            margin-bottom: 20px;
+          }
+        }
+
+        .content {
+          h4 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 130%;
+            margin-bottom: 30px;
+
+            @media (max-width: 1550px) {
+              font-size: 1.3vw;
+            }
+
+            @media (max-width: 1220px) {
+              font-size: 1.4vw;
+            }
+
+            @media (max-width: 1110px) {
+              font-size: 22px;
+            }
+
+            @media (max-width: 482px) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
+
+            @media (max-width: 1440px) {
+              font-size: 15px;
+            }
+
+            @media (max-width: 482px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .cardFooter {
+        border: 0;
+        background-color: #ffffff;
+        text-align: center;
+
+        button {
+          background: #557ece;
+          color: #fff;
+          margin-bottom: 56px;
+
+          &:hover {
+            background: #fff;
+            border: 1px solid #557ece;
+            color: #557ece;
+          }
+        }
+      }
+    }
+  }
+}
