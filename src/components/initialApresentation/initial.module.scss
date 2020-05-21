@@ -114,6 +114,8 @@
   .btnsList {
     display: block;
     .btnStarted {
+      font-weight: 500;
+      line-height: 17px;
       color: #013b9a;
       background: #fff;
       margin-right: 39px;
@@ -125,6 +127,10 @@
     }
 
     .btnVideo {
+      font-weight: 400;
+      line-height: 16px;
+      text-align: center;
+      text-transform: capitalize;
       background: transparent;
       border: 1px solid #fff;
       color: #fff;

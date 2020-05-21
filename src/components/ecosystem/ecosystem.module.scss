@@ -10,7 +10,7 @@
     text-align: center;
     margin: auto;
     margin-top: 80px;
-    width: 50%;
+    width: min-content;
 
     @media (max-width: 800px) {
       width: 95%;
@@ -32,10 +32,10 @@
     .subtitle {
       text-align: center;
       margin: auto;
-      width: 50%;
+      width: 100%;
 
       p {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
         line-height: 150%;
         /* or 24px */
@@ -73,28 +73,34 @@
       max-width: 184px;
       padding-top: 60px;
       min-width: 154px;
-      max-height: 128px;
+      max-height: 169px;
       margin: 28.5px;
       margin-bottom: 40px;
       text-align: center;
 
       h6 {
         color: #557ece;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 16px;
         line-height: 19px;
         text-align: center;
         text-transform: capitalize;
+        margin-bottom: 22px;
       }
 
       p {
         font-weight: 500;
         font-size: 12px;
         line-height: 14px;
+        max-width: 110px;
+        margin: auto auto 36px;
         text-align: center;
+        padding: 9px 11px;
+        background: #557ece;
+        box-shadow: 4px 4px 30px rgba(142, 170, 198, 0.2);
+        border-radius: 3px;
         text-transform: capitalize;
-
-        color: #0047ff;
+        color: #fff;
       }
 
       %circle {
@@ -168,7 +174,7 @@
     }
   }
 
-  .discoveryButton {
+  .exploreButton {
     text-align: center;
     margin: auto;
     margin-top: 50px;
@@ -180,13 +186,18 @@
     }
 
     button {
-      background: #557ece;
-      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: capitalize;
+      color: #0047ff;
+      background: #fff;
 
       &:hover {
-        background-color: #fff;
-        border: 1px solid #557ece;
-        color: #557ece;
+        background-color: #0047ff;
+        border: 1px solid #0047ff;
+        color: #fff;
       }
     }
   }

@@ -97,7 +97,7 @@
 
       h1 {
         font-size: 48px;
-        font-weight: 400;
+        font-weight: 500;
         max-width: 785px;
         margin-bottom: 30px;
         letter-spacing: -0.02em;
@@ -114,6 +114,7 @@
         font-weight: 300;
         max-width: 785px;
         font-size: 18px;
+        line-height: 150%;
 
         @media (max-width: 466px) {
           font-size: 4.5vw;

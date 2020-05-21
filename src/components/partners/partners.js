@@ -16,9 +16,7 @@ const Partners = () => {
         >
           <div className={["row", partnersStyle.rowTag].join(" ")}>
             <div className={partnersStyle.tag}>
-              <div
-                className={[partnersStyle.cardNews, "card news"].join(" ")}
-              >
+              <div className={[partnersStyle.cardNews, "card news"].join(" ")}>
                 <p className={partnersStyle.tagP}>
                   <span>
                     <FormattedMessage id="partners.news.title" />
@@ -52,7 +50,7 @@ const Partners = () => {
               <FormattedMessage id="partners.title" />{" "}
             </h1>
           </div>
-          <div className="row">
+          <div className={["row", partnersStyle.subtitle].join(" ")}>
             <p>
               <FormattedMessage id="partners.description" />{" "}
             </p>
@@ -60,7 +58,7 @@ const Partners = () => {
         </div>
         <div className={["col-7", partnersStyle.colImg].join(" ")}>
           <div className={partnersStyle.rowImgs}>
-            <img src={bgSvg} useMap="#image-map" alt=""/>
+            <img src={bgSvg} useMap="#image-map" alt="" />
           </div>
         </div>
         <div className={["row", partnersStyle.swipe].join(" ")}>

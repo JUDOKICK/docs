@@ -13,12 +13,21 @@ const Ecosystem = () => {
     <div>
       <div className={ecosystemStyle.ecosystem}>
         <div className={ecosystemStyle.title}>
-          <h1><FormattedMessage  id="ecosystem.title"/></h1>
+          <h1>
+            <FormattedMessage id="ecosystem.title" />
+          </h1>
           <div className={ecosystemStyle.subtitle}>
-            <p><FormattedMessage  id="ecosystem.description"/></p>
+            <p>
+              <FormattedMessage id="ecosystem.description" />
+            </p>
           </div>
         </div>
-        <div className={["row justify-content-center", ecosystemStyle.rowCards].join(" ")}>
+        <div
+          className={[
+            "row justify-content-center",
+            ecosystemStyle.rowCards,
+          ].join(" ")}
+        >
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
             <div className="row justify-content-center">
               <div className={ecosystemStyle.binance}>
@@ -26,8 +35,12 @@ const Ecosystem = () => {
               </div>
             </div>
 
-            <h6><FormattedMessage  id="ecosystem.partners.binance.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.binance.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.binance.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.binance.description" />
+            </p>
           </div>
 
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
@@ -37,8 +50,12 @@ const Ecosystem = () => {
               </div>
             </div>
 
-            <h6><FormattedMessage  id="ecosystem.partners.trust.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.trust.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.trust.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.trust.description" />
+            </p>
           </div>
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
             <div className="row justify-content-center">
@@ -47,8 +64,12 @@ const Ecosystem = () => {
               </div>
             </div>
 
-            <h6><FormattedMessage  id="ecosystem.partners.atomic.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.atomic.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.atomic.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.atomic.description" />
+            </p>
           </div>
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
             <div className="row justify-content-center">
@@ -56,8 +77,12 @@ const Ecosystem = () => {
                 <img src={blockfolio} alt="Blockfolio" />
               </div>
             </div>
-            <h6><FormattedMessage  id="ecosystem.partners.blockfolio.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.blockfolio.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.blockfolio.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.blockfolio.description" />
+            </p>
           </div>
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
             <div className="row justify-content-center">
@@ -65,8 +90,12 @@ const Ecosystem = () => {
                 <img src={delta} alt="Delta" />
               </div>
             </div>
-            <h6><FormattedMessage  id="ecosystem.partners.delta.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.delta.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.delta.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.delta.description" />
+            </p>
           </div>
           <div className={["col-sm card", ecosystemStyle.ecoCards].join(" ")}>
             <div className="row justify-content-center">
@@ -74,13 +103,19 @@ const Ecosystem = () => {
                 <img src={coin} alt="Coin" />
               </div>
             </div>
-            <h6><FormattedMessage  id="ecosystem.partners.coin.title"/></h6>
-            <p><FormattedMessage  id="ecosystem.partners.coin.description"/></p>
+            <h6>
+              <FormattedMessage id="ecosystem.partners.coin.title" />
+            </h6>
+            <p>
+              <FormattedMessage id="ecosystem.partners.coin.description" />
+            </p>
           </div>
         </div>
-        <div className={[ecosystemStyle.discoveryButton, "row"].join(" ")}>
+        <div className={[ecosystemStyle.exploreButton, "row"].join(" ")}>
           <div className="col-sm">
-            <button><FormattedMessage  id="ecosystem.discovery.title"/></button>
+            <button>
+              <FormattedMessage id="ecosystem.discovery.title" />
+            </button>
           </div>
         </div>
       </div>

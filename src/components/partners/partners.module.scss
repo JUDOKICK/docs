@@ -103,9 +103,21 @@
       }
     }
 
-    @media (max-width: 456px) {
-      h1 {
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 120%;
+      @media (max-width: 456px) {
         font-size: 9vw;
+      }
+    }
+
+    .subtitle {
+      p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        padding-right: 48px;
       }
     }
   }

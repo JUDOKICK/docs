@@ -22,15 +22,17 @@ const News = () => {
           className={[newsStyle.block, "card news-sections-cards"].join(" ")}
         >
           <div className={["card-header", newsStyle.cardHeader].join(" ")}>
-            <a target="_blank"  rel="noopener noreferrer" href={item.url} >
+            <a target="_blank" rel="noopener noreferrer" href={item.url}>
               <img src={pic} alt={item.title} />
             </a>
           </div>
           <div className={["card-body", newsStyle.cardBody].join(" ")}>
             <div className={newsStyle.author}>
               <img src={item.avatar} alt={item.author} />
-              <p>{item.author}</p>
-              <p>{getMediumDate(item.publishAt)}</p>
+              <p>
+                {item.author}
+                <span>{getMediumDate(item.publishAt)}</span>
+              </p>
             </div>
             <div className={newsStyle.content}>
               <h4>{item.title}</h4>
@@ -38,7 +40,7 @@ const News = () => {
             </div>
           </div>
           <div className={["card-footer", newsStyle.cardFooter].join(" ")}>
-            <a target="_blank"  rel="noopener noreferrer" href={item.url}>
+            <a target="_blank" rel="noopener noreferrer" href={item.url}>
               <button>
                 <FormattedMessage id="news.more" />
               </button>
