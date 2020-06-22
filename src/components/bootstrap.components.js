@@ -13,6 +13,8 @@ import {
   ResponsiveEmbed,
   Modal,
   Form,
+  Button,
+  Collapse,
 } from "react-bootstrap"
 
 export const NavComp = Nav
@@ -27,3 +29,5 @@ export const TabComp = Tab
 export const ResponsiveEmbedComp = ResponsiveEmbed
 export const ModalComp = Modal
 export const FormComp = Form
+export const ButtonComp = Button
+export const CollapseComp = Collapse
