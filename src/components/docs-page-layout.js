@@ -5,6 +5,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { preToCodeBlock } from "mdx-utils"
 import { Link } from "gatsby"
 import Code from "./code"
+import Header from "./header/header"
+import Footer from "./footer/footer"
+import Sidebar from "./sidebar/sidebar"
 
 const shortcodes = {
   Link,
@@ -20,26 +23,58 @@ const shortcodes = {
   },
 } // Provide common components here
 
-export default ({ data: { mdx } }) => {
+export default ({ data: { self, prev, next } }) => {
   return (
     <div>
-      <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </MDXProvider>
+      <Header />
+      <div>
+        <Sidebar active={self.fields.slug} />
+        <h1>{self.frontmatter.title}</h1>
+        <MDXProvider components={shortcodes}>
+          <MDXRenderer>{self.body}</MDXRenderer>
+        </MDXProvider>
+        {self.tableOfContents && self.tableOfContents.items &&
+        <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
+        </ul>
+        }
+        {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
+        {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
+      </div>
+      <Footer />
     </div>
   )
 }
 
 export const pageQuery = graphql`
-  query DocQuery($id: String) {
-    mdx(id: { eq: $id }) {
+  query DocQuery($id: String, $prev: String, $next: String) {
+    self: mdx(id: { eq: $id }) {
       id
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
       }
       tableOfContents
+    }
+    prev: mdx(id: { eq: $prev }) {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: mdx(id: { eq: $next }) {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
     }
   }
 `

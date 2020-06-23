@@ -45,24 +45,44 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  // load menu
-  function nodeItems (node) {
+  // get a flat list of items from tree
+  const nodeItems = (node) => {
     if (typeof node === "string") {
-      console.log(node);
-      return node;
+      return node
+    } else if (Array.isArray(node)) {
+      return node.flatMap(nodeItems)
     } else if (node && node.items) {
-      return node.items.map(nodeItems);
+      return nodeItems(node.items)
     }
-  };
-  console.log(sidebars.docs);
-  const items = nodeItems(sidebars.docs);
-  console.log(items);
+  }
+  let items = nodeItems(sidebars.docs);
   
-  // Create doc pages.
+  // fix sidebar doc path
+  items = items.map(slug => `/docs/${slug}/`);
+
+  // get doc nodes
   const docs = result.data.allMdx.edges
 
+  // build an array of node ids (instead of slugs)
+  const ids = new Array(items.length);
+  docs.forEach(({ node }) => {
+    // look up node in the flat sidebar so we build an array of node ids
+    // ids[node.id] = items.indexOf(node.fields.slug);
+    const i = items.indexOf(`${node.fields.slug}`);
+    if (i >= 0) ids[i] = node.id;
+  });
+  console.log(items);
+  console.log(ids);
+  
+  // Create doc pages.
   // you'll call `createPage` for each result
-  docs.forEach(({ node }, index) => {
+  docs.forEach(({ node }) => {
+
+    // wire next and prev items according to sidebar (-1 if there is no prev or next)
+    const index = ids.indexOf(node.id);
+    const next = (index >= 0 && index < (ids.length - 1)) ? ids[index + 1] : undefined;
+    const prev = (index >= 1 && index < ids.length) ? ids[index - 1] : undefined;
+
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
@@ -71,8 +91,8 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
       component: path.resolve(`./src/components/docs-page-layout.js`),
       // You can use the values in this context in
       // our page layout component
-      context: { id: node.id },
+      context: { id: node.id, next, prev },
     })
-    reporter.success(`Page created for ${node.fields.slug}`)
+    reporter.success(`Page created for ${node.id} at ${node.fields.slug}`)
   })
 }
