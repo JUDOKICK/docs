@@ -1,31 +1,39 @@
 {
   "title": "Home",
   "menu": {
-    "news": {
-      "title": "DApps",
-      "link": ""
-    },
-    "developers": {
-      "title": "Action",
+    "about": {
+      "title": "About us",
       "link": ""
     },
     "community": {
       "title": "Community",
       "link": ""
     },
-    "about": {
-      "title": "About",
+    "developers": {
+      "title": "Co",
       "link": ""
     },
-    "eng": {
-      "title": "",
+    "dApps": {
+      "title": "DApps",
+      "link": ""
+    },
+    "blog": {
+      "title": "Blog",
+      "link": ""
+    },
+    "resources": {
+      "title": "Whitepaper",
+      "link": ""
+    },
+    "whitepaper": {
+      "title": "Whitepaper",
       "link": ""
     }
   },
   "inital": {
-    "title": "The Operating",
-    "titleContinue": "System for DApps",
-    "description": "A Bridge Between Linux & Blockchain",
+    "title": "A Bridge Between Linux & Blockchain",
+    "titleContinue": "",
+    "description": "Build your DApp off-chain with Linux, Maitain on-chain security",
     "getStarted": {
       "title": "GET STARTED",
       "link": ""
@@ -36,20 +44,15 @@
     }
   },
   "provide": {
-    "news": {
-      "title": "NEWS",
-      "description": "Cartesi completed it’s $1.5M token sale on Binance!",
-      "link": ""
-    },
-    "title": "Cartesi Provides a Linux Runtime Environment for Blockchain DApps.",
-    "description": "With Cartesi, developers use familiar and powerful software components supported by Linux to create their DApps. They are free from the hassle of limited domain-specific blockchain environments."
+    "title": "Cartesi provides a Linux runtime environment for blockchain DApps.",
+    "description": "Build scalable DApps using a fully-fledged Linux operating system and mainstream software stacks. Run complex computations over massive amounts of data off-chain, free from blockchain limitations and fees, while retaining decentralization and security. DApps with Cartesi are easier to build, scalable and more powerful. Combine the best of both worlds with Cartesi, and collaborate with other innovators as you shape the future of the web."
   },
   "explore": {
     "tech": "THE TECH",
     "developers": "DEVELOPERS",
     "ecosystem": "ECOSYSTEM",
     "partners": "PARTNERS",
-    "title": "Discover Cartesi",
+    "title": "Explore Cartesi",
     "realOs": {
       "title": "A Real OS. Intensive Computation.",
       "description": "Cartesi provides a Linux runtime environment for blockchain DApps. Complex computations run off-chain while retaining the strong security guarantees of the underlying blockchain.",
@@ -57,7 +60,7 @@
       "link": ""
     },
     "blockchain": {
-      "title": "On-chain Guaranteed Consensus.",
+      "title": "Blockchain Guaranteed Consensus.",
       "description": "Computations can be verified by all parties involved in the App. Disputes are settled automatically by Cartesi. This requires negligible computation inside the blockchain, regardless of the size of the external computation.",
       "more": "LEARN MORE",
       "link": ""
@@ -97,7 +100,7 @@
     }
   },
   "getStarted": {
-    "title": "Getting Started",
+    "title": "Get Started",
     "github": {
       "title": "Take a peek",
       "subtitle": "Api",
@@ -165,7 +168,7 @@
       }
     },
     "discovery": {
-      "title": "EXPLORE CTSI",
+      "title": "DISCOVER CTSI",
       "link": ""
     }
   },

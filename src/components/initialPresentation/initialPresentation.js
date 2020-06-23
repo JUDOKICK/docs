@@ -1,15 +1,11 @@
 import React, { useState } from "react"
 import initialStyle from "./initial.module.scss"
-import imgBg from "../../images/SVG/initial/diagram.png"
-import logoWSJ from "../../images/SVG/initial/wsj.svg"
-import logoT from "../../images/SVG/initial/t.svg"
-import logoEG from "../../images/SVG/initial/eg.svg"
-import logoComputer from "../../images/SVG/initial/computer.svg"
+import outermeshLeftSvg from "../../images/initialPresentation/home/outermesh-left.svg"
+import outermeshRightSvg from "../../images/initialPresentation/home/outermesh-right.svg"
 import { RowComp, ModalComp } from "../bootstrap.components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage } from "gatsby-plugin-intl"
-
 
 function ModalVideoComp(props) {
   const YoutubeVideo = () => {
@@ -50,7 +46,7 @@ function ModalVideoComp(props) {
   )
 }
 
-const InitialApresentation = () => {
+const InitialPresentation = () => {
   const [modalCompShow, setModalCompShow] = useState(false)
 
   return (
@@ -66,9 +62,6 @@ const InitialApresentation = () => {
           >
             <h1>
               <FormattedMessage id="inital.title" />
-            </h1>
-            <h1>
-              <FormattedMessage id="inital.titleContinue" />
             </h1>
           </RowComp>
           <RowComp
@@ -90,11 +83,11 @@ const InitialApresentation = () => {
             lg={12}
             xl={1}
           >
-            <button className={initialStyle.btnStarted}>
+            <button className={initialStyle.btnDefault}>
               <FormattedMessage id="inital.getStarted.title" />
             </button>
             <button
-              className={initialStyle.btnVideo}
+              className={initialStyle.btnDefault}
               onClick={() => setModalCompShow(true)}
             >
               <span>
@@ -102,37 +95,25 @@ const InitialApresentation = () => {
                 <FormattedMessage id="inital.video.title" />{" "}
               </span>
             </button>
-
             <ModalVideoComp
               show={modalCompShow}
               onHide={() => setModalCompShow(false)}
             />
-
-            {/* */}
-          </RowComp>
-
-          <RowComp
-            className={initialStyle.imgsList}
-            xs={2}
-            md={2}
-            lg={12}
-            xl={1}
-          >
-            <img src={logoWSJ} alt="WSJ" />
-            <img src={logoT} alt="T" />
-            <img
-              className={initialStyle.computerLogo}
-              src={logoComputer}
-              alt="Computer"
-            />
-            <img src={logoEG} alt="EG" />
           </RowComp>
         </div>
-        {/* <div className={initialStyle.diagram}></div> */}
-        <img className={initialStyle.imgBg} src={imgBg} alt="" />
+        <img
+          className={initialStyle.svgRight}
+          src={outermeshRightSvg}
+          alt="Lines right"
+        />
+        <img
+          className={initialStyle.svgLeft}
+          src={outermeshLeftSvg}
+          alt="Lines left"
+        />
       </div>
     </div>
   )
 }
 
-export default InitialApresentation
+export default InitialPresentation

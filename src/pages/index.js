@@ -4,8 +4,9 @@ import React from "react"
 import "../styles/global.scss"
 // import Image from "../components/image"
 import Header from "../components/header/header"
-import InitialApresentation from "../components/initialApresentation/initialApresentation"
-import CartesiProvide from "../components/cartesiProvide/cartesiProvide"
+import InitialPresentation from "../components/initialPresentation/initialPresentation"
+// import CartesiProvide from "../components/cartesiProvide/cartesiProvide"
+import ShapingTheFuture from "../components/shapingTheFuture/shapingTheFuture"
 import ExploreCartesi from "../components/exploreCartesi/exploreCartesi"
 import BuildAnything from "../components/buildAnything/buildAnything"
 import GetStarted from "../components/getStarted/getStarted"
@@ -27,8 +28,8 @@ const IndexPage = ({ intl }) => {
       />
       <Header />
       <div>
-        <InitialApresentation />
-        <CartesiProvide />
+        <InitialPresentation />
+        <ShapingTheFuture />
         <ExploreCartesi />
         <BuildAnything />
         <GetStarted />

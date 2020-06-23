@@ -1,0 +1,22 @@
+#ambAbout {
+  @import "style.scss";
+
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $azul-escuro;
+  }
+
+  .about {
+    p {
+      font-size: rem(18);
+      line-height: 2;
+      margin: rem(30 0);
+    }
+  }
+}

@@ -1,14 +1,16 @@
 .layout {
-  background: linear-gradient(157.41deg, #020e21 13.41%, #0042af 91.52%);
+  background: linear-gradient(#00050c 13.41%, #262829 91.52%);
   color: #fff;
   width: 100%;
-  min-height: 730px;
+  min-height: 500px;
   height: 100%;
+  text-align: center;
+  position: relative;
 
   h1 {
     font-style: normal;
-    font-weight: 500;
-    font-size: 54px;
+    font-weight: 300;
+    font-size: 3rem;
     line-height: 64px;
     letter-spacing: -0.02em;
   }
@@ -16,33 +18,47 @@
   p {
     font-style: normal;
     font-weight: 300;
-    font-size: 27px;
-    line-height: 32px;
+    font-size: 1.59rem;
+    line-height: 54px;
     text-transform: capitalize;
   }
 
-  .imgBg {
+  .svgRight {
     width: 100%;
-    min-width: 1488px;
-    right: 0;
+    max-width: 620px;
     position: absolute;
-    top: 1%;
+    top: -40px;
+    right: 0px;
     z-index: 0;
     transition: all 0.2s ease;
 
-    @media (min-width: 1779px) {
-      width: 95%;
-      position: absolute;
-      top: -1%;
-      right: 0px;
+    @media (max-width: 1289px) {
+      max-width: 650px;
+      opacity: 0.5;
     }
 
+    @media (max-width: 720px) {
+      top: 60px;
+    }
+  }
+
+  .svgLeft {
+    width: 100%;
+    max-width: 620px;
+    position: absolute;
+    bottom: -320px;
+    left: 0px;
+    z-index: 0;
+    transition: all 0.2s ease;
+
     @media (max-width: 1289px) {
-      width: 1488px;
-      position: absolute;
-      top: 2%;
+      max-width: 650px;
+      bottom: -280px;
       opacity: 0.5;
-      right: 0px;
+    }
+
+    @media (max-width: 720px) {
+      bottom: -200px;
     }
   }
 
@@ -113,6 +129,22 @@
 
   .btnsList {
     display: block;
+
+    .btnDefault {
+      color: #fff;
+      background: #555555;
+      margin: 10px 20px;
+
+      &:hover {
+        background: #fff;
+        color: #6e6e6e;
+      }
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+
     .btnStarted {
       font-weight: 500;
       line-height: 17px;
