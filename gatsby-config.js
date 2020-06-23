@@ -61,7 +61,22 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           default: require.resolve("./src/components/page-layout.js"),
-        }
+        },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              withWebp: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-linked-files`,
+        ],
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
       },
     },
 
