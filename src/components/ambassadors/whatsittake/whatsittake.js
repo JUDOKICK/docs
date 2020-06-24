@@ -6,19 +6,22 @@ const Whatsittake = () => {
   return (
     <div id={ambWhatsItTakeStyles.ambWhatsItTake}>
       <section
-        class={[
+        className={[
           ambWhatsItTakeStyles.whatsittake,
           ambWhatsItTakeStyles.parallax,
         ].join(" ")}
         data-speed="10"
         id={ambWhatsItTakeStyles.whatsittake}
       >
-        <div class="container order-2 order-md-1 px-md-0">
-          <h2 class="titles titles-medium" data-localize="whatsittake.title">
+        <div className="container order-2 order-md-1 px-md-0">
+          <h2
+            className="titles titles-medium"
+            data-localize="whatsittake.title"
+          >
             What does it take to become a Cartesi Ambassador?
           </h2>
-          <div class="row">
-            <div class="col-12 col-md-9">
+          <div className="row">
+            <div className="col-12 col-md-9">
               <p data-localize="whatsittake.info">
                 We are on an ever lookout for a considerable variety of
                 backgrounds, talents and novel ideas. Social diversity of skill
@@ -45,17 +48,17 @@ const Whatsittake = () => {
             </div>
           </div>
         </div>
-        <div class="order-1 order-md-2 d-flex d-sm-none">
-          {/* <!-- <svg class="icons blocks">
+        <div className="order-1 order-md-2 d-flex d-sm-none">
+          {/* <!-- <svg className="icons blocks">
                         <use xlink:href="#blocks"></use>
                     </svg> --> */}
-          <svg class="icons block1" data-speed="10">
+          <svg className="icons block1" data-speed="10">
             <use xlinkHref="#block1"></use>
           </svg>
-          <svg class="icons block2" data-speed="5">
+          <svg className="icons block2" data-speed="5">
             <use xlinkHref="#block2"></use>
           </svg>
-          <svg class="icons block3" data-speed="10">
+          <svg className="icons block3" data-speed="10">
             <use xlinkHref="#block3"></use>
           </svg>
         </div>
