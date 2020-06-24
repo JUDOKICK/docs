@@ -1,0 +1,141 @@
+.layout {
+  background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 68px 60px;
+
+  .title {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+
+    @media (max-width: 490px) {
+      margin-bottom: 100px;
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.02em;
+
+      @media (max-width: 490px) {
+        font-size: 9vw;
+      }
+    }
+  }
+
+  .block {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+
+    .buildWith {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 100px;
+
+      @media (max-width: 1027px) {
+        margin-bottom: 50px;
+
+        img {
+          width: 100%;
+          transition: all 0.2s ease;
+
+          @media (max-width: 620px) {
+            width: 240px;
+          }
+        }
+      }
+    }
+  }
+
+  .steps {
+    margin-top: 30px;
+    padding: 60px 0;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+
+    .stepsLayout {
+      justify-content: center;
+
+      img {
+        width: 80%;
+        position: absolute;
+        left: 10%;
+        z-index: 1;
+      }
+
+      .descriptionsFirstRow {
+        // border: solid 1px red;
+        margin: auto;
+        width: 88%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1600px) {
+          width: 94%;
+        }
+
+        @media (max-width: 1300px) {
+          width: 96%;
+        }
+
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+
+      .descriptionsSecondRow {
+        margin: auto;
+        width: 88%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 7.4vw;
+
+        @media (max-width: 1600px) {
+          width: 94%;
+          margin-top: 6.4vw;
+        }
+
+        @media (max-width: 1400px) {
+          width: 96%;
+          margin-top: 4.9vw;
+        }
+
+        @media (max-width: 1250px) {
+          width: 96%;
+          margin-top: 5.2vw;
+        }
+
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+
+    p {
+      font-weight: 300;
+      margin-top: 8vw;
+      max-width: 320px;
+      z-index: 2;
+      text-align: left;
+      padding: 0 20px;
+
+      @media (max-width: 1400px) {
+        font-size: 1.2vw;
+      }
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding: 0 12px;
+      }
+    }
+  }
+}

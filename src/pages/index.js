@@ -7,7 +7,7 @@ import Header from "../components/header/header"
 import InitialPresentation from "../components/home/initialPresentation/initialPresentation"
 import ShapingTheFuture from "../components/home/shapingTheFuture/shapingTheFuture"
 import WhyBuildWithCartesi from "../components/home/whyBuildWithCartesi/whyBuildWithCartesi"
-import BuildAnything from "../components/buildAnything/buildAnything"
+import HowItWorks from "../components/home/howItWorks/howItWorks"
 import GetStarted from "../components/getStarted/getStarted"
 import Achieving from "../components/achieving/achieving"
 import Partners from "../components/partners/partners"
@@ -30,7 +30,7 @@ const IndexPage = ({ intl }) => {
         <InitialPresentation />
         <ShapingTheFuture />
         <WhyBuildWithCartesi />
-        {/* <BuildAnything /> */}
+        <HowItWorks />
         {/* <GetStarted /> */}
         {/* <Achieving /> */}
         {/* <Partners /> */}

@@ -79,31 +79,16 @@
       }
     },
 
-    "buildAnything": {
-      "title": "Build Anything",
-      "defi": {
-        "title": "DeFi",
-        "description": "Cartesi applications will be able to read and do complex calculations involving data from multiple sources. This will help interoperability between blockchains and services such as future and insurance markets."
-      },
-      "machineLearning": {
-        "title": "Machine Learning",
-        "description": "A trustless marketplace for AI and computational tasks. With the power of Cartesi’s decentralized automated verification, developers will be able to create services that allow new DApps to outsource and distribute work. This opens new possibilities for lower cost AI, developed by outsourced experts and bots."
-      },
-      "logistics": {
-        "title": "Logistics & Optimization",
-        "description": "With Cartesi, professionals in fields such as logistics will be able to offer their services and be hired by enterprises internationally and without the need for intermediaries."
-      },
-      "gaming": {
-        "title": "Gaming",
-        "description": "Cartesi will unleash vast new possibilities for blockchain games. Developers will be able to use traditional tools and libraries that can be compiled for Linux. Additionally, game state processing will be free from the computational limits and high fees of blockchains without the need to sacrifice decentralization."
-      },
-      "future": {
-        "title": "The Future Of Automation",
-        "description": "“With the power of Cartesi’s decentralized verification, applications will be able to outsource and distribute verifiable work. This opens new possibilities for trustless marketplaces and autonomous systems involving humans and machines, propelling IoT, data science and AI through new business models.”"
-      },
-      "research": {
-        "title": "Research",
-        "description": "Outsourced computation will allow for millions of users to lend their idle computing power. This will benefit scientific research, 3d rendering, video transcoding and many other computationally intensive tasks in a trustless way, without reputation systems."
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
+      "step2": "Cross-compile the program to be deployed on Cartesi's virtual machine that emulates a RISC-V microprocessor and runs an embedded Linux distribution.",
+      "step3": "At runtime, your DApp smart contracts delegate computations to the program running off-chain on Cartesi Nodes. Nodes claim the results to the blockchain.",
+      "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests",
+      "step5": "In rare cases of dispute, the blockchain starts an interactive dispute resolution between Cartesi Nodes and runs a single step of the original computation with a negligible amount of data and at a very low cost.",
+      "step6": "Your DApp is running heavy and complex computation off-chain, while retaining full decentralization and the strong security guarantees of the blockchain.",
+      "button": {
+        "learnMore": "Learn More"
       }
     },
     "getStarted": {

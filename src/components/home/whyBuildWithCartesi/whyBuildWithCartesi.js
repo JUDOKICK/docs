@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./whyBuildWithCartesi.module.scss"
 import initialStyles from "../initialPresentation/initial.module.scss"
 
-import { RowComp, CardComp } from "../../bootstrap.components"
+import { RowComp } from "../../bootstrap.components"
 import scalableIconSvg from "../../../images/home/whys/scalable.svg"
 import versatileIconSvg from "../../../images/home/whys/versatile.svg"
 import easyToBuildIconSvg from "../../../images/home/whys/easy-to-build.svg"
