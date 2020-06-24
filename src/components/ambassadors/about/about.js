@@ -5,10 +5,10 @@ import ambAboutStyle from "../../../styles/styles_amb/about.ambassadors.module.s
 const About = () => {
   return (
     <div id={ambAboutStyle.ambAbout}>
-      <section class={ambAboutStyle.about} id="about">
-        <div class="container">
+      <section className={ambAboutStyle.about} id="about">
+        <div className="container">
           <h2
-            class={[
+            className={[
               ambAboutStyle.titles,
               ambAboutStyle.titlesMedium,
               ambAboutStyle.textCenter,

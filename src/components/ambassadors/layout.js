@@ -1,16 +1,17 @@
 import React from "react"
 
 import Header from "./header/header"
+import Footer from "./footer/footer"
 
 import ambLayoutStyles from "../../styles/styles_amb/layout.ambassadors.module.scss"
 
 const Layout = ({ children }) => {
   return (
-    <div id={["principal", ambLayoutStyles.ambLayout].join(" ")}>
+    <div id={ambLayoutStyles.ambLayout}>
       <Header />
       <div>
         <main>{children}</main>
-        <footer></footer>
+        <Footer />
       </div>
     </div>
   )
