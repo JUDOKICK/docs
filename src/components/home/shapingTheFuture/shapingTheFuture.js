@@ -1,7 +1,7 @@
 import React from "react"
 
 import shapingTheFuture from "./shapingTheFuture.module.scss"
-import { RowComp } from "../bootstrap.components"
+import { RowComp } from "../../bootstrap.components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 const ShapingTheFuture = () => {
@@ -17,7 +17,7 @@ const ShapingTheFuture = () => {
             xl={1}
           >
             <h1>
-              <FormattedMessage id="provide.title" />
+              <FormattedMessage id="home.shapingTheFuture.title" />
             </h1>
           </RowComp>
           <RowComp
@@ -28,7 +28,7 @@ const ShapingTheFuture = () => {
             xl={1}
           >
             <p>
-              <FormattedMessage id="provide.description" />
+              <FormattedMessage id="home.shapingTheFuture.description" />
             </p>
           </RowComp>
         </div>

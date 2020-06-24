@@ -4,10 +4,9 @@ import React from "react"
 import "../styles/global.scss"
 // import Image from "../components/image"
 import Header from "../components/header/header"
-import InitialPresentation from "../components/initialPresentation/initialPresentation"
-// import CartesiProvide from "../components/cartesiProvide/cartesiProvide"
-import ShapingTheFuture from "../components/shapingTheFuture/shapingTheFuture"
-import ExploreCartesi from "../components/exploreCartesi/exploreCartesi"
+import InitialPresentation from "../components/home/initialPresentation/initialPresentation"
+import ShapingTheFuture from "../components/home/shapingTheFuture/shapingTheFuture"
+import WhyBuildWithCartesi from "../components/home/whyBuildWithCartesi/whyBuildWithCartesi"
 import BuildAnything from "../components/buildAnything/buildAnything"
 import GetStarted from "../components/getStarted/getStarted"
 import Achieving from "../components/achieving/achieving"
@@ -23,14 +22,14 @@ const IndexPage = ({ intl }) => {
     <div>
       <SEO
         lang={intl.locale}
-        title={intl.formatMessage({ id: "title" })}
+        title={intl.formatMessage({ id: "home.title" })}
         keywords={[`Cartesi`, `Blockchain`, `DApps`, `Linux`]}
       />
       <Header />
       <div>
         <InitialPresentation />
         <ShapingTheFuture />
-        <ExploreCartesi />
+        <WhyBuildWithCartesi />
         <BuildAnything />
         <GetStarted />
         <Achieving />

@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import initialStyle from "./initial.module.scss"
-import outermeshLeftSvg from "../../images/initialPresentation/home/outermesh-left.svg"
-import outermeshRightSvg from "../../images/initialPresentation/home/outermesh-right.svg"
-import { RowComp, ModalComp } from "../bootstrap.components"
+import outermeshLeftSvg from "../../../images/home/initial/outermesh-left.svg"
+import outermeshRightSvg from "../../../images/home/initial/outermesh-right.svg"
+import { RowComp, ModalComp } from "../../bootstrap.components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -61,7 +61,7 @@ const InitialPresentation = () => {
             xl={1}
           >
             <h1>
-              <FormattedMessage id="inital.title" />
+              <FormattedMessage id="home.initial.title" />
             </h1>
           </RowComp>
           <RowComp
@@ -72,7 +72,7 @@ const InitialPresentation = () => {
             xl={1}
           >
             <p>
-              <FormattedMessage id="inital.description" />
+              <FormattedMessage id="home.initial.description" />
             </p>
           </RowComp>
 
@@ -84,7 +84,7 @@ const InitialPresentation = () => {
             xl={1}
           >
             <button className={initialStyle.btnDefault}>
-              <FormattedMessage id="inital.getStarted.title" />
+              <FormattedMessage id="home.initial.getStarted.title" />
             </button>
             <button
               className={initialStyle.btnDefault}
@@ -92,7 +92,7 @@ const InitialPresentation = () => {
             >
               <span>
                 <FontAwesomeIcon icon={faVideo} />
-                <FormattedMessage id="inital.video.title" />{" "}
+                <FormattedMessage id="home.initial.video.title" />{" "}
               </span>
             </button>
             <ModalVideoComp
