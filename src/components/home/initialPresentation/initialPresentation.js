@@ -64,13 +64,7 @@ const InitialPresentation = () => {
               <FormattedMessage id="home.initial.title" />
             </h1>
           </RowComp>
-          <RowComp
-            className={initialStyle.subTitle}
-            xs={2}
-            md={2}
-            lg={12}
-            xl={1}
-          >
+          <RowComp className={initialStyle.subTitle}>
             <p>
               <FormattedMessage id="home.initial.description" />
             </p>

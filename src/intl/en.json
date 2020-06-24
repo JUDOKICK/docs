@@ -73,6 +73,9 @@
       "private": {
         "title": "Private",
         "description": "DApp state can be kept private among application participants"
+      },
+      "button": {
+        "startBuildingToday": "Start building today"
       }
     },
 
@@ -179,100 +182,100 @@
     "news": {
       "title": "NEWS",
       "more": "READ MORE"
-    },
-    "footer": {
-      "title": "Stay in touch:",
-      "socialList": {
-        "github": {
-          "title": "Github",
-          "link": ""
-        },
-        "twitter": {
-          "title": "Twitter",
-          "link": ""
-        },
-        "discord": {
-          "title": "Discord",
-          "link": ""
-        },
-        "medium": {
-          "title": "Medium",
-          "link": ""
-        },
-        "telegram": {
-          "title": "Telegram",
-          "link": ""
-        }
-      },
-      "subscribe": "SUBSCRIBE",
-      "email": "Email",
-      "pages": {
-        "about": {
-          "title": "About",
-          "link": ""
-        },
-        "developers": {
-          "title": "Developers",
-          "link": ""
-        },
-        "ecosystem": {
-          "title": "Ecosystem",
-          "link": ""
-        },
-        "news": {
-          "title": "News",
-          "link": ""
-        },
-        "why": {
-          "title": "Why Cartesi",
-          "link": ""
-        },
-        "whitepaper": {
-          "title": "Whitepaper",
-          "link": ""
-        },
-        "lightpaper": {
-          "title": "Lightpaper",
-          "link": ""
-        },
-        "how": {
-          "title": "How it works",
-          "link": ""
-        },
-        "industries": {
-          "title": "Industries",
-          "link": ""
-        },
-        "roadmap": {
-          "title": "Roadmap",
-          "link": ""
-        },
-        "faq": {
-          "title": "FAQ",
-          "link": ""
-        },
-        "team": {
-          "title": "Team",
-          "link": ""
-        },
-        "advisor": {
-          "title": "Advisor",
-          "link": ""
-        },
-        "partners": {
-          "title": "Partners",
-          "link": ""
-        },
-        "supporters": {
-          "title": "& Supporters",
-          "link": ""
-        },
-        "policy": {
-          "title": "Privacy Policy",
-          "link": ""
-        }
-      },
-      "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
     }
+  },
+  "footer": {
+    "title": "Stay in touch:",
+    "socialList": {
+      "github": {
+        "title": "Github",
+        "link": ""
+      },
+      "twitter": {
+        "title": "Twitter",
+        "link": ""
+      },
+      "discord": {
+        "title": "Discord",
+        "link": ""
+      },
+      "medium": {
+        "title": "Medium",
+        "link": ""
+      },
+      "telegram": {
+        "title": "Telegram",
+        "link": ""
+      }
+    },
+    "subscribe": "SUBSCRIBE",
+    "email": "Email",
+    "pages": {
+      "about": {
+        "title": "About",
+        "link": ""
+      },
+      "developers": {
+        "title": "Developers",
+        "link": ""
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "link": ""
+      },
+      "news": {
+        "title": "News",
+        "link": ""
+      },
+      "why": {
+        "title": "Why Cartesi",
+        "link": ""
+      },
+      "whitepaper": {
+        "title": "Whitepaper",
+        "link": ""
+      },
+      "lightpaper": {
+        "title": "Lightpaper",
+        "link": ""
+      },
+      "how": {
+        "title": "How it works",
+        "link": ""
+      },
+      "industries": {
+        "title": "Industries",
+        "link": ""
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "link": ""
+      },
+      "faq": {
+        "title": "FAQ",
+        "link": ""
+      },
+      "team": {
+        "title": "Team",
+        "link": ""
+      },
+      "advisor": {
+        "title": "Advisor",
+        "link": ""
+      },
+      "partners": {
+        "title": "Partners",
+        "link": ""
+      },
+      "supporters": {
+        "title": "& Supporters",
+        "link": ""
+      },
+      "policy": {
+        "title": "Privacy Policy",
+        "link": ""
+      }
+    },
+    "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
   }
 }

@@ -30,12 +30,12 @@ const IndexPage = ({ intl }) => {
         <InitialPresentation />
         <ShapingTheFuture />
         <WhyBuildWithCartesi />
-        <BuildAnything />
-        <GetStarted />
-        <Achieving />
-        <Partners />
-        <Ecosystem />
-        <News />
+        {/* <BuildAnything /> */}
+        {/* <GetStarted /> */}
+        {/* <Achieving /> */}
+        {/* <Partners /> */}
+        {/* <Ecosystem /> */}
+        {/* <News /> */}
       </div>
       <Footer />
     </div>
