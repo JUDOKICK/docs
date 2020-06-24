@@ -9,21 +9,21 @@ import icoChat from "../../../images/ambassadors/ico-chat.svg"
 const Requeriments = () => {
   return (
     <div id={ambRequerimentsStyles.ambRequeriments}>
-      <section class={ambRequerimentsStyles.requirements}>
-        <div class={ambRequerimentsStyles.container}>
+      <section className={ambRequerimentsStyles.requirements}>
+        <div className={ambRequerimentsStyles.container}>
           <h2
-            class={[
+            className={[
               ambRequerimentsStyles.titles,
               ambRequerimentsStyles.titlesMedium,
             ].join(" ")}
           >
             Basic Requirements
           </h2>
-          <div class={[ambRequerimentsStyles.content, "mx-auto"].join(" ")}>
-            <div class="row">
-              <div class={[ambRequerimentsStyles.contentItem].join(" ")}>
+          <div className={[ambRequerimentsStyles.content, "mx-auto"].join(" ")}>
+            <div className="row">
+              <div className={[ambRequerimentsStyles.contentItem].join(" ")}>
                 <img
-                  class={[
+                  className={[
                     ambRequerimentsStyles.icons,
                     ambRequerimentsStyles.icoMagnetic,
                   ].join(" ")}
@@ -34,9 +34,9 @@ const Requeriments = () => {
                   management, a proven influencer or marketing service provider.
                 </p>
               </div>
-              <div class={[ambRequerimentsStyles.contentItem]}>
+              <div className={[ambRequerimentsStyles.contentItem]}>
                 <img
-                  class={[
+                  className={[
                     ambRequerimentsStyles.icons,
                     ambRequerimentsStyles.icoHand,
                   ].join(" ")}
@@ -46,9 +46,9 @@ const Requeriments = () => {
                   Extensive understanding and genuine enthusiasm for Cartesi.
                 </p>
               </div>
-              <div class={[ambRequerimentsStyles.contentItem]}>
+              <div className={[ambRequerimentsStyles.contentItem]}>
                 <img
-                  class={[
+                  className={[
                     ambRequerimentsStyles.icons,
                     ambRequerimentsStyles.icoGroup,
                   ].join(" ")}
@@ -59,9 +59,9 @@ const Requeriments = () => {
                   mainstream marketing spheres.
                 </p>
               </div>
-              <div class={[ambRequerimentsStyles.contentItem]}>
+              <div className={[ambRequerimentsStyles.contentItem]}>
                 <img
-                  class={[
+                  className={[
                     ambRequerimentsStyles.icons,
                     ambRequerimentsStyles.icoChat,
                   ].join(" ")}
