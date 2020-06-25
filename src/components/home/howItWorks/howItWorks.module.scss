@@ -12,10 +12,6 @@
     margin: auto;
     justify-content: center;
 
-    @media (max-width: 490px) {
-      margin-bottom: 100px;
-    }
-
     h1 {
       font-style: normal;
       font-weight: 300;
@@ -65,15 +61,27 @@
     .stepsLayout {
       justify-content: center;
 
-      img {
+      .imgDesktop {
         width: 80%;
         position: absolute;
         left: 10%;
         z-index: 1;
+        @media (max-width: 990px) {
+          display: none;
+        }
+      }
+
+      .imgMobile {
+        display: none;
+
+        @media (max-width: 990px) {
+          display: initial;
+          height: 20vw;
+          margin-right: 5vw;
+        }
       }
 
       .descriptionsFirstRow {
-        // border: solid 1px red;
         margin: auto;
         width: 88%;
         display: flex;
@@ -89,6 +97,11 @@
 
         @media (max-width: 1024px) {
           width: 100%;
+        }
+
+        @media (max-width: 990px) {
+          margin-top: 10vw;
+          flex-direction: column;
         }
       }
 
@@ -118,7 +131,25 @@
         @media (max-width: 1024px) {
           width: 100%;
         }
+
+        @media (max-width: 990px) {
+          margin-top: initial;
+          flex-direction: column;
+        }
       }
+    }
+
+    @media (max-width: 990px) {
+      margin-top: 0;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .descriptionItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
     }
 
     p {
@@ -132,10 +163,28 @@
       @media (max-width: 1400px) {
         font-size: 1.2vw;
       }
-      @media (max-width: 1024px) {
+      @media (max-width: 1090px) {
         width: 100%;
         padding: 0 12px;
+        font-size: 1.3vw;
       }
+
+      @media (max-width: 990px) {
+        margin: 0;
+        padding: 0;
+        max-width: initial;
+        font-size: 3.2vw;
+      }
+    }
+  }
+
+  @media (max-width: 490px) {
+    padding: 68px 30px;
+  }
+
+  .btnGroup {
+    @media (max-width: 990px) {
+      margin-top: 40px;
     }
   }
 }
