@@ -308,6 +308,7 @@ const Getstarted = () => {
                   <FormComp.Control
                     type="text"
                     name="fullname"
+                    id="fullname"
                     className={[
                       getstartedStyles.formControl,
                       getstartedStyles.formControlLg,
@@ -333,6 +334,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="telegram"
+                    id="telegram"
                     placeholder="Telegram Handle (@)"
                     required
                   />
@@ -354,6 +356,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="country"
+                    id="country"
                     required
                   >
                     {options}
@@ -366,7 +369,7 @@ const Getstarted = () => {
                   </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
-                  <label for="" className={getstartedStyles.srOnly}>
+                  <label for="expertise" className={getstartedStyles.srOnly}>
                     Area of Expertise
                   </label>
                   <FormComp.Control
@@ -375,6 +378,7 @@ const Getstarted = () => {
                       getstartedStyles.formControl,
                       "form-control-lg",
                     ].join(" ")}
+                    id="expertise"
                     name="expertise"
                     rows="3"
                     placeholder="Area of Expertise"
@@ -386,12 +390,13 @@ const Getstarted = () => {
                   </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
-                  <label for="country" className={getstartedStyles.srOnly}>
+                  <label for="howlong" className={getstartedStyles.srOnly}>
                     How long have you been involved in crypto or blockchain?
                   </label>
                   <FormComp.Control
                     type="text"
                     name="howlong"
+                    id="howlong"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -414,6 +419,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="about"
+                    id="about"
                     rows="3"
                     placeholder="About Yourself"
                     required
@@ -433,6 +439,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="experiences"
+                    id="experiences"
                     rows="3"
                     placeholder="Describe your experiences and professional background"
                     required
@@ -452,6 +459,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="references"
+                    id="references"
                     rows="3"
                     placeholder="Link some references and resources we can examine"
                     required
@@ -471,6 +479,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="why"
+                    id="why"
                     rows="3"
                     placeholder="Explain why you want to be an ambassador"
                     required
@@ -480,7 +489,7 @@ const Getstarted = () => {
                   </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
-                  <label for="" className={getstartedStyles.srOnly}>
+                  <label for="questions" className={getstartedStyles.srOnly}>
                     Any final questions or comments?
                   </label>
                   <FormComp.Control
@@ -490,6 +499,7 @@ const Getstarted = () => {
                       "form-control-lg",
                     ].join(" ")}
                     name="questions"
+                    id="questions"
                     rows="3"
                     placeholder="Any final questions or comments?"
                     required

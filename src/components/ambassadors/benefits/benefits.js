@@ -55,6 +55,7 @@ const Benefits = () => {
                     benefitsStyles.icoCalender,
                   ].join(" ")}
                   src={icoCalender}
+                  alt="Calender"
                 ></img>
                 <p>
                   Early access to official releases, valuable information and
@@ -68,6 +69,7 @@ const Benefits = () => {
                     benefitsStyles.icoNetwork,
                   ].join(" ")}
                   src={icoNetwork}
+                  alt="Network"
                 ></img>
                 <p>
                   Networking opportunities with Cartesi Team members, partners,
@@ -81,6 +83,7 @@ const Benefits = () => {
                     benefitsStyles.icoMegaphone,
                   ].join(" ")}
                   src={icoMegaphone}
+                  alt="Megaphone"
                 ></img>
                 <p>
                   Active participation in other similar programmes through
@@ -94,6 +97,7 @@ const Benefits = () => {
                     benefitsStyles.icoCertified,
                   ].join(" ")}
                   src={icoCertified}
+                  alt="certified"
                 ></img>
                 <p>
                   Official title and recognition on the Cartesi Ambassadors
@@ -107,6 +111,7 @@ const Benefits = () => {
                     benefitsStyles.icoStar,
                   ].join(" ")}
                   src={icoStar}
+                  alt="start"
                 ></img>
                 <p>
                   Official recognition and the opportunities to attend local
@@ -119,6 +124,7 @@ const Benefits = () => {
                     " "
                   )}
                   src={icoKey}
+                  alt="key"
                 ></img>
                 <p>
                   CTSI Token awards based on your active involvement, actions
@@ -132,6 +138,7 @@ const Benefits = () => {
                     benefitsStyles.icoBlock,
                   ].join(" ")}
                   src={icoBlock}
+                  alt="block"
                 ></img>
                 <p>
                   Other ambassadors__benefits and awards the Cartesi Foundation
@@ -145,6 +152,7 @@ const Benefits = () => {
                     benefitsStyles.icoPosition,
                   ].join(" ")}
                   src={icoPosition}
+                  alt="Position"
                 ></img>
                 <p>
                   Cartesi may announce the position on social media and create a

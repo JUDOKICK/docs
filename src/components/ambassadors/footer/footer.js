@@ -44,45 +44,45 @@ const Footer = () => {
               <ul className={footerStyles.socialmediaNav}>
                 <li className={footerStyles.socialmediaItem}>
                   <a
-                    to="https://www.github.com/cartesi"
+                    href="https://www.github.com/cartesi"
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     <FaGithub />
                   </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
                   <a
-                    to="https://discord.gg/Pt2NrnS"
+                    href="https://discord.gg/Pt2NrnS"
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     <FaDiscord />
                   </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
                   <a
-                    to="https://www.twitter.com/cartesiproject"
+                    href="https://www.twitter.com/cartesiproject"
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     <FaTwitter />
                   </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
                   <a
-                    to="https://www.medium.com/cartesi"
+                    href="https://www.medium.com/cartesi"
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     <FaMedium />
                   </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
                   <a
-                    to="https://t.me/cartesiproject"
+                    href="https://t.me/cartesiproject"
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     <FaTelegramPlane />
                   </a>
@@ -118,9 +118,9 @@ const Footer = () => {
                         footerStyles.rowForm,
                       ].join(" ")}
                     >
-                      <div className={footerStyles.mlFormEmbedContent}>
+                      {/* <div className={footerStyles.mlFormEmbedContent}>
                         <h4></h4>
-                      </div>
+                      </div> */}
                       <FormComp
                         className={footerStyles.mlBlockForm}
                         validated={validated}
@@ -220,18 +220,17 @@ const Footer = () => {
                         " "
                       )}
                       title="About"
-                      target="_blank"
                     >
                       About
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://www.github.com/cartesi"
+                      href="https://www.github.com/cartesi"
                       className={footerStyles.navLink}
                       title="Developers"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Developers
                     </a>
@@ -243,18 +242,17 @@ const Footer = () => {
                         " "
                       )}
                       title="Ecosystem"
-                      target="_blank"
                     >
                       Ecosystem
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://medium.com/cartesi"
+                      href="https://medium.com/cartesi"
                       className={footerStyles.navLink}
                       title="News"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       News
                     </a>
@@ -265,55 +263,55 @@ const Footer = () => {
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#cartesi"
+                      href="https://cartesi.io/#cartesi"
                       className={footerStyles.navLink}
                       title="Why Cartesi"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Why Cartesi
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/cartesi_whitepaper.pdf"
+                      href="https://cartesi.io/cartesi_whitepaper.pdf"
                       className={footerStyles.navLink}
                       title="Whitepaper"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Whitepaper
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/cartesi_lightpaper_english.pdf"
+                      href="https://cartesi.io/cartesi_lightpaper_english.pdf"
                       className={footerStyles.navLink}
                       title="Lightpaper"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Lightpaper
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#cartesi__feat-img"
+                      href="https://cartesi.io/#cartesi__feat-img"
                       className={footerStyles.navLink}
                       title="How it works"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       How it works
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#how-to"
+                      href="https://cartesi.io/#how-to"
                       className={footerStyles.navLink}
                       title="Industries"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Industries
                     </a>
@@ -324,10 +322,10 @@ const Footer = () => {
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#roadmap"
+                      href="https://cartesi.io/#roadmap"
                       className={footerStyles.navLink}
                       title="Roadmap"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       target="_blank"
                     >
                       Roadmap
@@ -335,43 +333,38 @@ const Footer = () => {
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#blog"
+                      href="https://cartesi.io/#blog"
                       className={footerStyles.navLink}
                       title="Blog"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Blog
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/faq.html"
+                      href="https://cartesi.io/faq.html"
                       className={footerStyles.navLink}
                       title="FAQ"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       FAQ
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
-                      to=""
-                      className={footerStyles.navLink}
-                      title="Team"
-                      target="_blank"
-                    >
+                    <Link to="" className={footerStyles.navLink} title="Team">
                       Team
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#team-core"
+                      href="https://cartesi.io/#team-core"
                       className={footerStyles.navLink}
                       title="Core Team"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Core Team
                     </a>
@@ -382,43 +375,38 @@ const Footer = () => {
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#team-advisors"
+                      href="https://cartesi.io/#team-advisors"
                       className={footerStyles.navLink}
                       title="Advisor"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Advisor
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/#partners"
+                      href="https://cartesi.io/#partners"
                       className={footerStyles.navLink}
                       title="Partners & Supporters"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Partners & Supporters
                     </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
-                      to=""
-                      className={footerStyles.navLink}
-                      title="Legal"
-                      target="_blank"
-                    >
+                    <Link to="" className={footerStyles.navLink} title="Legal">
                       Legal
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
                     <a
-                      to="https://cartesi.io/privacy_policy.pdf"
+                      href="https://cartesi.io/privacy_policy.pdf"
                       className={footerStyles.navLink}
                       title="Privacy Policy"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                     >
                       Privacy Policy
                     </a>
@@ -429,6 +417,7 @@ const Footer = () => {
                 <img
                   className={["icons", footerStyles.icoCartesi].join(" ")}
                   src={icoCartesi}
+                  alt="cartesi"
                 ></img>
                 <p>
                   The Cartesi Project is commissioned by the

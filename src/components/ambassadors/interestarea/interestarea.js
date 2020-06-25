@@ -46,6 +46,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoWorld,
                   ].join(" ")}
                   src={icoWorld}
+                  alt="world"
                 ></img>
                 <p>
                   Global, regional, and local crypto influencers; community
@@ -59,6 +60,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoPeople,
                   ].join(" ")}
                   src={icoPeople}
+                  alt="people"
                 ></img>
                 <p>
                   Having an already existing user-base or community that you’re
@@ -72,6 +74,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoShare,
                   ].join(" ")}
                   src={icoShare}
+                  alt="share"
                 ></img>
                 <p>
                   Ability to engage and share Cartesi and Cartesi’s DApps with
@@ -85,6 +88,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoEye,
                   ].join(" ")}
                   src={icoEye}
+                  alt="eye"
                 ></img>
                 <p>
                   Directing new individuals to Cartesi’s environment,
@@ -98,6 +102,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoMotion,
                   ].join(" ")}
                   src={icoMotion}
+                  alt="motion"
                 ></img>
                 <p>
                   Highly experienced within the cryptocurrency industry,
@@ -112,6 +117,7 @@ const Interestarea = () => {
                     interestAreaStyles.icoBlock,
                   ].join(" ")}
                   src={icoBlock}
+                  alt="block"
                 ></img>
                 <p>
                   Developers interested in building DApps or developing with

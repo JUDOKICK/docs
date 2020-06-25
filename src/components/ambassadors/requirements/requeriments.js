@@ -28,6 +28,7 @@ const Requeriments = () => {
                     ambRequerimentsStyles.icoMagnetic,
                   ].join(" ")}
                   src={iconMagnetic}
+                  alt="Magnetic"
                 ></img>
                 <p>
                   Hands-on knowledge of crypto markets, background in community
@@ -41,6 +42,7 @@ const Requeriments = () => {
                     ambRequerimentsStyles.icoHand,
                   ].join(" ")}
                   src={icoHand}
+                  alt="Hand"
                 ></img>
                 <p>
                   Extensive understanding and genuine enthusiasm for Cartesi.
@@ -53,6 +55,7 @@ const Requeriments = () => {
                     ambRequerimentsStyles.icoGroup,
                   ].join(" ")}
                   src={icoGroup}
+                  alt="Group"
                 ></img>
                 <p>
                   Highly-motivated and connected within cryptocurrency or
@@ -66,6 +69,7 @@ const Requeriments = () => {
                     ambRequerimentsStyles.icoChat,
                   ].join(" ")}
                   src={icoChat}
+                  alt="chat"
                 ></img>
                 <p>Exemplary talent and impeccable communication skills.</p>
               </div>

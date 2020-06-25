@@ -25,14 +25,15 @@ const Menu = () => {
           </Link>
         </li>
         <li className={ambHeaderStyle.navItem}>
-          <Link
+          <a
             className={[ambHeaderStyle.navLink, "nav-link"].join(" ")}
-            to="https://www.github.com/cartesi"
+            href="https://www.github.com/cartesi"
             data-localize="menu.link2"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Developers
-          </Link>
+          </a>
         </li>
         <li className={ambHeaderStyle.navItem}>
           <Link
@@ -46,14 +47,15 @@ const Menu = () => {
           </Link>
         </li>
         <li className={ambHeaderStyle.navItem}>
-          <Link
+          <a
             className={[ambHeaderStyle.navLink, "nav-link"].join(" ")}
-            to="https://medium.com/cartesi"
+            href="https://medium.com/cartesi"
             data-localize="menu.link4"
             target="_blank"
+            rel="noopener noreferrer"
           >
             News
-          </Link>
+          </a>
         </li>
       </ul>
       <ul

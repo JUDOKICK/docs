@@ -41,6 +41,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/sharp-ye-864660176/"
                 title="Sharp Ye"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambShapYe} alt="Sharp Ye" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -54,6 +55,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/peteranh910/"
                 title="Viet Anh"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambVietAhn} alt="Viet Anh" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -67,6 +69,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/wonhyoung-lim-158b86175/"
                 title="Wonhyoung Lim"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambWonhyoungLim} alt="Wonhyoung Lim" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -80,6 +83,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/berkayykorkmaz/"
                 title="Berkay Korkmazz"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambBerkayKorkmazz} alt="Berkay Korkmazz" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -94,6 +98,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/helenimah"
                 title="Helen IMAH"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambHelenImah} alt="Helen IMAH" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -107,6 +112,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/christian-naitsirhc-46536b16a"
                 title="Dilip Ishara"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambDilipIshara} alt="Dilip Ishara" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -120,6 +126,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/suhashegde/"
                 title="Suhas Hegde"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambSuhasHegde} alt="Suhas Hegde" />
                 <p className={ambAmbassadorsStyle.title}>
@@ -133,6 +140,7 @@ const ambassadors = () => {
                 href="https://www.linkedin.com/in/christian-laurden-46536b16a/"
                 title="Christian Laurden"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={ambChristianLaurden} alt="Christian Laurden" />
                 <p className={ambAmbassadorsStyle.title}>
