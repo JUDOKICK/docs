@@ -78,7 +78,6 @@
         "startBuildingToday": "Start building today"
       }
     },
-
     "howItWorks": {
       "title": "How It Works",
       "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
@@ -89,6 +88,38 @@
       "step6": "Your DApp is running heavy and complex computation off-chain, while retaining full decentralization and the strong security guarantees of the blockchain.",
       "button": {
         "learnMore": "Learn More"
+      }
+    },
+    "useCases": {
+      "title": "Cartesi Use Cases",
+      "deFi": {
+        "title": "DeFi",
+        "description": "Cartesi applications will be able to read and perform complex calculations involving data from multiple sources. This will help interoperability between blockchains and services — such as futures and insurance markets."
+      },
+      "gaming": {
+        "title": "Gaming",
+        "description": "Cartesi will unleash vast new possibilities for blockchain games. Developers will be able to use traditional tools and libraries that can be compiled for Linux. Additionally, game state processing will be free from the computational limits and high fees of blockchains without the need to sacrifice decentralization."
+      },
+      "machineLearning": {
+        "title": "Machine Learning",
+        "description": "A decentralised marketplace for Al and computational tasks. With the power of Cartesi's decentralized automated verification, developers will be able to create services that allow new DApps to outsource and distribute work. This opens new possibilities for lower-cost Al by outsourcing experts and bots."
+      },
+      "theFutureOfAutomation": {
+        "title": "The Future of Automation",
+        "description": "With the power of Cartesi's decentralized verification, applications will be able to outsource and distribute verifiable work. This opens new possibilities for trustless marketplaces and autonomous systems involving humans and machines, propelling loT, data science and Al through new business models."
+      },
+      "logistics": {
+        "title": "Logistics & Optimization",
+        "description": "With Cartesi, professionals in fields such as logistics and transportation will be able to offer their services and be hired by enterprises internationally and without the need for intermediaries."
+      },
+      "research": {
+        "title": "Research",
+        "description": "Outsourced computation will allow for millions of users to lend their idle computing power. This will benefit scientific research, 3D rendering, video transcoding and many other computationally intensive tasks in a trustless way, without reputation systems."
+      },
+      "creeptsTowerDefense": {
+        "title": "Creepts Tower Defense",
+        "subtitle": "First Fully Decentralized Tower Defense DApp",
+        "playNow": "PLAY NOW"
       }
     },
     "getStarted": {

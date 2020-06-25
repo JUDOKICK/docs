@@ -185,6 +185,15 @@
     svg {
       margin-right: 8px;
     }
+
+    @media (max-width: 425px) {
+      min-width: 130px;
+      width: 90%;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: initial;
+    }
   }
 }
 

@@ -8,12 +8,14 @@ import InitialPresentation from "../components/home/initialPresentation/initialP
 import ShapingTheFuture from "../components/home/shapingTheFuture/shapingTheFuture"
 import WhyBuildWithCartesi from "../components/home/whyBuildWithCartesi/whyBuildWithCartesi"
 import HowItWorks from "../components/home/howItWorks/howItWorks"
-import GetStarted from "../components/getStarted/getStarted"
-import Achieving from "../components/achieving/achieving"
-import Partners from "../components/partners/partners"
-import Ecosystem from "../components/ecosystem/ecosystem"
-import News from "../components/news/news"
-import Footer from "../components/footer/footer"
+import UseCases from "../components/home/useCases/useCases"
+
+// import GetStarted from "../components/getStarted/getStarted"
+// import Achieving from "../components/achieving/achieving"
+// import Partners from "../components/partners/partners"
+// import Ecosystem from "../components/ecosystem/ecosystem"
+// import News from "../components/news/news"
+import Footer from "../components/home/footer/footer"
 import SEO from "../components/seo/seo"
 import { injectIntl } from "gatsby-plugin-intl"
 
@@ -31,6 +33,7 @@ const IndexPage = ({ intl }) => {
         <ShapingTheFuture />
         <WhyBuildWithCartesi />
         <HowItWorks />
+        <UseCases />
         {/* <GetStarted /> */}
         {/* <Achieving /> */}
         {/* <Partners /> */}
