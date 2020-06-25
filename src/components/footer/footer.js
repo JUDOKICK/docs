@@ -11,6 +11,9 @@ import telegram from "../../images/SVG/footer/telegram.svg"
 import twitter from "../../images/SVG/footer/twitter.svg"
 import logo from "../../images/SVG/footer/logo.svg"
 
+import outermeshRightSvg from "../../images/footer/footer-outermesh-right.svg"
+import outermeshLeftSvg from "../../images/footer/footer-outermesh-left.svg"
+
 const FormEmail = () => {
   const [validated, setValidated] = useState(false)
 
@@ -28,7 +31,7 @@ const FormEmail = () => {
     <FormComp noValidate validated={validated} onSubmit={handleSubmit}>
       <FormComp.Row className={footerStyle.footerForm}>
         <FormComp.Group controlId="validationCustom01">
-          <FormComp.Control required type="email" placeholder="E-mail" />
+          <FormComp.Control required type="email" placeholder="" />
           <FormComp.Control.Feedback>Thank you!</FormComp.Control.Feedback>
           <FormComp.Control.Feedback style={{ fontWeight: 500 }} type="invalid">
             Please, insert your e-mail.
@@ -46,7 +49,7 @@ const Footer = () => (
   <div>
     <div className={footerStyle.footer}>
       <div
-        className={footerStyle.mask}
+        // className={footerStyle.mask}
         style={{
           background: `url(${geometric})`,
         }}
@@ -171,6 +174,16 @@ const Footer = () => (
             </p>
           </div>
         </div>
+        <img
+          className={footerStyle.svgRight}
+          src={outermeshRightSvg}
+          alt="Lines right"
+        />
+        <img
+          className={footerStyle.svgLeft}
+          src={outermeshLeftSvg}
+          alt="Lines left"
+        />
       </div>
     </div>
   </div>
