@@ -1,5 +1,5 @@
 .layout {
-  background: linear-gradient(#00050c 13.41%, #262829 91.52%);
+  background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
   color: #fff;
   width: 100%;
   min-height: 500px;
@@ -10,16 +10,17 @@
   h1 {
     font-style: normal;
     font-weight: 300;
-    font-size: 3rem;
-    line-height: 64px;
+    font-size: 48px;
+    // line-height: 48px;
     letter-spacing: -0.02em;
+    margin-bottom: 32px;
   }
 
   p {
     font-style: normal;
     font-weight: 300;
     font-size: 1.59rem;
-    line-height: 54px;
+    line-height: 36px;
     text-transform: capitalize;
   }
 
@@ -110,78 +111,24 @@
   }
 
   .subTitle {
+    margin: 0;
     margin-bottom: 20px;
+    justify-content: center;
 
     @media (max-width: 1190px) {
       p {
         margin: auto;
-        max-width: 90%;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       margin-bottom: 50px;
+      margin-top: 50px;
     }
 
     @media (max-width: 490px) {
       p {
         font-size: 7vw;
-      }
-    }
-  }
-
-  .btnsList {
-    display: block;
-
-    .btnDefault {
-      color: #fff;
-      background: #555555;
-      margin: 10px 20px;
-
-      &:hover {
-        background: #fff;
-        color: #6e6e6e;
-      }
-
-      svg {
-        margin-right: 8px;
-      }
-    }
-
-    .btnStarted {
-      font-weight: 500;
-      line-height: 17px;
-      color: #013b9a;
-      background: #fff;
-      margin-right: 39px;
-
-      &:hover {
-        background: #013b9a;
-        color: #fff;
-      }
-    }
-
-    .btnVideo {
-      font-weight: 400;
-      line-height: 16px;
-      text-align: center;
-      text-transform: capitalize;
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-
-      &:hover {
-        color: #013b9a;
-        background: #fff;
-      }
-
-      svg {
-        margin-right: 5px;
-      }
-    }
-
-    @media (max-width: 581px) {
-      .btnStarted,
-      .btnVideo {
-        margin: 10px;
-        padding: 1px 5px;
       }
     }
   }
@@ -203,6 +150,40 @@
       img {
         margin: 20px 50px;
       }
+    }
+  }
+
+  @media (max-width: 720px) {
+    padding: 0px;
+  }
+}
+
+.btnsList {
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+  margin: 0;
+
+  .btnDefault {
+    color: #fff;
+    background: #666666;
+    margin: 10px 20px;
+    font-weight: 500;
+    outline: none;
+    text-transform: uppercase;
+    width: initial;
+    min-width: 222px;
+
+    &:hover {
+      background: #1f70c1;
+    }
+
+    &:focus {
+      background: #217dda;
+    }
+
+    svg {
+      margin-right: 8px;
     }
   }
 }

@@ -1,0 +1,124 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 68px 60px;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 218, 218, 0.28) -13.59%,
+    rgba(250, 250, 250, 0) 100%
+  );
+
+  @media (max-width: 720px) {
+    padding: 68px 50px;
+  }
+
+  @media (max-width: 490px) {
+    padding: 68px 40px;
+  }
+
+  .blockContainer {
+    padding-bottom: 2rem;
+    text-align: center;
+
+    .title {
+      justify-content: center;
+      margin-bottom: 35px;
+
+      h1 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000;
+
+        @media (max-width: 490px) {
+          font-size: 9vw;
+        }
+      }
+    }
+
+    .cardGroup {
+      justify-content: center;
+
+      .cardLayout {
+        box-sizing: border-box;
+        max-width: 430px;
+        margin: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bodyLayout {
+          text-align: left;
+          justify-content: center;
+          padding: 20px 0;
+
+          h2 {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: #000;
+            margin-top: 15px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 150%;
+            margin-top: 10px;
+          }
+
+          img {
+            height: 48px;
+          }
+
+          @media (min-width: 1250px) and (max-width: 1500px) {
+            h4 {
+              font-size: 1.9vw;
+            }
+
+            p {
+              font-size: 1.3vw;
+            }
+          }
+
+          @media (max-width: 700px) {
+            h4 {
+              font-size: 4vw;
+            }
+
+            p {
+              font-size: 2.5vw;
+            }
+          }
+
+          @media (max-width: 570px) {
+            h4 {
+              font-size: 5.7vw;
+            }
+
+            p {
+              font-size: 3.5vw;
+            }
+          }
+        }
+      }
+    }
+
+    .btnGroup {
+      justify-content: center;
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+}

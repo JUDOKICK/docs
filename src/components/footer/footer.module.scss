@@ -1,13 +1,14 @@
 .footer {
   width: 100%;
-  min-height: 600px;
+  // min-height: 600px;
+  overflow: hidden;
   padding-top: 1px;
   color: #fff;
-  background: linear-gradient(159.3deg, #020e21 13.41%, #0042af 91.52%);
+  background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
 
   .mask {
     background-position: center;
-    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NDMiIHZpZXdCb…N0b3Atb3BhY2l0eT0iMC45MiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=);
+    // background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NDMiIHZpZXdCb…N0b3Atb3BhY2l0eT0iMC45MiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -33,8 +34,50 @@
     }
   }
 
+  .svgRight {
+    width: 100%;
+    max-width: 760px;
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    z-index: -1;
+    transition: all 0.2s ease;
+
+    @media (max-width: 1289px) {
+      max-width: 650px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 720px) {
+      top: -200px;
+    }
+
+    @media (max-width: 490px) {
+      width: 200%;
+    }
+  }
+
+  .svgLeft {
+    width: 100%;
+    max-width: 760px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: all 0.2s ease;
+
+    @media (max-width: 1289px) {
+      max-width: 650px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 490px) {
+      width: 200%;
+    }
+  }
+
   .blockContent {
-    margin-top: 180px;
+    margin-top: 110px;
     position: relative;
     z-index: 4;
   }
@@ -51,22 +94,31 @@
     }
 
     h1 {
-      font-weight: 500;
-      font-size: 42px;
-      line-height: 50px;
-      margin-bottom: 30px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      // line-height: 48px;
+      letter-spacing: -0.02em;
+      margin-bottom: 100px;
     }
 
     .socialList {
       text-align: center;
       margin: auto;
-      width: 70%;
-      margin-bottom: 30px;
+      width: 80%;
+      margin-bottom: 40px;
+      line-height: 50px;
+      @media (max-width: 420px) {
+        width: 90%;
+      }
 
       img {
         margin: 0 7px;
-        height: 35px;
         width: 35.45px;
+        @media (max-width: 420px) {
+          margin: 0 10px;
+          width: 32px;
+        }
       }
     }
     .subscribe {
@@ -86,12 +138,11 @@
           height: 43px;
           margin-left: 10px;
           color: #fff;
-          background: #557ece;
+          background: #000;
           border-radius: 4px;
-
-          // @media (max-width: 420px) {
-          //   margin: auto;
-          // }
+          font-size: 12px !important;
+          font-weight: 500;
+          opacity: 1;
         }
 
         input {
