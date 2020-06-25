@@ -1,10 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import footerStyles from "../../../styles/styles_amb/footer.module.scss"
 import icoCartesi from "../../../images/ambassadors/ico-cartesi.svg"
+import {
+  FaGithub,
+  FaDiscord,
+  FaTelegramPlane,
+  FaMedium,
+  FaTwitter,
+} from "react-icons/fa"
+
+import { FormComp } from "../../bootstrap.components"
+// const { Control } = FormComp
+// const { Feedback } = Control
 
 const Footer = () => {
+  const [validated, setValidated] = useState(false)
+
+  const handleSubmit = event => {
+    const form = event.currentTarget
+    if (form.checkValidity() === false) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    setValidated(true)
+  }
+
   return (
     <div id={footerStyles.ambFooter}>
       <footer id={footerStyles.footer} className={footerStyles.footer}>
@@ -20,40 +43,49 @@ const Footer = () => {
               </h4>
               <ul className={footerStyles.socialmediaNav}>
                 <li className={footerStyles.socialmediaItem}>
-                  <Link to="https://www.github.com/cartesi" target="_blank">
-                    <i className={["fab", footerStyles.faGithub].join(" ")}></i>
-                  </Link>
+                  <a
+                    to="https://www.github.com/cartesi"
+                    target="_blank"
+                    rel="noopener norefferer"
+                  >
+                    <FaGithub />
+                  </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
-                  <Link to="https://discord.gg/Pt2NrnS" target="_blank">
-                    <i
-                      className={["fab", footerStyles.faDiscord].join(" ")}
-                    ></i>
-                  </Link>
+                  <a
+                    to="https://discord.gg/Pt2NrnS"
+                    target="_blank"
+                    rel="noopener norefferer"
+                  >
+                    <FaDiscord />
+                  </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
-                  <Link
+                  <a
                     to="https://www.twitter.com/cartesiproject"
                     target="_blank"
+                    rel="noopener norefferer"
                   >
-                    <i
-                      className={["fab", footerStyles.faTwitter].join(" ")}
-                    ></i>
-                  </Link>
+                    <FaTwitter />
+                  </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
-                  <Link to="https://www.medium.com/cartesi" target="_blank">
-                    <i className={["fab", footerStyles.faMedium].join(" ")}></i>
-                  </Link>
+                  <a
+                    to="https://www.medium.com/cartesi"
+                    target="_blank"
+                    rel="noopener norefferer"
+                  >
+                    <FaMedium />
+                  </a>
                 </li>
                 <li className={footerStyles.socialmediaItem}>
-                  <Link to="https://t.me/cartesiproject" target="_blank">
-                    <i
-                      className={["fab", footerStyles.faTelegramPlane].join(
-                        " "
-                      )}
-                    ></i>
-                  </Link>
+                  <a
+                    to="https://t.me/cartesiproject"
+                    target="_blank"
+                    rel="noopener norefferer"
+                  >
+                    <FaTelegramPlane />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -62,8 +94,8 @@ const Footer = () => {
             {/* <!-- news --> */}
             <div
               className={footerStyles.mlFormEmbed}
-              data-account="1797592:x4y1u5u9w3"
-              data-form="2025920:r0w4v3"
+              // data-account="1797592:x4y1u5u9w3"
+              // data-form="2025920:r0w4v3"
             >
               <div
                 id={footerStyles.mlb22025920}
@@ -89,12 +121,11 @@ const Footer = () => {
                       <div className={footerStyles.mlFormEmbedContent}>
                         <h4></h4>
                       </div>
-                      <form
+                      <FormComp
                         className={footerStyles.mlBlockForm}
-                        action="https://app.mailerlite.com/webforms/submit/r0w4v3"
-                        data-code="r0w4v3"
-                        method="post"
-                        target="_blank"
+                        validated={validated}
+                        noValidate
+                        onSubmit={handleSubmit}
                       >
                         <div
                           className={[
@@ -108,23 +139,27 @@ const Footer = () => {
                                 style={{ width: 100 + "%" }}
                                 className={footerStyles.horizontalFields}
                               >
-                                <div
+                                <FormComp.Group
                                   className={[
                                     footerStyles.mlFieldGroup,
                                     footerStyles.mlFieldEmail,
                                     footerStyles.mlValidateEmail,
                                     footerStyles.mlValidateRequired,
                                   ].join(" ")}
+                                  controlId="validationEmailFooter"
                                 >
-                                  <input
+                                  <FormComp.Control
                                     type="email"
                                     className={footerStyles.formControl}
-                                    data-inputmask=""
                                     name="fields[email]"
                                     placeholder="Email"
                                     autocomplete="email"
+                                    required
                                   />
-                                </div>
+                                  <FormComp.Control.Feedback type="invalid">
+                                    Please enter required field
+                                  </FormComp.Control.Feedback>
+                                </FormComp.Group>
                               </div>
                             </div>
                             <div
@@ -139,7 +174,7 @@ const Footer = () => {
                               >
                                 Subscribe
                               </button>
-                              <button
+                              {/* <button
                                 disabled="disabled"
                                 style={{ display: "none" }}
                                 type="button"
@@ -148,18 +183,13 @@ const Footer = () => {
                                 {" "}
                                 <div
                                   className={footerStyles.mlFormEmbedSubmitLoad}
-                                >
-                                  <div></div>
-                                  <div></div>
-                                  <div></div>
-                                  <div></div>
-                                </div>{" "}
-                              </button>
+                                ></div>{" "}
+                              </button> */}
                             </div>
                           </div>
                         </div>
                         <input type="hidden" name="ml-submit" value="1" />
-                      </form>
+                      </FormComp>
                     </div>
                     <div
                       className={[
@@ -196,14 +226,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://www.github.com/cartesi"
                       className={footerStyles.navLink}
                       title="Developers"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Developers
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <Link
@@ -218,102 +249,111 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://medium.com/cartesi"
                       className={footerStyles.navLink}
                       title="News"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       News
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
               <div className={footerStyles.content}>
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#cartesi"
                       className={footerStyles.navLink}
                       title="Why Cartesi"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Why Cartesi
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/cartesi_whitepaper.pdf"
                       className={footerStyles.navLink}
                       title="Whitepaper"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Whitepaper
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/cartesi_lightpaper_english.pdf"
                       className={footerStyles.navLink}
                       title="Lightpaper"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Lightpaper
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#cartesi__feat-img"
                       className={footerStyles.navLink}
                       title="How it works"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       How it works
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#how-to"
                       className={footerStyles.navLink}
                       title="Industries"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Industries
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
               <div className={footerStyles.content}>
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#roadmap"
                       className={footerStyles.navLink}
                       title="Roadmap"
+                      rel="noopener norefferer"
                       target="_blank"
                     >
                       Roadmap
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#blog"
                       className={footerStyles.navLink}
                       title="Blog"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Blog
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/faq.html"
                       className={footerStyles.navLink}
                       title="FAQ"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       FAQ
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <Link
@@ -326,38 +366,41 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#team-core"
                       className={footerStyles.navLink}
                       title="Core Team"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Core Team
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
               <div className={footerStyles.content}>
                 <ul className={footerStyles.nav}>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#team-advisors"
                       className={footerStyles.navLink}
                       title="Advisor"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Advisor
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/#partners"
                       className={footerStyles.navLink}
                       title="Partners & Supporters"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Partners & Supporters
-                    </Link>
+                    </a>
                   </li>
                   <li className={footerStyles.navItem}>
                     <Link
@@ -370,14 +413,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className={footerStyles.navItem}>
-                    <Link
+                    <a
                       to="https://cartesi.io/privacy_policy.pdf"
                       className={footerStyles.navLink}
                       title="Privacy Policy"
                       target="_blank"
+                      rel="noopener norefferer"
                     >
                       Privacy Policy
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>

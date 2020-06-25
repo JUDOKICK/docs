@@ -1,8 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 
 import getstartedStyles from "../../../styles/styles_amb/getstarted.module.scss"
+import { FormComp } from "../../bootstrap.components"
 
 const Getstarted = () => {
+  const [validated, setValidated] = useState(false)
+
+  const handleSubmit = event => {
+    const form = event.currentTarget
+    if (form.checkValidity() === false) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    setValidated(true)
+  }
+
   const countries = [
     "Afghanistan",
     "Albania",
@@ -261,6 +274,7 @@ const Getstarted = () => {
           getstartedStyles.parallax,
         ].join(" ")}
         data-speed="10"
+        style={{ backgroundPosition: `right ${-588.7}px` }}
         id={getstartedStyles.getstarted}
       >
         <div className={getstartedStyles.container}>
@@ -274,36 +288,45 @@ const Getstarted = () => {
           </h2>
           <div className="row">
             <div className={[getstartedStyles.formarea].join(" ")}>
-              <form
+              {/* <form
                 action="https://app.99inbound.com/api/e/xkkbVDHg"
                 method="POST"
                 target="_blank"
                 className={getstartedStyles.needsValidation}
-                novalidate
+                noValidate
+              > */}
+              <FormComp
+                noValidate
+                validated={validated}
+                // className={getstartedStyles.needsValidation}
+                onSubmit={handleSubmit}
               >
                 <div className={getstartedStyles.formGroup}>
                   <label for="fullname" className={getstartedStyles.srOnly}>
                     Full Name
                   </label>
-                  <input
+                  <FormComp.Control
                     type="text"
                     name="fullname"
                     className={[
                       getstartedStyles.formControl,
-                      "form-control-lg",
+                      getstartedStyles.formControlLg,
                     ].join(" ")}
                     placeholder="Full Name"
                     required
                   />
-                  <div className={getstartedStyles.invalidFeedback}>
+                  <FormComp.Control.Feedback
+                    type="invalid"
+                    // className={getstartedStyles.invalidFeedback}
+                  >
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="telegram" className={getstartedStyles.srOnly}>
                     Telegram Handle
                   </label>
-                  <input
+                  <FormComp.Control
                     type="text"
                     className={[
                       getstartedStyles.formControl,
@@ -313,15 +336,19 @@ const Getstarted = () => {
                     placeholder="Telegram Handle (@)"
                     required
                   />
-                  <div className={getstartedStyles.invalidFeedback}>
+                  <FormComp.Control.Feedback
+                    type="invalid"
+                    // className={getstartedStyles.invalidFeedback}
+                  >
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="country" className={getstartedStyles.srOnly}>
                     Representing Country
                   </label>
-                  <select
+                  <FormComp.Control
+                    as="select"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -330,16 +357,20 @@ const Getstarted = () => {
                     required
                   >
                     {options}
-                  </select>
-                  <div className={getstartedStyles.invalidFeedback}>
-                    Please select a country.
-                  </div>
+                  </FormComp.Control>
+                  <FormComp.Control.Feedback
+                    type="invalid"
+                    // className={getstartedStyles.invalidFeedback}
+                  >
+                    Please select an country!
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="" className={getstartedStyles.srOnly}>
                     Area of Expertise
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -349,16 +380,16 @@ const Getstarted = () => {
                     placeholder="Area of Expertise"
                     value=""
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="country" className={getstartedStyles.srOnly}>
                     How long have you been involved in crypto or blockchain?
                   </label>
-                  <input
+                  <FormComp.Control
                     type="text"
                     name="howlong"
                     className={[
@@ -368,15 +399,16 @@ const Getstarted = () => {
                     placeholder="How long have you been involved in crypto or blockchain?"
                     required
                   />
-                  <div className={getstartedStyles.invalidFeedback}>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="about" className={getstartedStyles.srOnly}>
                     About Yourself{" "}
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -385,16 +417,17 @@ const Getstarted = () => {
                     rows="3"
                     placeholder="About Yourself"
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="experiences" className={getstartedStyles.srOnly}>
                     Describe your experiences and professional background
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -403,16 +436,17 @@ const Getstarted = () => {
                     rows="3"
                     placeholder="Describe your experiences and professional background"
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="references" className={getstartedStyles.srOnly}>
                     Link some references and resources we can examine
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -421,16 +455,17 @@ const Getstarted = () => {
                     rows="3"
                     placeholder="Link some references and resources we can examine"
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="why" className={getstartedStyles.srOnly}>
                     Explain why you want to be an ambassador
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -439,16 +474,17 @@ const Getstarted = () => {
                     rows="3"
                     placeholder="Explain why you want to be an ambassador"
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div className={getstartedStyles.formGroup}>
                   <label for="" className={getstartedStyles.srOnly}>
                     Any final questions or comments?
                   </label>
-                  <textarea
+                  <FormComp.Control
+                    as="textarea"
                     className={[
                       getstartedStyles.formControl,
                       "form-control-lg",
@@ -457,10 +493,10 @@ const Getstarted = () => {
                     rows="3"
                     placeholder="Any final questions or comments?"
                     required
-                  ></textarea>
-                  <div className={getstartedStyles.invalidFeedback}>
+                  ></FormComp.Control>
+                  <FormComp.Control.Feedback type="invalid">
                     Please enter required field!
-                  </div>
+                  </FormComp.Control.Feedback>
                 </div>
                 <div
                   className={[
@@ -468,42 +504,50 @@ const Getstarted = () => {
                     "form-check justify-content-center d-flex",
                   ].join(" ")}
                 >
-                  <div className={getstartedStyles.formCheck}>
-                    <input
-                      className={getstartedStyles.formCheckInput}
-                      type="checkbox"
-                      name="agreement"
-                      value=""
-                      id={getstartedStyles.invalidCheck}
-                      required
-                    />
-                    <label
-                      className={getstartedStyles.formCheckLabel}
-                      for="invalidCheck"
-                    >
-                      Agree to terms and conditions
-                    </label>
-                    <div className={getstartedStyles.invalidFeedback}>
-                      You must agree before submitting.
-                    </div>
-                  </div>
+                  {/* <div className={getstartedStyles.formCheck}> */}
+                  <FormComp.Check
+                    // className={[getstartedStyles.formCheckInput].join(" ")}
+                    // className="form-check-input"
+
+                    required
+                    type="checkbox"
+                    name="agreement"
+                    value=""
+                    label="Agree to terms and conditions"
+                    feedback="You must agree before submitting."
+                    // id={getstartedStyles.invalidCheck}
+                    required
+                  />
+                  {/* <label
+                    className={getstartedStyles.formCheckLabel}
+                    for="invalidCheck"
+                  >
+                    Agree to terms and conditions
+                  </label> */}
+                  {/* <div className={getstartedStyles.invalidFeedback}>
+                    
+                  </div> */}
                 </div>
-                <div style={{ position: "absolute", left: -5000 + "px" }}>
-                  <input
+                {/* </div> */}
+                {/* <div style={{ position: "absolute", left: -5000 + "px" }}>
+                  <FormComp.Check
                     type="checkbox"
                     name="lovely_tangello_honeycomb_weasel"
                     value="1"
-                    tabindex="-1"
+                    // tabindex="-1"
                     autocomplete="no"
                   />
-                </div>
+                </div> */}
                 <button
                   type="submit"
-                  className={["btn", getstartedStyles.btnAzul].join(" ")}
+                  className={[
+                    getstartedStyles.btn,
+                    getstartedStyles.btnAzul,
+                  ].join(" ")}
                 >
                   Apply
                 </button>
-              </form>
+              </FormComp>
             </div>
           </div>
         </div>

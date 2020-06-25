@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import ambHeaderStyle from "../../../styles/styles_amb/header.ambassadors.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLanguage } from "@fortawesome/free-solid-svg-icons"
 // const ambHeaderStyle = {}
 const Menu = () => {
   return (
@@ -77,11 +79,7 @@ const Menu = () => {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <i
-              className={[ambHeaderStyle.fas, ambHeaderStyle.faLanguage].join(
-                " "
-              )}
-            ></i>
+            <FontAwesomeIcon icon={faLanguage} />
             &nbsp;EN
             {/* <!-- <script>var href = location.href;document.write(href.match(/([^\/]*)\/*$/)[1]);</script> --> */}
           </Link>
