@@ -41,7 +41,7 @@ const News = () => {
           </div>
           <div className={["card-footer", newsStyle.cardFooter].join(" ")}>
             <a target="_blank" rel="noopener noreferrer" href={item.url}>
-              <button>
+              <button className={newsStyle.btnDefault}>
                 <FormattedMessage id="news.more" />
               </button>
             </a>
