@@ -1,10 +1,95 @@
 @import "../../styles/variables.scss";
 
 .header {
-  background: $default-bg-color;
-  color: $black;
-  padding-left: 10%;
-  padding-right: 9%;
+  background: transparent;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  color: $white;
+  padding-left: 30px;
+  padding-right: 20px;
+
+  // @media (max-width: 1220px) {
+  //   padding: 0 30px 0 20px;
+  // }
+
+  @media (max-width: 1192px) {
+    padding: 0;
+  }
+
+  &-white {
+    @extend .header;
+    color: $black !important;
+
+    @media (min-width: 1490px) {
+      padding-right: 10%;
+    }
+
+    @media (min-width: 1490px) {
+      padding-right: 10%;
+    }
+
+    @media (max-width: 1192px) {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+    }
+
+    @extend .navPosition;
+    .navPosition {
+      @media (max-width: 1192px) {
+        background-color: $white !important;
+      }
+      .nav-icon {
+        // margin: 1em;
+        width: 40px;
+        &:after,
+        &:before,
+        div {
+          background-color: $black !important;
+          border-radius: 3px;
+          content: "";
+          display: block;
+          height: 5px;
+          margin: 7px 0;
+          transition: all 0.2s ease-in-out;
+        }
+        &.open {
+          div {
+            transform: scale(0);
+          }
+          &::before {
+            transform: translateY(12px) rotate(135deg);
+          }
+          &:after {
+            transform: translateY(-12px) rotate(-135deg);
+          }
+        }
+      }
+
+      .navbar-toggler {
+        width: fit-content;
+        height: auto;
+        border: 0;
+        padding: 0;
+        outline: 0 !important;
+      }
+      a {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        margin: auto 15px;
+        @media (max-width: 1340px) {
+          margin: auto 5px;
+        }
+
+        @media (max-width: 1192px) {
+          margin: 5px 5px;
+        }
+      }
+    }
+  }
 
   // & .headerCollapes {
   //   position: absolute;
@@ -20,7 +105,7 @@
     padding-right: 10%;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1192px) {
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -31,30 +116,62 @@
     z-index: 1;
     background-color: transparent;
 
-    button {
-      border: 0;
+    @media (max-width: 1192px) {
+      background-color: $black;
+    }
+
+    .nav-icon {
+      // margin: 1em;
+      width: 40px;
+      &:after,
+      &:before,
+      div {
+        background-color: $white;
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all 0.2s ease-in-out;
+      }
+      &.open {
+        div {
+          transform: scale(0);
+        }
+        &::before {
+          transform: translateY(12px) rotate(135deg);
+        }
+        &:after {
+          transform: translateY(-12px) rotate(-135deg);
+        }
+      }
+    }
+    .navbar-toggler {
       width: fit-content;
+      height: auto;
+      padding: 0;
+      outline: 0 !important;
     }
 
-    @media (max-width: 502px) {
-      padding: 3%;
+    .logo {
+      width: 181px;
+      height: 60px;
     }
-  }
 
-  .logo {
-    width: 181px;
-    height: 60px;
-  }
+    .nameLogo {
+      font-size: 18px;
+    }
 
-  .nameLogo {
-    font-size: 18px;
-  }
+    .navbarCollapse {
+      justify-content: center;
 
-  .navbarCollapse {
-    justify-content: flex-end;
+      .toggle {
+        border: 0 !important;
+      }
 
-    .toggle {
-      border: 0 !important;
+      @media (max-width: 1192px) {
+        margin-bottom: 50px;
+      }
     }
 
     a {
@@ -63,12 +180,16 @@
       font-size: 18px;
       line-height: 21px;
       margin: auto 15px;
-      @media (max-width: 1200px) {
+      @media (max-width: 1340px) {
         margin: auto 5px;
+      }
+
+      @media (max-width: 1192px) {
+        margin: 5px 5px;
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1192px) {
       text-align: center;
     }
   }

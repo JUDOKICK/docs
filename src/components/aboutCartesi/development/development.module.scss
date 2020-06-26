@@ -1,0 +1,64 @@
+$text-color: #000000;
+
+.development {
+  min-height: 500px;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .title {
+    justify-content: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 50px;
+  }
+
+  .block-team {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+    max-width: 1350px;
+
+    .developer-info {
+      width: 235.66px;
+      height: 65.32px;
+      margin: 41.34px 50.17px;
+
+      @media (max-width: 446px) {
+        width: 100%;
+        height: auto;
+        margin: 50px 10px;
+      }
+
+      .name-developer {
+        min-width: 240px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 27px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+      .office-developer {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        /* or 30px */
+
+        text-align: center;
+        font-feature-settings: "liga" off;
+      }
+    }
+  }
+}

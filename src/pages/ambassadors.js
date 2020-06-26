@@ -10,7 +10,7 @@ import InterestArea from "../components/ambassadors/interestarea/interestarea"
 import Benefits from "../components/ambassadors/benefits/benefits"
 import Getstarted from "../components/ambassadors/getstarted/getstarted"
 
-const Index = () => (
+const Ambassadors = () => (
   <Layout>
     {/* <Seo/> */}
     <AmbAmbassadors />
@@ -23,4 +23,4 @@ const Index = () => (
   </Layout>
 )
 
-export default Index
+export default Ambassadors
