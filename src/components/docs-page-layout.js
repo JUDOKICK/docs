@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { preToCodeBlock } from "mdx-utils"
 import { Link } from "gatsby"
+import { Col, Container, Row } from "react-bootstrap"
 import Code from "./code"
 import Header from "./header/header"
 import Footer from "./footer/footer"
@@ -27,19 +28,27 @@ export default ({ data: { self, prev, next } }) => {
   return (
     <div>
       <Header />
-      <div>
-        <Sidebar active={self.fields.slug} />
-        <h1>{self.frontmatter.title}</h1>
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer>{self.body}</MDXRenderer>
-        </MDXProvider>
-        {self.tableOfContents && self.tableOfContents.items &&
-        <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
-        </ul>
-        }
-        {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
-        {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
-      </div>
+      <Container fluid>
+        <Row noGutters={false}>
+          <Col md={3} xl={2} xs={12} className="bd-sidebar">
+            <Sidebar active={self.fields.slug} />
+          </Col>
+          <Col md={9} xl={8} xs={12}>
+            <h1>{self.frontmatter.title}</h1>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer>{self.body}</MDXRenderer>
+            </MDXProvider>
+            {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
+            {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
+          </Col>
+          <Col xl={2} className="d-none d-xl-block bd-toc">
+            {self.tableOfContents && self.tableOfContents.items &&
+              <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
+              </ul>
+            }
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   )
