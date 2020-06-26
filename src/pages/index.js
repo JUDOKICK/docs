@@ -6,16 +6,17 @@ import "../styles/global.scss"
 import Header from "../components/header/header"
 import InitialPresentation from "../components/home/initialPresentation/initialPresentation"
 import ShapingTheFuture from "../components/home/shapingTheFuture/shapingTheFuture"
-import WhyBuildWithCartesi from "../components/home/whyBuildWithCartesi/whyBuildWithCartesi"
+import WhyBuildInCartesi from "../components/home/whyBuildInCartesi/whyBuildInCartesi"
 import HowItWorks from "../components/home/howItWorks/howItWorks"
 import UseCases from "../components/home/useCases/useCases"
+import Partners from "../components/home/partners/partners"
 
 // import GetStarted from "../components/getStarted/getStarted"
 // import Achieving from "../components/achieving/achieving"
 // import Partners from "../components/partners/partners"
 // import Ecosystem from "../components/ecosystem/ecosystem"
-// import News from "../components/news/news"
-import Footer from "../components/home/footer/footer"
+import News from "../components/news/news"
+import Footer from "../components/footer/footer"
 import SEO from "../components/seo/seo"
 import { injectIntl } from "gatsby-plugin-intl"
 
@@ -31,14 +32,15 @@ const IndexPage = ({ intl }) => {
       <div>
         <InitialPresentation />
         <ShapingTheFuture />
-        <WhyBuildWithCartesi />
+        <WhyBuildInCartesi />
         <HowItWorks />
         <UseCases />
+        <Partners />
         {/* <GetStarted /> */}
         {/* <Achieving /> */}
         {/* <Partners /> */}
         {/* <Ecosystem /> */}
-        {/* <News /> */}
+        <News />
       </div>
       <Footer />
     </div>

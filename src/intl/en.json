@@ -122,38 +122,8 @@
         "playNow": "PLAY NOW"
       }
     },
-    "getStarted": {
-      "title": "Get Started",
-      "github": {
-        "title": "Take a peek",
-        "subtitle": "Api",
-        "apiReferencee": "Full API reference",
-        "cartesi": "Cartesi on Github",
-        "stars": "268 stars",
-        "commits": "6366 commit",
-        "contributors": "30 contributors"
-      },
-      "developers": {
-        "title": "CARTESI DEVELOPERS",
-        "subtitle": "Get Early Access to Cartesi Brand New Features.",
-        "description": "Cartesi provides a Linux runtime environment for blockchain DApps. Complex computations run off-chain while retaining the strong security guarantees of the underlying blockchain.",
-        "join": "JOIN CARTESI",
-        "link": ""
-      }
-    },
-    "achieving": {
-      "title": "What We’are Achieving",
-      "swipe": "SWIPE >"
-    },
     "partners": {
-      "title": "Meet the Partners and Backers that Enable Cartesi.",
-      "description": "Join the select group of partners and backers that are early adopting and investing in our game changing technology.",
-      "swipe": "SWIPE >",
-      "news": {
-        "title": "NEWS",
-        "description": "Cartesi Partners with GoBlock on a DeFi Project",
-        "link": ""
-      }
+      "title": "Partners & Backers"
     },
     "ecosystem": {
       "title": "Ecosystem",
@@ -194,11 +164,11 @@
         "title": "DISCOVER CTSI",
         "link": ""
       }
-    },
-    "news": {
-      "title": "NEWS",
-      "more": "READ MORE"
     }
+  },
+  "news": {
+    "title": "Blog",
+    "more": "READ MORE"
   },
   "footer": {
     "title": "Stay in touch:",

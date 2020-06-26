@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import footerStyle from "./footer.module.scss"
-import { FormComp } from "../../bootstrap.components"
+import { FormComp } from "../bootstrap.components"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import geometric from "../../../images/SVG/footer/geometric-new.svg"
-import discord from "../../../images/SVG/footer/discord.svg"
-import github from "../../../images/SVG/footer/github.svg"
-import medium from "../../../images/SVG/footer/medium.svg"
-import telegram from "../../../images/SVG/footer/telegram.svg"
-import twitter from "../../../images/SVG/footer/twitter.svg"
-import logo from "../../../images/SVG/footer/logo.svg"
+import geometric from "../../images/SVG/footer/geometric-new.svg"
+import discord from "../../images/SVG/footer/discord.svg"
+import github from "../../images/SVG/footer/github.svg"
+import medium from "../../images/SVG/footer/medium.svg"
+import telegram from "../../images/SVG/footer/telegram.svg"
+import twitter from "../../images/SVG/footer/twitter.svg"
+import logo from "../../images/SVG/footer/logo.svg"
 
-import outermeshRightSvg from "../../../images/footer/footer-outermesh-right.svg"
-import outermeshLeftSvg from "../../../images/footer/footer-outermesh-left.svg"
+import outermeshRightSvg from "../../images/footer/footer-outermesh-right.svg"
+import outermeshLeftSvg from "../../images/footer/footer-outermesh-left.svg"
 
 const FormEmail = () => {
   const [validated, setValidated] = useState(false)

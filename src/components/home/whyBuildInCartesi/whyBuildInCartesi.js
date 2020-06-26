@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./whyBuildWithCartesi.module.scss"
+import styles from "./whyBuildInCartesi.module.scss"
 import initialStyles from "../initialPresentation/initial.module.scss"
 
 import { RowComp } from "../../bootstrap.components"
@@ -12,7 +12,7 @@ import privateIconSvg from "../../../images/home/whys/private.svg"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-const WhyBuildWithCartesi = () => (
+const WhyBuildInCartesi = () => (
   <div>
     <div className={styles.layout}>
       <div className={["container-fluid", styles.blockContainer].join(" ")}>
@@ -113,4 +113,4 @@ const WhyBuildWithCartesi = () => (
     </div>
   </div>
 )
-export default WhyBuildWithCartesi
+export default WhyBuildInCartesi
