@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import classNames from "classnames"
 import footerStyle from "./footer.module.scss"
 import { FormComp } from "../bootstrap.components"
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -14,7 +15,7 @@ import logo from "../../images/SVG/footer/logo.svg"
 import outermeshRightSvg from "../../images/footer/footer-outermesh-right.svg"
 import outermeshLeftSvg from "../../images/footer/footer-outermesh-left.svg"
 
-const FormEmail = () => {
+const FormEmail = ({ secondFooter }) => {
   const [validated, setValidated] = useState(false)
 
   const handleSubmit = event => {
@@ -38,14 +39,22 @@ const FormEmail = () => {
           </FormComp.Control.Feedback>
         </FormComp.Group>
         <FormComp.Group>
-          <button type="submit">SUBSCRIBE</button>
+          <button
+            className={[
+              classNames({ [footerStyle.secondFooter]: secondFooter }),
+              footerStyle.dynamicClass,
+            ].join(" ")}
+            type="submit"
+          >
+            SUBSCRIBE
+          </button>
         </FormComp.Group>
       </FormComp.Row>
     </FormComp>
   )
 }
 
-const Footer = () => (
+const Footer = ({ secondFooter }) => (
   <div>
     <div className={footerStyle.footer}>
       <div
@@ -67,7 +76,7 @@ const Footer = () => (
             <img src={telegram} alt="Telegram" />
           </div>
           <div className={[footerStyle.subscribe].join(" ")}>
-            <FormEmail />
+            <FormEmail secondFooter={secondFooter} />
           </div>
         </div>
         <div className={[footerStyle.info, "row"].join(" ")}>
