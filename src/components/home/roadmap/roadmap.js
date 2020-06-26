@@ -30,18 +30,15 @@ const Roadmap = () => {
 
   const expandRoadmap = () => {
     setRoadmapExpanded(!roadmapExpanded)
-    if (roadmapRef.current && roadmapExpanded)
-      setTimeout(() => {
-        roadmapRef.current.scrollIntoView({
-          block: "center",
-          behavior: "smooth",
-        })
-      }, 800)
+    roadmapRef.current.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    })
   }
 
   return (
     <div>
-      <div className={roadmapStyle.roadmap}>
+      <div className={roadmapStyle.roadmap} ref={roadmapRef}>
         <div className={roadmapStyle.title}>
           <h1>
             <FormattedMessage id="home.roadmap.title" />
@@ -65,7 +62,6 @@ const Roadmap = () => {
           className={roadmapStyle.expandButton}
           onClick={expandRoadmap}
           onKeyDown={expandRoadmap}
-          ref={roadmapRef}
           role="button"
           tabIndex={0}
         >
