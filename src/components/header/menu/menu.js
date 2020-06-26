@@ -3,59 +3,169 @@ import { Link } from "gatsby"
 
 import { NavComp, NavDropdownComp } from "../../bootstrap.components"
 import menuStyle from "./menu.module.scss"
-// const { Item } = NavDropdownComp
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFilePdf, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import expandDown from "../../../images/SVG/menu/expandWhite1.svg"
+import expadDownBlack from "../../../images/SVG/menu/expanddown.svg"
 
-const Menu = () => (
-  <div>
-    <NavComp className="ml-auto">
-      <div className={menuStyle.section}>
-        <Link className="nav-link" to={`/${"en"}/#news`}>
-          News
-        </Link>
-      </div>
+const { Item } = NavDropdownComp
 
-      <NavDropdownComp
-        className={menuStyle.section}
-        title="DApps"
-        id="collasible-nav-dropdown-1"
+const Menu = ({ typeNav }) => {
+  var iconType = typeNav === 1 ? expandDown : expadDownBlack
+  var iconLangType = typeNav === 1 ? expadDownBlack : expandDown
+
+  return (
+    <div>
+      <NavComp
+        className={[
+          "ml-auto",
+          typeNav === 1 ? menuStyle.menu : menuStyle.menuWhite,
+        ]}
       >
-        {/* <Item href="#action/3.1">Action</Item>
-        <Item href="#action/3.2">Another action</Item> */}
-      </NavDropdownComp>
-      <NavDropdownComp
-        className={menuStyle.section}
-        title="Developers"
-        id="collasible-nav-dropdown-2"
-      >
-        {/* <Item href="#action/3.1.1">Action</Item>
-        <Item href="#action/3.2.1">Another action</Item> */}
-      </NavDropdownComp>
-      <NavDropdownComp
-        className={menuStyle.section}
-        title="Community"
-        id="collasible-nav-dropdown-3"
-      >
-        {/* <Item href="#action/3.1.2">Action</Item>
-        <Item href="#action/3.2.2">Another action</Item> */}
-      </NavDropdownComp>
-      <NavDropdownComp
-        className={menuStyle.section}
-        title="About"
-        id="collasible-nav-dropdown-4"
-      >
-        {/* <Item href="#action/3.1.3">Action</Item>
-        <Item href="#action/3.2.3">Another action</Item> */}
-      </NavDropdownComp>
-      <NavDropdownComp
-        className={menuStyle.locale}
-        title="ENG"
-        id="collasible-nav-dropdown-5"
-      >
-        {/* <Item href="#action/3.1.4">CH</Item>
-        <Item href="#action/3.2.4">ES</Item> */}
-      </NavDropdownComp>
-    </NavComp>
-  </div>
-)
+        <NavDropdownComp
+          className={menuStyle.section}
+          title={
+            <span className={menuStyle.iconExpand}>
+              About us <img src={iconType} alt="down"></img>
+            </span>
+          }
+          id="collasible-nav-dropdown-1"
+        >
+          <div className={menuStyle.dropdownItens}>
+            <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+              About
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Company
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Team
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Carrers
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Press
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Contact Us
+            </Item>
+          </div>
+        </NavDropdownComp>
+
+        <NavDropdownComp
+          className={menuStyle.section}
+          title={
+            <span className={menuStyle.iconExpand}>
+              Community <img src={iconType} alt="down"></img>
+            </span>
+          }
+          id="collasible-nav-dropdown-1"
+        >
+          <div className={menuStyle.dropdownItens}>
+            <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+              Teste
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Teste2
+            </Item>
+            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+              Teste3
+            </Item>
+          </div>
+        </NavDropdownComp>
+        <NavDropdownComp
+          className={menuStyle.section}
+          title={
+            <span className={menuStyle.iconExpand}>
+              Developers <img src={iconType} alt="down"></img>
+            </span>
+          }
+          id="collasible-nav-dropdown-2"
+        >
+          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+            Teste
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste2
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste3
+          </Item>
+        </NavDropdownComp>
+        <NavDropdownComp
+          className={menuStyle.section}
+          title={
+            <span className={menuStyle.iconExpand}>
+              DApps <img src={iconType} alt="down"></img>
+            </span>
+          }
+          id="collasible-nav-dropdown-3"
+        >
+          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+            Teste
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste2
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste3
+          </Item>
+        </NavDropdownComp>
+
+        <div className={menuStyle.section}>
+          <Link className="nav-link" to={`/${"en"}/#blog`}>
+            Blog
+          </Link>
+        </div>
+        <NavDropdownComp
+          className={menuStyle.section}
+          title={
+            <span className={menuStyle.iconExpand}>
+              Resources <img src={iconType} alt="down"></img>
+            </span>
+          }
+          id="collasible-nav-dropdown-4"
+        >
+          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+            Teste
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste2
+          </Item>
+          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            Teste3
+          </Item>
+        </NavDropdownComp>
+        <div
+          className={[menuStyle.section, menuStyle.whitepaper, "nav-link"].join(
+            " "
+          )}
+        >
+          <a href="/#" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={menuStyle.svg} icon={faFilePdf} />
+            {"   "} Whitepaper
+          </a>
+        </div>
+        <NavDropdownComp
+          className={menuStyle.locale}
+          title={
+            <span className={menuStyle.iconExpand}>
+              ENG <img src={iconLangType} alt="down"></img>
+            </span>
+          }
+          eventKey={6}
+        >
+          <Item href="#action/3.1.4" className={menuStyle.itemLocale}>
+            中文
+          </Item>
+          <Item href="#action/3.2.4" className={menuStyle.itemLocale}>
+            ES
+          </Item>
+        </NavDropdownComp>
+      </NavComp>
+    </div>
+  )
+}
 
 export default Menu

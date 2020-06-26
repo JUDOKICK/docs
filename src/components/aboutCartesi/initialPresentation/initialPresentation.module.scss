@@ -1,0 +1,60 @@
+.initial {
+  background: linear-gradient(159.21deg, #030404 25.4%, #515251 86.86%);
+  width: 100%;
+  min-height: 572px;
+
+  .block-title {
+    width: 100%;
+    padding-top: 135px;
+    position: relative;
+    z-index: 1;
+    padding-left: 245px;
+
+    @media (max-width: 800px) {
+      left: auto;
+      padding: 135px 15%;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 57px;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 27px;
+      line-height: 32px;
+      color: #ffffff;
+      margin-bottom: 134px;
+    }
+  }
+
+  //   imagem que mascara o background
+  .mask-effect {
+    opacity: 0.5;
+    transform: rotate(-180deg);
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 561px;
+  }
+
+  //    imagem vetorial em holograma
+  .vector-bg {
+    position: absolute;
+    right: 0;
+    top: 233px;
+
+    @media (max-width: 462px) {
+      top: 266px;
+      opacity: 0.5;
+    }
+  }
+}
