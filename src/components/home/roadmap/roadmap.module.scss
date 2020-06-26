@@ -38,7 +38,7 @@
     overflow-y: hidden;
     padding: 16px 5px;
     max-height: 70vh;
-    transition: 1.2s;
+    transition: 1s;
 
     img {
       max-width: 100%;
@@ -62,7 +62,8 @@
     overflow-y: hidden;
     padding: 16px 5px;
     max-height: 60vh;
-    transition: 1.2s;
+    transition: 1s;
+
     img {
       max-width: 100%;
     }
@@ -84,6 +85,7 @@
     margin-top: 70px;
     cursor: pointer;
     transition: 0.5s;
+    outline: none;
 
     p {
       text-transform: uppercase;
@@ -110,6 +112,14 @@
 
       svg {
         stroke: #1f70c1;
+      }
+    }
+
+    &:focus {
+      color: #217dda;
+
+      svg {
+        stroke: #217dda;
       }
     }
   }

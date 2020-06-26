@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "./partners.module.scss"
 import { RowComp } from "../../bootstrap.components"
-import partnersLeftSvg from "../../../images/home/partners/partners-left.svg"
-import partnersRightSvg from "../../../images/home/partners/partners-right.svg"
+import partnersLeftPng from "../../../images/home/partners/partners-left.png"
+import partnersRightPng from "../../../images/home/partners/partners-right.png"
 import outermeshSvg from "../../../images/home/partners/outermesh-partners.svg"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -16,13 +16,12 @@ const Partners = () => (
             <FormattedMessage id="home.partners.title" />
           </h1>
         </RowComp>
-
         <RowComp className={styles.partnersContainer}>
           <div>
-            <img src={partnersLeftSvg} alt="" />
+            <img src={partnersLeftPng} alt="" />
           </div>
-          <div>
-            <img src={partnersRightSvg} alt="" />
+          <div style={{ marginLeft: "-2px" }}>
+            <img src={partnersRightPng} alt="" />
           </div>
         </RowComp>
         <img className={styles.svgLeft} src={outermeshSvg} alt="Lines left" />

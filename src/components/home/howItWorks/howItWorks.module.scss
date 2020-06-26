@@ -58,6 +58,42 @@
     margin: auto;
     justify-content: center;
 
+    .descriptionItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 990px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1vw;
+      margin-top: 7vw;
+      max-width: 320px;
+      z-index: 2;
+      text-align: left;
+      padding: 0 20px;
+
+      @media (max-width: 1400px) {
+        font-size: 1.2vw;
+      }
+
+      @media (max-width: 1090px) {
+        width: 100%;
+        padding: 0 12px;
+        font-size: 1.3vw;
+      }
+
+      @media (max-width: 990px) {
+        margin: 0;
+        padding: 0;
+        max-width: initial;
+        font-size: 3.2vw;
+      }
+    }
+
     .stepsLayout {
       justify-content: center;
 
@@ -86,6 +122,18 @@
         width: 88%;
         display: flex;
         justify-content: space-between;
+        height: 19vw;
+
+        .descriptionItem {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 0.8vw;
+
+          @media (max-width: 990px) {
+            align-items: center;
+          }
+        }
 
         @media (max-width: 1600px) {
           width: 94%;
@@ -100,6 +148,7 @@
         }
 
         @media (max-width: 990px) {
+          height: initial;
           margin-top: 10vw;
           flex-direction: column;
         }
@@ -110,22 +159,28 @@
         width: 88%;
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
-        margin-top: 7.4vw;
+
+        .descriptionItem {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 5vw;
+
+          @media (max-width: 990px) {
+            align-items: center;
+          }
+        }
 
         @media (max-width: 1600px) {
           width: 94%;
-          margin-top: 6.4vw;
         }
 
         @media (max-width: 1400px) {
           width: 96%;
-          margin-top: 4.9vw;
         }
 
         @media (max-width: 1250px) {
           width: 96%;
-          margin-top: 20px;
         }
 
         @media (max-width: 1024px) {
@@ -143,38 +198,6 @@
       margin-top: 0;
       padding: 20px 0;
       width: 100%;
-    }
-
-    .descriptionItem {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    p {
-      font-weight: 300;
-      margin-top: 8vw;
-      max-width: 320px;
-      z-index: 2;
-      text-align: left;
-      padding: 0 20px;
-
-      @media (max-width: 1400px) {
-        font-size: 1.2vw;
-      }
-      @media (max-width: 1090px) {
-        width: 100%;
-        padding: 0 12px;
-        font-size: 1.3vw;
-      }
-
-      @media (max-width: 990px) {
-        margin: 0;
-        padding: 0;
-        max-width: initial;
-        font-size: 3.2vw;
-      }
     }
   }
 
