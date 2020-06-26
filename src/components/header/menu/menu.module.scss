@@ -17,7 +17,11 @@
         // color: $white;
       }
       .dropdown-item {
+        margin: auto;
         color: $white !important;
+        &:hover {
+          background: #ffffff38;
+        }
       }
 
       & > div {
@@ -69,6 +73,16 @@
         color: $white;
       }
 
+      .item-locale {
+        &:hover {
+          margin: auto;
+          color: $white !important;
+          &:hover {
+            background: #ffffff36;
+          }
+        }
+      }
+
       @media (max-width: 1488px) {
         right: 0px;
       }
@@ -80,7 +94,7 @@
         margin: auto !important;
 
         & > div {
-          top: 2px;
+          top: auto;
           left: -5px;
         }
         // margin-left: 0 !important;
@@ -93,7 +107,7 @@
       // }
 
       a {
-        // margin-left: 5px !important;
+        margin-left: 0px !important;
         font-weight: 500 !important;
         font-size: 12px !important;
         line-height: 14px !important;
@@ -119,7 +133,11 @@
       }
     }
     .dropdown-item {
+      margin: auto;
       color: $black !important;
+      &:hover {
+        background: #00000036;
+      }
     }
 
     @media (max-width: 1235px) {
@@ -155,9 +173,19 @@
     & > div {
       max-width: 50px;
       position: relative;
-      top: 2px;
+      top: auto;
       min-width: 50px;
       left: 0px;
+    }
+
+    .item-locale {
+      &:hover {
+        margin: auto;
+        color: $black !important;
+        &:hover {
+          background: #00000036;
+        }
+      }
     }
 
     @media (max-width: 1488px) {
@@ -175,7 +203,7 @@
     }
 
     a {
-      margin-left: 5px !important;
+      margin-left: 0px !important;
       font-weight: 500 !important;
       font-size: 12px !important;
       line-height: 14px !important;

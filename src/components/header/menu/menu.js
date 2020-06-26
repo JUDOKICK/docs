@@ -38,16 +38,16 @@ const Menu = ({ typeNav }) => {
             <Item href="#action/3.2" className={menuStyle.dropdownItem}>
               Company
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/3.3" className={menuStyle.dropdownItem}>
               Team
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/3.4" className={menuStyle.dropdownItem}>
               Carrers
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/3.5" className={menuStyle.dropdownItem}>
               Press
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/3.6" className={menuStyle.dropdownItem}>
               Contact Us
             </Item>
           </div>
@@ -63,13 +63,13 @@ const Menu = ({ typeNav }) => {
           id="collasible-nav-dropdown-1"
         >
           <div className={menuStyle.dropdownItens}>
-            <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+            <Item href="#action/4.1" className={menuStyle.dropdownItem}>
               Teste
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/4.2" className={menuStyle.dropdownItem}>
               Teste2
             </Item>
-            <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+            <Item href="#action/4.3" className={menuStyle.dropdownItem}>
               Teste3
             </Item>
           </div>
@@ -83,13 +83,13 @@ const Menu = ({ typeNav }) => {
           }
           id="collasible-nav-dropdown-2"
         >
-          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+          <Item href="#action/5.1" className={menuStyle.dropdownItem}>
             Teste
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/5.2" className={menuStyle.dropdownItem}>
             Teste2
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/5.3" className={menuStyle.dropdownItem}>
             Teste3
           </Item>
         </NavDropdownComp>
@@ -102,13 +102,13 @@ const Menu = ({ typeNav }) => {
           }
           id="collasible-nav-dropdown-3"
         >
-          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+          <Item href="#action/6.1" className={menuStyle.dropdownItem}>
             Teste
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/6.2" className={menuStyle.dropdownItem}>
             Teste2
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/6.3" className={menuStyle.dropdownItem}>
             Teste3
           </Item>
         </NavDropdownComp>
@@ -127,13 +127,13 @@ const Menu = ({ typeNav }) => {
           }
           id="collasible-nav-dropdown-4"
         >
-          <Item href="#action/3.1" className={menuStyle.dropdownItem}>
+          <Item href="#action/7.1" className={menuStyle.dropdownItem}>
             Teste
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/7.2" className={menuStyle.dropdownItem}>
             Teste2
           </Item>
-          <Item href="#action/3.2" className={menuStyle.dropdownItem}>
+          <Item href="#action/7.3" className={menuStyle.dropdownItem}>
             Teste3
           </Item>
         </NavDropdownComp>
@@ -156,12 +156,12 @@ const Menu = ({ typeNav }) => {
           }
           eventKey={6}
         >
-          <Item href="#action/3.1.4" className={menuStyle.itemLocale}>
+          <Item href="#action/8.1" className={menuStyle.itemLocale}>
             中文
           </Item>
-          <Item href="#action/3.2.4" className={menuStyle.itemLocale}>
+          {/* <Item href="#action/3.2.4" className={menuStyle.itemLocale}>
             ES
-          </Item>
+          </Item> */}
         </NavDropdownComp>
       </NavComp>
     </div>
