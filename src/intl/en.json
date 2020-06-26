@@ -122,48 +122,14 @@
         "playNow": "PLAY NOW"
       }
     },
+    "roadmap": {
+      "title": "Our Roadmap",
+      "expandRoadmap": "Expand Roadmap",
+      "hideRoadmap": "Hide Roadmap",
+      "startBuildingToday": "START BUILDING TODAY"
+    },
     "partners": {
       "title": "Partners & Backers"
-    },
-    "ecosystem": {
-      "title": "Ecosystem",
-      "description": "Store, trade and track CTSI with our trusted partners",
-      "partners": {
-        "binance": {
-          "title": "BINANCE",
-          "description": "TRADE CTSI",
-          "link": ""
-        },
-        "trust": {
-          "title": "TRUST WALLET",
-          "description": "STORE CTSI",
-          "link": ""
-        },
-        "atomic": {
-          "title": "ATOMIC WALLET",
-          "description": "STORE CTSI",
-          "link": ""
-        },
-        "blockfolio": {
-          "title": "BLOCKFOLIO",
-          "description": "TRACK CTSI",
-          "link": ""
-        },
-        "delta": {
-          "title": "DELTA APP",
-          "description": "TRACK CTSI",
-          "link": ""
-        },
-        "coin": {
-          "title": "COIN MARKET CAP",
-          "description": "TRACK CTSI",
-          "link": ""
-        }
-      },
-      "discovery": {
-        "title": "DISCOVER CTSI",
-        "link": ""
-      }
     }
   },
   "news": {

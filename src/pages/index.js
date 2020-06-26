@@ -10,11 +10,7 @@ import WhyBuildInCartesi from "../components/home/whyBuildInCartesi/whyBuildInCa
 import HowItWorks from "../components/home/howItWorks/howItWorks"
 import UseCases from "../components/home/useCases/useCases"
 import Partners from "../components/home/partners/partners"
-
-// import GetStarted from "../components/getStarted/getStarted"
-// import Achieving from "../components/achieving/achieving"
-// import Partners from "../components/partners/partners"
-// import Ecosystem from "../components/ecosystem/ecosystem"
+import Roadmap from "../components/home/roadmap/roadmap"
 import News from "../components/news/news"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo/seo"
@@ -35,11 +31,8 @@ const IndexPage = ({ intl }) => {
         <WhyBuildInCartesi />
         <HowItWorks />
         <UseCases />
+        <Roadmap />
         <Partners />
-        {/* <GetStarted /> */}
-        {/* <Achieving /> */}
-        {/* <Partners /> */}
-        {/* <Ecosystem /> */}
         <News />
       </div>
       <Footer />

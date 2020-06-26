@@ -1,7 +1,5 @@
 import React from "react"
 import styles from "./partners.module.scss"
-import initialStyles from "../initialPresentation/initial.module.scss"
-
 import { RowComp } from "../../bootstrap.components"
 import partnersLeftSvg from "../../../images/home/partners/partners-left.svg"
 import partnersRightSvg from "../../../images/home/partners/partners-right.svg"
