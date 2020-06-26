@@ -1,0 +1,276 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 68px 60px;
+  background: #fff;
+
+  @media (max-width: 720px) {
+    padding: 68px 50px;
+  }
+
+  @media (max-width: 490px) {
+    padding: 68px 40px;
+  }
+
+  .blockContainer {
+    padding-bottom: 2rem;
+    text-align: center;
+
+    .title {
+      justify-content: center;
+      margin-bottom: 35px;
+
+      h1 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000;
+
+        @media (max-width: 490px) {
+          font-size: 9vw;
+        }
+      }
+    }
+
+    .cardGroup {
+      justify-content: center;
+
+      .cardLightLayout {
+        box-sizing: border-box;
+        max-width: 620px;
+        width: 100%;
+        margin: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media (max-width: 1500px) {
+          max-width: 520px;
+        }
+
+        @media (max-width: 1250px) {
+          max-width: 460px;
+        }
+
+        @media (max-width: 1024px) {
+          max-width: initial;
+        }
+
+        @media (max-width: 720px) {
+          display: initial;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin: 24px 0;
+        }
+
+        img {
+          width: 180px;
+          margin-right: 12px;
+          margin-left: -8px;
+        }
+
+        p {
+          font-family: Rubik;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 150%;
+          margin-top: 10px;
+        }
+
+        .cardBodyLayout {
+          text-align: left;
+          justify-content: center;
+
+          h2 {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: #000;
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+
+          @media (min-width: 1250px) and (max-width: 1500px) {
+            h4 {
+              font-size: 1.9vw;
+            }
+
+            p {
+              font-size: 1.3vw;
+            }
+          }
+
+          @media (max-width: 720px) {
+            h4 {
+              font-size: 4vw;
+            }
+
+            p {
+              font-size: 2.5vw;
+            }
+
+            h2 {
+              font-size: 6vw;
+            }
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+            width: 100%;
+          }
+        }
+
+        .caseIconDesktop {
+          @media (max-width: 720px) {
+            display: none;
+          }
+        }
+        .caseIconMobile {
+          img {
+            width: 125px;
+          }
+          @media (min-width: 721px) {
+            display: none;
+          }
+        }
+        .descriptionDesktop {
+          @media (max-width: 720px) {
+            display: none;
+          }
+        }
+        .descriptionMobile {
+          width: 100%;
+          font-weight: 300;
+          flex-direction: row;
+          text-align: left;
+          font-size: 3.6vw;
+          @media (min-width: 721px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .cardLayout {
+      justify-content: center;
+      margin-top: 100px;
+      width: 100%;
+      max-width: 950px;
+      padding: 36px;
+
+      @media (max-width: 950px) {
+        padding-bottom: 150px;
+      }
+
+      h2 {
+        font-weight: normal;
+        font-style: italic;
+        margin-top: 30px;
+        font-size: 36px;
+        z-index: 2;
+      }
+
+      h3 {
+        font-weight: normal;
+        font-size: 18px;
+        color: #666666;
+        z-index: 2;
+      }
+
+      img {
+        transition: 1s;
+        @media (max-width: 600px) {
+          opacity: 0.7;
+        }
+      }
+
+      .creeptsBallSvg {
+        position: absolute;
+        left: -85px;
+        top: -75px;
+        @media (max-width: 950px) {
+          opacity: 0.6;
+        }
+        @media (max-width: 600px) {
+          left: -50px;
+          top: -55px;
+          width: 140px;
+        }
+      }
+
+      .creeptsMultipleBallsSvg {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        z-index: 1;
+        @media (max-width: 950px) {
+          opacity: 0.6;
+        }
+        @media (max-width: 600px) {
+          width: 180px;
+        }
+      }
+
+      .towerLeft {
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        z-index: 0;
+        @media (max-width: 1024px) {
+          width: 200px;
+        }
+        @media (max-width: 600px) {
+          width: 160px;
+          left: initial;
+          right: -30px;
+        }
+      }
+
+      .towerRight {
+        position: absolute;
+        right: 100px;
+        bottom: 0;
+        z-index: 0;
+        @media (max-width: 1024px) {
+          width: 200px;
+        }
+        @media (max-width: 600px) {
+          width: 160px;
+          right: initial;
+          left: -30px;
+        }
+      }
+
+      .creeptsPyramid {
+        position: absolute;
+        right: -35px;
+        top: -58px;
+        z-index: 1;
+        @media (max-width: 950px) {
+          opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+          right: -25px;
+          top: -40px;
+          width: 100px;
+        }
+      }
+    }
+
+    .btnGroup {
+      justify-content: center;
+      text-align: center;
+      margin-top: 30px;
+      z-index: 2;
+    }
+  }
+}

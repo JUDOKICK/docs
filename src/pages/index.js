@@ -6,12 +6,11 @@ import "../styles/global.scss"
 import Header from "../components/header/header"
 import InitialPresentation from "../components/home/initialPresentation/initialPresentation"
 import ShapingTheFuture from "../components/home/shapingTheFuture/shapingTheFuture"
-import WhyBuildWithCartesi from "../components/home/whyBuildWithCartesi/whyBuildWithCartesi"
+import WhyBuildInCartesi from "../components/home/whyBuildInCartesi/whyBuildInCartesi"
 import HowItWorks from "../components/home/howItWorks/howItWorks"
-import GetStarted from "../components/getStarted/getStarted"
-import Achieving from "../components/achieving/achieving"
-import Partners from "../components/partners/partners"
-import Ecosystem from "../components/ecosystem/ecosystem"
+import UseCases from "../components/home/useCases/useCases"
+import Partners from "../components/home/partners/partners"
+import Roadmap from "../components/home/roadmap/roadmap"
 import News from "../components/news/news"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo/seo"
@@ -29,13 +28,12 @@ const IndexPage = ({ intl }) => {
       <div>
         <InitialPresentation />
         <ShapingTheFuture />
-        <WhyBuildWithCartesi />
+        <WhyBuildInCartesi />
         <HowItWorks />
-        {/* <GetStarted /> */}
-        {/* <Achieving /> */}
-        {/* <Partners /> */}
-        {/* <Ecosystem /> */}
-        {/* <News /> */}
+        <UseCases />
+        <Roadmap />
+        <Partners />
+        <News />
       </div>
       <Footer />
     </div>

@@ -1,0 +1,124 @@
+.roadmap {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 218, 218, 0.28) -13.59%,
+    rgba(250, 250, 250, 0) 100%
+  );
+
+  .title {
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+
+    h1 {
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 120%;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+      letter-spacing: -0.02em;
+      width: fit-content;
+      margin: auto;
+
+      @media (max-width: 490px) {
+        font-size: 9vw;
+      }
+    }
+  }
+
+  .roadmapDesktop {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 95%;
+    overflow-y: hidden;
+    padding: 16px 5px;
+    max-height: 70vh;
+    transition: 1.2s;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1250px) {
+      max-height: 55vh;
+    }
+
+    @media (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .roadmapMobile {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 90%;
+    overflow-y: hidden;
+    padding: 16px 5px;
+    max-height: 60vh;
+    transition: 1.2s;
+    img {
+      max-width: 100%;
+    }
+
+    @media (min-width: 721px) {
+      display: none;
+    }
+  }
+
+  .expandRoadmap {
+    max-height: 4000px;
+  }
+
+  .expandButton {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    p {
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: -8px;
+    }
+
+    svg {
+      stroke: #666666;
+      transition: 0.3s ease-in-out;
+    }
+
+    .arrowInverted {
+      svg {
+        transform: rotateX(180deg) translate(0px, -25px);
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: #1f70c1;
+
+      svg {
+        stroke: #1f70c1;
+      }
+    }
+  }
+  .btnGroup {
+    margin: 40px 0 60px 0;
+    text-align: center;
+
+    @media (max-width: 990px) {
+      margin-top: 40px;
+    }
+  }
+}

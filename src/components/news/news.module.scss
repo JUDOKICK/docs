@@ -1,16 +1,16 @@
 .news {
   width: 100%;
-  min-height: 600px;
-  left: 0px;
-  top: 0px;
   justify-content: center;
-  padding: 20px;
-  margin: 0 auto 180px;
+  padding: 40px 20px;
+  margin: auto;
 
   @media (max-width: 1510px) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 184px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 10px 20px;
   }
 
   .title {
@@ -20,7 +20,7 @@
     margin: 70px auto;
 
     h1 {
-      font-weight: 500;
+      font-weight: 300;
       font-size: 48px;
       line-height: 120%;
       text-align: center;
@@ -39,7 +39,7 @@
     grid-template-columns: repeat(3, 441px);
     grid-template-rows: 639px;
     gap: 44px;
-    margin-bottom: 184px;
+    margin-bottom: 64px;
 
     & > div {
       padding: 0;
@@ -59,13 +59,15 @@
       grid-template-rows: repeat(3, 686px);
       gap: 100px;
       margin: auto;
+      margin-bottom: 64px;
     }
 
     @media (max-width: 482px) {
       grid-template-columns: repeat(1, 95%);
-      grid-template-rows: repeat(3, 686px);
-      gap: 100px;
+      grid-template-rows: initial;
+      gap: 50px;
       margin: auto;
+      margin-bottom: 64px;
     }
 
     .block {
@@ -139,7 +141,7 @@
         .content {
           h4 {
             font-style: normal;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 22px;
             line-height: 130%;
             margin-bottom: 30px;
@@ -167,14 +169,11 @@
             font-size: 14px;
             line-height: 150%;
             margin-bottom: 1.5rem;
+            color: #666666;
 
             @media (max-width: 1440px) {
               font-size: 14px;
             }
-
-            // @media (max-width: 482px) {
-            //   font-size: 14px;
-            // }
           }
         }
       }
@@ -183,18 +182,41 @@
         border: 0;
         background-color: #ffffff;
         text-align: center;
-        // padding: 0.75rem;
+        padding-bottom: 30px;
 
-        button {
-          background: #557ece;
+        @media (max-width: 720px) {
+          padding-bottom: 20px;
+        }
+
+        .btnDefault {
           color: #fff;
-          margin-bottom: 50px;
+          background: #666666;
+          margin: 10px 20px;
           font-weight: 500;
+          outline: none;
+          text-transform: uppercase;
+          width: initial;
+          min-width: 222px;
 
           &:hover {
-            background: #fff;
-            border: 1px solid #557ece;
-            color: #557ece;
+            background: #1f70c1;
+          }
+
+          &:focus {
+            background: #217dda;
+          }
+
+          svg {
+            margin-right: 8px;
+          }
+
+          @media (max-width: 425px) {
+            min-width: 130px;
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            max-width: initial;
           }
         }
       }
