@@ -34,7 +34,7 @@
     "initial": {
       "title": "A Bridge Between Linux & Blockchain",
       "titleContinue": "",
-      "description": "Build your DApp off-chain with Linux, Maitain on-chain security",
+      "description": "Build your DApp off-chain with Linux, Maintain on-chain security",
       "getStarted": {
         "title": "GET STARTED",
         "link": ""
@@ -78,7 +78,6 @@
         "startBuildingToday": "Start building today"
       }
     },
-
     "howItWorks": {
       "title": "How It Works",
       "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
@@ -91,83 +90,161 @@
         "learnMore": "Learn More"
       }
     },
-    "getStarted": {
-      "title": "Get Started",
-      "github": {
-        "title": "Take a peek",
-        "subtitle": "Api",
-        "apiReferencee": "Full API reference",
-        "cartesi": "Cartesi on Github",
-        "stars": "268 stars",
-        "commits": "6366 commit",
-        "contributors": "30 contributors"
+    "useCases": {
+      "title": "Cartesi Use Cases",
+      "deFi": {
+        "title": "DeFi",
+        "description": "Cartesi applications will be able to read and perform complex calculations involving data from multiple sources. This will help interoperability between blockchains and services — such as futures and insurance markets."
       },
-      "developers": {
-        "title": "CARTESI DEVELOPERS",
-        "subtitle": "Get Early Access to Cartesi Brand New Features.",
-        "description": "Cartesi provides a Linux runtime environment for blockchain DApps. Complex computations run off-chain while retaining the strong security guarantees of the underlying blockchain.",
-        "join": "JOIN CARTESI",
-        "link": ""
+      "gaming": {
+        "title": "Gaming",
+        "description": "Cartesi will unleash vast new possibilities for blockchain games. Developers will be able to use traditional tools and libraries that can be compiled for Linux. Additionally, game state processing will be free from the computational limits and high fees of blockchains without the need to sacrifice decentralization."
+      },
+      "machineLearning": {
+        "title": "Machine Learning",
+        "description": "A decentralised marketplace for Al and computational tasks. With the power of Cartesi's decentralized automated verification, developers will be able to create services that allow new DApps to outsource and distribute work. This opens new possibilities for lower-cost Al by outsourcing experts and bots."
+      },
+      "theFutureOfAutomation": {
+        "title": "The Future of Automation",
+        "description": "With the power of Cartesi's decentralized verification, applications will be able to outsource and distribute verifiable work. This opens new possibilities for trustless marketplaces and autonomous systems involving humans and machines, propelling loT, data science and Al through new business models."
+      },
+      "logistics": {
+        "title": "Logistics & Optimization",
+        "description": "With Cartesi, professionals in fields such as logistics and transportation will be able to offer their services and be hired by enterprises internationally and without the need for intermediaries."
+      },
+      "research": {
+        "title": "Research",
+        "description": "Outsourced computation will allow for millions of users to lend their idle computing power. This will benefit scientific research, 3D rendering, video transcoding and many other computationally intensive tasks in a trustless way, without reputation systems."
+      },
+      "creeptsTowerDefense": {
+        "title": "Creepts Tower Defense",
+        "subtitle": "First Fully Decentralized Tower Defense DApp",
+        "playNow": "PLAY NOW"
       }
     },
-    "achieving": {
-      "title": "What We’are Achieving",
-      "swipe": "SWIPE >"
+    "roadmap": {
+      "title": "Our Roadmap",
+      "expandRoadmap": "Expand Roadmap",
+      "hideRoadmap": "Hide Roadmap",
+      "startBuildingToday": "START BUILDING TODAY"
     },
     "partners": {
-      "title": "Meet the Partners and Backers that Enable Cartesi.",
-      "description": "Join the select group of partners and backers that are early adopting and investing in our game changing technology.",
-      "swipe": "SWIPE >",
-      "news": {
-        "title": "NEWS",
-        "description": "Cartesi Partners with GoBlock on a DeFi Project",
-        "link": ""
-      }
-    },
-    "ecosystem": {
-      "title": "Ecosystem",
-      "description": "Store, trade and track CTSI with our trusted partners",
-      "partners": {
-        "binance": {
-          "title": "BINANCE",
-          "description": "TRADE CTSI",
-          "link": ""
-        },
-        "trust": {
-          "title": "TRUST WALLET",
-          "description": "STORE CTSI",
-          "link": ""
-        },
-        "atomic": {
-          "title": "ATOMIC WALLET",
-          "description": "STORE CTSI",
-          "link": ""
-        },
-        "blockfolio": {
-          "title": "BLOCKFOLIO",
-          "description": "TRACK CTSI",
-          "link": ""
-        },
-        "delta": {
-          "title": "DELTA APP",
-          "description": "TRACK CTSI",
-          "link": ""
-        },
-        "coin": {
-          "title": "COIN MARKET CAP",
-          "description": "TRACK CTSI",
-          "link": ""
-        }
-      },
-      "discovery": {
-        "title": "DISCOVER CTSI",
-        "link": ""
-      }
-    },
-    "news": {
-      "title": "NEWS",
-      "more": "READ MORE"
+      "title": "Partners & Backers"
     }
+  },
+  "aboutCartesi": {
+    "initial": {
+      "title": "About Cartesi",
+      "titleContinue": "A bridge between Linux and blockchain"
+    },
+    "story": {
+      "title": "Our Story",
+      "description": {
+        "paragraph01": "Cartesi was founded in 2018 by Erick de Moura, Augusto Teixeira, Diego Nehab and Colin Steil. The founding team initially got into blockchain as a result of one of the founders, Augusto Teixeira, being friends with Serguei Popov, the founder of IOTA. Serguei became one of Cartesi’s earliest investors and advisors.",
+        "paragraph02": "Augusto had the original idea of creating a trustless AI marketplace for data scientists. Later, the team realized they were tapping into a broader scope and the project evolved into developing a versatile layer-2 Linux infrastructure to overcome the problems of scalability, of computation, and infrastructure for blockchain applications.",
+        "paragraph03": "Cartesi is special in the blockchain universe because it allows decentralized applications to run within a Linux environment. Complex processing can be executed off-chain, free from a blockchain’s computational limits and corresponding fees. Cartesi is chain-agnostic and  developers won’t need to worry about the longevity of particular blockchains.",
+        "paragraph04": "Cartesi has received funding by prominent investors and funds such as SNZ, SOSV, Artesian and others.",
+        "paragraph05": "Cartesi’s vision is to make the development of DApps easy, scalable, and cost-efficient by incorporating tools developers already use and have evolved over the last 30 years. Cartesi will allow DApps to be closer to what we experience with regular apps we use every day, making the broader adoption of blockchain a reality. "
+      }
+    },
+    "meet": {
+      "title": "Meet the team",
+      "person01": {
+        "name": "Erick de Moura",
+        "office": "Chief Executive Officer"
+      },
+      "person02": {
+        "name": "Colin Steil",
+        "office": "Chief Operating Officer"
+      },
+      "person03": {
+        "name": "Augusto Teixeira, PhD",
+        "office": "Chief Scientific Officer"
+      },
+      "person04": {
+        "name": "Diego Nehab, PhD",
+        "office": "Chief Technology Officer"
+      }
+    },
+    "development": {
+      "title": "Development Team",
+      "person01": {
+        "name": "Danilo Tuler",
+        "office": "Head of Enginnering"
+      },
+      "person02": {
+        "name": "Felipe Argent",
+        "office": "Blockchain Engineer"
+      },
+      "person03": {
+        "name": "Gabriel Barros",
+        "office": "Blockchain Engineer"
+      },
+      "person04": {
+        "name": "Victor Fusco",
+        "office": "Senior Software Engineer"
+      },
+      "person05": {
+        "name": "Milton Jonathan",
+        "office": "Senior Software Engineer"
+      },
+      "person06": {
+        "name": "Fabiana Cecin, PhD",
+        "office": "Software Engineer"
+      },
+      "person07": {
+        "name": "Stephen Chen",
+        "office": "Software Engineer"
+      },
+      "person08": {
+        "name": "Carlo Fragni",
+        "office": "Software Engineer"
+      }
+    },
+    "advisors": {
+      "title": "Advisors",
+      "person01": {
+        "name": "Serguei Popov, PhD",
+        "office01": "Senior Advisor",
+        "office02": "Co-Founder of IOTA"
+      },
+      "person02": {
+        "name": "Stas Oskin",
+        "office01": "Senior Advisor",
+        "office02": "Core Dev & Bus Dev of Wings.ai"
+      },
+      "person03": {
+        "name": "William Bao Bean",
+        "office01": "General Partner at SOSV",
+        "office02": "Managing Director at Chinaccelerator",
+        "office03": "Managing Director at MOX"
+      },
+      "person04": {
+        "name": "Luiz Henrique de Figueiredo, PhD",
+        "office01": "Co-creator of Lua",
+        "office02": "programming language"
+      },
+      "person05": {
+        "name": "Boris Povod",
+        "office01": "Co-founder of Wings",
+        "office02": "Co-founder of Cripti"
+      },
+      "person06": {
+        "name": "Michael Hwang",
+        "office01": "Managing Director, Big Bang Angels",
+        "office02": "Board Member, Across Asia Alliance"
+      },
+      "person07": {
+        "name": "T.k. Hamed",
+        "office01": "Founder of CTE Advisor",
+        "office02": "6 Year Crypto Veteran",
+        "office03": "Growth Hacker & Strategist"
+      }
+    }
+  },
+  "news": {
+    "title": "Blog",
+    "more": "READ MORE"
   },
   "footer": {
     "title": "Stay in touch:",

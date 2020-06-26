@@ -298,7 +298,11 @@ const Getstarted = () => {
               <FormComp
                 noValidate
                 validated={validated}
-                // className={getstartedStyles.needsValidation}
+                className={
+                  validated
+                    ? getstartedStyles.wasValidated
+                    : getstartedStyles.needsValidation
+                }
                 onSubmit={handleSubmit}
               >
                 <div className={getstartedStyles.formGroup}>
