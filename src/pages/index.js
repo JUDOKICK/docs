@@ -24,7 +24,7 @@ const IndexPage = ({ intl }) => {
         title={intl.formatMessage({ id: "home.title" })}
         keywords={[`Cartesi`, `Blockchain`, `DApps`, `Linux`]}
       />
-      <Header />
+      <Header typeNav={1} />
       <div>
         <InitialPresentation />
         <ShapingTheFuture />
