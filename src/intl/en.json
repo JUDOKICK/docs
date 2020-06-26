@@ -262,5 +262,17 @@
       }
     },
     "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
+  },
+  "press":{
+    "mediaCoverage": {
+      "title": "Media Coverage & Enquiries",
+      "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Also, feel free to reach out if you’ve already written about us and would like us to feature your article below. Get in touch with us at press@cartesi.io"
+    },
+    "cartesiMedia": {
+      "title": "Cartesi in the Media"
+    },
+    "latestUpdates": {
+      "title": "Latest Updates"
+    }
   }
 }
