@@ -13,6 +13,7 @@ import {
   ResponsiveEmbed,
   Modal,
   Form,
+  Dropdown,
   Button,
   Collapse,
 } from "react-bootstrap"
@@ -31,3 +32,4 @@ export const ModalComp = Modal
 export const FormComp = Form
 export const ButtonComp = Button
 export const CollapseComp = Collapse
+export const DropdownComp = Dropdown

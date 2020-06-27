@@ -1,18 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import { NavComp, NavDropdownComp } from "../../bootstrap.components"
+import {
+  NavComp,
+  NavDropdownComp,
+  DropdownComp,
+} from "../../bootstrap.components"
 import menuStyle from "./menu.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilePdf, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import expandDown from "../../../images/SVG/menu/expandWhite1.svg"
 import expadDownBlack from "../../../images/SVG/menu/expanddown.svg"
 
-const { Item } = NavDropdownComp
+const { Item } = DropdownComp
 
 const Menu = ({ typeNav }) => {
   var iconType = typeNav === 1 ? expandDown : expadDownBlack
   var iconLangType = typeNav === 1 ? expadDownBlack : expandDown
+  const [open, setOpen] = useState(false)
 
   return (
     <div>
@@ -24,6 +29,13 @@ const Menu = ({ typeNav }) => {
         ]}
       >
         <NavDropdownComp
+          // onMouseOver={() => setOpen(true)}
+          // onFocus={() => setOpen(true)}
+          // onMouseLeave={() => setOpen(false)}
+          // onBlur={() => setOpen(false)}
+          // onToggle={() => setOpen(!open)}
+          // toggle={() => setOpen(!open)}
+          // defaultOpen={open}
           className={menuStyle.section}
           title={
             <span className={menuStyle.iconExpand}>
