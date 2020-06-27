@@ -126,6 +126,18 @@
     }
   }
   .section {
+    div {
+      border-radius: 7px;
+    }
+
+    .dropdownItens {
+      margin-top: -10px;
+      margin-bottom: -10px;
+      padding: 12px;
+      background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
+      border-radius: 7px;
+    }
+
     a {
       color: $white !important;
       &::after {
@@ -134,9 +146,15 @@
     }
     .dropdown-item {
       margin: auto;
-      color: $black !important;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 200%;
+      // color: $black !important;
+      color: $white !important;
+      transition: 0.3s;
       &:hover {
-        background: #00000036;
+        background: transparent;
+        text-decoration: underline;
       }
     }
 
@@ -163,12 +181,21 @@
     background-color: $white;
     color: $black !important;
     height: 23px;
-    width: 49px;
+    // width: 49px;
     margin: auto;
     border-radius: 3px;
     position: absolute;
     right: -53px;
-    top: 30px;
+    top: 40px;
+    padding-left: 7px;
+
+    @media (max-width: 1199px) {
+      padding-right: 7px;
+    }
+
+    a {
+      margin: 0px 7px !important;
+    }
 
     & > div {
       max-width: 50px;

@@ -386,5 +386,36 @@
       "title": "Upcoming Events",
       "button": "READ MORE"
     }
+  },
+  "wallets": {
+    "title": "Wallets & Exchanges",
+    "initial": {
+      "title": "Wallets & Exchanges",
+      "description": "Welcome to the Cartesi Ecosystem. Store and track CTSI with our trusted partners. Trade CTSI on the world's largest exchanges. We are continuously expanding our international reach with CTSI and it’s ease to acquire for users around the world."
+    },
+    "exchanges": {
+      "title": "Exchanges - Trade CTSI"
+    },
+    "wallets": {
+      "title": "Wallets - Securely Store CTSI",
+      "wallet": {
+        "atomicWallet": "Atomic Wallet",
+        "ledger": "Ledger",
+        "myCrypto": "My Crypto",
+        "trezor": "Trezor",
+        "trustWallet": "Trust Wallet"
+      }
+    },
+    "ctsiUpdates": {
+      "title": "Track CTSI Prices, Updates, and Announcements",
+      "updates": {
+        "blockfolio": "Blockfolio",
+        "delta": "Delta",
+        "coinMarketCap": "CoinMarketCap",
+        "coinGecko": "CoinGecko",
+        "blockfolioSignal": "Blockfolio Signal",
+        "deltaDirect": "Delta Direct"
+      }
+    }
   }
 }
