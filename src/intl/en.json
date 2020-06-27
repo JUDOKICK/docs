@@ -340,7 +340,7 @@
     },
     "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
   },
-  "press":{
+  "press": {
     "mediaCoverage": {
       "title": "Media Coverage & Enquiries",
       "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Also, feel free to reach out if you’ve already written about us and would like us to feature your article below. Get in touch with us at press@cartesi.io"
@@ -350,6 +350,37 @@
     },
     "latestUpdates": {
       "title": "Latest Updates"
+    }
+  },
+  "wallets": {
+    "title": "Wallets & Exchanges",
+    "initial": {
+      "title": "Wallets & Exchanges",
+      "description": "Welcome to the Cartesi Ecosystem. Store and track CTSI with our trusted partners. Trade CTSI on the world's largest exchanges. We are continuously expanding our international reach with CTSI and it’s ease to acquire for users around the world."
+    },
+    "exchanges": {
+      "title": "Exchanges - Trade CTSI"
+    },
+    "wallets": {
+      "title": "Wallets - Securely Store CTSI",
+      "wallet": {
+        "atomicWallet": "Atomic Wallet",
+        "ledger": "Ledger",
+        "myCrypto": "My Crypto",
+        "trezor": "Trezor",
+        "trustWallet": "Trust Wallet"
+      }
+    },
+    "ctsiUpdates": {
+      "title": "Track CTSI Prices, Updates, and Announcements",
+      "updates": {
+        "blockfolio": "Blockfolio",
+        "delta": "Delta",
+        "coinMarketCap": "CoinMarketCap",
+        "coinGecko": "CoinGecko",
+        "blockfolioSignal": "Blockfolio Signal",
+        "deltaDirect": "Delta Direct"
+      }
     }
   }
 }
