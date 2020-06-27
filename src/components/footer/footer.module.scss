@@ -106,14 +106,24 @@
       text-align: center;
       margin: auto;
       width: 80%;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       line-height: 50px;
       @media (max-width: 420px) {
         width: 90%;
       }
 
+      a {
+        display: inline-flex;
+        color: #fff;
+        transition-duration: 0.3s;
+        &:hover {
+          transform: scale(1.2) !important;
+          opacity: 0.9;
+        }
+      }
+
       img {
-        margin: 0 7px;
+        margin: 0 8px;
         width: 35.45px;
         @media (max-width: 420px) {
           margin: 0 10px;
@@ -170,6 +180,7 @@
     margin: auto;
     justify-content: center;
     margin-top: 100px;
+    align-items: center;
 
     & > div {
       margin: 0 40.5px;
@@ -185,6 +196,8 @@
       padding: 0;
       li {
         display: block;
+        line-height: 150%;
+        margin: 4px 0;
         a {
           color: #fff;
         }
@@ -243,7 +256,7 @@
 
     @media (max-width: 366px) {
       display: grid;
-      grid-template-columns: repeat(2, 140px);
+      grid-template-columns: repeat(2, 48%);
     }
   }
 }

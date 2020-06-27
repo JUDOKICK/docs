@@ -51,7 +51,7 @@
         margin: 12px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         .bodyLayout {
           text-align: left;
@@ -78,8 +78,11 @@
             margin-top: 10px;
           }
 
-          img {
-            height: 48px;
+          .bodyImg {
+            padding-top: 10px;
+            height: 77px;
+            display: flex;
+            align-items: flex-end;
           }
 
           @media (min-width: 1250px) and (max-width: 1500px) {

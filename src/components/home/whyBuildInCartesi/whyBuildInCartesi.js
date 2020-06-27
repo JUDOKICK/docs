@@ -25,7 +25,7 @@ const WhyBuildInCartesi = () => (
         <RowComp className={styles.cardGroup}>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={scalableIconSvg} alt="" />
               </div>
               <h2>
@@ -38,7 +38,7 @@ const WhyBuildInCartesi = () => (
           </div>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={versatileIconSvg} alt="" />
               </div>
               <h2>
@@ -51,7 +51,7 @@ const WhyBuildInCartesi = () => (
           </div>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={easyToBuildIconSvg} alt="" />
               </div>
               <h2>
@@ -64,7 +64,7 @@ const WhyBuildInCartesi = () => (
           </div>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={fullyDecentralizedIconSvg} alt="" />
               </div>
               <h2>
@@ -77,7 +77,7 @@ const WhyBuildInCartesi = () => (
           </div>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={portableIconSvg} alt="" />
               </div>
               <h2>
@@ -90,7 +90,7 @@ const WhyBuildInCartesi = () => (
           </div>
           <div className={styles.cardLayout}>
             <div className={styles.bodyLayout}>
-              <div>
+              <div className={styles.bodyImg}>
                 <img src={privateIconSvg} alt="" />
               </div>
               <h2>
