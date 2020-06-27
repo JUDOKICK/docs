@@ -20,6 +20,7 @@ const Menu = ({ typeNav }) => {
         className={[
           "ml-auto",
           typeNav === 1 ? menuStyle.menu : menuStyle.menuWhite,
+          menuStyle.menuDefault,
         ]}
       >
         <NavDropdownComp

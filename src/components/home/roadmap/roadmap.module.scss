@@ -116,6 +116,7 @@
     }
 
     &:focus {
+      text-decoration: underline;
       color: #217dda;
 
       svg {

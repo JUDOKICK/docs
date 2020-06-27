@@ -28,12 +28,16 @@ const Roadmap = () => {
   const [roadmapExpanded, setRoadmapExpanded] = useState(false)
   const roadmapRef = useRef(null)
 
-  const expandRoadmap = () => {
-    setRoadmapExpanded(!roadmapExpanded)
-    roadmapRef.current.scrollIntoView({
-      block: "start",
-      behavior: "smooth",
-    })
+  const expandRoadmap = event => {
+    const key = event.which || event.keyCode
+    console.log(key)
+    if (!key || key === 13) {
+      setRoadmapExpanded(!roadmapExpanded)
+      roadmapRef.current.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      })
+    }
   }
 
   return (
