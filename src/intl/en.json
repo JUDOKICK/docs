@@ -340,7 +340,7 @@
     },
     "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
   },
-  "press":{
+  "press": {
     "mediaCoverage": {
       "title": "Media Coverage & Enquiries",
       "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Also, feel free to reach out if you’ve already written about us and would like us to feature your article below. Get in touch with us at press@cartesi.io"
@@ -350,6 +350,41 @@
     },
     "latestUpdates": {
       "title": "Latest Updates"
+    }
+  },
+  "community": {
+    "join": {
+      "title": "Join the Cartesi Community",
+      "description": "Contribute to building the future of the decentralized web. As we continue to expand, we are on the lookout for passionate and talented leaders to join our movement bringing novel ideas to scale the ecosystem and drive continuous improvements to our infrastructure."
+    },
+    "become": {
+      "title": "Become a Cartesi Ambassador",
+      "description": "Join our program and tell the world about our unique technology. Start a new community, represent our work, mentor other members, participate in events, build content, and help us scale the Cartesi ecosystem. You will get exclusive access to our latest innovations and upcoming plans, receive rewards, and you’ll be at the forefront of a significant technology breakthrough",
+      "button1": "learn more"
+    },
+    "channels": {
+      "telegram": "Telegram",
+      "medium": "Medium",
+      "discord": "Discord",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "reddit": "Reddit",
+      "facebook": "Fecebook",
+      "linkedin": "LinkedIn"
+    },
+    "groups": {
+      "title": "Cartesi International Groups",
+      "russo": "Ty",
+      "chines": "中文",
+      "chines2": "中文",
+      "turco": "Turkey",
+      "vietna": "Vietnam",
+      "koreano": "한국어",
+      "india": "India"
+    },
+    "upcoming": {
+      "title": "Upcoming Events",
+      "button": "READ MORE"
     }
   }
 }
