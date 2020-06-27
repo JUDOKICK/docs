@@ -58,7 +58,6 @@ const Footer = ({ secondFooter }) => (
   <div>
     <div className={footerStyle.footer}>
       <div
-        // className={footerStyle.mask}
         style={{
           background: `url(${geometric})`,
         }}
@@ -69,11 +68,41 @@ const Footer = ({ secondFooter }) => (
             <FormattedMessage id="footer.title" />
           </h1>
           <div className={[footerStyle.socialList].join(" ")}>
-            <img src={discord} alt="Discord" />
-            <img src={github} alt="Github" />
-            <img src={twitter} alt="Twitter" />
-            <img src={medium} alt="Medium" />
-            <img src={telegram} alt="Telegram" />
+            <a
+              href="https://discord.gg/Pt2NrnS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={discord} alt="Discord" />
+            </a>
+            <a
+              href="https://www.github.com/cartesi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="Github" />
+            </a>
+            <a
+              href="https://www.twitter.com/cartesiproject"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={twitter} alt="Twitter" />
+            </a>
+            <a
+              href="https://www.medium.com/cartesi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={medium} alt="Medium" />
+            </a>
+            <a
+              href="https://t.me/cartesiannouncements"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={telegram} alt="Telegram" />
+            </a>
           </div>
           <div className={[footerStyle.subscribe].join(" ")}>
             <FormEmail secondFooter={secondFooter} />
@@ -83,22 +112,22 @@ const Footer = ({ secondFooter }) => (
           <div className="col-xs">
             <ul>
               <li>
-                <Link to="/">
+                <Link to="/about">
                   <FormattedMessage id="footer.pages.about.title" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/#">
                   <FormattedMessage id="footer.pages.developers.title" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/#">
                   <FormattedMessage id="footer.pages.ecosystem.title" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/#news">
                   <FormattedMessage id="footer.pages.news.title" />
                 </Link>
               </li>

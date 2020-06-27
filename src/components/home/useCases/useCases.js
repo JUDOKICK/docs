@@ -158,9 +158,15 @@ const UseCases = () => (
             </h3>
             <div className={styles.btnGroup}>
               <div className={initialStyles.btnsList}>
-                <button className={initialStyles.btnDefault}>
-                  <FormattedMessage id="home.useCases.creeptsTowerDefense.playNow" />
-                </button>
+                <a
+                  href="https://creepts.cartesi.io/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className={initialStyles.btnDefault}>
+                    <FormattedMessage id="home.useCases.creeptsTowerDefense.playNow" />
+                  </button>
+                </a>
               </div>
             </div>
             <img

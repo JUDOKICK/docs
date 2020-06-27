@@ -17,9 +17,9 @@ const ArrowDownIcon = () => (
   >
     <path
       d="M2.99921 33.0007L33 63.0015L63.0008 33.0007"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 )
@@ -83,9 +83,15 @@ const Roadmap = () => {
           </div>
           <RowComp className={roadmapStyle.btnGroup}>
             <div className={initialStyles.btnsList}>
-              <button className={initialStyles.btnDefault}>
-                <FormattedMessage id="home.howItWorks.button.learnMore" />
-              </button>
+              <a
+                href="https://medium.com/cartesi/tagged/newsletter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className={initialStyles.btnDefault}>
+                  <FormattedMessage id="home.howItWorks.button.learnMore" />
+                </button>
+              </a>
             </div>
           </RowComp>
         </div>
