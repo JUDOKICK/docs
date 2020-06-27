@@ -30,7 +30,6 @@ const Roadmap = () => {
 
   const expandRoadmap = event => {
     const key = event.which || event.keyCode
-    console.log(key)
     if (!key || key === 13) {
       setRoadmapExpanded(!roadmapExpanded)
       roadmapRef.current.scrollIntoView({
@@ -50,43 +49,46 @@ const Roadmap = () => {
         </div>
         <div
           className={`${roadmapStyle.roadmapDesktop} ${
-            roadmapExpanded && roadmapStyle.expandRoadmap
+            roadmapExpanded ? roadmapStyle.expandRoadmap : ""
           }`}
         >
           <img src={roadmapDesktopSvg} alt="Roadmap" />
         </div>
         <div
           className={`${roadmapStyle.roadmapMobile} ${
-            roadmapExpanded && roadmapStyle.expandRoadmap
+            roadmapExpanded ? roadmapStyle.expandRoadmap : ""
           }`}
         >
           <img src={roadmapMobileSvg} alt="Roadmap" />
         </div>
-        <div
-          className={roadmapStyle.expandButton}
-          onClick={expandRoadmap}
-          onKeyDown={expandRoadmap}
-          role="button"
-          tabIndex={0}
-        >
-          <p>
-            {roadmapExpanded ? (
-              <FormattedMessage id="home.roadmap.hideRoadmap" />
-            ) : (
-              <FormattedMessage id="home.roadmap.expandRoadmap" />
-            )}
-          </p>
-          <div className={roadmapExpanded && roadmapStyle.arrowInverted}>
-            <ArrowDownIcon />
+        {!roadmapExpanded && <div className={roadmapStyle.roadmapFade} />}
+        <div className={roadmapStyle.roadmapFooter}>
+          <div
+            className={roadmapStyle.expandButton}
+            onClick={expandRoadmap}
+            onKeyDown={expandRoadmap}
+            role="button"
+            tabIndex={0}
+          >
+            <p>
+              {roadmapExpanded ? (
+                <FormattedMessage id="home.roadmap.hideRoadmap" />
+              ) : (
+                <FormattedMessage id="home.roadmap.expandRoadmap" />
+              )}
+            </p>
+            <div className={roadmapExpanded ? roadmapStyle.arrowInverted : ""}>
+              <ArrowDownIcon />
+            </div>
           </div>
+          <RowComp className={roadmapStyle.btnGroup}>
+            <div className={initialStyles.btnsList}>
+              <button className={initialStyles.btnDefault}>
+                <FormattedMessage id="home.howItWorks.button.learnMore" />
+              </button>
+            </div>
+          </RowComp>
         </div>
-        <RowComp className={roadmapStyle.btnGroup}>
-          <div className={initialStyles.btnsList}>
-            <button className={initialStyles.btnDefault}>
-              <FormattedMessage id="home.howItWorks.button.learnMore" />
-            </button>
-          </div>
-        </RowComp>
       </div>
     </div>
   )
