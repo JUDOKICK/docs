@@ -115,6 +115,7 @@
     position: relative;
     z-index: 1;
     background-color: transparent;
+    padding: 20px 3%;
 
     @media (max-width: 1192px) {
       background-color: $black;
