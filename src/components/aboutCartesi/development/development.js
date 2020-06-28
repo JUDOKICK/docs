@@ -69,7 +69,7 @@ const Development = () => {
         <h6 className={developmentStyles.nameDeveloper}>
           <FormattedMessage id={item.person.name} />
         </h6>
-        <p className={developmentStyles.officeDevelop}>
+        <p className={developmentStyles.officeDeveloper}>
           <FormattedMessage id={item.person.office} />
         </p>
       </div>

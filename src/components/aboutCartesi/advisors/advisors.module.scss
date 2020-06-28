@@ -29,13 +29,14 @@ $text-color: #000000;
     max-width: 1700px;
 
     .advisors-info {
-      width: 340px;
+      width: fit-content;
       height: 107px;
-      margin: 65px 40px;
+      margin: 65px 46.5px;
       text-align: left;
 
       .name-advisor {
-        min-width: 240px;
+        min-width: 200px;
+        max-width: 250px;
         font-style: normal;
         font-weight: 300;
         font-size: 27px;

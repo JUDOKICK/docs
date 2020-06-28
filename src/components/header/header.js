@@ -12,7 +12,13 @@ import headerLogoWhite from "../../images/SVG/menu/logo-white.svg"
 
 const { Brand, Toggle, Collapse } = NavbarComp
 
-const Header = ({ typeNav }) => {
+/* The name of the page using the menu must be passed via the props as pageName, 
+example: "about", "press", except when it is "home" 
+
+  The number of the menu style must be passed via props as typeNav,
+example: 1 (to dark) or 2 (to ligth ), only number. 
+*/
+const Header = ({ typeNav, pageName }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -58,7 +64,7 @@ const Header = ({ typeNav }) => {
         </button>
         <Collapse in={open} className={headerStyles.navbarCollapse}>
           <div id="responsive-navbar-nav">
-            <Menu typeNav={typeNav} />
+            <Menu typeNav={typeNav} pageName={pageName} />
           </div>
         </Collapse>
       </NavbarComp>
