@@ -3,6 +3,7 @@ import React from "react"
 import joinStyles from "./join.module.scss"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import outlineBg from "../../../images/community/outermesh-community.svg"
+import leekEffect from "../../../images/community/leak-effect.svg"
 
 const Join = () => {
   return (
@@ -16,6 +17,7 @@ const Join = () => {
         </p>
       </div>
       <img className={joinStyles.outline} src={outlineBg} alt="outline" />
+      <img className={joinStyles.effect} src={leekEffect} alt="effect" />
     </div>
   )
 }

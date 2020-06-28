@@ -363,6 +363,7 @@
       "button1": "learn more"
     },
     "channels": {
+      "title": "Channels",
       "telegram": "Telegram",
       "medium": "Medium",
       "discord": "Discord",

@@ -1,0 +1,114 @@
+@import "../../../styles/variables.scss";
+
+.becomes {
+  width: 100%;
+  min-height: 587px;
+  height: 100%;
+  position: relative;
+  background-color: $white;
+  z-index: 0;
+  transition: all 0.1s ease;
+  color: $black;
+  @media (max-width: 1060px) {
+  }
+  .block-titles {
+    position: relative;
+    z-index: 1;
+    padding-top: 118px;
+    max-width: 950px;
+    padding-left: 246px;
+    padding-bottom: 121px;
+
+    @media (max-width: 1400px) {
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 80px;
+    }
+
+    @media (max-width: 1060px) {
+    }
+    .title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 57px;
+      letter-spacing: -0.02em;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      max-width: 605px;
+      line-height: 150%;
+      margin-bottom: 30px;
+      font-feature-settings: "liga" off;
+      // margin-bottom: 150px;
+    }
+
+    .btn-learn {
+      background: $dark-gray;
+      color: $white;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: capitalize;
+      text-transform: uppercase;
+      border-radius: 3px;
+      width: 229px;
+      height: 53px;
+      text-align: center;
+      align-content: center;
+
+      &:hover {
+        background: #817c7c;
+        border: none;
+      }
+      &:focus,
+      &:active {
+        border: none;
+        outline: none;
+      }
+    }
+
+    @media (max-width: 490px) {
+      text-align: center;
+      .title {
+        font-size: 9vw;
+      }
+      // .description {
+      //   font-size: 7vw;
+      // }
+    }
+  }
+
+  .blocks {
+    position: absolute;
+    right: 146px;
+    bottom: -93px;
+    z-index: 0;
+
+    @media (max-width: 1530px) {
+      right: 4.5%;
+    }
+
+    @media (max-width: 1227px) {
+      filter: blur(1.2px);
+    }
+  }
+
+  .effect {
+    position: absolute;
+    right: 0;
+    min-height: 592px;
+    mix-blend-mode: multiply;
+    transform: rotate(-180deg);
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    opacity: 0.5;
+  }
+}
