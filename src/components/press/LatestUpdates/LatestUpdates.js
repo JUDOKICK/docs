@@ -13,7 +13,7 @@ const LatestUpdates = () => {
         </div>
 
         <button className={latestUpdates.btnDefault}>
-          <FormattedMessage id="nepresss.latestUpdates.more.title" />
+          <FormattedMessage id="presss.latestUpdates.more.title" />
         </button>
       </div>
     )
