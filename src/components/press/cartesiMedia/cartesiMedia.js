@@ -34,7 +34,7 @@ function CarouselPrevArrow(props) {
   )
 }
 
-var settings = {
+const settings = {
   dots: false,
   infinite: true,
   speed: 500,
@@ -138,6 +138,7 @@ const CartesiMedia = props => {
                         <CardComp.Footer
                           className={[cartesiMedia.cardFooter].join(" ")}
                         >
+                           
                           <a
                             target="_blank"
                             rel="noopener noreferrer"

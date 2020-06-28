@@ -349,7 +349,11 @@
       "title": "Cartesi in the Media"
     },
     "latestUpdates": {
-      "title": "Latest Updates"
+      "title": "Latest Updates",
+      "more": {
+        "title":"VIEW ALL ARTICLES",
+        "link": ""
+      }
     }
   },
   "community": {
