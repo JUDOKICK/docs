@@ -8,13 +8,13 @@ import News from '../../news/news'
 const LatestUpdates = () => {
     return (
       <div className={latestUpdates.container}>
-        <div className={latestUpdates.boxCenter}>
-          <News title={<FormattedMessage id="press.latestUpdates.title" />} limit={6}/>
-        </div>
+          <div className={latestUpdates.boxCenter}>
+            <News title={<FormattedMessage id="press.latestUpdates.title" />} limit={6}/>
+          </div>
 
-        <button className={latestUpdates.btnDefault}>
-          <FormattedMessage id="presss.latestUpdates.more.title" />
-        </button>
+          <button className={latestUpdates.btnDefault}>
+            <FormattedMessage id="press.latestUpdates.more.title" />
+          </button>
       </div>
     )
 }

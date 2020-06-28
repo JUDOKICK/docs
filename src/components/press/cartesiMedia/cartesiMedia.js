@@ -138,6 +138,7 @@ const CartesiMedia = props => {
                         <CardComp.Footer
                           className={[cartesiMedia.cardFooter].join(" ")}
                         >
+                           
                           <a
                             target="_blank"
                             rel="noopener noreferrer"
