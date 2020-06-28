@@ -1,6 +1,6 @@
 import React from "react"
 
-import becomeStyles from "./becomes.module.scss"
+import becomeStyles from "./become.module.scss"
 
 const Become = () => {
   return <div className={becomeStyles.becomes}></div>

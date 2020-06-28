@@ -422,7 +422,7 @@ const Menu = ({ typeNav, pageName }) => {
           )}
         >
           <a
-            href="https://medium.com/cartesi/on-linux-and-blockchains-a955a49a84e1"
+            href="https://cartesi.io/cartesi_whitepaper.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -20,6 +20,8 @@ example: 1 (to dark) or 2 (to ligth ), only number.
 */
 const Header = ({ typeNav, pageName }) => {
   const [open, setOpen] = useState(false)
+  var lang = "en"
+  var page = pageName !== undefined || pageName === "home" ? pageName : ""
 
   return (
     <header
@@ -31,7 +33,7 @@ const Header = ({ typeNav, pageName }) => {
         expand="xl"
         variant="light"
       >
-        <Brand href="#home" className={headerStyles.navbarLogo}>
+        <Brand href={`/${lang}/`} className={headerStyles.navbarLogo}>
           <img
             alt=""
             src={typeNav === 1 ? headerLogoWhite : headerLogo}
