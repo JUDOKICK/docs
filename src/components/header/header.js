@@ -12,7 +12,7 @@ import headerLogoWhite from "../../images/SVG/menu/logo-white.svg"
 
 const { Brand, Toggle, Collapse } = NavbarComp
 
-const Header = ({ typeNav }) => {
+const Header = ({ typeNav, pageName }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -58,7 +58,7 @@ const Header = ({ typeNav }) => {
         </button>
         <Collapse in={open} className={headerStyles.navbarCollapse}>
           <div id="responsive-navbar-nav">
-            <Menu typeNav={typeNav} />
+            <Menu typeNav={typeNav} pageName={pageName} />
           </div>
         </Collapse>
       </NavbarComp>

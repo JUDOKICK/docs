@@ -13,7 +13,7 @@
   //   padding: 0 30px 0 20px;
   // }
 
-  @media (max-width: 1192px) {
+  @media (max-width: 1199px) {
     padding: 0;
   }
 
@@ -21,36 +21,43 @@
     @extend .header;
     color: $black !important;
 
-    @media (min-width: 1490px) {
+    @media (min-width: 1360px) {
       padding-right: 10%;
     }
 
-    @media (min-width: 1490px) {
-      padding-right: 10%;
+    @media (min-width: 1200px) and (max-width: 1359px) {
+      padding-right: 7%;
     }
 
-    @media (max-width: 1192px) {
+    @media (max-width: 1199px) {
       position: absolute;
       width: 100%;
       z-index: 2;
     }
 
-    @extend .navPosition;
     .navPosition {
-      @media (max-width: 1192px) {
-        background-color: $white !important;
+      position: relative;
+      z-index: 1;
+      background-color: transparent;
+      padding-top: 20px;
+
+      @media (max-width: 1199px) {
+        background-color: $white;
+        padding-right: 7%;
+        padding-left: 10%;
       }
+
       .nav-icon {
         // margin: 1em;
-        width: 40px;
+        width: 35px;
         &:after,
         &:before,
         div {
-          background-color: $black !important;
+          background-color: $black;
           border-radius: 3px;
           content: "";
           display: block;
-          height: 5px;
+          height: 3px;
           margin: 7px 0;
           transition: all 0.2s ease-in-out;
         }
@@ -59,21 +66,41 @@
             transform: scale(0);
           }
           &::before {
-            transform: translateY(12px) rotate(135deg);
+            transform: translateY(8px) rotate(135deg);
           }
           &:after {
             transform: translateY(-12px) rotate(-135deg);
           }
         }
       }
-
       .navbar-toggler {
         width: fit-content;
         height: auto;
-        border: 0;
         padding: 0;
         outline: 0 !important;
       }
+
+      .logo {
+        width: 181px;
+        height: 60px;
+      }
+
+      .nameLogo {
+        font-size: 18px;
+      }
+
+      .navbarCollapse {
+        justify-content: center;
+
+        .toggle {
+          border: 0 !important;
+        }
+
+        @media (max-width: 1199px) {
+          margin-bottom: 50px;
+        }
+      }
+
       a {
         font-style: normal;
         font-weight: 300;
@@ -84,9 +111,13 @@
           margin: auto 5px;
         }
 
-        @media (max-width: 1192px) {
+        @media (max-width: 1199px) {
           margin: 5px 5px;
         }
+      }
+
+      @media (max-width: 1199px) {
+        text-align: center;
       }
     }
   }
@@ -97,15 +128,15 @@
   //   z-index: 2;
   // }
 
-  @media (min-width: 1490px) {
+  @media (min-width: 1360px) {
     padding-right: 10%;
   }
 
-  @media (min-width: 1490px) {
-    padding-right: 10%;
+  @media (min-width: 1200px) and (max-width: 1359px) {
+    padding-right: 7%;
   }
 
-  @media (max-width: 1192px) {
+  @media (max-width: 1199px) {
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -115,15 +146,17 @@
     position: relative;
     z-index: 1;
     background-color: transparent;
-    padding: 20px 3%;
+    padding-top: 20px;
 
-    @media (max-width: 1192px) {
+    @media (max-width: 1199px) {
       background-color: $black;
+      padding-right: 7%;
+      padding-left: 10%;
     }
 
     .nav-icon {
       // margin: 1em;
-      width: 40px;
+      width: 35px;
       &:after,
       &:before,
       div {
@@ -131,7 +164,7 @@
         border-radius: 3px;
         content: "";
         display: block;
-        height: 5px;
+        height: 3px;
         margin: 7px 0;
         transition: all 0.2s ease-in-out;
       }
@@ -140,7 +173,7 @@
           transform: scale(0);
         }
         &::before {
-          transform: translateY(12px) rotate(135deg);
+          transform: translateY(8px) rotate(135deg);
         }
         &:after {
           transform: translateY(-12px) rotate(-135deg);
@@ -170,7 +203,7 @@
         border: 0 !important;
       }
 
-      @media (max-width: 1192px) {
+      @media (max-width: 1199px) {
         margin-bottom: 50px;
       }
     }
@@ -185,12 +218,12 @@
         margin: auto 5px;
       }
 
-      @media (max-width: 1192px) {
+      @media (max-width: 1199px) {
         margin: 5px 5px;
       }
     }
 
-    @media (max-width: 1192px) {
+    @media (max-width: 1199px) {
       text-align: center;
     }
   }
