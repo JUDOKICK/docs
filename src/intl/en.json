@@ -351,7 +351,7 @@
     "latestUpdates": {
       "title": "Latest Updates",
       "more": {
-        "title":"VIEW ALL ARTICLES",
+        "title": "VIEW ALL ARTICLES",
         "link": ""
       }
     }
@@ -368,14 +368,38 @@
     },
     "channels": {
       "title": "Channels",
-      "telegram": "Telegram",
-      "medium": "Medium",
-      "discord": "Discord",
-      "github": "GitHub",
-      "twitter": "Twitter",
-      "reddit": "Reddit",
-      "facebook": "Fecebook",
-      "linkedin": "LinkedIn"
+      "telegram": {
+        "title": "Telegram",
+        "button": "JOIN GROUP"
+      },
+      "medium": {
+        "title": "Medium",
+        "button": "READ THE BLOG"
+      },
+      "discord": {
+        "title": "Discord",
+        "button": "DEV COMMUNITY"
+      },
+      "github": {
+        "title": "GitHub",
+        "button": "START BUILDING"
+      },
+      "twitter": {
+        "title": "Twitter",
+        "button": "FOLLOW US"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "button": "JOIN THE COMMUNITY"
+      },
+      "facebook": {
+        "title": "Fecebook",
+        "button": "CONNECT"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "button": "CONNECT"
+      }
     },
     "groups": {
       "title": "Cartesi International Groups",
