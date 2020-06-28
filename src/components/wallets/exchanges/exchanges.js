@@ -24,9 +24,6 @@ const WhyBuildInCartesi = () => (
           <div className="col-md-4">
             <img src={wazirxPng} alt="" />
           </div>
-          <div className="col-md-4">
-            <img src={gateioPng} alt="" />
-          </div>
         </RowComp>
       </div>
     </div>
