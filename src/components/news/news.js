@@ -3,10 +3,14 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { getMediumDate } from "../../utils/date"
 import newsStyle from "./news.module.scss"
 
-const News = () => {
+const News = ({ title, limit }) => {
   const [posts, setPosts] = useState([])
+
+  let limitMedium = limit ? limit : 3
+  let mediumApi = `${process.env.MEDIUM_API}&limit=${limitMedium}&picture=big`
+  
   useEffect(() => {
-    fetch(process.env.MEDIUM_API)
+    fetch(mediumApi)
       .then(response => response.json())
       .then(result => {
         setPosts(result)
@@ -56,7 +60,7 @@ const News = () => {
       <div className={[newsStyle.news, "row"].join(" ")}>
         <div className={newsStyle.title}>
           <h1>
-            <FormattedMessage id="news.title" />
+            { title ? title : <FormattedMessage id="news.title" /> }
           </h1>
         </div>
         <div className={["row", newsStyle.gridCards].join(" ")}>{news}</div>
