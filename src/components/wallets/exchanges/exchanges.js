@@ -18,10 +18,10 @@ const WhyBuildInCartesi = () => (
         </RowComp>
 
         <RowComp className={styles.itemsGroup}>
-          <div className="col-md-4">
+          <div className="col-md-2">
             <img src={binancePng} alt="" />
           </div>
-          <div className="col-md-4">
+          <div className="col-md-2">
             <img src={wazirxPng} alt="" />
           </div>
         </RowComp>
