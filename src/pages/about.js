@@ -13,7 +13,7 @@ import Footer from "../components/footer/footer"
 const About = ({ intl }) => {
   return (
     <>
-      <Header typeNav={2} pageName="about" />
+      <Header typeNav={1} pageName="about" />
       <div>
         <InitialPresentation />
         <OurStory />
