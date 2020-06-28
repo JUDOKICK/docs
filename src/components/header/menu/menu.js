@@ -287,6 +287,55 @@ const Menu = ({ typeNav, pageName }) => {
           </div>
         </div>
 
+        <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
+          <a
+            aria-haspopup="true"
+            aria-expanded="false"
+            id="collasible-nav-dropdown-2"
+            href="#"
+            className={[
+              "dropdown-toggle nav-link",
+              menuStyle.dropdownHover,
+            ].join(" ")}
+            role="button"
+          >
+            <span className={menuStyle.iconExpand}>
+              DApps <img src={iconTypeHidden} alt="down"></img>
+            </span>
+          </a>
+          <div
+            aria-label="collasible-nav-dropdown-0"
+            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
+          >
+            <div className={[menuStyle.dropdownItens].join(" ")}>
+              <Link
+                to={`/${lang}/${page}/`}
+                className={[
+                  menuStyle.dropdownItem,
+                  menuStyle.active,
+                  "dropdown-item",
+                ].join(" ")}
+              >
+                <span className={menuStyle.iconExpand}>
+                  DApps <img src={iconTypeHover} alt="down"></img>
+                </span>
+              </Link>
+              <a
+                href="https://creepts.cartesi.io"
+                target="_blank"
+                rel="noopener noreffer"
+                className={[
+                  menuStyle.dropdownItem,
+                  menuStyle.active,
+                  "dropdown-item",
+                ].join(" ")}
+              >
+                Creepts
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className={menuStyle.section}>
           <a className="nav-link" href="https://medium.com/cartesi">
             Blog
