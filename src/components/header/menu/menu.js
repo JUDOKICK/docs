@@ -18,7 +18,7 @@ const { Item } = DropdownComp
 
 const Menu = ({ typeNav, pageName }) => {
   var lang = "en"
-  var page = pageName !== undefined ? pageName : ""
+  var page = pageName !== undefined || pageName === "home" ? pageName : ""
   var iconTypeHidden = typeNav === 1 ? expandDown : expandDownBlack
   var iconLangTypeHidden = typeNav === 1 ? expandDownBlack : expandDown
   var iconTypeHover = typeNav === 1 ? expandDownUp : expandDownUpBlack
