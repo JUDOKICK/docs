@@ -81,7 +81,7 @@ const Menu = ({ typeNav, pageName }) => {
                 "dropdown-item",
               ].join(" ")}
             >
-              Carrers
+              Careers
             </a>
             <Link
               to="/en/press"
