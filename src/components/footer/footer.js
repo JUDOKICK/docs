@@ -63,7 +63,7 @@ const Footer = ({ secondFooter, pageName }) => {
 
   return (
     <div>
-      <div className={footerStyle.footer}>
+      <div className={footerStyle.footer} id="footer">
         <div
           style={{
             background: `url(${geometric})`,

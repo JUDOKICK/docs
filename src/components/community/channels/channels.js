@@ -128,7 +128,7 @@ const Channels = () => {
   })
 
   return (
-    <div className={channelsStyles.channels}>
+    <div className={channelsStyles.channels} id="channels">
       <div className={["continer", channelsStyles.blockChannels].join(" ")}>
         <div className={["row", channelsStyles.title].join(" ")}>
           <FormattedMessage id="community.channels.title" />
