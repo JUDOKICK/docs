@@ -1,10 +1,11 @@
 import React from "react"
-
+import loadable from "@loadable/component"
 import groupsStyles from "./groups.module.scss"
 import { FormattedMessage, defineMessages } from "gatsby-plugin-intl"
 import telegramIcon from "../../../images/community/Vectortelegram.svg"
 import weChatIcon from "../../../images/community/msg-vector.svg"
-import ReactCountryFlag from "react-country-flag"
+
+const ReactCountryFlag = loadable(() => import('react-country-flag'))
 
 const Groups = () => {
   const itemsGroups = [
