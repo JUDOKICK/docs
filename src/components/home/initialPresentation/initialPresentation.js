@@ -26,7 +26,7 @@ function ModalVideoComp(props) {
     <ModalComp
       className={initialStyle.modalContentVideo}
       {...props}
-      size="lg"
+      dialogClassName={initialStyle.modalView}
       aria-labelledby="contained-modalComp-title-vcenter"
       centered
     >
