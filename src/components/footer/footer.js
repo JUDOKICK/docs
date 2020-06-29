@@ -15,9 +15,6 @@ import logo from "../../images/SVG/footer/logo.svg"
 import outermeshRightSvg from "../../images/footer/footer-outermesh-right.svg"
 import outermeshLeftSvg from "../../images/footer/footer-outermesh-left.svg"
 
-/* The name of the page using the menu must be passed via the props as pageName, 
-example: "about", "press", except when it is "home" */
-
 const FormEmail = ({ secondFooter }) => {
   const [validated, setValidated] = useState(false)
 
@@ -57,6 +54,8 @@ const FormEmail = ({ secondFooter }) => {
   )
 }
 
+/* The name of the page using the footer must be passed via the props as pageName, 
+example: "about", "press", except when it is "home" */
 const Footer = ({ secondFooter, pageName }) => {
   var lang = "en"
   var page = pageName !== undefined || pageName === "home" ? pageName : ""
