@@ -32,7 +32,7 @@ const FormEmail = ({ secondFooter }) => {
     <FormComp noValidate validated={validated} onSubmit={handleSubmit}>
       <FormComp.Row className={footerStyle.footerForm}>
         <FormComp.Group controlId="validationCustom01">
-          <FormComp.Control required type="email" placeholder="e-mail" />
+          <FormComp.Control required type="email" placeholder="E-mail" />
           <FormComp.Control.Feedback>Thank you!</FormComp.Control.Feedback>
           <FormComp.Control.Feedback style={{ fontWeight: 500 }} type="invalid">
             Please, insert your e-mail.
