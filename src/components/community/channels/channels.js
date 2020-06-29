@@ -135,11 +135,7 @@ const Channels = () => {
         </div>
         <div className={channelsStyles.blockCards}>{cards}</div>
       </div>
-      <img
-        className={channelsStyles.bgImage}
-        src={bgImage}
-        alt="background image"
-      />
+      <img className={channelsStyles.bgImage} src={bgImage} alt="background" />
     </div>
   )
 }

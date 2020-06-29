@@ -148,7 +148,7 @@
       }
     },
     "meet": {
-      "title": "Meet the team",
+      "title": "The Founders",
       "person01": {
         "name": "Erick de Moura",
         "office": "Chief Executive Officer"
@@ -173,7 +173,7 @@
         "office": "Head of Enginnering"
       },
       "person02": {
-        "name": "Felipe Argent",
+        "name": "Felipe Argento",
         "office": "Blockchain Engineer"
       },
       "person03": {
@@ -199,6 +199,14 @@
       "person08": {
         "name": "Carlo Fragni",
         "office": "Software Engineer"
+      },
+      "person09": {
+        "name": "Gabriel Coutinho",
+        "office": "Software Engineer"
+      },
+      "person10": {
+        "name": "Marcos Pernambuco ",
+        "office": "Senior Software Engineer"
       }
     },
     "advisors": {
@@ -273,67 +281,83 @@
     "subscribe": "SUBSCRIBE",
     "email": "Email",
     "pages": {
-      "about": {
-        "title": "About",
-        "link": ""
-      },
-      "developers": {
-        "title": "Developers",
-        "link": ""
-      },
-      "ecosystem": {
-        "title": "Ecosystem",
-        "link": ""
-      },
-      "news": {
-        "title": "News",
-        "link": ""
-      },
-      "why": {
-        "title": "Why Cartesi",
-        "link": ""
-      },
-      "whitepaper": {
-        "title": "Whitepaper",
-        "link": ""
-      },
-      "lightpaper": {
-        "title": "Lightpaper",
-        "link": ""
-      },
-      "how": {
-        "title": "How it works",
-        "link": ""
-      },
-      "industries": {
-        "title": "Industries",
-        "link": ""
-      },
-      "roadmap": {
-        "title": "Roadmap",
-        "link": ""
-      },
-      "faq": {
-        "title": "FAQ",
+      "company": {
+        "title": "Company",
         "link": ""
       },
       "team": {
         "title": "Team",
         "link": ""
       },
-      "advisor": {
-        "title": "Advisor",
+      "careers": {
+        "title": "Careers",
+        "link": ""
+      },
+      "press": {
+        "title": "Press",
+        "link": ""
+      },
+      "contact": {
+        "title": "Contact Us",
+        "link": ""
+      },
+      "blog": {
+        "title": "Blog",
+        "link": ""
+      },
+      "dapps": {
+        "title": "DApps",
+        "link": ""
+      },
+      "ambassadors": {
+        "title": "Ambassadors",
+        "link": ""
+      },
+      "channels": {
+        "title": "Channels",
+        "link": ""
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "link": ""
+      },
+      "technology": {
+        "title": "Technology",
+        "link": ""
+      },
+      "whitepaper": {
+        "title": "Whitepaper",
+        "link": ""
+      },
+      "github": {
+        "title": "Github",
+        "link": ""
+      },
+      "ctsitoken": {
+        "title": "CTSI Token",
+        "link": ""
+      },
+      "developer": {
+        "title": "Developer Portal",
+        "link": ""
+      },
+      "faq": {
+        "title": "FAQ",
+        "link": ""
+      },
+      "lightpaper": {
+        "title": "lightpaper",
+        "link": ""
+      },
+      "ctsibeginners": {
+        "title": "CTSI for Beginners",
         "link": ""
       },
       "partners": {
-        "title": "Partners",
+        "title": "Partners & Backers",
         "link": ""
       },
-      "supporters": {
-        "title": "& Supporters",
-        "link": ""
-      },
-      "policy": {
+      "privacy": {
         "title": "Privacy Policy",
         "link": ""
       }
@@ -341,7 +365,7 @@
     "description": "The Cartesi Project is commissioned by the Cartesi Foundation."
   },
   "press": {
-    "title":"Press",
+    "title": "Press",
     "mediaCoverage": {
       "title": "Media Coverage & Enquiries",
       "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Also, feel free to reach out if you’ve already written about us and would like us to feature your article below. Get in touch with us at press@cartesi.io"

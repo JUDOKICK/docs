@@ -81,7 +81,7 @@ const Menu = ({ typeNav, pageName }) => {
                 "dropdown-item",
               ].join(" ")}
             >
-              Carrers
+              Careers
             </a>
             <Link
               to="/en/press"
@@ -143,7 +143,7 @@ const Menu = ({ typeNav, pageName }) => {
               Channels
             </Link>
             <Link
-              to={`/${lang}/wallets`}
+              to={`/${lang}/ecosystem`}
               className={[
                 menuStyle.dropdownItem,
                 menuStyle.active,
@@ -332,7 +332,7 @@ const Menu = ({ typeNav, pageName }) => {
                 "dropdown-item",
               ].join(" ")}
             >
-              Cartesi for Beginners
+              Whitepaper
             </a>
           </div>
         </div>

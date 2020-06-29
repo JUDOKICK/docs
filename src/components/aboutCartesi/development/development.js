@@ -56,9 +56,16 @@ const Development = () => {
     }),
     defineMessages({
       person: {
-        id: 8,
-        name: "aboutCartesi.development.person08.name",
-        office: "aboutCartesi.development.person08.office",
+        id: 9,
+        name: "aboutCartesi.development.person09.name",
+        office: "aboutCartesi.development.person09.office",
+      },
+    }),
+    defineMessages({
+      person: {
+        id: 10,
+        name: "aboutCartesi.development.person10.name",
+        office: "aboutCartesi.development.person10.office",
       },
     }),
   ]
@@ -77,7 +84,7 @@ const Development = () => {
   })
 
   return (
-    <div className={developmentStyles.development}>
+    <div className={developmentStyles.development} id="team">
       <div className={[developmentStyles.title, "row"].join(" ")}>
         <FormattedMessage id="aboutCartesi.development.title" />
       </div>

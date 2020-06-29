@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .footer {
   width: 100%;
   // min-height: 600px;
@@ -149,11 +151,21 @@
           height: 43px;
           margin-left: 10px;
           color: #fff;
-          background: #000;
+          background: $dark-gray;
           border-radius: 4px;
           font-size: 12px !important;
           font-weight: 500;
           opacity: 1;
+
+          &:hover {
+            background: #1f70c1;
+          }
+          &:active,
+          &:focus {
+            background: #217dda;
+            outline: none;
+            border: none;
+          }
         }
 
         .dynamic-class {
