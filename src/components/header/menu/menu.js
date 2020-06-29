@@ -34,385 +34,306 @@ const Menu = ({ typeNav, pageName }) => {
         ]}
       >
         <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-0"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              About us <img src={iconTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-0"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={[menuStyle.dropdownItens].join(" ")}>
-              <Link
-                to={`/${lang}/${page}`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  About us <img src={iconTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              <Link
-                to={`/${lang}/about/#team`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Company
-              </Link>
+          <div className={menuStyle.dropdowner}>
+            <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-0"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                About us <img src={iconTypeHidden} alt="down"></img>
+              </span>
+            </a>
+            <Link
+              to={`/${lang}/about/#team`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Company
+            </Link>
 
-              <Link
-                to={`/${lang}/about/#team`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Team
-              </Link>
-              <a
-                href="https://angel.co/company/cartesi/jobs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Carrers
-              </a>
-              <Link
-                to="/en/press"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Press
-              </Link>
-              <Link
-                to={`/${lang}/${page}/#footer`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* </NavDropdownComp> */}
-
-        <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-1"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              Community <img src={iconTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-0"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={[menuStyle.dropdownItens].join(" ")}>
-              <Link
-                to="/en/community"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  Community <img src={iconTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              <Link
-                to="/en/community/#ambassadors"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Ambassadors
-              </Link>
-              <Link
-                to="/en/community/#channels"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Channels
-              </Link>
-              <Link
-                to="/en/wallets"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Wallets & Exchanges
-              </Link>
-            </div>
+            <Link
+              to={`/${lang}/about/#team`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Team
+            </Link>
+            <a
+              href="https://angel.co/company/cartesi/jobs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Carrers
+            </a>
+            <Link
+              to="/en/press"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Press
+            </Link>
+            <Link
+              to={`/${lang}/${page}/#footer`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
 
         <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-2"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              Developers <img src={iconTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-0"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={[menuStyle.dropdownItens].join(" ")}>
-              <Link
-                to={`/${lang}/${page}/`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  Developers <img src={iconTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              <a
-                href="https://medium.com/cartesi/tagged/tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Technology
-              </a>
-
-              <a
-                href="https://cartesi.io/cartesi_whitepaper.pdf"
-                target="_black"
-                rel="noopener noreferre"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Whitepaper
-              </a>
-              <a
-                href="https://github.com/cartesi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Github
-              </a>
-              <a
-                href="https://www.coingecko.com/en/coins/cartesi"
-                target="_blank"
-                rel="noopener noreffer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                CTSI Token
-              </a>
-              <Link
-                to="/en/about/#footer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Developer Portal
-              </Link>
-            </div>
+          <div className={menuStyle.dropdowner}>
+            <Link
+              id="collasible-nav-dropdown-1"
+              to={`/${lang}/community`}
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+                menuStyle.anchor,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                Community <img src={iconTypeHidden} alt="down"></img>
+              </span>
+            </Link>
+            <Link
+              to={`/${lang}/community/#ambassadors`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Ambassadors
+            </Link>
+            <Link
+              to={`/${lang}/community#channels/`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Channels
+            </Link>
+            <Link
+              to={`/${lang}/wallets`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Wallets & Exchanges
+            </Link>
           </div>
         </div>
 
         <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-2"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              DApps <img src={iconTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-0"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={[menuStyle.dropdownItens].join(" ")}>
-              <Link
-                to={`/${lang}/${page}/`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  DApps <img src={iconTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              <a
-                href="https://creepts.cartesi.io"
-                target="_blank"
-                rel="noopener noreffer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Creepts
-              </a>
-            </div>
+          <div className={menuStyle.dropdowner}>
+            <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-2"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                Developers <img src={iconTypeHidden} alt="down"></img>
+              </span>
+            </a>
+
+            <a
+              href="https://medium.com/cartesi/tagged/tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Technology
+            </a>
+
+            <a
+              href="https://cartesi.io/cartesi_whitepaper.pdf"
+              target="_black"
+              rel="noopener noreferre"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Whitepaper
+            </a>
+            <a
+              href="https://github.com/cartesi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Github
+            </a>
+            <a
+              href="https://www.coingecko.com/en/coins/cartesi"
+              target="_blank"
+              rel="noopener noreffer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              CTSI Token
+            </a>
+            <Link
+              to={`/${lang}/${pageName}/#footer`}
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Developer Portal
+            </Link>
           </div>
         </div>
 
-        <div className={menuStyle.section}>
-          <a className="nav-link" href="https://medium.com/cartesi">
+        <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
+          <div className={menuStyle.dropdowner}>
+            <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-2"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                DApps <img src={iconTypeHidden} alt="down"></img>
+              </span>
+            </a>
+
+            <a
+              href="https://creepts.cartesi.io"
+              target="_blank"
+              rel="noopener noreffer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Creepts
+            </a>
+          </div>
+        </div>
+
+        <div className={[menuStyle.section, menuStyle.anchor].join(" ")}>
+          <a
+            className="nav-link"
+            href="https://medium.com/cartesi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Blog
           </a>
         </div>
 
         <div className={[menuStyle.section, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-2"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              Resources <img src={iconTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-0"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={[menuStyle.dropdownItens].join(" ")}>
-              <Link
-                to={`/${lang}/${page}/`}
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  Resources <img src={iconTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              <a
-                href="https://medium.com/cartesi/tagged/tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                FAQ
-              </a>
+          <div className={menuStyle.dropdowner}>
+            <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-2"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                Resources <img src={iconTypeHidden} alt="down"></img>
+              </span>
+            </a>
 
-              <a
-                href="https://cartesi.io/cartesi_lightpaper_english.pdf"
-                target="_black"
-                rel="noopener noreferre"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Lightpaper
-              </a>
-              <a
-                href="https://medium.com/cartesi/on-linux-and-blockchains-a955a49a84e1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  menuStyle.dropdownItem,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                Cartesi for Beginners
-              </a>
-            </div>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              FAQ
+            </a>
+
+            <a
+              href="https://cartesi.io/cartesi_lightpaper_english.pdf"
+              target="_black"
+              rel="noopener noreferre"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Lightpaper
+            </a>
+            <a
+              href="https://medium.com/cartesi/on-linux-and-blockchains-a955a49a84e1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                menuStyle.dropdownItem,
+                menuStyle.active,
+                "dropdown-item",
+              ].join(" ")}
+            >
+              Cartesi for Beginners
+            </a>
           </div>
         </div>
 
@@ -431,49 +352,35 @@ const Menu = ({ typeNav, pageName }) => {
           </a>
         </div>
         <div className={[menuStyle.locale, "nav-item dropdown"].join(" ")}>
-          <a
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="collasible-nav-dropdown-2"
-            href="#"
-            className={[
-              "dropdown-toggle nav-link",
-              menuStyle.dropdownHover,
-            ].join(" ")}
-            role="button"
-          >
-            <span className={menuStyle.iconExpand}>
-              ENG <img src={iconLangTypeHidden} alt="down"></img>
-            </span>
-          </a>
-          <div
-            aria-label="collasible-nav-dropdown-6"
-            className={[menuStyle.dropdownMenu, "dropdown-menu"].join(" ")}
-          >
-            <div className={menuStyle.dropdownItens}>
-              <Link
-                to={`/${lang}/${page}/`}
-                className={[
-                  menuStyle.itemLocale,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                <span className={menuStyle.iconExpand}>
-                  ENG <img src={iconLangTypeHover} alt="down"></img>
-                </span>
-              </Link>
-              {/* <Link
-                to="/en/about/#footer"
-                className={[
-                  menuStyle.itemLocale,
-                  menuStyle.active,
-                  "dropdown-item",
-                ].join(" ")}
-              >
-                中文
-              </Link> */}
-            </div>
+          <div className={menuStyle.dropdowner}>
+            <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-2"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              <span className={menuStyle.iconExpand}>
+                ENG <img src={iconLangTypeHidden} alt="down"></img>
+              </span>
+            </a>
+            {/* <a
+              aria-haspopup="true"
+              aria-expanded="false"
+              id="collasible-nav-dropdown-2"
+              href="#"
+              className={[
+                "dropdown-toggle nav-link",
+                menuStyle.dropdownHover,
+              ].join(" ")}
+              role="button"
+            >
+              中文
+            </a> */}
           </div>
         </div>
       </NavComp>

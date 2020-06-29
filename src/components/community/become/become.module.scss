@@ -58,17 +58,19 @@
       text-transform: capitalize;
       text-transform: uppercase;
       border-radius: 3px;
-      width: 229px;
+      width: auto;
+      white-space: nowrap;
       height: 53px;
       text-align: center;
       align-content: center;
 
       &:hover {
-        background: #817c7c;
+        background: #1f70c1;
         border: none;
       }
       &:focus,
       &:active {
+        background: #217dda;
         border: none;
         outline: none;
       }
@@ -96,7 +98,7 @@
     }
 
     @media (max-width: 1227px) {
-      filter: blur(1.2px);
+      filter: blur(1.5px);
     }
   }
 

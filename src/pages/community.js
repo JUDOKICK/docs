@@ -11,7 +11,7 @@ import UpEvents from "../components/community/UpEvents/upEvents"
 const Community = () => {
   return (
     <>
-      <Header typeNav={1} pageName="community" />
+      <Header typeNav={2} pageName="community" />
       <div>
         <Join />
         <Become />

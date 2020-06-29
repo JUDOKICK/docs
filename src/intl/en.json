@@ -60,7 +60,7 @@
       },
       "easyToBuild": {
         "title": "Easy to build",
-        "description": "Developers use familiar software stacks and popular standards to code DApps."
+        "description": "Developers use familiar software stacks and popular standards to country DApps."
       },
       "fullyDecentralized": {
         "title": "Fully-Decentralized",
@@ -80,7 +80,7 @@
     },
     "howItWorks": {
       "title": "How It Works",
-      "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
+      "step1": "country your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
       "step2": "Cross-compile the program to be deployed on Cartesi's virtual machine that emulates a RISC-V microprocessor and runs an embedded Linux distribution.",
       "step3": "At runtime, your DApp smart contracts delegate computations to the program running off-chain on Cartesi Nodes. Nodes claim the results to the blockchain.",
       "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests",
@@ -403,13 +403,41 @@
     },
     "groups": {
       "title": "Cartesi International Groups",
-      "russo": "Ty",
-      "chines": "中文",
-      "chines2": "中文",
-      "turco": "Turkey",
-      "vietna": "Vietnam",
-      "koreano": "한국어",
-      "india": "India"
+      "russo": {
+        "title": "Ty",
+        "button": "вступить в группу",
+        "country": "RU"
+      },
+      "chines": {
+        "title": "中文",
+        "button": "加入",
+        "country": "CN"
+      },
+      "chines2": {
+        "title": "中文",
+        "button": "加入",
+        "country": "CN"
+      },
+      "turkey": {
+        "title": "Turkey",
+        "button": "STORE CTSI",
+        "country": "TR"
+      },
+      "vietnam": {
+        "title": "Vietnam",
+        "button": "JOIN",
+        "country": "VN"
+      },
+      "korea": {
+        "title": "한국어",
+        "button": "JOIN",
+        "country": "KR"
+      },
+      "india": {
+        "title": "India",
+        "button": "Join",
+        "country": "IN"
+      }
     },
     "upcoming": {
       "title": "Upcoming Events",
