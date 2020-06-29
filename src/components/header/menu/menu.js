@@ -150,7 +150,7 @@ const Menu = ({ typeNav, pageName }) => {
                 "dropdown-item",
               ].join(" ")}
             >
-              Wallets & Exchanges
+              Ecosystem
             </Link>
           </div>
         </div>
