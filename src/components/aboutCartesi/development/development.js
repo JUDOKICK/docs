@@ -56,9 +56,16 @@ const Development = () => {
     }),
     defineMessages({
       person: {
-        id: 8,
-        name: "aboutCartesi.development.person08.name",
-        office: "aboutCartesi.development.person08.office",
+        id: 9,
+        name: "aboutCartesi.development.person09.name",
+        office: "aboutCartesi.development.person09.office",
+      },
+    }),
+    defineMessages({
+      person: {
+        id: 10,
+        name: "aboutCartesi.development.person10.name",
+        office: "aboutCartesi.development.person10.office",
       },
     }),
   ]

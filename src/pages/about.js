@@ -21,7 +21,7 @@ const About = ({ intl }) => {
         <Development />
         <Advisors />
       </div>
-      <Footer secondFooter="second-footer" />
+      <Footer secondFooter="second-footer" pageName={"about"} />
     </>
   )
 }

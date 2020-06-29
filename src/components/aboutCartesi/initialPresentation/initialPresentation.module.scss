@@ -1,12 +1,12 @@
 .initial {
   background: linear-gradient(159.21deg, #030404 25.4%, #515251 86.86%);
   width: 100%;
-  min-height: 588px;
+  min-height: 565px;
   transition: all 0.1s ease;
   .block-title {
     width: 100%;
-    max-height: 587px;
-    padding-top: 214px;
+    max-height: 561px;
+    padding-top: 173px;
     position: relative;
     z-index: 1;
     padding-left: 245px;
@@ -14,11 +14,11 @@
 
     @media (max-width: 900px) {
       left: auto;
-      padding: 230px 15% 0;
+      padding: 173px 15% 0;
     }
 
     @media (max-width: 462px) {
-      padding: 205px 10% 0;
+      padding: 173px 10% 0;
     }
 
     .title {
@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    min-height: 588px;
+    min-height: 565px;
     transition: all 0.1s ease;
   }
 
@@ -63,7 +63,7 @@
   .vector-bg {
     position: absolute;
     right: 0;
-    top: 232px;
+    top: 205px;
     transition: all 0.1s ease;
 
     @media (max-width: 805px) {
@@ -72,7 +72,7 @@
     }
 
     @media (max-width: 462px) {
-      top: 300px;
+      top: 273px;
       width: 800px;
     }
   }
