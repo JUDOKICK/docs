@@ -84,7 +84,7 @@ const Development = () => {
   })
 
   return (
-    <div className={developmentStyles.development}>
+    <div className={developmentStyles.development} id="team">
       <div className={[developmentStyles.title, "row"].join(" ")}>
         <FormattedMessage id="aboutCartesi.development.title" />
       </div>
