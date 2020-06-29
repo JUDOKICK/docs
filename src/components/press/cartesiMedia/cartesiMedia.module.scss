@@ -1,18 +1,26 @@
 .container {
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 490px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
-  padding: 10px 60px;
+
+  *:focus {
+    outline: 0;
+    outline: none;
+  }
 
   .boxCenter {
-    max-width: 900px;
+    max-width: 80%;
     text-align: center;
+
+    @media (max-width: 700px) {
+      max-width: 300px;
+    }
 
     .title {
       justify-content: center;
@@ -45,85 +53,123 @@
         }
       }
     }
-  }
-}
 
-.carouselTitle {
-  display: contents;
-  .image {
-    width: 50%;
-  }
-  .carouselContent {
-    p {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 150%;
-      margin-bottom: 1.5rem;
+      
+    .card{
+      min-width: 200px;
+      min-height: 480px;
+      margin: 10px;
+    
+      .cardHeader{
+        text-align: center;
+        border: none;
+        background-color: #fff !important;
+      
+        .image{
+          padding-left: 30%;
+        }
 
-      @media (max-width: 1440px) {
-        font-size: 14px;
+        .date{
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 146.7%;
+          text-align: center;
+          margin-left: 12px;
+          text-transform: capitalize;
+          color: #666666;
+          margin-bottom: 20px;
+        }
       }
-    }
-  }
-}
-.cardFooter {
-  border: 0;
-  background-color: #ffffff;
-  text-align: center;
-
-  button {
-    background: #557ece;
-    color: #fff;
-    margin-bottom: 50px;
-    font-weight: 500;
-
-    &:hover {
-      background: #fff;
-      border: 1px solid #557ece;
-      color: #557ece;
-    }
-  }
-}
-
-
-.carouselBlock {
-  position: relative;
-  padding: 2.777rem 0;
-  .slick-arrow {
-    top: calc(40% - 15px);
-    position: absolute;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    color: gray;
-    width: 30px;
-    height: 30px;
-    @media (max-width: 680px) {
-      font-size: 200%;
-    }
-    &:hover {
-      cursor: pointer;
-      color: gray;
-      text-decoration: none;
-    }
-    &.slick-prev {
-      left: -1.5rem;
-      @media (max-width: 500px) {
-        left: 0;
+    
+      .carouselTitle {
+        display: contents;
+        .image {
+          width: 50%;
+        }
       }
-    }
-    &.slick-next {
-      right: -1.5rem;
-      @media (max-width: 500px) {
-        right: 0;
+
+      .carouselContent {
+        p {
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 150%;
+          margin-bottom: 1.5rem;
+          text-align: left;
+
+          @media (max-width: 1440px) {
+            font-size: 14px;
+          }
+        }
       }
+    
+      .cardFooter {
+        border: 0;
+        background-color: #ffffff;
+        text-align: center;
+      
+        button {
+          background: #666666;
+          color: #fff;
+          margin-bottom: 50px;
+          font-weight: 500;
+      
+
+          &:hover {
+            background: #1f70c1;
+          }
+    
+          &:focus {
+            background: #217dda;
+          }
+
+        }
+      }
+      
+      .carouselBlock {
+        position: relative;
+        padding: 2.777rem 0;
+        .slick-arrow {
+          top: calc(40% - 15px);
+          position: absolute;
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          color: gray;
+          width: 30px;
+          height: 30px;
+          @media (max-width: 680px) {
+            font-size: 200%;
+          }
+
+          &:hover {
+            cursor: pointer;
+            color: gray;
+            text-decoration: none;
+          }
+          &.slick-prev {
+            left: -2.5rem !important;
+            @media (max-width: 500px) {
+              left: 0 !important;
+            }
+          }
+          &.slick-next {
+            right: -2.5rem !important;
+            @media (max-width: 500px) {
+              right: 0 !important;
+            }
+          }
+        }
+        .slick-list {
+          overflow: hidden;
+          .slick-track {
+            display: flex !important;
+          }
+        }
+      }
+    
     }
+
   }
-  .slick-list {
-    overflow: hidden;
-    .slick-track {
-      display: flex !important;
-    }
-  }
+
 }

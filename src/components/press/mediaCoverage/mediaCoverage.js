@@ -19,7 +19,7 @@ const MediaCoverage = () => {
             className={mediaCoverage.subTitle}
             xs={1}
             md={1}
-            lg={2}
+            lg={1}
             xl={1}
           >
             <p>

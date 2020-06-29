@@ -28,7 +28,7 @@ function CarouselNextArrow(props) {
 function CarouselPrevArrow(props) {
   const { className, style, onClick } = props
   return (
-    <div className={className} style={{ ...style }} onClick={onClick}>
+    <div className={className} style={{ ...style, left: '-2.5rem' }} onClick={onClick}>
       <img src={prev} />
     </div>
   )
@@ -39,30 +39,32 @@ const settings = {
   infinite: true,
   speed: 500,
   nextArrow: <CarouselNextArrow />,
-  prevArrow: <CarouselPrevArrow />,
-  slidesToShow: 3,
+  prevArrow: <CarouselPrevArrow/>,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         infinite: true,
         dots: false,
       },
     },
     {
-      breakpoint: 680,
+      breakpoint: 1024,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: false,
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 700,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -76,32 +78,58 @@ const slides = [
     text:
       "Blockchain Interoperabilty: The Holy Grail for Cross-Chain Deployment",
     date: "May 21, 2020",
-    id: 1,
+    url: "https://pr-48.d39b4y6vhbs03w.amplifyapp.com/en/"
   },
   {
     photo: wall,
     name: "The Wall Street Jounal",
     text: "5 Ways Your Business Can Benefit From Blockchain",
     date: "April 14, 2020",
-    id: 2,
+    url: "https://pr-48.d39b4y6vhbs03w.amplifyapp.com/en/"
   },
   {
     photo: computer,
     name: "Computer Weekly",
     text: "Cartesi creates Linux infrastructure for blockchain DApps",
     date: "May 5, 2020",
-    id: 3,
+    url: "https://pr-48.d39b4y6vhbs03w.amplifyapp.com/en/"
   },
   {
     photo: european,
     name: "European Gaming",
     text: "Exclusive Q&A with Colin Steil, CO-Founder and COO of Cartesi",
     date: "May 5, 2020",
-    id: 4,
+    url: "https://pr-48.d39b4y6vhbs03w.amplifyapp.com/en/"
   },
 ]
 
 const CartesiMedia = props => {
+
+  const slidesContent = slides.map((item, key) => {
+    return (
+      <div key={key}>
+        <CardComp className={[cartesiMedia.card].join(" ")}>
+          <CardComp.Header className={[cartesiMedia.cardHeader].join(" ")}>
+            <img className={[cartesiMedia.image].join(" ")} src={item.photo}></img>
+            <div className={[cartesiMedia.title].join(" ")} >{item.name}</div>
+            <div className={[cartesiMedia.date].join(" ")} >{item.date}</div>
+          </CardComp.Header>
+          <CardComp.Body >
+            <div className={cartesiMedia.carouselContent}>
+              <p>{item.text}</p>
+            </div>
+          </CardComp.Body>
+          <CardComp.Footer className={[cartesiMedia.cardFooter].join(" ")} >
+      
+            <a target="_blank" rel="noopener noreferrer" href={item.url}  >
+              <button>READ MORE</button>
+            </a>
+          </CardComp.Footer>
+        </CardComp>
+      </div>
+    )
+  })
+
   return (
     <div>
       <div className={cartesiMedia.container}>
@@ -121,36 +149,8 @@ const CartesiMedia = props => {
             xl={1}
           >
             <div>
-              <Slider {...settings} className={cartesiMedia.carouselBlock}>
-                {slides.map(item => {
-                  return (
-                    <div key={item.id}>
-                      <CardComp style={{ width: "18rem" }}>
-                        <CardComp.Body className={cartesiMedia}>
-                            
-                          <img src={item.photo}></img>
-                          <span>{item.name}</span>
-                          <span>{item.date}</span>
-                        </CardComp.Body>
-                        <div className={cartesiMedia.carouselContent}>
-                          <p>{item.text}</p>
-                        </div>
-                        <CardComp.Footer
-                          className={[cartesiMedia.cardFooter].join(" ")}
-                        >
-                           
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://pr-48.d39b4y6vhbs03w.amplifyapp.com/en/"
-                          >
-                            <button>READ MORE</button>
-                          </a>
-                        </CardComp.Footer>
-                      </CardComp>
-                    </div>
-                  )
-                })}
+              <Slider {...settings} className={cartesiMedia.carouselBlock}> 
+                {slidesContent}
               </Slider>
             </div>
           </RowComp>
