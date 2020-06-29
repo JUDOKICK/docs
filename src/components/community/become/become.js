@@ -6,7 +6,7 @@ import blocks from "../../../images/community/block-community.svg"
 
 const Become = () => {
   return (
-    <div className={becomeStyles.becomes}>
+    <div className={becomeStyles.becomes} id="ambassadors">
       <div className={[becomeStyles.blockTitles, "col"].join(" ")}>
         <h1 className={becomeStyles.title}>
           <FormattedMessage id="community.become.title" />

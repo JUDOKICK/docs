@@ -133,7 +133,7 @@ const Menu = ({ typeNav, pageName }) => {
               Ambassadors
             </Link>
             <Link
-              to={`/${lang}/community#channels/`}
+              to={`/${lang}/community/#channels`}
               className={[
                 menuStyle.dropdownItem,
                 menuStyle.active,
