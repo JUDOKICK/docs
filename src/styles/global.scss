@@ -71,3 +71,15 @@ button {
 .news {
   border-radius: 3px;
 }
+
+@media (max-width: 450px){
+  .slick-arrow{
+    z-index: 1;
+    &.slick-next {
+      right: -10px !important;
+    }
+    &.slick-prev {
+      left: -20px !important;
+  }
+  }
+}
