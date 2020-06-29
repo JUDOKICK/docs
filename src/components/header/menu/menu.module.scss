@@ -436,6 +436,10 @@
           transition: all 0.4s linear;
         }
       }
+      .dropdowner {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+        background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
+      }
       // overflow: visible;
     }
 
@@ -450,8 +454,6 @@
       margin-top: -10px;
       margin-bottom: -10px;
       padding: 11px 0;
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
-      background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
       border-radius: 7px;
     }
 

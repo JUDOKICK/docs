@@ -6,7 +6,9 @@
     .boxCenter {
       max-width: 100%;
       text-align: center;
-      padding-bottom: 100px;
+      padding-bottom: 80px;
+      background-color: #f7f7f7;
+      background-image: linear-gradient(#f7f7f7, #fff); /* Standard syntax (must be last) */
 
       .title {
         justify-content: center;
@@ -43,13 +45,13 @@
       .btnDefault {
         color: #fff;
         background: #666666;
-        margin: 10px 10px;
         font-weight: 500;
         outline: none;
         text-transform: uppercase;
         width: initial;
         min-width: 300px;
-  
+        margin-top: -50px;
+
         &:hover {
           background: #1f70c1;
         }
