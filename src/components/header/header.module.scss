@@ -120,6 +120,7 @@
 
       @media (max-width: 1199px) {
         text-align: center;
+        font-size: 23px;
       }
     }
   }
@@ -186,6 +187,7 @@
     .navbar-toggler {
       width: fit-content;
       height: auto;
+      border: none;
       padding: 0;
       outline: 0 !important;
     }
@@ -224,6 +226,7 @@
 
       @media (max-width: 1199px) {
         margin: auto 5px;
+        font-size: 23px;
       }
     }
 
