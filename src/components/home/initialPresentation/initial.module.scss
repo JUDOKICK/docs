@@ -126,7 +126,12 @@
     margin: 0;
     margin-bottom: 20px;
     justify-content: center;
+    text-transform: none;
 
+    p{
+      text-transform: none;
+    }
+    
     @media (max-width: 1190px) {
       p {
         margin: auto;
