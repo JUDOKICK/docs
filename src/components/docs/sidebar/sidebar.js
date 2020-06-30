@@ -60,7 +60,7 @@ export default ({ active }) => {
             const href = `/docs/${item}/`
             return (
                     <li className={[sidebar.item].join(" ")}>
-                        <a onClick={(e)=>{e.preventDefault()}} className={[sidebar.link].join(" ")}  href={href} key={key}>
+                        <a className={[sidebar.link].join(" ")}  href={href} key={key}>
                             {titles[href]}
                         </a>
                     </li>

@@ -32,7 +32,7 @@ export default ({ data: { self, prev, next } }) => {
       <div className={pageLayout.header}>
         <Header/>
       </div>
-      <Container fluid>
+      <Container fluid className={pageLayout.main}>
         <Row noGutters={false} className={pageLayout.container}>
           <Col md={3} xl={2} xs={12} className={["bd-sidebar", pageLayout.sidebar].join(" ")}>
             <Sidebar active={self.fields.slug} />
