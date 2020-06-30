@@ -8,11 +8,29 @@ const Getstarted = () => {
 
   const handleSubmit = event => {
     const form = event.currentTarget
+    let dataForm = []
     if (form.checkValidity() === false) {
       event.preventDefault()
       event.stopPropagation()
     }
+    event.preventDefault()
+    for (var i = 0; i < 10; i++) {
+      dataForm.push(
+        `${event.target[i].getAttribute("name")}: ` + event.target[i].value
+      )
+    }
 
+    fetch("https://app.99inbound.com/api/e/xkkbVDHg", {
+      method: "POST",
+      body: JSON.stringify({
+        ...dataForm,
+      }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(res => {
+        console.log(res.data)
+      })
+      .catch(error => console.error("Error: ", error))
     setValidated(true)
   }
 
@@ -386,7 +404,6 @@ const Getstarted = () => {
                     name="expertise"
                     rows="3"
                     placeholder="Area of Expertise"
-                    value=""
                     required
                   ></FormComp.Control>
                   <FormComp.Control.Feedback type="invalid">
