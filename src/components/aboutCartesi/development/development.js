@@ -10,6 +10,7 @@ const Development = () => {
         id: 1,
         name: "aboutCartesi.development.person01.name",
         office: "aboutCartesi.development.person01.office",
+        link: "https://www.linkedin.com/in/danilotuler/",
       },
     }),
     defineMessages({
@@ -17,6 +18,7 @@ const Development = () => {
         id: 2,
         name: "aboutCartesi.development.person02.name",
         office: "aboutCartesi.development.person02.office",
+        link: "https://www.linkedin.com/in/felipe-argento-ba5494b2/",
       },
     }),
     defineMessages({
@@ -24,6 +26,7 @@ const Development = () => {
         id: 3,
         name: "aboutCartesi.development.person03.name",
         office: "aboutCartesi.development.person03.office",
+        link: "#",
       },
     }),
     defineMessages({
@@ -31,6 +34,7 @@ const Development = () => {
         id: 4,
         name: "aboutCartesi.development.person04.name",
         office: "aboutCartesi.development.person04.office",
+        link: "https://www.linkedin.com/in/victorfusco/",
       },
     }),
     defineMessages({
@@ -38,6 +42,7 @@ const Development = () => {
         id: 5,
         name: "aboutCartesi.development.person05.name",
         office: "aboutCartesi.development.person05.office",
+        link: "#",
       },
     }),
     defineMessages({
@@ -45,6 +50,7 @@ const Development = () => {
         id: 6,
         name: "aboutCartesi.development.person06.name",
         office: "aboutCartesi.development.person06.office",
+        link: "https://www.linkedin.com/in/fabiana-cecin-9983a919a/",
       },
     }),
     defineMessages({
@@ -52,6 +58,7 @@ const Development = () => {
         id: 7,
         name: "aboutCartesi.development.person07.name",
         office: "aboutCartesi.development.person07.office",
+        link: "https://www.linkedin.com/in/stephen-chen-65624851/",
       },
     }),
     defineMessages({
@@ -59,6 +66,7 @@ const Development = () => {
         id: 9,
         name: "aboutCartesi.development.person09.name",
         office: "aboutCartesi.development.person09.office",
+        link: "#",
       },
     }),
     defineMessages({
@@ -66,6 +74,7 @@ const Development = () => {
         id: 10,
         name: "aboutCartesi.development.person10.name",
         office: "aboutCartesi.development.person10.office",
+        link: "#",
       },
     }),
   ]
@@ -73,12 +82,19 @@ const Development = () => {
   const team = dataTeam.map(item => {
     return (
       <div className={developmentStyles.developerInfo} key={item.person.id}>
-        <h6 className={developmentStyles.nameDeveloper}>
-          <FormattedMessage id={item.person.name} />
-        </h6>
-        <p className={developmentStyles.officeDeveloper}>
-          <FormattedMessage id={item.person.office} />
-        </p>
+        <a
+          href={item.person.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#000" }}
+        >
+          <h6 className={developmentStyles.nameDeveloper}>
+            <FormattedMessage id={item.person.name} />
+          </h6>
+          <p className={developmentStyles.officeDeveloper}>
+            <FormattedMessage id={item.person.office} />
+          </p>
+        </a>
       </div>
     )
   })

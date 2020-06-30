@@ -14,7 +14,7 @@
   .block-titles {
     position: relative;
     z-index: 1;
-    padding-top: 118px;
+    padding-top: 70px;
     max-width: 950px;
     padding-left: 246px;
     padding-bottom: 121px;
@@ -22,7 +22,7 @@
     @media (max-width: 1400px) {
       padding-left: 10%;
       padding-right: 10%;
-      padding-top: 80px;
+      // padding-top: 70px;
     }
 
     @media (max-width: 1060px) {

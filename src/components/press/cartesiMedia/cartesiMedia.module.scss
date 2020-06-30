@@ -30,7 +30,7 @@
         font-size: 48px;
         font-weight: 300;
         max-width: 900px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         letter-spacing: -0.02em;
 
         @media (max-width: 466px) {
@@ -39,7 +39,7 @@
       }
     }
 
-    .subTitle {
+    .carouselBlock {
       justify-content: center;
       p {
         font-weight: 300;
@@ -53,24 +53,62 @@
           padding: 0 10px;
         }
       }
+
+      .settings-carousel {
+        background-color: black;
+      }
+
+      @media (max-width: 970px) {
+        max-width: 338px;
+        margin: auto;
+      }
     }
 
-      
-    .card{
+    .fake-card {
+      @media (max-width: 1780px) {
+        // margin: 28px 77px;
+        display: none !important;
+      }
+    }
+
+    .card {
       min-width: 200px;
-      min-height: 480px;
-      margin: 10px;
-    
-      .cardHeader{
+      width: 340px;
+      height: 459px;
+      min-height: 459px;
+      margin: 28px 9px;
+      background: #ffffff;
+      border: 1px solid #e4e4e4;
+      box-sizing: border-box;
+      box-shadow: 4px 4px 30px rgba(193, 193, 193, 0.5);
+      border-radius: 4px;
+
+      @media (max-width: 1780px) {
+        margin: 28px auto;
+      }
+
+      .cardHeader {
         text-align: center;
         border: none;
         background-color: #fff !important;
-      
-        .image{
-          padding-left: 28%;
+        padding: 0;
+
+        .title {
+          line-height: 146.7%;
         }
 
-        .date{
+        .image {
+          width: 64px;
+          height: 64px;
+          background: #ffffff;
+          border: 1px solid #dde5f3;
+          box-sizing: border-box;
+          box-shadow: 4px 4px 30px rgba(142, 170, 198, 0.2);
+          border-radius: 50%;
+          margin: 36px auto 6px;
+        }
+
+        .date {
           font-weight: 500;
           font-size: 12px;
           line-height: 146.7%;
@@ -81,7 +119,7 @@
           margin-bottom: 20px;
         }
       }
-    
+
       .carouselTitle {
         display: contents;
         .image {
@@ -89,44 +127,46 @@
         }
       }
 
-      .carouselContent {
-        p {
-          font-style: normal;
-          font-weight: 300;
-          font-size: 14px;
-          line-height: 150%;
-          margin-bottom: 1.5rem;
-          text-align: left;
+      .card-body {
+        padding: 30px 44px 19px 46px;
+        .carouselContent {
+          p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 150%;
+            // margin-bottom: 1.5rem;
+            text-align: left;
+            font-feature-settings: "liga" off;
 
-          @media (max-width: 1440px) {
-            font-size: 14px;
+            @media (max-width: 1440px) {
+              font-size: 19px;
+            }
           }
         }
       }
-    
+
       .cardFooter {
         border: 0;
         background-color: #ffffff;
         text-align: center;
-      
+
         button {
           background: #666666;
           color: #fff;
           margin-bottom: 50px;
           font-weight: 500;
-      
 
           &:hover {
             background: #1f70c1;
           }
-    
+
           &:focus {
             background: #217dda;
           }
-
         }
       }
-      
+
       .carouselBlock {
         position: relative;
         padding: 2.777rem 0;
@@ -168,9 +208,10 @@
           }
         }
       }
-    
+
+      @media (max-width: 500px) {
+        width: 300px;
+      }
     }
-
   }
-
 }
