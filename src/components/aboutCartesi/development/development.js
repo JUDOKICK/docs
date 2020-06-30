@@ -66,7 +66,7 @@ const Development = () => {
         id: 9,
         name: "aboutCartesi.development.person09.name",
         office: "aboutCartesi.development.person09.office",
-        link: "#",
+        link: "https://www.linkedin.com/in/milton-jonathan/",
       },
     }),
     defineMessages({
@@ -74,7 +74,7 @@ const Development = () => {
         id: 10,
         name: "aboutCartesi.development.person10.name",
         office: "aboutCartesi.development.person10.office",
-        link: "#",
+        link: "https://www.linkedin.com/in/gbbabarros",
       },
     }),
   ]

@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage, lo } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
+import { injectIntl } from "gatsby-plugin-intl"
+
 
 function ModalVideoComp(props) {
   const YoutubeVideo = () => {
@@ -49,8 +51,9 @@ function ModalVideoComp(props) {
   )
 }
 
-const InitialPresentation = props => {
-  const [modalCompShow, setModalCompShow] = useState(false)
+const InitialPresentation = ({ intl }) => {
+  const [modalCompShow, setModalCompShow] = useState(false) 
+  let lang = intl.locale
 
   return (
     <div>
@@ -74,7 +77,7 @@ const InitialPresentation = props => {
             lg={12}
             xl={1}
           >
-            <Link to={`en/docs/intro`}>
+            <Link to={`${lang}/#whyBuildInCartesi`}>
               <button className={initialStyle.btnDefault}>
                 <FormattedMessage id="home.initial.getStarted.title" />
               </button>
@@ -111,4 +114,4 @@ const InitialPresentation = props => {
   )
 }
 
-export default InitialPresentation
+export default injectIntl(InitialPresentation)

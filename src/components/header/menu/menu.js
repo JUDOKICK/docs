@@ -16,7 +16,7 @@ import expandDownUpBlack from "../../../images/SVG/menu/expandUp.svg"
 
 const { Item } = DropdownComp
 
-const Menu = ({ typeNav, pageName }) => {
+const Menu = ({ typeNav, pageName, lang }) => {
   var lang = "en"
   var page = pageName !== undefined || pageName === "home" ? pageName : ""
   var iconTypeHidden = typeNav === 1 ? expandDown : expandDownBlack
