@@ -223,18 +223,19 @@
       }
 
       &:hover {
-        transition: all 0.4s linear;
+        transition: all 0.6s linear;
         max-height: 300px;
         .iconExpand {
           img {
             transform: rotate(-180deg);
-            transition: all 0.4s linear;
+            transition: all 0.6s linear;
           }
         }
 
         .dropdowner {
           background: linear-gradient(180deg, #f3f3f3 -13.59%, #ffffff 100%);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.4s ease;
         }
         // overflow: visible;
       }
@@ -251,6 +252,9 @@
         margin-bottom: -10px;
         padding: 11px 0;
         border-radius: 7px;
+        background: transparent;
+        box-shadow: transparent;
+        transition: all 0.4s ease;
       }
 
       .dropdown-itens {
@@ -419,11 +423,11 @@
     position: relative;
     z-index: 3;
     overflow: hidden;
-    transition: max-height 0.4s linear;
+    transition: max-height 0.2s linear;
 
     .iconExpand {
       img {
-        transition: all 0.4s linear;
+        transition: all 0.2s linear;
       }
     }
 
@@ -433,10 +437,13 @@
       .iconExpand {
         img {
           transform: rotate(-180deg);
-          transition: all 0.4s linear;
+          transition: all 0.3s linear;
         }
       }
       .dropdowner {
+        -webkit-transition: background 0.4s linear;
+        -ms-transition: background 0.4s linear;
+        transition: background 0.4s ease;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
         background: linear-gradient(178.26deg, #060505 22.29%, #454545 104.81%);
       }
@@ -455,6 +462,11 @@
       margin-bottom: -10px;
       padding: 11px 0;
       border-radius: 7px;
+      background: transparent;
+      box-shadow: transparent;
+      -webkit-transition: background 0.4s linear;
+      -ms-transition: background 0.4s linear;
+      transition: background 0.4s ease;
     }
 
     .dropdown-itens {
