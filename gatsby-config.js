@@ -1,3 +1,5 @@
+const admonitions = require("remark-admonitions")
+
 module.exports = {
   siteMetadata: {
     title: `Cartesi`,
@@ -76,6 +78,7 @@ module.exports = {
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
         ],
+        remarkPlugins: [admonitions],
         plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
       },
     },
