@@ -52,7 +52,7 @@ const Meet = () => {
         href={item.person.link}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ display: "flex", color: "#000" }}
+        style={{ display: "flex", color: "#1f70c1" }}
       >
         <div
           className={["col-sm card", meetStyles.cardsTeam].join(" ")}
