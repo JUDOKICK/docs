@@ -15,6 +15,7 @@ const Meet = () => {
         name: "aboutCartesi.meet.person01.name",
         office: "aboutCartesi.meet.person01.office",
         photo: erickPhoto,
+        link: "https://www.linkedin.com/in/erickdemoura/",
       },
     }),
     defineMessages({
@@ -23,6 +24,7 @@ const Meet = () => {
         name: "aboutCartesi.meet.person02.name",
         office: "aboutCartesi.meet.person02.office",
         photo: colinPhoto,
+        link: "https://www.linkedin.com/in/colinsteil/",
       },
     }),
     defineMessages({
@@ -31,6 +33,7 @@ const Meet = () => {
         name: "aboutCartesi.meet.person03.name",
         office: "aboutCartesi.meet.person03.office",
         photo: augustuPhoto,
+        link: "https://www.linkedin.com/in/augusto-teixeira-39a3a8169/",
       },
     }),
     defineMessages({
@@ -39,28 +42,36 @@ const Meet = () => {
         name: "aboutCartesi.meet.person04.name",
         office: "aboutCartesi.meet.person04.office",
         photo: diegoPhoto,
+        link: "https://www.linkedin.com/in/diegonehab/",
       },
     }),
   ]
   let cardsTeam = team.map(item => {
     return (
-      <div
-        className={["col-sm card", meetStyles.cardsTeam].join(" ")}
-        key={item.person.id}
+      <a
+        href={item.person.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ display: "flex", color: "#000" }}
       >
-        <div className="row justify-content-center">
-          <div className={meetStyles.photoTeam}>
-            <img src={item.person.photo} alt={`photo${item.person.id}`} />
+        <div
+          className={["col-sm card", meetStyles.cardsTeam].join(" ")}
+          key={item.person.id}
+        >
+          <div className="row justify-content-center">
+            <div className={meetStyles.photoTeam}>
+              <img src={item.person.photo} alt={`photo${item.person.id}`} />
+            </div>
           </div>
+          <h6>
+            {" "}
+            <FormattedMessage id={item.person.name} />{" "}
+          </h6>
+          <p>
+            <FormattedMessage id={item.person.office} />
+          </p>
         </div>
-        <h6>
-          {" "}
-          <FormattedMessage id={item.person.name} />{" "}
-        </h6>
-        <p>
-          <FormattedMessage id={item.person.office} />
-        </p>
-      </div>
+      </a>
     )
   })
 
