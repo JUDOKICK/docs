@@ -224,9 +224,13 @@ const Footer = ({ secondFooter, pageName }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <Link
+                    to="/en/docs/intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FormattedMessage id="footer.pages.developer.title" />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

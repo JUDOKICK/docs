@@ -5,7 +5,7 @@ import outermeshRightSvg from "../../../images/home/initial/outermesh-right.svg"
 import { RowComp, ModalComp } from "../../bootstrap.components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo } from "@fortawesome/free-solid-svg-icons"
-import { FormattedMessage, lo } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import { injectIntl } from "gatsby-plugin-intl"
 
