@@ -4,23 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 60px 50px 60px;
+  padding: 70px 40px;
   background: linear-gradient(
     180deg,
     rgba(218, 218, 218, 0.28) -13.59%,
     rgba(250, 250, 250, 0) 100%
   );
 
-  @media (max-width: 720px) {
-    padding: 68px 40px;
-  }
-
-  @media (max-width: 490px) {
-    padding: 68px 30px 48px 30px;
-  }
-
   .blockContainer {
-    padding-bottom: 2rem;
     text-align: center;
 
     .title {
@@ -44,24 +35,68 @@
 
     .itemsGroup {
       justify-content: center;
-      padding: 30px 120px;
-      width: 90%;
+      width: 95%;
       margin: auto;
-
-      @media (max-width: 1250px) {
-        padding: 30px 60px;
-        width: 95%;
-      }
+      margin-top: 70px;
 
       @media (max-width: 990px) {
-        padding: 20px 0;
         width: 100%;
       }
 
-      img {
-        width: 100%;
-        max-width: 220px;
-        margin: 18px 0;
+      .btnDropdown {
+        border-radius: 3px;
+        padding: 16px;
+        position: relative;
+        max-width: 260px;
+        margin: auto;
+        margin-bottom: 20px;
+
+        span {
+          &:first-child {
+            img {
+              height: 25px;
+            }
+          }
+        }
+
+        .btnDropdownContent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .btnDropdownArrow {
+            width: 14px;
+            margin-left: 16px;
+          }
+        }
+
+        .dropdownClosed {
+          transform: rotateX(180deg);
+        }
+
+        .btnDropdownLinks {
+          margin-top: 20px;
+          height: 0;
+          display: none;
+          transition: 1s;
+
+          a {
+            display: inline-block;
+            padding: 10px 0px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: capitalize;
+            color: #fff;
+            width: 100%;
+          }
+        }
+
+        .showBtnLinks {
+          display: block;
+          height: initial !important;
+        }
       }
     }
   }

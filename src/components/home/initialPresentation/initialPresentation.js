@@ -5,7 +5,8 @@ import outermeshRightSvg from "../../../images/home/initial/outermesh-right.svg"
 import { RowComp, ModalComp } from "../../bootstrap.components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo } from "@fortawesome/free-solid-svg-icons"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, lo } from "gatsby-plugin-intl"
+import { Link } from "gatsby"
 
 function ModalVideoComp(props) {
   const YoutubeVideo = () => {
@@ -48,20 +49,14 @@ function ModalVideoComp(props) {
   )
 }
 
-const InitialPresentation = () => {
+const InitialPresentation = props => {
   const [modalCompShow, setModalCompShow] = useState(false)
 
   return (
     <div>
       <div className={initialStyle.layout}>
         <div className={["container ", initialStyle.contentPage].join(" ")}>
-          <RowComp
-            className={initialStyle.titleHeader}
-            xs={2}
-            md={2}
-            lg={12}
-            xl={1}
-          >
+          <RowComp className={initialStyle.titleHeader}>
             <h1>
               <FormattedMessage id="home.initial.title" />
             </h1>
@@ -79,9 +74,11 @@ const InitialPresentation = () => {
             lg={12}
             xl={1}
           >
-            <button className={initialStyle.btnDefault}>
-              <FormattedMessage id="home.initial.getStarted.title" />
-            </button>
+            <Link to={`${window.location.pathname}#whyBuildInCartesi`}>
+              <button className={initialStyle.btnDefault}>
+                <FormattedMessage id="home.initial.getStarted.title" />
+              </button>
+            </Link>
             <button
               className={[initialStyle.btnDefault, initialStyle.btnWatch].join(
                 " "

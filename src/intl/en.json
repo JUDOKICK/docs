@@ -83,7 +83,7 @@
       "step1": "country your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
       "step2": "Cross-compile the program to be deployed on Cartesi's virtual machine that emulates a RISC-V microprocessor and runs an embedded Linux distribution.",
       "step3": "At runtime, your DApp smart contracts delegate computations to the program running off-chain on Cartesi Nodes. Nodes claim the results to the blockchain.",
-      "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests",
+      "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests.",
       "step5": "In rare cases of dispute, the blockchain starts an interactive dispute resolution between Cartesi Nodes and runs a single step of the original computation with a negligible amount of data and at a very low cost.",
       "step6": "Your DApp is running heavy and complex computation off-chain, while retaining full decentralization and the strong security guarantees of the blockchain.",
       "button": {
@@ -94,7 +94,7 @@
       "title": "Cartesi Use Cases",
       "deFi": {
         "title": "DeFi",
-        "description": "Cartesi applications will be able to read and perform complex calculations involving data from multiple sources. This will help interoperability between blockchains and services — such as futures and insurance markets."
+        "description": "Cartesi applications will be able to perform complex and intensive computation involving large amounts of data, potentially from multiple sources. This will release DeFi from the current scalability constraints of blockchain. It will also help interoperability between blockchains and services — such as futures and insurance markets."
       },
       "gaming": {
         "title": "Gaming",
@@ -114,7 +114,7 @@
       },
       "research": {
         "title": "Research",
-        "description": "Outsourced computation will allow for millions of users to lend their idle computing power. This will benefit scientific research, 3D rendering, video transcoding and many other computationally intensive tasks in a trustless way, without reputation systems."
+        "description": "Outsourced computation can allow for millions of users to lend their idle computing power. This can benefit scientific research, 3D rendering, video transcoding and many other computationally intensive tasks that are actually verifiable. No reputation system needed. No sybil attacks."
       },
       "creeptsTowerDefense": {
         "title": "Creepts Tower Defense",
