@@ -74,7 +74,7 @@ const InitialPresentation = props => {
             lg={12}
             xl={1}
           >
-            <Link to={`${window.location.pathname}#whyBuildInCartesi`}>
+            <Link to={`en/docs/intro`}>
               <button className={initialStyle.btnDefault}>
                 <FormattedMessage id="home.initial.getStarted.title" />
               </button>
