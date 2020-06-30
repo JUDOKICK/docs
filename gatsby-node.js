@@ -88,7 +88,7 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
       // (or `node.frontmatter.slug`)
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/docs-page-layout.js`),
+      component: path.resolve(`./src/components/docs/pageLayout/pageLayout.js`),
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id, next, prev },

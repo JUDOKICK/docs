@@ -5,10 +5,12 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { preToCodeBlock } from "mdx-utils"
 import { Link } from "gatsby"
 import { Col, Container, Row } from "react-bootstrap"
-import Code from "./code"
-import Header from "./header/header"
-import Footer from "./footer/footer"
-import Sidebar from "./sidebar/sidebar"
+import Code from "../code/code"
+import Header from "../../header/header"
+import Footer from "../../footer/footer"
+import Sidebar from "../sidebar/sidebar"
+
+import pageLayout from "./pageLayout.module.scss"
 
 const shortcodes = {
   Link,
@@ -29,7 +31,7 @@ export default ({ data: { self, prev, next } }) => {
     <div>
       <Header />
       <Container fluid>
-        <Row noGutters={false}>
+        <Row noGutters={false} className={pageLayout.container}>
           <Col md={3} xl={2} xs={12} className="bd-sidebar">
             <Sidebar active={self.fields.slug} />
           </Col>
