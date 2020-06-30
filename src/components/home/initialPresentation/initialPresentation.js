@@ -14,10 +14,12 @@ function ModalVideoComp(props) {
         width="100%"
         height="100%"
         title="Cartesi"
-        src="https://www.youtube.com/embed/tYBfDe-14hE"
+        src="//www.youtube.com/embed/tYBfDe-14hE?autoplay=1&autohide=1&fs=1&rel=0&hd=1&wmode=transparent&enablejsapi=1&html5=1&controls=0&showinfo=0"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+        mozallowfullscreen
+        webkitallowfullscreen
       ></iframe>
     )
   }
@@ -81,7 +83,9 @@ const InitialPresentation = () => {
               <FormattedMessage id="home.initial.getStarted.title" />
             </button>
             <button
-              className={initialStyle.btnDefault}
+              className={[initialStyle.btnDefault, initialStyle.btnWatch].join(
+                " "
+              )}
               onClick={() => setModalCompShow(true)}
             >
               <span>

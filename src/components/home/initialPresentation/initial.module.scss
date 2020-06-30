@@ -181,6 +181,19 @@
 
     &:focus {
       background: #217dda;
+
+      &.btn-watch:focus {
+        animation: focusTime 0.4s linear;
+        background: #666666;
+        @keyframes focusTime {
+          0% {
+            background: #217dda;
+          }
+          100% {
+            background: #666666;
+          }
+        }
+      }
     }
 
     svg {
