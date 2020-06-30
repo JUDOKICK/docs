@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+// Slick used for carousel
+// @import "./slick/slick";
+// @import "./slick/slickTheme";
+
 @font-face {
   font-family: "Rubik";
   src: url("../fonts/rubik/Rubik-Light.ttf") format("truetype");
@@ -72,14 +76,14 @@ button {
   border-radius: 3px;
 }
 
-@media (max-width: 450px){
-  .slick-arrow{
+@media (max-width: 450px) {
+  .slick-arrow {
     z-index: 1;
     &.slick-next {
       right: -10px !important;
     }
     &.slick-prev {
       left: -20px !important;
-  }
+    }
   }
 }
