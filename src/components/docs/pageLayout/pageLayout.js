@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -9,6 +9,12 @@ import Code from "../code/code"
 import Header from "../../header/header"
 import Footer from "../../footer/footer"
 import Sidebar from "../sidebar/sidebar"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faBars,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
 
 import pageLayout from "./pageLayout.module.scss"
 
@@ -27,32 +33,66 @@ const shortcodes = {
 } // Provide common components here
 
 export default ({ data: { self, prev, next } }) => {
+  const [visible, setVisible] = useState(false)
   return (
     <div>
       <div className={pageLayout.header}>
-        <Header/>
+        <Header />
       </div>
       <Container fluid className={pageLayout.main}>
         <Row noGutters={false} className={pageLayout.container}>
-          <Col md={3} xl={2} xs={12} className={["bd-sidebar", pageLayout.sidebar].join(" ")}>
+          <Col
+            md={3}
+            xl={2}
+            xs={12}
+            className={["bd-sidebar", pageLayout.sidebar].join(" ")}
+          >
             <Sidebar active={self.fields.slug} />
+            <button
+              className={pageLayout.toggleMenu}
+              onClick={() => setVisible(!visible)}
+            >
+              <FontAwesomeIcon icon={faBars} />
+            </button>
           </Col>
-          
+
           <Row className={pageLayout.content}>
-              <Col md={9} xl={8} xs={12}>
-                <h1>{self.frontmatter.title}</h1>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{self.body}</MDXRenderer>
-                </MDXProvider>
-                {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
-                {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
-              </Col>
-              <Col xl={2} className="d-none d-xl-block bd-toc">
-                {self.tableOfContents && self.tableOfContents.items &&
-                  <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
-                  </ul>
-                }
-              </Col>
+            <Col md={9} xl={8} xs={12}>
+              <h1>{self.frontmatter.title}</h1>
+              <MDXProvider
+                className={pageLayout.provider}
+                components={shortcodes}
+              >
+                <MDXRenderer>{self.body}</MDXRenderer>
+              </MDXProvider>
+              <div className={pageLayout.arrows}>
+                {prev && (
+                  <h5 className={pageLayout.prevArrow}>
+                    {" "}
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                    <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link>
+                  </h5>
+                )}
+                {" | "}
+                {next && (
+                  <h5 className={pageLayout.nextArrow}>
+                    <Link to={next.fields.slug}>{next.frontmatter.title}</Link>{" "}
+                    <FontAwesomeIcon icon={faChevronRight} />
+                  </h5>
+                )}
+              </div>
+            </Col>
+            <Col xl={2} className="d-none d-xl-block bd-toc">
+              {self.tableOfContents && self.tableOfContents.items && (
+                <ul>
+                  {self.tableOfContents.items.map(item => (
+                    <li>
+                      <a href={item.url}>{item.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Col>
           </Row>
         </Row>
       </Container>
