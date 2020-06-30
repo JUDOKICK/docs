@@ -79,8 +79,12 @@ export default ({ active }) => {
           className={[sidebar.submenu].join(" ")}
           onClick={e => manageItem(key, e)}
         >
+          {" "}
           <a className={sidebar.hideSubmenu}>
-            <div className={sidebar.item}>{item.label}</div>
+            <div className={sidebar.item}>
+              {item.label}
+              <i class={["arrow right", sidebar.arrowMenu].join(" ")}></i>
+            </div>
           </a>
           <ul className={sidebar.itemDropdawn}>{links(item.items)}</ul>
         </li>

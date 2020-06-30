@@ -45,7 +45,11 @@ export default ({ data: { self, prev, next } }) => {
             md={3}
             xl={2}
             xs={12}
-            className={["bd-sidebar", pageLayout.sidebar].join(" ")}
+            className={[
+              "bd-sidebar",
+              pageLayout.sidebar,
+              visible ? pageLayout.visible : pageLayout.hidden,
+            ].join(" ")}
           >
             <Sidebar active={self.fields.slug} />
             <button

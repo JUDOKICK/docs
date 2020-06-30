@@ -7,8 +7,10 @@ $color-fonts: #606770;
     color: $color-fonts;
     padding: 5px 3px;
     margin: 2px 0;
-    &:hover {
+    transition: all 0.2s ease;
+    &:hover > a {
       box-shadow: 1px 1px 5px $theme-light;
+      background-color: #0000000d;
     }
   }
   a {
@@ -37,7 +39,7 @@ $color-fonts: #606770;
     &active {
       text-decoration: none;
       color: #505357;
-      background-color: $theme-light;
+      // background-color: $theme-light;
     }
   }
 
@@ -45,18 +47,52 @@ $color-fonts: #606770;
   .submenu {
     margin: 5px 0;
     max-height: 30px;
+    $size: 30px;
     overflow: hidden;
     list-style-type: none;
     padding: 0;
     padding-left: 0;
     list-style-type: none;
+    transition: max-height 0.2s linear;
+
+    &:active {
+      transition: max-height 1s linear;
+      max-height: 100%;
+      $size: 100%;
+    }
+    &:hover {
+      @if $size == 100% {
+        & > a:first-of-type > .item {
+          .arrow-menu {
+            transition: all 0.3s linear;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .item {
+      width: 100%;
+    }
+
+    .arrow-menu {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      float: right;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transition: all 0.3s linear;
+    }
 
     .hide-submenu {
       display: flex;
       place-content: space-between;
       padding: 4px 5px;
       &:hover {
-        background: $theme-light;
+        // background: $theme-light;
       }
     }
 
