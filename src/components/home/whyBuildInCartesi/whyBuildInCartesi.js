@@ -13,7 +13,7 @@ import privateIconSvg from "../../../images/home/whys/private.svg"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 const WhyBuildInCartesi = () => (
-  <div>
+  <div id="whyBuildInCartesi">
     <div className={styles.layout}>
       <div className={["container-fluid", styles.blockContainer].join(" ")}>
         <RowComp className={styles.title}>
@@ -23,78 +23,78 @@ const WhyBuildInCartesi = () => (
         </RowComp>
 
         <RowComp className={styles.cardGroup}>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={scalableIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.scalable.title" />
+                <img src={scalableIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.scalable.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.scalable.description" />
               </p>
             </div>
           </div>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={versatileIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.versatile.title" />
+                <img src={versatileIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.versatile.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.versatile.description" />
               </p>
             </div>
           </div>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={easyToBuildIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.easyToBuild.title" />
+                <img src={easyToBuildIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.easyToBuild.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.easyToBuild.description" />
               </p>
             </div>
           </div>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={fullyDecentralizedIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.fullyDecentralized.title" />
+                <img src={fullyDecentralizedIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.fullyDecentralized.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.fullyDecentralized.description" />
               </p>
             </div>
           </div>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={portableIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.portable.title" />
+                <img src={portableIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.portable.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.portable.description" />
               </p>
             </div>
           </div>
-          <div className={styles.cardLayout}>
+          <div className={`${styles.cardLayout} col-lg-4 col-md-6`}>
             <div className={styles.bodyLayout}>
-              <div className={styles.bodyImg}>
-                <img src={privateIconSvg} alt="" />
-              </div>
               <h2>
-                <FormattedMessage id="home.whyBuildInCartesi.private.title" />
+                <img src={privateIconSvg} alt="" />
+                <span>
+                  <FormattedMessage id="home.whyBuildInCartesi.private.title" />
+                </span>
               </h2>
               <p>
                 <FormattedMessage id="home.whyBuildInCartesi.private.description" />

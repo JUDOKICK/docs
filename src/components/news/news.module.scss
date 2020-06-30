@@ -1,7 +1,7 @@
 .news {
   width: 100%;
   justify-content: center;
-  padding: 0px 20px 60px 20px;
+  padding: 70px 20px;
   margin: auto;
 
   @media (max-width: 1510px) {
@@ -9,15 +9,11 @@
     flex-direction: column;
   }
 
-  @media (max-width: 720px) {
-    padding: 10px 20px;
-  }
-
   .title {
     text-align: center;
     margin: auto;
     width: 50%;
-    margin: 70px auto;
+    margin-bottom: 60px;
 
     h1 {
       font-weight: 300;
@@ -59,7 +55,6 @@
       grid-template-rows: repeat(3, 686px);
       gap: 100px;
       margin: auto;
-      margin-bottom: 64px;
     }
 
     @media (max-width: 482px) {
@@ -67,7 +62,6 @@
       grid-template-rows: initial;
       gap: 50px;
       margin: auto;
-      margin-bottom: 64px;
     }
 
     .block {
@@ -77,7 +71,7 @@
       box-shadow: 4px 4px 30px rgba(142, 170, 198, 0.2);
       border-radius: 4px;
       max-width: 441px;
-      margin-bottom: 100px;
+      // margin-bottom: 100px;
 
       .cardHeader {
         padding: 0;
