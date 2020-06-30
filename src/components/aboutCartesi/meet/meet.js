@@ -76,7 +76,7 @@ const Meet = () => {
   })
 
   return (
-    <div className={meetStyles.meet}>
+    <div className={meetStyles.meet}  id="team">
       <div className={["container", meetStyles.contentMeet].join(" ")}>
         <div className={meetStyles.title}>
           <FormattedMessage id="aboutCartesi.meet.title" />

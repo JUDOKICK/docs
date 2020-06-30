@@ -13,11 +13,12 @@ import expandDown from "../../../images/SVG/menu/expandWhite1.svg"
 import expandDownUp from "../../../images/SVG/menu/expandWhite2.svg"
 import expandDownBlack from "../../../images/SVG/menu/expanddown.svg"
 import expandDownUpBlack from "../../../images/SVG/menu/expandUp.svg"
+import { injectIntl } from "gatsby-plugin-intl"
 
 const { Item } = DropdownComp
 
-const Menu = ({ typeNav, pageName, lang }) => {
-  var lang = "en"
+const Menu = ({ typeNav, pageName, intl }) => {
+  var lang = intl.locale
   var page = pageName !== undefined || pageName === "home" ? pageName : ""
   var iconTypeHidden = typeNav === 1 ? expandDown : expandDownBlack
   var iconLangTypeHidden = typeNav === 1 ? expandDownBlack : expandDown
@@ -51,7 +52,7 @@ const Menu = ({ typeNav, pageName, lang }) => {
               </span>
             </a>
             <Link
-              to={`/${lang}/about/#team`}
+              to={`/${lang}/about`}
               className={[
                 menuStyle.dropdownItem,
                 menuStyle.active,
@@ -84,7 +85,7 @@ const Menu = ({ typeNav, pageName, lang }) => {
               Careers
             </a>
             <Link
-              to="/en/press"
+              to={`/${lang}/press`}
               className={[
                 menuStyle.dropdownItem,
                 menuStyle.active,
@@ -388,4 +389,4 @@ const Menu = ({ typeNav, pageName, lang }) => {
   )
 }
 
-export default Menu
+export default injectIntl(Menu)

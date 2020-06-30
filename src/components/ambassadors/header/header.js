@@ -37,7 +37,7 @@ const Header = () => {
           ].join(" ")}
         >
           <div className={ambHeaderStyle.container}>
-            <Link to="/ambassadors/#" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
               <img
                 src={logoCartesi}
                 className={ambHeaderStyle.logoCartesi}

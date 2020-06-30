@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import { injectIntl } from "gatsby-plugin-intl"
 
 import ambHeaderStyle from "../../../styles/styles_amb/header.ambassadors.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLanguage } from "@fortawesome/free-solid-svg-icons"
-// const ambHeaderStyle = {}
-const Menu = () => {
+const Menu = ({intl}) => {
+  let lang = intl.locale
+
   return (
     <>
       <ul
@@ -18,44 +20,40 @@ const Menu = () => {
             className={[ambHeaderStyle.navLink, "nav-link smooth-scroll"].join(
               " "
             )}
-            to="/ambassadors/#about"
-            data-localize="menu.link1"
+            to={`/${lang}/about`}
           >
             About
           </Link>
-        </li>
-        <li className={ambHeaderStyle.navItem}>
-          <a
-            className={[ambHeaderStyle.navLink, "nav-link"].join(" ")}
-            href="https://www.github.com/cartesi"
-            data-localize="menu.link2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Developers
-          </a>
         </li>
         <li className={ambHeaderStyle.navItem}>
           <Link
             className={[ambHeaderStyle.navLink, "nav-link smooth-scroll"].join(
               " "
             )}
-            to="#stayintouch"
-            data-localize="menu.link3"
+            to={`/${lang}/docs/intro`}            
+          >
+            Developers
+          </Link>
+        </li>
+        <li className={ambHeaderStyle.navItem}>
+          <Link
+            className={[ambHeaderStyle.navLink, "nav-link smooth-scroll"].join(
+              " "
+            )}
+            to={`/${lang}/ecosystem`}            
           >
             Ecosystem
           </Link>
         </li>
         <li className={ambHeaderStyle.navItem}>
-          <a
-            className={[ambHeaderStyle.navLink, "nav-link"].join(" ")}
-            href="https://medium.com/cartesi"
-            data-localize="menu.link4"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            className={[ambHeaderStyle.navLink, "nav-link smooth-scroll"].join(
+              " "
+            )}
+            to={`/${lang}/press`}            
           >
             News
-          </a>
+          </Link>
         </li>
       </ul>
       <ul
@@ -75,27 +73,16 @@ const Menu = () => {
               "nav-link text-uppercase dropdown-toggle",
             ].join(" ")}
             to="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
           >
             <FontAwesomeIcon icon={faLanguage} />
             &nbsp;EN
             {/* <!-- <script>var href = location.href;document.write(href.match(/([^\/]*)\/*$/)[1]);</script> --> */}
           </Link>
-          {/* <!-- <div id="menulang" className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="dropdown-item" href="./">English</Link>
-                                    <Link className="dropdown-item" href="./zh">中文</Link>
-                                    <Link className="dropdown-item" href="./ko">한국어</Link>
-                                    <Link className="dropdown-item" href="./ru">русский</Link>
-                                    <Link className="dropdown-item" href="./vi">Tiếng Việt</Link>
-                                </div> --> */}
+
         </li>
       </ul>
     </>
   )
 }
 
-export default Menu
+export default injectIntl(Menu)
