@@ -133,6 +133,7 @@
     }
   },
   "aboutCartesi": {
+    "title": "About Us",
     "initial": {
       "title": "About Cartesi",
       "titleContinue": "A Bridge between Linux and Blockchain"
@@ -382,6 +383,7 @@
     }
   },
   "community": {
+    "title": "Community",
     "join": {
       "title": "Join the Cartesi Community",
       "description": "Contribute to building the future of the decentralized web. As we continue to expand, we are on the lookout for passionate and talented leaders to join our movement bringing novel ideas to scale the ecosystem and drive continuous improvements to our infrastructure."
@@ -499,5 +501,8 @@
         "deltaDirect": "Delta Direct"
       }
     }
+  },
+  "ambassadors": {
+    "title": "Ambassadors"
   }
 }

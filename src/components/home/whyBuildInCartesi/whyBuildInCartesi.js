@@ -105,7 +105,7 @@ const WhyBuildInCartesi = () => (
         </RowComp>
         <RowComp className={styles.btnGroup}>
           <div className={initialStyles.btnsList}>
-            <Link to={`${window.location.pathname}docs`}>
+            <Link to="/en/docs/intro">
               <button className={initialStyles.btnDefault}>
                 <FormattedMessage id="home.whyBuildInCartesi.button.startBuildingToday" />
               </button>

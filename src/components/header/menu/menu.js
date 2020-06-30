@@ -1,11 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import {
-  NavComp,
-  NavDropdownComp,
-  DropdownComp,
-} from "../../bootstrap.components"
+import { NavComp, DropdownComp } from "../../bootstrap.components"
 import menuStyle from "./menu.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons"
@@ -14,15 +10,15 @@ import expandDownUp from "../../../images/SVG/menu/expandWhite2.svg"
 import expandDownBlack from "../../../images/SVG/menu/expanddown.svg"
 import expandDownUpBlack from "../../../images/SVG/menu/expandUp.svg"
 
-const { Item } = DropdownComp
+// const { Item } = DropdownComp
 
 const Menu = ({ typeNav, pageName }) => {
   var lang = "en"
-  var page = pageName !== undefined || pageName === "home" ? pageName : ""
+  var page = pageName !== undefined || pageName !== "home" ? pageName : ""
   var iconTypeHidden = typeNav === 1 ? expandDown : expandDownBlack
   var iconLangTypeHidden = typeNav === 1 ? expandDownBlack : expandDown
-  var iconTypeHover = typeNav === 1 ? expandDownUp : expandDownUpBlack
-  var iconLangTypeHover = typeNav === 1 ? expandDownUpBlack : expandDownUp
+  // var iconTypeHover = typeNav === 1 ? expandDownUp : expandDownUpBlack
+  // var iconLangTypeHover = typeNav === 1 ? expandDownUpBlack : expandDownUp
 
   return (
     <div>
@@ -223,7 +219,7 @@ const Menu = ({ typeNav, pageName }) => {
               CTSI Token
             </a>
             <Link
-              to={`/${lang}/${pageName}/#footer`}
+              to={`/${lang}/${page}/#footer`}
               className={[
                 menuStyle.dropdownItem,
                 menuStyle.active,

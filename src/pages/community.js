@@ -7,10 +7,17 @@ import Become from "../components/community/become/become"
 import Channels from "../components/community/channels/channels"
 import Groups from "../components/community/groups/groups"
 import UpEvents from "../components/community/UpEvents/upEvents"
+import { injectIntl } from "gatsby-plugin-intl"
+import SEO from "../components/seo/seo"
 
-const Community = () => {
+const Community = ({ intl }) => {
   return (
-    <>
+    <div>
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "community.title" })}
+        keywords={[`Cartesi`, `Community`, `Ambassadors`, `Events`]}
+      />
       <Header typeNav={1} pageName="community" />
       <div>
         <Join />
@@ -20,8 +27,8 @@ const Community = () => {
         <UpEvents />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
-export default Community
+export default injectIntl(Community)

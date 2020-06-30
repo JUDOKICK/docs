@@ -16,6 +16,8 @@ import Footer from "../components/footer/footer"
 import SEO from "../components/seo/seo"
 import { injectIntl } from "gatsby-plugin-intl"
 
+if (typeof window !== `undefined`) window.location.replace(`/en/`) // highlight-line
+
 const IndexPage = ({ intl }) => {
   return (
     <div>

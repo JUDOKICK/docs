@@ -60,7 +60,7 @@ const Meet = () => {
         >
           <div className="row justify-content-center">
             <div className={meetStyles.photoTeam}>
-              <img src={item.person.photo} alt={`photo${item.person.id}`} />
+              <img src={item.person.photo} alt={`${item.person.id}`} />
             </div>
           </div>
           <h6>

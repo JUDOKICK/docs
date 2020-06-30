@@ -9,10 +9,16 @@ import MeetTeam from "../components/aboutCartesi/meet/meet"
 import Development from "../components/aboutCartesi/development/development"
 import Advisors from "../components/aboutCartesi/advisors/advisors"
 import Footer from "../components/footer/footer"
+import SEO from "../components/seo/seo"
 
 const About = ({ intl }) => {
   return (
-    <>
+    <div>
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "aboutCartesi.title" })}
+        keywords={[`Cartesi`, `About`, `Story`, `Advisors`, `Team`]}
+      />
       <Header typeNav={1} pageName="about" />
       <div>
         <InitialPresentation />
@@ -22,7 +28,7 @@ const About = ({ intl }) => {
         <Advisors />
       </div>
       <Footer secondFooter="second-footer" pageName={"about"} />
-    </>
+    </div>
   )
 }
 

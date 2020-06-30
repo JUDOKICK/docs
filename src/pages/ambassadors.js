@@ -9,10 +9,16 @@ import Requeriments from "../components/ambassadors/requirements/requeriments"
 import InterestArea from "../components/ambassadors/interestarea/interestarea"
 import Benefits from "../components/ambassadors/benefits/benefits"
 import Getstarted from "../components/ambassadors/getstarted/getstarted"
+import SEO from "../components/seo/seo"
+import { injectIntl } from "gatsby-plugin-intl"
 
-const Ambassadors = () => (
+const Ambassadors = ({ intl }) => (
   <Layout>
-    {/* <Seo/> */}
+    <SEO
+      lang={intl.locale}
+      title={intl.formatMessage({ id: "ambassadors.title" })}
+      keywords={[`Cartesi`, `Benefits`, `Ambassadors`, `Requeriments`]}
+    />
     <AmbAmbassadors />
     <About />
     <WhatsItTake />
@@ -23,4 +29,4 @@ const Ambassadors = () => (
   </Layout>
 )
 
-export default Ambassadors
+export default injectIntl(Ambassadors)
