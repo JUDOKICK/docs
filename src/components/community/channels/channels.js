@@ -41,7 +41,7 @@ const Channels = () => {
         button: "community.channels.discord.button",
         icon: discordIcon,
         bgCircle: "#7289DA",
-        link: "",
+        link: "https://discord.com/invite/Pt2NrnS",
       },
     }),
     defineMessages({

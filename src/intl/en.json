@@ -80,7 +80,7 @@
     },
     "howItWorks": {
       "title": "How It Works",
-      "step1": "country your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
+      "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
       "step2": "Cross-compile the program to be deployed on Cartesi's virtual machine that emulates a RISC-V microprocessor and runs an embedded Linux distribution.",
       "step3": "At runtime, your DApp smart contracts delegate computations to the program running off-chain on Cartesi Nodes. Nodes claim the results to the blockchain.",
       "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests.",
@@ -441,7 +441,7 @@
         "country": "CN"
       },
       "chines2": {
-        "title": "中文",
+        "title": "Emmanuel-111",
         "button": "加入",
         "country": "CN"
       },

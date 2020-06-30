@@ -38,7 +38,7 @@ const Groups = () => {
         button: "community.groups.chines2.button",
         icon: weChatIcon,
         bgCircle: "#25DF73",
-        link: "Emmanuel-111",
+        link: "https://www.wechat.com/pt",
         code: "community.groups.chines2.country",
       },
     }),
@@ -118,6 +118,12 @@ const Groups = () => {
             )}
           </FormattedMessage>{" "}
           <FormattedMessage id={item.person.title} />
+          {/* {
+            item.person.special? 
+              <div  style={{paddingTop: '10px', paddingBottom:'0', marginBottom: '0'}} className={groupsStyles.btnTooltip}>{item.person.special}</div>
+            : 
+              ""
+          } */}
         </h6>
         <a
           className={[groupsStyles.btnCard, "button"].join(" ")}
@@ -125,12 +131,6 @@ const Groups = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {/* {item.person.link === "Emmanuel-111" ? (
-            <span className={groupsStyles.btnTooltip}>{item.person.link}</span>
-          ) : (
-            ""
-          )} */}
-
           <FormattedMessage id={item.person.button} />
         </a>
       </div>

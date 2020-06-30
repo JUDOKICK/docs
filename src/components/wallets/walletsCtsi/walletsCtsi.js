@@ -20,36 +20,52 @@ const WhyBuildInCartesi = () => (
         </RowComp>
 
         <RowComp className={styles.itemsGroup}>
-          <div className={styles.item}>
-            <img src={atomicWalletPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.wallets.wallet.atomicWallet" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={ledgerPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.wallets.wallet.ledger" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={myCryptoPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.wallets.wallet.myCrypto" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={trezorPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.wallets.wallet.trezor" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={trustWalletPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.wallets.wallet.trustWallet" />
-            </p>
-          </div>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://atomicwallet.io/">  
+            <div className={styles.item}>
+              <img src={atomicWalletPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.wallets.wallet.atomicWallet" />
+              </p>
+            </div>
+          </a>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://www.ledger.com/">
+            <div className={styles.item}>
+              <img src={ledgerPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.wallets.wallet.ledger" />
+              </p>
+            </div>
+          </a>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://mycrypto.com/">
+            <div className={styles.item}>
+              <img src={myCryptoPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.wallets.wallet.myCrypto" />
+              </p>
+            </div>  
+          </ a>
+
+          <a target="_blank" rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://trezor.io/">
+              <div className={styles.item}>
+                <img src={trezorPng} alt="" />
+                <p>
+                  <FormattedMessage id="wallets.wallets.wallet.trezor" />
+                </p>
+              </div>
+            </a>
+
+          <a target="_blank" rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://trustwallet.com/" >
+            <div className={styles.item}>
+              <img src={trustWalletPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.wallets.wallet.trustWallet" />
+              </p>
+            </div>
+          </a>
+          
         </RowComp>
       </div>
     </div>

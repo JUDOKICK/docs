@@ -21,42 +21,59 @@ const WhyBuildInCartesi = () => (
         </RowComp>
 
         <RowComp className={styles.itemsGroup}>
-          <div className={styles.item}>
-            <img src={blockfolioPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.blockfolio" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={deltaPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.delta" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={coinMarketCapPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.coinMarketCap" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={coinGeckoPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.coinGecko" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={blockfolioSignalPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.blockfolioSignal" />
-            </p>
-          </div>
-          <div className={styles.item}>
-            <img src={deltaDirectPng} alt="" />
-            <p>
-              <FormattedMessage id="wallets.ctsiUpdates.updates.deltaDirect" />
-            </p>
-          </div>
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://blockfolio.com/coin/CTSI">  
+            <div className={styles.item}>
+              <img src={blockfolioPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.blockfolio" />
+              </p>
+            </div>
+          </a>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://delta.app/en/crypto/ctsi/cartesi">  
+            <div className={styles.item}>
+              <img src={deltaPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.delta" />
+              </p>
+            </div>
+          </a>
+        
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://coinmarketcap.com/currencies/cartesi/">  
+            <div className={styles.item}>
+              <img src={coinMarketCapPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.coinMarketCap" />
+              </p>
+            </div>
+          </a>
+          
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://www.coingecko.com/en/coins/cartesi">  
+            <div className={styles.item}>
+              <img src={coinGeckoPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.coinGecko" />
+              </p>
+            </div>
+          </a>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://blockfolio.com/">  
+            <div className={styles.item}>
+              <img src={blockfolioSignalPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.blockfolioSignal" />
+              </p>
+            </div>
+          </a>
+
+          <a target="_blank"  rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false" href="https://delta.app/en/download">  
+            <div className={styles.item}>
+              <img src={deltaDirectPng} alt="" />
+              <p>
+                <FormattedMessage id="wallets.ctsiUpdates.updates.deltaDirect" />
+              </p>
+            </div>
+          </a>
         </RowComp>
       </div>
     </div>

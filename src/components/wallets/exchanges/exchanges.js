@@ -109,8 +109,8 @@ function ButtonDropdown({ color, content, links }) {
           !closed ? styles.showBtnLinks : ""
         }`}
       >
-        {links.map(link => {
-          return <div key={link}>{link}</div>
+        {links.map((link, key )=> {
+          return <div key={key}>{link}</div>
         })}
       </div>
     </div>
