@@ -11,6 +11,7 @@ import portableIconSvg from "../../../images/home/whys/portable.svg"
 import privateIconSvg from "../../../images/home/whys/private.svg"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { Link } from "gatsby"
 
 const WhyBuildInCartesi = () => (
   <div id="whyBuildInCartesi">
@@ -104,9 +105,11 @@ const WhyBuildInCartesi = () => (
         </RowComp>
         <RowComp className={styles.btnGroup}>
           <div className={initialStyles.btnsList}>
-            <button className={initialStyles.btnDefault}>
-              <FormattedMessage id="home.whyBuildInCartesi.button.startBuildingToday" />
-            </button>
+            <Link to={`${window.location.pathname}docs`}>
+              <button className={initialStyles.btnDefault}>
+                <FormattedMessage id="home.whyBuildInCartesi.button.startBuildingToday" />
+              </button>
+            </Link>
           </div>
         </RowComp>
       </div>
