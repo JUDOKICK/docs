@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 68px 60px;
+  padding: 70px 60px;
   background: linear-gradient(
     180deg,
     rgba(218, 218, 218, 0.28) -13.59%,
@@ -20,7 +20,7 @@
   }
 
   .blockContainer {
-    padding-bottom: 2rem;
+    // padding-bottom: 2rem;
     text-align: center;
 
     .title {
@@ -44,19 +44,35 @@
 
     .cardGroup {
       justify-content: center;
+      padding: 0 80px;
+
+      @media (max-width: 1500px) {
+        padding: 0 40px;
+      }
+
+      @media (max-width: 1250px) {
+        padding: 0;
+      }
 
       .cardLayout {
-        box-sizing: border-box;
-        max-width: 430px;
-        margin: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        padding: 10px 40px;
+
+        @media (max-width: 1500px) {
+          padding: 0 20px;
+        }
+
+        @media (max-width: 1250px) {
+          margin: 10px;
+        }
+
+        @media (max-width: 720px) {
+          margin: 20px 0;
+        }
 
         .bodyLayout {
           text-align: left;
           justify-content: center;
-          padding: 20px 0;
+          padding: 0 20px;
 
           h2 {
             font-style: normal;
@@ -66,7 +82,28 @@
             letter-spacing: -0.02em;
             color: #000;
             margin-top: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-end;
+            height: 77px;
+
+            img {
+              margin-right: 12px;
+            }
+
+            span {
+              margin-bottom: -3px;
+              line-height: 100%;
+            }
+
+            @media (max-width: 1250px) {
+              font-size: 28px;
+            }
+
+            @media (max-width: 720px) {
+              font-size: 24px;
+              height: initial;
+            }
           }
 
           p {
@@ -78,40 +115,11 @@
             margin-top: 10px;
           }
 
-          .bodyImg {
-            padding-top: 10px;
-            height: 77px;
-            display: flex;
-            align-items: flex-end;
-          }
-
-          @media (min-width: 1250px) and (max-width: 1500px) {
-            h4 {
-              font-size: 1.9vw;
-            }
-
-            p {
-              font-size: 1.3vw;
-            }
-          }
-
           @media (max-width: 700px) {
-            h4 {
+            padding: 0;
+
+            p {
               font-size: 4vw;
-            }
-
-            p {
-              font-size: 2.5vw;
-            }
-          }
-
-          @media (max-width: 570px) {
-            h4 {
-              font-size: 5.7vw;
-            }
-
-            p {
-              font-size: 3.5vw;
             }
           }
         }
