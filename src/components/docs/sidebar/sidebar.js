@@ -59,11 +59,11 @@ export default ({ active }) => {
         if (typeof item === "string") {
             const href = `/docs/${item}/`
             return (
-                <a  className={[sidebar.link].join(" ")} href={href} key={key}>
-                    <li>
-                        {titles[href]}
+                    <li className={[sidebar.item].join(" ")}>
+                        <a onClick={(e)=>{e.preventDefault()}} className={[sidebar.link].join(" ")}  href={href} key={key}>
+                            {titles[href]}
+                        </a>
                     </li>
-                </a>
             )
         }
 
@@ -84,7 +84,7 @@ export default ({ active }) => {
     return (
         <div>
             {sidebars && sidebars.docs &&
-                <div className={[sidebar.menu].join(" ")} className="nav flex-column">
+                <div className={["nav flex-column", sidebar.menu].join(" ")}>
                     {links(sidebars.docs)}
                 </div>
             }

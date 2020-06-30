@@ -1,17 +1,27 @@
-.submenu{
-    max-width: 100%;
-    max-height: 25px;
-    overflow: hidden;
-    list-style-type: none;
-    padding: 0;
-
-    ul {
-        list-style-type: none;
-    }
-    
-}
 
 .menu{
-    margin-right: 100px;
-    height: 10px;
+    padding-bottom: 150px;
+    .submenu{
+        margin-bottom: 0;
+        max-height: 25px;
+        overflow: hidden;
+        list-style-type: none;
+        padding: 0;
+    
+        ul {
+            padding-left: 10px;
+            list-style-type: none;
+        }
+        
+        .item{
+            .link{
+                border-radius: .25rem;
+            }
+                
+            ul {
+                padding-left: 10px;
+                list-style-type: none;
+            }
+        }
+    }
 }

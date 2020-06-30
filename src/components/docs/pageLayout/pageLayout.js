@@ -29,29 +29,36 @@ const shortcodes = {
 export default ({ data: { self, prev, next } }) => {
   return (
     <div>
-      <Header />
+      <div className={pageLayout.header}>
+        <Header/>
+      </div>
       <Container fluid>
         <Row noGutters={false} className={pageLayout.container}>
-          <Col md={3} xl={2} xs={12} className="bd-sidebar">
+          <Col md={3} xl={2} xs={12} className={["bd-sidebar", pageLayout.sidebar].join(" ")}>
             <Sidebar active={self.fields.slug} />
           </Col>
-          <Col md={9} xl={8} xs={12}>
-            <h1>{self.frontmatter.title}</h1>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>{self.body}</MDXRenderer>
-            </MDXProvider>
-            {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
-            {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
-          </Col>
-          <Col xl={2} className="d-none d-xl-block bd-toc">
-            {self.tableOfContents && self.tableOfContents.items &&
-              <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
-              </ul>
-            }
-          </Col>
+          
+          <Row className={pageLayout.content}>
+              <Col md={9} xl={8} xs={12}>
+                <h1>{self.frontmatter.title}</h1>
+                <MDXProvider components={shortcodes}>
+                  <MDXRenderer>{self.body}</MDXRenderer>
+                </MDXProvider>
+                {prev && <h5>Prev: <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link></h5>}
+                {next && <h5>Next: <Link to={next.fields.slug}>{next.frontmatter.title}</Link></h5>}
+              </Col>
+              <Col xl={2} className="d-none d-xl-block bd-toc">
+                {self.tableOfContents && self.tableOfContents.items &&
+                  <ul>{self.tableOfContents.items.map(item => <li><a href={item.url}>{item.title}</a></li>)}
+                  </ul>
+                }
+              </Col>
+          </Row>
         </Row>
       </Container>
-      <Footer />
+      <div className={pageLayout.footer}>
+        <Footer />
+      </div>
     </div>
   )
 }
