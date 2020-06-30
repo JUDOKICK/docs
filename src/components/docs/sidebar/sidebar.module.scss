@@ -1,5 +1,6 @@
 $theme-light: #dadde1;
 $color-fonts: #606770;
+$theme-light-hover: #0000000d;
 
 .menu {
   li {
@@ -9,8 +10,8 @@ $color-fonts: #606770;
     margin: 2px 0;
     transition: all 0.2s ease;
     &:hover > a {
-      box-shadow: 1px 1px 5px $theme-light;
-      background-color: #0000000d;
+      box-shadow: 1px 1px 5px $theme-light-hover;
+      background-color: $theme-light-hover;
     }
   }
   a {
@@ -39,7 +40,12 @@ $color-fonts: #606770;
     &active {
       text-decoration: none;
       color: #505357;
-      // background-color: $theme-light;
+      background-color: $theme-light-hover;
+
+      a {
+        box-shadow: none;
+        background-color: transparent;
+      }
     }
   }
 
@@ -79,7 +85,7 @@ $color-fonts: #606770;
     .arrow-menu {
       border: solid black;
       border-width: 0 3px 3px 0;
-      display: inline-block;
+      display: block;
       float: right;
       padding: 3px;
       transform: rotate(-45deg);
@@ -90,9 +96,15 @@ $color-fonts: #606770;
     .hide-submenu {
       display: flex;
       place-content: space-between;
-      padding: 4px 5px;
+      // padding: 4px 5px;
+      .item {
+        padding: 4px 5px;
+      }
       &:hover {
-        // background: $theme-light;
+        .item {
+          box-shadow: 1px 1px 5px $theme-light-hover;
+          // background: $theme-light;
+        }
       }
     }
 

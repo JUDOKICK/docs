@@ -62,7 +62,9 @@ export default ({ data: { self, prev, next } }) => {
 
           <Row className={pageLayout.content}>
             <Col md={9} xl={8} xs={12}>
-              <h1>{self.frontmatter.title}</h1>
+              <h1 className={pageLayout.titleInitial}>
+                {self.frontmatter.title}
+              </h1>
               <MDXProvider
                 className={pageLayout.provider}
                 components={shortcodes}
@@ -86,7 +88,13 @@ export default ({ data: { self, prev, next } }) => {
                 )}
               </div>
             </Col>
-            <Col xl={2} className="d-none d-xl-block bd-toc">
+            <Col
+              xl={2}
+              className={[
+                "d-none d-xl-block bd-toc",
+                pageLayout.siderSection,
+              ].join(" ")}
+            >
               {self.tableOfContents && self.tableOfContents.items && (
                 <ul>
                   {self.tableOfContents.items.map(item => (
