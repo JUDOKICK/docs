@@ -1,0 +1,125 @@
+$theme-light: #dadde1;
+$color-fonts: #606770;
+$theme-light-hover: #0000000d;
+
+.menu {
+  li {
+    cursor: pointer;
+    color: $color-fonts;
+    padding: 5px 3px;
+    margin: 2px 0;
+    transition: all 0.2s ease;
+    &:hover > a {
+      box-shadow: 1px 1px 5px $theme-light-hover;
+      background-color: $theme-light-hover;
+    }
+  }
+  a {
+    color: $color-fonts;
+  }
+
+  ul {
+    padding-left: 15px;
+    .item {
+      display: block;
+    }
+  }
+  //
+  //
+
+  //     & li:nth-child(3) {
+  //       &::after {
+  //         background-size: 2rem 2rem;
+  //         background-position: 50%;
+  //       }
+  //     }
+  //   }
+
+  .item {
+    &:hover,
+    &active {
+      text-decoration: none;
+      color: #505357;
+      background-color: $theme-light-hover;
+
+      a {
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  padding-bottom: 150px;
+  .submenu {
+    margin: 5px 0;
+    max-height: 30px;
+    $size: 30px;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 0;
+    list-style-type: none;
+    transition: max-height 0.2s linear;
+
+    &:active {
+      transition: max-height 1s linear;
+      max-height: 100%;
+      $size: 100%;
+    }
+    &:hover {
+      @if $size == 100% {
+        & > a:first-of-type > .item {
+          .arrow-menu {
+            transition: all 0.3s linear;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .item {
+      width: 100%;
+    }
+
+    .arrow-menu {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: block;
+      float: right;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transition: all 0.3s linear;
+    }
+
+    .hide-submenu {
+      display: flex;
+      place-content: space-between;
+      // padding: 4px 5px;
+      .item {
+        padding: 4px 5px;
+      }
+      &:hover {
+        .item {
+          box-shadow: 1px 1px 5px $theme-light-hover;
+          // background: $theme-light;
+        }
+      }
+    }
+
+    .item {
+      height: auto;
+      .link {
+        height: 30px;
+        border-radius: 0.25rem;
+        margin-right: 5px;
+      }
+
+      ul {
+        padding-left: 10px;
+        list-style-type: none;
+      }
+    }
+  }
+}

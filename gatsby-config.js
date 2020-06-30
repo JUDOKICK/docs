@@ -1,3 +1,5 @@
+const admonitions = require("remark-admonitions")
+
 module.exports = {
   siteMetadata: {
     title: `Cartesi`,
@@ -11,6 +13,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/docs/docs/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -48,6 +57,31 @@ module.exports = {
       },
     },
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/page-layout.js"),
+        },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              withWebp: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-linked-files`,
+        ],
+        remarkPlugins: [admonitions],
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
